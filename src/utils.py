@@ -12,9 +12,18 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+from torch.nn.utils.rnn import pad_sequence
+
+import spacy
+
+spacy_nlp = spacy.load("en_core_web_lg")
+
 from collections import defaultdict
 
-
+## General utilities.
 def escaped_timestamp():
     """[ret]: escaped string timestamp."""
     timestamp = datetime.datetime.now().isoformat()
@@ -31,9 +40,53 @@ def mkdir_if_necessary(path):
     return path
 
 
+## Utilities for language handling.
+
+EMBEDDING_CONTEXTUAL = "contextual"
+EMBEDDING_STATIC = "static"
+
+EMBEDDING_SIZE_SM = "embedding_size_sm"
+EMBEDDING_SIZE_LG = "embedding_size_lg"
+
+
+def untokenized_strings_to_pretrained_embeddings(
+    strings_tensor, embedding_type, embedding_size
+):
+    """
+    Tokenizes and embeds a set of strings.
+    :param:
+        strings_tensor: n_strings array of untokenized strings.
+        embedding_type: ["dummy", "contextual", "static"] - default choices around tokenizers.
+        embedding_size : [embedding_size_sm, embedding_size_lg] - whether to use a default smaller size of embeddings.
+    :ret:
+        tokens_tensor : unpadded list of n_strings x n_tokens
+        embedding_tensor: n_strings x max_len x embedding_dim : - embeddings for tokenized strings.
+        attention_mask: B x max_len - 1-hot mask indicating padding.
+    """
+    if embedding_type == EMBEDDING_STATIC:
+        # Tokenize using off the shelf tokenizer.
+        spacy_tokens_tensor = [
+            [token for token in spacy_nlp(sentence)] for sentence in strings_tensor
+        ]
+        tokens_tensor = [
+            [token.text for token in sentence] for sentence in spacy_tokens_tensor
+        ]
+        unpadded_token_embeddings = [
+            torch.tensor([token.vector for token in sentence])
+            for sentence in spacy_tokens_tensor
+        ]
+        padded_token_embeddings = pad_sequence(
+            unpadded_token_embeddings, batch_first=True
+        )
+        attention_mask = torch.sum(padded_token_embeddings, dim=-1) == 0
+        return tokens_tensor, padded_token_embeddings, attention_mask
+    elif embedding_type == EMBEDDING_CONTEXTUAL:
+        pass
+    else:
+        raise ValueError("Unknown embedding type.")
+
+
 ## Utilities for plotting.
-
-
 def generate_rel_plot(
     args, metrics_to_report, x_titles, y_titles, plot_title, y_lim=1.0
 ):

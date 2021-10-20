@@ -6,7 +6,7 @@ Utility functions for loading tasks and language for the compositional graphics 
 import os, dill
 from src.task_loaders import *
 
-ROOT_DIR = os.path.abspath(os.pardir)
+ROOT_DIR = os.path.abspath(os.getcwd())
 DEFAULT_DATA_DIRECTORY = os.path.join(ROOT_DIR, "data/compositional_graphics")
 OCAML_SPECIAL_HANDLER_LOGO = "LOGO"  # Special string flag for OCaml handling.
 
