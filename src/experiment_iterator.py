@@ -2,7 +2,7 @@
 experiment_iterator.py | Author : Catherine Wong.
 Utility classes for initializing and running iterated experiments from configs.
 """
-import os, json
+import os, json, random
 
 from dreamcoder.frontier import Frontier
 
@@ -56,6 +56,9 @@ class ExperimentState:
         self.curr_iteration = None
         self.metadata = self.init_metadata_from_config(config)
         self.init_log_and_export_from_config()
+
+        # Init random seed
+        random.seed(self.metadata[RANDOM_SEED])
 
     def init_tasks_from_config(self, config):
         task_loader = task_loaders.TaskLoaderRegistry[config[METADATA][TASKS_LOADER]]
@@ -189,6 +192,21 @@ class ExperimentState:
                 task_split, task_ids, include_samples, include_ground_truth_tasks
             )
         ]
+
+    def get_language_and_tasks_for_ids(
+        self,
+        task_split,
+        task_ids,
+        include_samples=False,
+        include_ground_truth_tasks=True,
+    ):
+        """Returns {task_id: array of language for list of task_ids}. If task_ids is ALL, returns all tasks in task_split and does NOT return samples."""
+        return {
+            task.name: self.task_language[task_split][task.name]
+            for task in self.get_tasks_for_ids(
+                task_split, task_ids, include_samples, include_ground_truth_tasks
+            )
+        }
 
     def get_tasks_for_ids(
         self,

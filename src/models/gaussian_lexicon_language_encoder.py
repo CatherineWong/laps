@@ -4,7 +4,6 @@ gmm_language_encoder.py | Author : Catherine Wong.
 Implements a generalized 'lexicon' for encoding sequences of vectors (eg. sentences with embedding representations for each token). Estimates parameters of the lexicon via single-component GMM over the embeddings; compresses sequences via MAP assignments to GMM components ('lexicon entries').
 
 TODO:
-    Investigate git issues for pushing.
     Investigate GMM initialization (seems to converge pseudorandomly.)
     Investigate behavior due to high dimensions - low-rank approximation?
     Investigate clustering (visual inspection).

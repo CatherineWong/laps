@@ -1,0 +1,110 @@
+{
+    "2": [
+        "two",
+        "twice",
+        "double"
+    ],
+    "3": [
+        "three",
+        "triple"
+    ],
+    "4": [
+        "four"
+    ],
+    "5": [
+        "five"
+    ],
+    "6": [
+        "six"
+    ],
+    "7": [
+        "seven"
+    ],
+    "8": [
+        "eight"
+    ],
+    "9": [
+        "nine"
+    ],
+    "arms": [
+        "appendages",
+        "spokes",
+        "limbs"
+    ],
+    "big": [
+        "huge",
+        "enormous",
+        "large"
+    ],
+    "circle": [
+        "ball"
+    ],
+    "concentric": [
+        "nested"
+    ],
+    "connected": [
+        "attached"
+    ],
+    "gon": [
+        "shape"
+    ],
+    "line": [
+        "dash"
+    ],
+    "medium": [
+        "middling"
+    ],
+    "next": [
+        "near"
+    ],
+    "pointed": [
+        "pointy",
+        "sided"
+    ],
+    "row": [
+        "line"
+    ],
+    "semicircle": [
+        "half circle",
+        "half of a circle"
+    ],
+    "separated": [
+        "apart"
+    ],
+    "short": [
+        "small",
+        "little"
+    ],
+    "small": [
+        "tiny",
+        "littler",
+        "smaller"
+    ],
+    "snowflake": [
+        "flower",
+        "clover"
+    ],
+    "space": [
+        "empty space",
+        "emptiness",
+        "blank"
+    ],
+    "spiral": [
+        "turning",
+        "twisty",
+        "wifi symbol"
+    ],
+    "staircase": [
+        "zigzag",
+        "stairs",
+        "steps"
+    ],
+    "star": [
+        "flower",
+        "snowflake"
+    ],
+    "zigzag": [
+        "wiggle",
+        "stairs"
+    ]
+}

@@ -38,11 +38,11 @@ amortized_synthesis_config_block = {
 
 TEST_GRAPHICS_CONFIG = {
     METADATA: {
-        EXPERIMENT_ID: "dreamcoder_compositional_graphics_200_human",
+        EXPERIMENT_ID: "dreamcoder_compositional_graphics_200_synthetic",
         LOG_DIRECTORY: "experiments/outputs/compositional_graphics",
         EXPORT_DIRECTORY: "experiments/logs/compositional_graphics",
         TASKS_LOADER: CompositionalGraphics200Loader.name,
-        TASK_LANGUAGE_LOADER: CompositionalGraphics200HumanLanguageLoader.name,
+        TASK_LANGUAGE_LOADER: CompositionalGraphics200SyntheticLanguageLoader.name,
         INIT_FRONTIERS_FROM_CHECKPOINT: False,
         OCAML_SPECIAL_HANDLER: OCAML_SPECIAL_HANDLER_LOGO,
         RANDOM_SEED: 0,
