@@ -78,6 +78,11 @@ class SynonymLanguageEncoder(model_loaders.ModelLoader):
                     keep_original=keep_original,
                     max_samples_per_synonyms=max_samples_per_synonyms,
                 )
+        # Set all of the tasks to this.
+        for task_id in tasks_to_synonym_language:
+            experiment_state.task_language[task_split][
+                task_id
+            ] = tasks_to_synonym_language[task_id]
         return tasks_to_synonym_language
 
     def generate_synonym_language_for_sentence(

@@ -43,6 +43,12 @@ def test_generate_synomym_language_all():
     for sentences in tasks_to_synonym_language.values():
         assert len(sentences) == max_samples_per_synonym
 
+    for task_id in tasks_to_synonym_language:
+        assert (
+            test_experiment_state.task_language[TRAIN][task_id]
+            == tasks_to_synonym_language[task_id]
+        )
+
 
 def test_generate_synonym_language_for_sentence():
     word2synonyms = {
