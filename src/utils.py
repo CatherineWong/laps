@@ -45,15 +45,10 @@ def mkdir_if_necessary(path):
 EMBEDDING_CONTEXTUAL = "contextual"
 EMBEDDING_STATIC = "static"
 
-EMBEDDING_SIZE_SM = "embedding_size_sm"
-EMBEDDING_SIZE_LG = "embedding_size_lg"
-
 CONTEXTUAL_DEFAULT_MODEL = "distilbert-base-uncased"
 
 
-def untokenized_strings_to_pretrained_embeddings(
-    strings_tensor, embedding_type, embedding_size
-):
+def untokenized_strings_to_pretrained_embeddings(strings_tensor, embedding_type):
     """
     Tokenizes and embeds a set of strings.
     :param:
@@ -67,6 +62,13 @@ def untokenized_strings_to_pretrained_embeddings(
     """
     if embedding_type == EMBEDDING_STATIC:
         # Tokenize using off the shelf tokenizer.
+        def replace_unk_like(vector, off_set=1.0):
+            # Don't allow spacy to use 0-vector as UNK.
+            if vector.sum() == 0:
+                return vector - off_set
+            else:
+                return vector
+
         spacy_tokens_tensor = [
             [token for token in spacy_nlp(sentence)] for sentence in strings_tensor
         ]
@@ -74,9 +76,10 @@ def untokenized_strings_to_pretrained_embeddings(
             [token.text for token in sentence] for sentence in spacy_tokens_tensor
         ]
         unpadded_token_embeddings = [
-            torch.tensor([token.vector for token in sentence])
+            torch.tensor([replace_unk_like(token.vector) for token in sentence])
             for sentence in spacy_tokens_tensor
         ]
+
     elif embedding_type == EMBEDDING_CONTEXTUAL:
         from transformers import AutoTokenizer, AutoModel, pipeline
 
@@ -86,15 +89,18 @@ def untokenized_strings_to_pretrained_embeddings(
 
         # Redundant: we get the tokens again so we can have their string values
         tokens_tensor = [
-            tokenizer.convert_ids_to_tokens(token_ids)
+            tokenizer.convert_ids_to_tokens(token_ids[1:-1])
             for token_ids in tokenizer(strings_tensor)["input_ids"]
         ]
 
         # TODO (@catwong): replace pipeline if this is too slow to do redundantly
         unpadded_token_embeddings = [
-            torch.tensor(sentence_embeddings).squeeze()
+            torch.tensor(sentence_embeddings).squeeze()[1:-1]
             for sentence_embeddings in nlp(strings_tensor)
         ]
+
+    else:
+        raise ValueError(f"Unknown embedding type: {embedding_type}")
 
     padded_token_embeddings = pad_sequence(unpadded_token_embeddings, batch_first=True)
     attention_mask = torch.sum(padded_token_embeddings, dim=-1) == 0

@@ -24,6 +24,7 @@ from data.compositional_graphics.grammar import *
 from data.compositional_graphics.encoder import *
 
 from src.models.laps_dreamcoder_recognition import *
+from src.models.gaussian_lexicon_language_encoder import *
 
 DEFAULT_CONFIG_DIR = "experiments/configs"
 

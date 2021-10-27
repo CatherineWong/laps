@@ -13,7 +13,6 @@ def test_untokenized_strings_to_pretrained_embeddings_static():
     ) = untokenized_strings_to_pretrained_embeddings(
         strings_tensor,
         embedding_type=EMBEDDING_STATIC,
-        embedding_size=EMBEDDING_SIZE_SM,
     )
     assert len(embedding_tensor.size()) == 3
     assert embedding_tensor.size()[0] == len(strings_tensor)
@@ -37,7 +36,6 @@ def test_untokenized_strings_to_pretrained_embeddings_contextual():
     ) = untokenized_strings_to_pretrained_embeddings(
         strings_tensor,
         embedding_type=EMBEDDING_CONTEXTUAL,
-        embedding_size=EMBEDDING_SIZE_SM,
     )
     assert len(embedding_tensor.size()) == 3
     assert embedding_tensor.size()[0] == len(strings_tensor)

@@ -1,0 +1,53 @@
+{
+    "metadata": {
+        "experiment_id": "gmm_lexicon_compositional_graphics_200_human",
+        "human_readable": "Fits a GMM lexicon. Domain: compositional graphics 200. Human language.",
+        "export_directory": null,
+        "log_directory": null,
+        "tasks_loader": "compositional_graphics_200",
+        "task_language_loader": "compositional_graphics_200_human",
+        "resume_checkpoint_directory": null,
+        "init_frontiers_from_checkpoint": false,
+        "ocaml_special_handler": "LOGO",
+        "random_seed": 0
+    },
+    "model_initializers": [
+        {
+            "model_type": "grammar",
+            "model_loader": "LOGO",
+            "model_initializer_fn": "load_model",
+            "params": {}
+        },
+        {
+            "model_type": "language_encoder",
+            "model_loader": "gaussian_lexicon_language_encoder",
+            "model_initializer_fn": "load_model",
+            "params": {}
+        }
+    ],
+    "experiment_iterator": {
+        "max_iterations": 1,
+        "task_batcher": "ordered_task_batcher",
+        "loop_blocks": [
+            {
+                "experiment_block_type": "model_fn",
+                "model_type": "language_encoder",
+                "model_fn": "optimize_model_for_frontiers",
+                "task_split": "train",
+                "task_batch_size": 15,
+                "params": {
+                    "language_embedding_type": "static",
+                    "n_lexicon_entries": 15
+                }
+            },
+            {
+                "experiment_block_type": "model_fn",
+                "model_type": "language_encoder",
+                "model_fn": "visualize_lexicon_and_map_assignments_to_lexicon",
+                "task_split": "train",
+                "task_batch_size": "all",
+                "params": {}
+            }
+        ]
+    }
+}
