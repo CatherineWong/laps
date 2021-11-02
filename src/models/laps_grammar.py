@@ -63,6 +63,10 @@ class LAPSGrammar(Grammar):
     STRUCTURE_PENALTY = "structure_penalty"
     TOP_K = "top_k"  # Compress with respect to the top K frontiers.
 
+    def __init__(self, logVariable, productions, continuationType=None):
+        self.primitive_prefix = ""
+        super().__init__(logVariable, productions, continuationType=continuationType)
+
     def infer_programs_for_tasks(
         self,
         experiment_state,

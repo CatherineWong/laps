@@ -77,6 +77,16 @@ parser.add_argument(
     action="store_true",
     help="Debug flag: avoids training the model.",
 )
+parser.add_argument(
+    "--db_output_language_and_programs",
+    action="store_true",
+    help="Debug flag: if true, prints language and current programs.",
+)
+parser.add_argument(
+    "--db_output_prompt_for_external_parser",
+    action="store_true",
+    help="Debug flag: if true, prints language and current programs.",
+)
 
 # Hyperparameters for the tests and compressor.
 parser.add_argument(
@@ -167,6 +177,7 @@ def test_discrimination_original_final_libraries_full(args, config):
         print(
             f"Iteration: {train_iteration}. Train task subset: {len(train_task_subset)} tasks: up to {train_task_subset[-1].name}"
         )
+
         # Make the comparison experiment_state by compressing the frontiers.
         compressed_experiment_state = get_initial_ground_truth_experiment_state(config)
 
@@ -196,6 +207,14 @@ def test_discrimination_original_final_libraries_full(args, config):
             (INITIAL, initial_ground_truth_experiment_state),
             (COMPRESSED, compressed_experiment_state),
         ]:
+            if args.db_output_language_and_programs:
+                report_language_and_programs(
+                    train_iteration,
+                    train_task_subset,
+                    experiment_state,
+                    args.db_output_prompt_for_external_parser,
+                )
+
             metrics_to_report[header][NUM_TRAIN_TASKS].append(len(train_task_subset))
 
             # Train the model with respect to the train task subset.
@@ -351,6 +370,31 @@ def test_heldout_scores_with_model_reranking(
             model_sorted_grammars,
             top_k_candidates_to_evaluate_on_heldout,
         )
+
+
+def report_language_and_programs(
+    train_iteration,
+    train_task_subset,
+    experiment_state,
+    output_prompt_for_external_parser,
+):
+    """Reports the language and programs for tasks."""
+    print(
+        f"Reporting the language and programs at iteration: {train_iteration} for {len(train_task_subset)} tasks."
+    )
+    for task in train_task_subset:
+        language_for_task = experiment_state.task_language[TRAIN][task.name]
+        print(
+            f"//For instance, here's the code that draws an image that people called: {str(language_for_task)}"
+        )
+        for entry in experiment_state.task_frontiers[TRAIN][task].entries:
+            code_string = str(entry.program)
+            if output_prompt_for_external_parser:
+                code_string = code_string.replace(
+                    experiment_state.models[GRAMMAR].primitive_prefix, ""
+                )
+            print(code_string)
+        print("\n")
 
 
 def report_model_baseline_top_k_candidates_heldout_likelihoods(

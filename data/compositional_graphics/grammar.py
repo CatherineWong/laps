@@ -29,4 +29,6 @@ class LogoGrammarLoader(ModelLoader):
         grammar = LAPSGrammar.uniform(
             logo_primitives, continuationType=logoPrimitives.turtle
         )
+
+        grammar.primitive_prefix = "logo_"
         return grammar
