@@ -18,6 +18,7 @@ Decoders:
 from collections import defaultdict
 from typing import List
 
+import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -800,6 +801,45 @@ class Seq2Seq(nn.Module, model_loaders.ModelLoader):
             "n_examples_per_task": n_examples_per_task.tolist(),
         }
 
+    def _make_cross_val_iterator(
+        self,
+        experiment_state,
+        task_split=TRAIN,
+        task_batch_ids=ALL,
+        cv_folds=3,
+    ):
+        """Splits the dataset into `cv_folds` folds of equal size and returns an
+        iterator over task_ids.
+
+        :params:
+            experiment_state: ExperimentState object.
+            task_split: which split to train tasks on.
+            task_batch_ids: list of IDs of tasks to train on or ALL to train
+                on all possible solved tasks in the split.
+            cv_folds: Number of cross validation folds.
+
+        :yields:
+            Iterator of (train_ids, val_ids). Generates cv_folds such tuples.
+
+        """
+        tasks = np.array(
+            experiment_state.get_tasks_for_ids(
+                task_split=task_split, task_ids=task_batch_ids
+            )
+        )
+        all_ids = [t.name for t in tasks]
+        np.random.seed(0)
+        np.random.shuffle(all_ids)
+
+        folds = np.array_split(all_ids, indices_or_sections=cv_folds)
+        for val_idx in range(cv_folds):
+            # Leave out fold val_idx
+            train_ids, val_ids = [], list(folds[val_idx])
+            for i, fold in enumerate(folds):
+                if i != val_idx:
+                    train_ids += list(fold)
+            yield (train_ids, val_ids)
+
     def optimize_model_for_frontiers(
         self,
         experiment_state,
@@ -809,6 +849,7 @@ class Seq2Seq(nn.Module, model_loaders.ModelLoader):
         learning_rate=1e-2,
         early_stopping_epsilon=1e-4,
         early_stopping_patience=5,
+        cv_folds=3,
     ):
         """Train the model with respect to the tasks in task_batch_ids.
         The model is trained to regress from a task encoding according to
@@ -831,6 +872,18 @@ class Seq2Seq(nn.Module, model_loaders.ModelLoader):
 
         On completion, model parameters should be updated to the trained model.
         """
+        cv_iterator = self._make_cross_val_iterator(
+            experiment_state,
+            task_split=task_split,
+            task_batch_ids=task_batch_ids,
+            cv_folds=cv_folds,
+        )
+
+        for train_ids, val_ids in cv_iterator:
+            print(train_ids, val_ids)
+
+        exit()
+
         encoder_optimizer = Adam(params=self.encoder.parameters(), lr=learning_rate)
         decoder_optimizer = Adam(params=self.decoder.parameters(), lr=learning_rate)
 
