@@ -45,6 +45,8 @@ class LAPSGrammar(Grammar):
     DEFAULT_API_COMPRESSOR = "compression_rescoring_api"
     DEFAULT_MAX_COMPRESSION = 1000
 
+    DREAMEGG_COMPRESSOR_TYPE = "dreamegg"
+
     # API keys for the OCaml compressor API.
     API_FN, REQUIRED_ARGS, KWARGS = "api_fn", "required_args", "kwargs"
     GRAMMAR, FRONTIERS, COMPRESSION_SCORES = (
@@ -212,6 +214,7 @@ class LAPSGrammar(Grammar):
         compressor_type=DEFAULT_COMPRESSOR_TYPE,
         compressor=DEFAULT_API_COMPRESSOR,
         compressor_directory=DEFAULT_BINARY_DIRECTORY,
+        experiment_state=None,
     ):
         """Caller for invoking an API function implemented in the the OCaml compression_rescoring_api binary. Function names and signatures are defined in compression_rescoring_api.ml.
         Expects:
@@ -233,11 +236,6 @@ class LAPSGrammar(Grammar):
             kwargs: any other response arguments.
         }
         """
-        if compressor_type != self.DEFAULT_COMPRESSOR_TYPE:
-            # Legacy Dreamcoder library supports Python enumeration
-            raise NotImplementedError
-        # Construct the JSON message.
-
         grammar = grammar if grammar is not None else self
         non_empty_frontiers = {
             split: [f for f in frontiers[split] if not f.empty] for split in frontiers
@@ -253,42 +251,88 @@ class LAPSGrammar(Grammar):
             },
             self.KWARGS: kwargs,
         }
-        json_serialized_binary_message = json.dumps(json_serialized_binary_message)
+        if compressor_type == self.DREAMEGG_COMPRESSOR_TYPE:
+            # Experimental: use a DreamEgg compressor.
+            self.send_receive_dreamegg_compressor_call(
+                grammar,
+                json_serialized_binary_message,
+                output_directory=None,
+            )
+        if compressor_type == self.DEFAULT_COMPRESSOR_TYPE:
+            json_serialized_binary_message = json.dumps(json_serialized_binary_message)
 
-        ocaml_binary_path = os.path.join(
-            get_root_dir(), compressor_directory, compressor
-        )
-        try:
-            process = subprocess.Popen(
-                ocaml_binary_path, stdin=subprocess.PIPE, stdout=subprocess.PIPE
+            ocaml_binary_path = os.path.join(
+                get_root_dir(), compressor_directory, compressor
             )
-            json_response, json_error = process.communicate(
-                bytes(json_serialized_binary_message, encoding="utf-8")
-            )
-            json_response = json.loads(json_response.decode("utf-8"))
-        except Exception as e:
-            print(f"Error in _send_receive_compressor_api_call: {e}")
+            try:
+                process = subprocess.Popen(
+                    ocaml_binary_path, stdin=subprocess.PIPE, stdout=subprocess.PIPE
+                )
+                json_response, json_error = process.communicate(
+                    bytes(json_serialized_binary_message, encoding="utf-8")
+                )
+                json_response = json.loads(json_response.decode("utf-8"))
+            except Exception as e:
+                print(f"Error in _send_receive_compressor_api_call: {e}")
 
-        json_deserialized_response = json_response
-        json_deserialized_response[self.REQUIRED_ARGS][self.GRAMMAR] = [
-            self._deserialize_json_grammar(serialized_grammar)
-            for serialized_grammar in json_response[self.REQUIRED_ARGS][self.GRAMMAR]
-        ]
+            json_deserialized_response = json_response
+            json_deserialized_response[self.REQUIRED_ARGS][self.GRAMMAR] = [
+                self._deserialize_json_grammar(serialized_grammar)
+                for serialized_grammar in json_response[self.REQUIRED_ARGS][
+                    self.GRAMMAR
+                ]
+            ]
 
-        new_grammars = json_deserialized_response[self.REQUIRED_ARGS][self.GRAMMAR]
-        # Deserialize the frontiers with respect to their corresponding grammar.
-        json_deserialized_response[self.REQUIRED_ARGS][self.FRONTIERS] = [
-            self._deserialize_json_frontiers(
-                new_grammars[grammar_idx],
-                non_empty_frontiers=non_empty_frontiers,
-                json_frontiers=json_frontiers,
+            new_grammars = json_deserialized_response[self.REQUIRED_ARGS][self.GRAMMAR]
+            # Deserialize the frontiers with respect to their corresponding grammar.
+            json_deserialized_response[self.REQUIRED_ARGS][self.FRONTIERS] = [
+                self._deserialize_json_frontiers(
+                    new_grammars[grammar_idx],
+                    non_empty_frontiers=non_empty_frontiers,
+                    json_frontiers=json_frontiers,
+                )
+                for grammar_idx, json_frontiers in enumerate(
+                    json_deserialized_response[self.REQUIRED_ARGS][self.FRONTIERS]
+                )
+            ]
+            json_serialized_binary_message = json.loads(json_serialized_binary_message)
+            return (
+                json_deserialized_response,
+                json_error,
+                json_serialized_binary_message,
             )
-            for grammar_idx, json_frontiers in enumerate(
-                json_deserialized_response[self.REQUIRED_ARGS][self.FRONTIERS]
-            )
-        ]
-        json_serialized_binary_message = json.loads(json_serialized_binary_message)
-        return json_deserialized_response, json_error, json_serialized_binary_message
+
+    def send_receive_dreamegg_compressor_call(
+        self,
+        grammar,
+        json_serialized_binary_message,
+        output_directory=None,
+        splits=[task_loaders.TRAIN],
+    ):
+        if output_directory == None:
+            output_directory = os.path.join(self.DREAMEGG_COMPRESSOR_TYPE, "data")
+        output_file = os.path.join(output_directory, "tmp.json")
+
+        dreamegg_formatted_frontiers = []
+        for split in splits:
+            for frontier in json_serialized_binary_message[self.REQUIRED_ARGS][
+                self.FRONTIERS
+            ][split]:
+                for program in frontier["programs"]:
+                    dreamegg_formatted_frontiers.append(
+                        self._dreamcoder_dreamegg_program(
+                            program["program"], send_to=self.DREAMEGG_COMPRESSOR_TYPE
+                        )
+                    )
+        with open(output_file, "w") as f:
+            json.dump(dreamegg_formatted_frontiers, f)
+
+    def _dreamcoder_dreamegg_program(self, program_string, send_to):
+        if send_to == self.DREAMEGG_COMPRESSOR_TYPE:
+            program_string = program_string.replace("lambda", "lam")
+        else:
+            program_string = program_string.replace("lam", "lambda")
+        return program_string
 
     def _deserialize_json_grammar(self, json_grammar):
         return LAPSGrammar(
@@ -415,6 +459,7 @@ class LAPSGrammar(Grammar):
             compressor_type=compressor_type,
             compressor=compressor,
             compressor_directory=compressor_directory,
+            experiment_state=experiment_state,
         )
 
         grammar_candidates = json_deserialized_response[self.REQUIRED_ARGS][

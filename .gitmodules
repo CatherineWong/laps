@@ -4,3 +4,6 @@
 [submodule "data/lax"]
 	path = data/lax
 	url = https://github.com/cogtoolslab/lax
+[submodule "dreamegg"]
+	path = dreamegg
+	url = https://github.com/mlb2251/dreamegg
