@@ -880,6 +880,10 @@ class Seq2Seq(nn.Module, model_loaders.ModelLoader):
         )
 
         for train_ids, val_ids in cv_iterator:
+            # Re-init models on each fold
+            self._initialize_encoders(experiment_state, self.task_encoder_types)
+            self._initialize_decoder(experiment_state)
+            
             print(train_ids, val_ids)
 
         exit()
