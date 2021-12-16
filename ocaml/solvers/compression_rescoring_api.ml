@@ -43,6 +43,9 @@ let frontiers_string = "frontiers";;
 let compression_scores_string = "compression_scores"
 let train_string = "train";;
 let test_string = "test" ;;
+let candidates_string = "candidates";;
+let train_scores_string = "train_scores";;
+let test_scores_string = "test_scores";;
 
 
 (** API Function handlers. All API functions are registered in the api_fn_handlers table. *)
@@ -109,6 +112,39 @@ register_api_fn "get_compressed_grammar_candidates_and_rewritten_frontiers" (fun
   let max_candidates_per_compression_step, max_grammar_candidates_to_retain_for_rewriting, max_compression_steps, top_k, arity, pseudocounts, structure_penalty, aic, cpus, language_alignments_weight, language_alignments = deserialize_compressor_kwargs kwargs in
 
   let compressed_grammar_candidates, compression_scores_candidates, rewritten_train_frontiers_candidates, rewritten_test_frontiers_candidates = compress_grammar_candidates_and_rewrite_frontiers_for_each ~grammar ~train_frontiers ~test_frontiers ~language_alignments ~max_candidates_per_compression_step ~max_grammar_candidates_to_retain_for_rewriting ~max_compression_steps ~top_k ~arity ~pseudocounts ~structure_penalty ~aic ~cpus  ~language_alignments_weight in 
+
+  let serialized_frontiers = List.map2_exn rewritten_train_frontiers_candidates rewritten_test_frontiers_candidates ~f: (fun train_frontiers test_frontiers ->
+    `Assoc([
+        train_string, `List(train_frontiers |> List.map ~f:serialize_frontier);
+        test_string, `List(test_frontiers |> List.map ~f:serialize_frontier);
+      ])
+    ) in 
+  let serialized_response = `Assoc([
+    required_args_string, `Assoc([
+      grammar_string, `List(compressed_grammar_candidates |> List.map ~f:serialize_grammar);
+      frontiers_string, `List(serialized_frontiers);
+      compression_scores_string, `List(compression_scores_candidates |> List.map ~f:(fun score -> `Float(score)))
+    ])
+  ]) in 
+  serialized_response
+);;
+
+(** get_candidate_oracle_costs: compresses with respect to train and test frontiers and returns costs for candidates
+under each.
+  Returns JSON response containing: 
+    train: {candidates, train_scores, test_scores},
+    test: {candidates, train_scores, test_scores}
+    Where inventions: [array of k programs wrt. the split frontiers]
+    scores: [array of corresponding scores wrt. the split frontiers]
+
+*)
+register_api_fn "get_candidate_oracle_costs" (fun grammar train_frontiers test_frontiers kwargs ->
+  let () = (Printf.eprintf "[ocaml] get_candidate_oracle_costs \n") in 
+  let () = (Printf.eprintf "[ocaml] Compressing grammar and rewriting candidates from %d train_frontiers and %d test_frontiers \n" (List.length train_frontiers) (List.length test_frontiers)) in 
+
+  let max_candidates_per_compression_step, max_grammar_candidates_to_retain_for_rewriting, max_compression_steps, top_k, arity, pseudocounts, structure_penalty, aic, cpus, language_alignments_weight, language_alignments = deserialize_compressor_kwargs kwargs in
+
+  let train_candidates, train_train_scores, train_test_scores, test_candidates, test_train_scores, test_test_scores = get_candidate_oracle_costs ~grammar ~train_frontiers ~test_frontiers ~language_alignments ~max_candidates_per_compression_step ~max_grammar_candidates_to_retain_for_rewriting ~max_compression_steps ~top_k ~arity ~pseudocounts ~structure_penalty ~aic ~cpus  ~language_alignments_weight in 
 
   let serialized_frontiers = List.map2_exn rewritten_train_frontiers_candidates rewritten_test_frontiers_candidates ~f: (fun train_frontiers test_frontiers ->
     `Assoc([

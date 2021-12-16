@@ -1,6 +1,6 @@
 [submodule "dreamcoder"]
 	path = dreamcoder
-	url = https://github.com/CatherineWong/laps_dreamcoder
+	url = git@github.com:CatherineWong/laps_dreamcoder.git
 [submodule "data/lax"]
 	path = data/lax
-	url = https://github.com/cogtoolslab/lax
+	url = git@github.com:cogtoolslab/lax.git

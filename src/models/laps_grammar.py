@@ -349,6 +349,61 @@ class LAPSGrammar(Grammar):
             }
         ]
         return grammar_frontier_score_candidates
+    
+    def _get_candidate_oracle_costs(
+        self,
+        experiment_state,
+        task_splits,
+        task_ids_in_splits,
+        max_candidates_per_compression_step,
+        max_compression_steps,
+        top_k=DEFAULT_TOP_K,
+        pseudocounts=DEFAULT_PSEUDOCOUNTS,
+        arity=DEFAULT_ARITY,
+        aic=DEFAULT_AIC,
+        structure_penalty=DEFAULT_STRUCTURE_PENALTY,
+        compressor_type=DEFAULT_COMPRESSOR_TYPE,
+        compressor=DEFAULT_API_COMPRESSOR,
+        compressor_directory=DEFAULT_BINARY_DIRECTORY,
+        cpus=DEFAULT_CPUS,
+    ):
+        """
+        Corresponding OCaml API function: 
+        get_candidate_oracle_costs
+        Given train frontiers and test frontiers, returns:
+            train_candidates, train_costs, test_costs
+            test_candidates, train_costs, test_costs
+        Where candidates are an array of inventions discovered wrt. the split frontiers;
+        ; train_costs are their costs under the train frontiers; 
+        ; test_costs are their costs under the test frontiers;
+        """
+        api_fn = "get_candidate_oracle_costs"
+        frontiers = experiment_state.get_frontiers_for_ids_in_splits(
+            task_splits=task_splits,
+            task_ids_in_splits=task_ids_in_splits,
+            include_samples=False,
+        )
+        # Build the standard KWARGS.
+        kwargs = {
+            self.MAX_CANDIDATES_PER_COMPRESSION_STEP: max_candidates_per_compression_step,
+            self.MAX_COMPRESSION_STEPS: max_compression_steps,
+            self.ARITY: arity,
+            self.PSEUDOCOUNTS: pseudocounts,
+            self.AIC: aic,
+            self.CPUS: cpus,
+            self.STRUCTURE_PENALTY: structure_penalty,
+            self.TOP_K: top_k,
+        }
+        json_deserialized_response, _, _ = self._send_receive_compressor_api_call(
+            api_fn=api_fn,
+            grammar=self,
+            frontiers=frontiers,
+            kwargs=kwargs,
+            compressor_type=compressor_type,
+            compressor=compressor,
+            compressor_directory=compressor_directory,
+        )
+        import pdb; pdb.set_trace();
 
     def _get_compressed_grammar_candidates_and_rewritten_frontiers(
         self,

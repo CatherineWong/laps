@@ -9,3 +9,4 @@ git submodule update --init --recursive
 cat laps_requirements.txt |  xargs -n 1 pip install --user
 # Install the NLTK word tokenize package.
 python -m nltk.downloader 'punkt'
+

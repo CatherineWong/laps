@@ -82,6 +82,36 @@ def test_laps_grammar_optimize_grammar_frontiers_for_frontiers():
     assert type(test_experiment_state.models[GRAMMAR]) == pre_compression_grammar_type
 
 
+def test_laps_grammar_get_candidate_oracle_costs_ocaml():
+    test_config = TEST_GRAPHICS_CONFIG
+    test_experiment_state = ExperimentState(test_config)
+
+    test_grammar = test_experiment_state.models[GRAMMAR]
+
+    test_frontiers = test_experiment_state.get_frontiers_for_ids_in_splits(
+        task_splits=[task_loaders.TRAIN, task_loaders.TEST],
+        task_ids_in_splits={
+            task_loaders.TRAIN: ["a small triangle", "a medium triangle"],
+            task_loaders.TEST: ["6 concentric square s", "a medium square next to a medium triangle"],
+        },
+    )
+
+    (
+        json_response,
+        json_error,
+        json_serialized_binary_message,
+    ) = test_grammar._get_candidate_oracle_costs(
+        experiment_state=test_experiment_state,
+        task_splits=[task_loaders.TRAIN, task_loaders.TEST],
+        task_ids_in_splits={
+            task_loaders.TRAIN: ["a small triangle", "a medium triangle"],
+            task_loaders.TEST: ["6 concentric square s", "a medium square next to a medium triangle"],
+        },
+        max_candidates_per_compression_step=5,
+        max_compression_steps=1,
+        arity=1,
+    )
+
 def test_laps_grammar_send_receive_compressor_api_call():
     test_config = TEST_GRAPHICS_CONFIG
     test_experiment_state = ExperimentState(test_config)
