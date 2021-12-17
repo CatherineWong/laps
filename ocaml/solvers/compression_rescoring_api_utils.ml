@@ -22,7 +22,7 @@ open Grammar
 (* open Eg *)
 open Versions
 
-let verbose_compression = ref false;; (** Debug flag for verbose compression **)
+let verbose_compression = ref true;; (** Debug flag for verbose compression **)
 
 (* If this is true, then we collect and report data on the sizes of the version spaces, for each program, and also for each round of inverse beta *)
 let collect_data = ref false;;
@@ -874,10 +874,94 @@ let illustrate_new_primitive new_grammar primitive frontiers =
     Printf.eprintf "[ocaml] Here is where it is used:\n";
     illustrations |> List.iter ~f:(fun program -> Printf.eprintf "  %s\n" (string_of_program program));;
 
+let calculate_version_space_local_frontiers inline arity v frontiers =
+  (* calculate candidates from the frontiers we can see *)
+  let frontier_indices : int list list = time_it ~verbose:!verbose_compression
+      "(worker) calculated version spaces" (fun () ->
+      !frontiers |> List.map ~f:(fun f -> f.programs |> List.map ~f:(fun (p,_) ->
+              incorporate v p |> n_step_inversion v ~inline ~n:arity))) in
+  if !collect_data then begin
+    List.iter2_exn !frontiers frontier_indices ~f:(fun frontier indices ->
+        List.iter2_exn (frontier.programs) indices ~f:(fun (p,_) index ->
+            let rec program_size = function
+              | Apply(f,x) -> 1 + program_size f + program_size x
+              | Abstraction(b) -> 1 + program_size b
+              | Index(_) | Invented(_,_) | Primitive(_,_,_) -> 1
+            in
+            let rec program_height = function
+              | Apply(f,x) -> 1 + (max (program_height f) (program_height x))
+              | Abstraction(b) -> 1 + program_height b
+              | Index(_) | Invented(_,_) | Primitive(_,_,_) -> 1
+            in
+            Printf.eprintf "DATA\t%s\tsize=%d\theight=%d\t|vs|=%d\t|[vs]|=%f\n" (string_of_program p)
+              (program_size p) (program_height p)
+              (reachable_versions v [index] |> List.length)
+              (log_version_size v index)
+          ))
+  end;
+  if !verbose_compression then
+    Printf.eprintf "(worker) %d distinct version spaces enumerated; %d accessible vs size; vs log sizes: %s\n"
+      v.i2s.ra_occupancy
+      (frontier_indices |> List.concat |> reachable_versions v |> List.length)
+      (frontier_indices |> List.concat |> List.map ~f:(Float.to_string % log_version_size v)
+       |> join ~separator:"; ");
+
+  let v, frontier_indices = garbage_collect_versions ~verbose:!verbose_compression v frontier_indices in
+  Gc.compact();
+  v, frontier_indices
+
+let build_cost_table_and_candidates v frontier_indices =
+  let cost_table = empty_cost_table v in
+
+  (* pack the candidates into a version space for efficiency *)
+  let candidate_table = new_version_table() in
+  let candidates : int list list = time_it ~verbose:!verbose_compression "(worker) proposed candidates"
+      (fun () ->
+      let reachable : int list list = frontier_indices |> List.map ~f:(reachable_versions v) in
+      let inhabitants : int list list = reachable |> List.map ~f:(fun indices ->
+          List.concat_map ~f:(snd % minimum_cost_inhabitants cost_table) indices |>
+          List.dedup_and_sort ~compare:(-) |> 
+          List.map ~f:(List.hd_exn % extract v) |>
+          List.filter ~f:nontrivial |>
+          List.map ~f:(incorporate candidate_table)) in 
+          inhabitants)
+  in
+  if !verbose_compression then Printf.eprintf "(worker) Total candidates: [%s] = %d, packs into %d vs\n"
+      (candidates |> List.map ~f:(Printf.sprintf "%d" % List.length) |> join ~separator:";")
+      (candidates |> List.map ~f:List.length |> sum)
+      (candidate_table.i2s.ra_occupancy);
+  flush_everything();
+  cost_table, candidates, candidate_table
+
+(** TODO: already make this parallel. *)
+let candidate_comparison_worker ~inline ~arity ~topK ~split_name g frontiers =
+  let _ = (Printf.eprintf "Calculating version table for split: %s with %d frontiers\n" (split_name) (List.length frontiers)) in 
+  let original_frontiers = frontiers in
+  let frontiers = ref (List.map ~f:(restrict ~topK g) frontiers) in
+
+  (** Calculate the local candidates. *)
+  let v = new_version_table() in
+  let v, frontier_indices = calculate_version_space_local_frontiers inline arity v frontiers in 
+  let cost_table, candidates, candidate_table = build_cost_table_and_candidates v frontier_indices in
+
+  (** Calculate the scores of the local candidates with respect to themselves. *)
+  let split_scores : float list = time_it ~verbose:!verbose_compression "(worker) beamed version spaces"
+      (fun () ->
+      beam_costs' ~ct:cost_table ~bs:1000000 candidates frontier_indices)
+  in
+
+  let candidates, split_scores, comparison_scores = [], [], []
+  in candidates, split_scores, comparison_scores
+
+
 let get_candidate_oracle_costs ~grammar ~train_frontiers ~test_frontiers ?language_alignments:(language_alignments=[]) ~max_candidates_per_compression_step ~max_compression_steps ~top_k ~arity ~pseudocounts ~structure_penalty ~aic ~cpus  ?language_alignments_weight:(language_alignments_weight=0.0) = 
-  let train_candidates, train_train_scores, train_test_scores = [], [], [] in
-  let test_candidates, test_train_scores, test_test_scores = [], [], []
-  in train_candidates, train_train_scores, train_test_scores, test_candidates, test_train_scores, test_test_scores
+  (** get_candidate_oracle_costs: constructs cost tables  with respect to train and test frontiers.*)
+
+  (** We will do this inline for now and then factor it out later. *)
+  
+  let train_candidates, train_train_scores, train_test_scores = candidate_comparison_worker ~inline:true ~arity ~topK:top_k ~split_name:"train" grammar train_frontiers in
+  let test_candidates, test_test_scores, test_train_scores = candidate_comparison_worker ~inline:true ~arity ~topK:top_k ~split_name:"test" grammar test_frontiers in
+  train_candidates, train_train_scores, train_test_scores, test_candidates, test_train_scores, test_test_scores
 
 let compress_grammar_candidates_and_rewrite_frontiers_for_each ~grammar ~train_frontiers ~test_frontiers ?language_alignments:(language_alignments=[]) ~max_candidates_per_compression_step
 ~max_grammar_candidates_to_retain_for_rewriting ~max_compression_steps ~top_k ~arity ~pseudocounts ~structure_penalty ~aic ~cpus  ?language_alignments_weight:(language_alignments_weight=0.0) = 

@@ -85,16 +85,11 @@ def test_laps_grammar_optimize_grammar_frontiers_for_frontiers():
 def test_laps_grammar_get_candidate_oracle_costs_ocaml():
     test_config = TEST_GRAPHICS_CONFIG
     test_experiment_state = ExperimentState(test_config)
+    test_experiment_state.initialize_ground_truth_task_frontiers(task_loaders.TRAIN)
+    test_experiment_state.initialize_ground_truth_task_frontiers(task_loaders.TEST)
+
 
     test_grammar = test_experiment_state.models[GRAMMAR]
-
-    test_frontiers = test_experiment_state.get_frontiers_for_ids_in_splits(
-        task_splits=[task_loaders.TRAIN, task_loaders.TEST],
-        task_ids_in_splits={
-            task_loaders.TRAIN: ["a small triangle", "a medium triangle"],
-            task_loaders.TEST: ["6 concentric square s", "a medium square next to a medium triangle"],
-        },
-    )
 
     (
         json_response,

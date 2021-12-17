@@ -383,6 +383,7 @@ class LAPSGrammar(Grammar):
             task_ids_in_splits=task_ids_in_splits,
             include_samples=False,
         )
+
         # Build the standard KWARGS.
         kwargs = {
             self.MAX_CANDIDATES_PER_COMPRESSION_STEP: max_candidates_per_compression_step,

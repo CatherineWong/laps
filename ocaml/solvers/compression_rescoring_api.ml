@@ -140,7 +140,7 @@ under each.
 *)
 register_api_fn "get_candidate_oracle_costs" (fun grammar train_frontiers test_frontiers kwargs ->
   let () = (Printf.eprintf "[ocaml] get_candidate_oracle_costs \n") in 
-  let () = (Printf.eprintf "[ocaml] Compressing grammar and rewriting candidates from %d train_frontiers and %d test_frontiers \n" (List.length train_frontiers) (List.length test_frontiers)) in 
+  let () = (Printf.eprintf "[ocaml] Calculating from %d train_frontiers and %d test_frontiers \n" (List.length train_frontiers) (List.length test_frontiers)) in 
 
   let max_candidates_per_compression_step, max_grammar_candidates_to_retain_for_rewriting, max_compression_steps, top_k, arity, pseudocounts, structure_penalty, aic, cpus, language_alignments_weight, language_alignments = deserialize_compressor_kwargs kwargs in
 
