@@ -144,19 +144,18 @@ register_api_fn "get_candidate_oracle_costs" (fun grammar train_frontiers test_f
 
   let max_candidates_per_compression_step, max_grammar_candidates_to_retain_for_rewriting, max_compression_steps, top_k, arity, pseudocounts, structure_penalty, aic, cpus, language_alignments_weight, language_alignments = deserialize_compressor_kwargs kwargs in
 
-  let train_candidates, train_train_scores, train_test_scores, test_candidates, test_train_scores, test_test_scores = get_candidate_oracle_costs ~grammar ~train_frontiers ~test_frontiers ~language_alignments ~max_candidates_per_compression_step ~max_grammar_candidates_to_retain_for_rewriting ~max_compression_steps ~top_k ~arity ~pseudocounts ~structure_penalty ~aic ~cpus  ~language_alignments_weight in 
+  let train_candidates, train_train_scores, train_test_scores, test_candidates, test_train_scores, test_test_scores = get_candidate_oracle_costs ~grammar ~train_frontiers ~test_frontiers ~language_alignments ~max_candidates_per_compression_step ~max_compression_steps ~top_k ~arity ~pseudocounts ~structure_penalty ~aic ~cpus  ~language_alignments_weight in 
 
-  let serialized_frontiers = List.map2_exn rewritten_train_frontiers_candidates rewritten_test_frontiers_candidates ~f: (fun train_frontiers test_frontiers ->
-    `Assoc([
-        train_string, `List(train_frontiers |> List.map ~f:serialize_frontier);
-        test_string, `List(test_frontiers |> List.map ~f:serialize_frontier);
-      ])
-    ) in 
   let serialized_response = `Assoc([
-    required_args_string, `Assoc([
-      grammar_string, `List(compressed_grammar_candidates |> List.map ~f:serialize_grammar);
-      frontiers_string, `List(serialized_frontiers);
-      compression_scores_string, `List(compression_scores_candidates |> List.map ~f:(fun score -> `Float(score)))
+    train_string, `Assoc([
+      candidates_string, `List(train_candidates |> List.map ~f:(fun e -> `String(string_of_program e)));
+      train_scores_string, `List(train_train_scores |> List.map ~f:(fun score -> `Float(score)));
+      test_scores_string, `List(train_test_scores |> List.map ~f:(fun score -> `Float(score)))
+    ]);
+    test_string, `Assoc([
+      candidates_string, `List(test_candidates |> List.map ~f:(fun e -> `String(string_of_program e)));
+      train_scores_string, `List(test_train_scores |> List.map ~f:(fun score -> `Float(score)));
+      test_scores_string, `List(test_test_scores |> List.map ~f:(fun score -> `Float(score)))
     ])
   ]) in 
   serialized_response

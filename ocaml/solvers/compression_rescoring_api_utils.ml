@@ -874,6 +874,11 @@ let illustrate_new_primitive new_grammar primitive frontiers =
     Printf.eprintf "[ocaml] Here is where it is used:\n";
     illustrations |> List.iter ~f:(fun program -> Printf.eprintf "  %s\n" (string_of_program program));;
 
+let get_candidate_oracle_costs ~grammar ~train_frontiers ~test_frontiers ?language_alignments:(language_alignments=[]) ~max_candidates_per_compression_step ~max_compression_steps ~top_k ~arity ~pseudocounts ~structure_penalty ~aic ~cpus  ?language_alignments_weight:(language_alignments_weight=0.0) = 
+  let train_candidates, train_train_scores, train_test_scores = [], [], [] in
+  let test_candidates, test_train_scores, test_test_scores = [], [], []
+  in train_candidates, train_train_scores, train_test_scores, test_candidates, test_train_scores, test_test_scores
+
 let compress_grammar_candidates_and_rewrite_frontiers_for_each ~grammar ~train_frontiers ~test_frontiers ?language_alignments:(language_alignments=[]) ~max_candidates_per_compression_step
 ~max_grammar_candidates_to_retain_for_rewriting ~max_compression_steps ~top_k ~arity ~pseudocounts ~structure_penalty ~aic ~cpus  ?language_alignments_weight:(language_alignments_weight=0.0) = 
   (** compress_grammar_candidates_and_rewrite_frontiers_for_each: compresses the grammar with respect to train_frontiers to retain max_candidates_per_compression_step top candidates, and rewrites train/test frontiesrs *with respect to each candidate grammar.*
