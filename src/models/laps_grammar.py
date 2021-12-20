@@ -269,6 +269,8 @@ class LAPSGrammar(Grammar):
         except Exception as e:
             print(f"Error in _send_receive_compressor_api_call: {e}")
 
+        import pdb; pdb.set_trace();
+
         json_deserialized_response = json_response
         json_deserialized_response[self.REQUIRED_ARGS][self.GRAMMAR] = [
             self._deserialize_json_grammar(serialized_grammar)
@@ -404,7 +406,7 @@ class LAPSGrammar(Grammar):
             compressor=compressor,
             compressor_directory=compressor_directory,
         )
-        import pdb; pdb.set_trace();
+       
 
     def _get_compressed_grammar_candidates_and_rewritten_frontiers(
         self,
@@ -511,7 +513,7 @@ class LAPSGrammar(Grammar):
         cpus=DEFAULT_CPUS,
     ):
         """
-        Parallel implementation for getting candidate compressed grammars and rewritten frontiers.
+    Parallel implementation for getting candidate compressed grammars and rewritten frontiers.
         Corresponding OCaml API Function:
         get_compressed_grammar_candidates_and_rewritten_frontiers
         Call the compressor to return a set of grammar candidates augmneted with library functions {g_c_0, g_c_1...} and frontiers rewritten under each candidate.

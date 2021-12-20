@@ -874,12 +874,12 @@ let illustrate_new_primitive new_grammar primitive frontiers =
     Printf.eprintf "[ocaml] Here is where it is used:\n";
     illustrations |> List.iter ~f:(fun program -> Printf.eprintf "  %s\n" (string_of_program program));;
 
-let calculate_version_space_local_frontiers inline arity v frontiers =
+let calculate_version_space_local_frontiers arity v frontiers =
   (* calculate candidates from the frontiers we can see *)
   let frontier_indices : int list list = time_it ~verbose:!verbose_compression
       "(worker) calculated version spaces" (fun () ->
       !frontiers |> List.map ~f:(fun f -> f.programs |> List.map ~f:(fun (p,_) ->
-              incorporate v p |> n_step_inversion v ~inline ~n:arity))) in
+              incorporate v p |> n_step_inversion v ~inline:true ~n:arity))) in
   if !collect_data then begin
     List.iter2_exn !frontiers frontier_indices ~f:(fun frontier indices ->
         List.iter2_exn (frontier.programs) indices ~f:(fun (p,_) index ->
@@ -933,34 +933,168 @@ let build_cost_table_and_candidates v frontier_indices =
   flush_everything();
   cost_table, candidates, candidate_table
 
-(** TODO: already make this parallel. *)
-let candidate_comparison_worker ~inline ~arity ~topK ~split_name g frontiers =
-  let _ = (Printf.eprintf "Calculating version table for split: %s with %d frontiers\n" (split_name) (List.length frontiers)) in 
-  let original_frontiers = frontiers in
-  let frontiers = ref (List.map ~f:(restrict ~topK g) frontiers) in
+(** Candidate comparison utility functions. **)
+let candidate_comparison_worker connection ~arity ~top_k ~split_name g split_frontiers =
+  (** Initialize the connection. *)
+  let context = Zmq.Context.create() in
+  let socket = Zmq.Socket.create context Zmq.Socket.req in
+  Zmq.Socket.connect socket connection;
+  let send data = Zmq.Socket.send socket (Marshal.to_string data []) in
+  let receive() = Marshal.from_string (Zmq.Socket.recv socket) 0 in
 
-  (** Calculate the local candidates. *)
+  (** Calculate the version table, candidates, and scores with respect to the original frontiers. *)
+  let () = (Printf.eprintf "Calculating version table for split: %s with %d frontiers\n" (split_name) (List.length split_frontiers)) in 
+
+  let original_frontiers = split_frontiers in
+  let split_frontiers = ref (List.map ~f:(restrict ~topK:top_k g) split_frontiers) in
+
+  (** Calculate the split candidates: the candidates under the initial split frontiers *)
   let v = new_version_table() in
-  let v, frontier_indices = calculate_version_space_local_frontiers inline arity v frontiers in 
-  let cost_table, candidates, candidate_table = build_cost_table_and_candidates v frontier_indices in
+  let v, frontier_indices = calculate_version_space_local_frontiers arity v split_frontiers in 
+  let cost_table, local_candidates, local_candidate_table = build_cost_table_and_candidates v frontier_indices in
+  let () = (Printf.eprintf "(worker) Sending initial candidates for split %s. We now have a size %d version space and a size %d cost table. \n" (split_name) (v.i2s.ra_occupancy) (cost_table.cost_table_parent.i2s.ra_occupancy)) in 
+  send (local_candidates,local_candidate_table.i2s); 
 
-  (** Calculate the scores of the local candidates with respect to themselves. *)
-  let split_scores : float list = time_it ~verbose:!verbose_compression "(worker) beamed version spaces"
+  (** Coalesce the global split candidates from any other threads for this split *)
+  let local_candidate_table = () in
+  let all_split_candidates : program list = receive() in
+  let all_split_candidates : int list = all_split_candidates |> List.map ~f:(incorporate v) in
+  if !verbose_compression then
+    (Printf.eprintf "(worker) Received a total of %d split_candidates in %s, incorporated into the final cost table.\n" (List.length all_split_candidates) (split_name);
+    (Printf.eprintf "(worker) We now have a size %d version space and a size %d cost table. \n" (v.i2s.ra_occupancy) (cost_table.cost_table_parent.i2s.ra_occupancy));
+     flush_everything());
+
+  (** Calculate the scores with respect to the global split candidates. *)
+  let split_candidate_scores : float list = time_it ~verbose:!verbose_compression "(worker) beamed version spaces"
       (fun () ->
-      beam_costs' ~ct:cost_table ~bs:1000000 candidates frontier_indices)
+      beam_costs' ~ct:cost_table ~bs:100000 all_split_candidates frontier_indices)
   in
+  if !verbose_compression then
+    (Printf.eprintf "(worker) Sending back %d scores for split %s.\n" (List.length split_candidate_scores) (split_name);
+     flush_everything());
+  send split_candidate_scores;
 
-  let candidates, split_scores, comparison_scores = [], [], []
-  in candidates, split_scores, comparison_scores
+  (** Coalesce the oracle candidates from the opposite split. *)
+  let alternate_split_candidates : program list = receive() in
+  let alternate_split_candidates : int list = alternate_split_candidates |> List.map ~f:(incorporate_if_in_table v) in
+  if !verbose_compression then
+    (Printf.eprintf "(worker) Received a total of %d alternate split_candidates in %s, incorporated into the final cost table.\n" (List.length alternate_split_candidates) (split_name);
+    (Printf.eprintf "(worker) We now have a size %d version space and a size %d cost table. \n" (v.i2s.ra_occupancy) (cost_table.cost_table_parent.i2s.ra_occupancy));
+     flush_everything());
+  (** Calculate the scores with respect to the opposite split candidates. *)
+  let alternate_split_candidate_scores : float list = time_it ~verbose:!verbose_compression "(worker) beamed version spaces"
+      (fun () ->
+      beam_costs' ~ct:cost_table ~bs:100000 alternate_split_candidates frontier_indices)
+  in
+  if !verbose_compression then
+    (Printf.eprintf "(worker) Sending back %d scores for split %s.\n" (List.length alternate_split_candidate_scores) (split_name);
+     flush_everything());
+  send alternate_split_candidate_scores;
+  (Printf.eprintf "Done");;
 
+let divide_list_cpus n_cpus items = 
+(** ret: [array of n_cpus subarrays containing partitioned items] *)
+  let n_items = List.length items in 
+  let base_count = n_items / n_cpus in 
+  let residual = n_items - (base_count * n_cpus) in 
+  let rec partition residual items =
+    let this_count =
+      base_count + (if residual > 0 then 1 else 0)
+    in
+    match items with
+    | [] -> []
+    | _ :: _ ->
+      let prefix, suffix = List.split_n items this_count in
+      prefix :: partition (residual - 1) suffix
+  in
+  partition residual items
 
-let get_candidate_oracle_costs ~grammar ~train_frontiers ~test_frontiers ?language_alignments:(language_alignments=[]) ~max_candidates_per_compression_step ~max_compression_steps ~top_k ~arity ~pseudocounts ~structure_penalty ~aic ~cpus  ?language_alignments_weight:(language_alignments_weight=0.0) = 
-  (** get_candidate_oracle_costs: constructs cost tables  with respect to train and test frontiers.*)
+let create_candidate_comparison_threads ~arity ~top_k ~split_name ~n_cpus g split_frontiers =
+  let sockets = ref [] in 
+  let timestamp = Time.now() |> Time.to_filename_string ~zone:Time.Zone.utc in
+  let fork_worker frontier_partition = 
+    let p = List.length !sockets in
+    let connection = Printf.sprintf "ipc:///tmp/compression_ipc_%s_%s_%d" split_name timestamp p in
+    sockets := !sockets @ [connection];
 
-  (** We will do this inline for now and then factor it out later. *)
+    match Unix.fork() with
+    | `In_the_child -> candidate_comparison_worker connection ~arity ~top_k ~split_name g frontier_partition
+    | _ -> ()
+  in
+  let partitioned_frontiers = divide_list_cpus n_cpus split_frontiers in 
+  partitioned_frontiers |> List.iter ~f:fork_worker;
+  let context = Zmq.Context.create() in
+  let sockets = !sockets |> List.map ~f:(fun address ->
+      let socket = Zmq.Socket.create context Zmq.Socket.rep in
+      Zmq.Socket.bind socket address;
+      socket)
+  in
+  sockets, context
+
+let send_threads_data data sockets = 
+  let data = Marshal.to_string data [] in
+    sockets |> List.iter ~f:(fun socket -> Zmq.Socket.send socket data)
+
+let receive_thread_data socket = Marshal.from_string (Zmq.Socket.recv socket) 0
+
+let kill_threads sockets context = 
+  send_threads_data KillWorker sockets;
+    sockets |> List.iter ~f:(fun s -> Zmq.Socket.close s);
+    Zmq.Context.terminate context
+
+let time_elapsed start_time = (Time.diff (Time.now ()) start_time |> Time.Span.to_string)
+
+let collect_candidates_from_sockets sockets =
+  let candidates : program list list = sockets |> List.map ~f:(fun s ->
+      let candidate_message : (int list list)*(vs ra) = receive_thread_data s in
+      let (candidates, candidate_table) = candidate_message in
+      let candidate_table = {(new_version_table()) with i2s=candidate_table} in
+      candidates |> List.map ~f:(List.map ~f:(singleton_head % extract candidate_table))) |> List.concat in  
+  let candidates : program list = occurs_multiple_times (List.concat candidates) in
+  candidates
+
+let collect_cumulative_scores_from_sockets sockets = 
+  let candidate_scores : float list list =
+    sockets |> List.map ~f:(fun s -> let ss : float list = receive_thread_data s in ss) in 
+  let cumulative_scores = candidate_scores |> List.transpose_exn |> List.map ~f:(fold1 (+.))
+  in cumulative_scores
+
+let get_candidate_oracle_costs_step_main ~grammar ~train_frontiers ~test_frontiers ~max_candidates_per_compression_step ~max_compression_steps ~top_k ~arity ~pseudocounts ~structure_penalty ~aic ~cpus = 
+(** compare_candidates_oracle: main thread for calculating the comparison scores for get_candidate_oracle costs at a given step. *)
+  let () = (Printf.eprintf "Calculating candidates and comparison costs wrt. %d train | %d test frontiers with %d cpus. \n" (List.length train_frontiers) (List.length test_frontiers) cpus)
+  in 
   
-  let train_candidates, train_train_scores, train_test_scores = candidate_comparison_worker ~inline:true ~arity ~topK:top_k ~split_name:"train" grammar train_frontiers in
-  let test_candidates, test_test_scores, test_train_scores = candidate_comparison_worker ~inline:true ~arity ~topK:top_k ~split_name:"test" grammar test_frontiers in
+  let start_time = Time.now() in
+  let train_sockets, train_context = create_candidate_comparison_threads ~arity ~top_k ~split_name:"train" ~n_cpus:(cpus / 2) grammar train_frontiers in 
+  let train_candidates = collect_candidates_from_sockets train_sockets in 
+  send_threads_data train_candidates train_sockets;
+  let () = (Printf.eprintf "Collected a total of %d %s candidates. \n" (List.length train_candidates) "train") in 
+  let () = (Printf.eprintf "Finished calculating initial candidates in %s.\n" (time_elapsed start_time)) in 
+  let train_train_scores = collect_cumulative_scores_from_sockets train_sockets in 
+  let () = (Printf.eprintf "Received %s candidate scores for %d candidates.\n" ("train") (List.length train_train_scores)) in 
+
+  let test_sockets, test_context = create_candidate_comparison_threads ~arity ~top_k ~split_name:"test" ~n_cpus:(cpus - (cpus / 2)) grammar test_frontiers in 
+  let test_candidates = collect_candidates_from_sockets test_sockets in 
+  let () = (Printf.eprintf "Collected a total of %d %s candidates. \n" (List.length test_candidates) "test") in 
+  send_threads_data test_candidates test_sockets;
+  let test_test_scores = collect_cumulative_scores_from_sockets test_sockets in 
+  let () = (Printf.eprintf "Received %s candidate scores for %d candidates.\n" ("test") (List.length test_test_scores)) in 
+
+  (** Now, calculate the oracle scores. *)
+  send_threads_data test_candidates train_sockets;
+
+  (* let () = kill_threads train_sockets train_context in  *)
+  (* let () = kill_threads test_sockets train_context in  *)
+  start_time
+
+(** API function implementations. **)
+let get_candidate_oracle_costs ~grammar ~train_frontiers ~test_frontiers  ~max_candidates_per_compression_step ~max_compression_steps ~top_k ~arity ~pseudocounts ~structure_penalty ~aic ~cpus = 
+  (** get_candidate_oracle_costs: gets ordered lists of costs for candidates at each stage of compression, with respect to the train and test frontiers. 
+  :ret: train_candidates, train_train_scores, train_test_scores, test_candidates, test_train_scores, test_test_scores - where candidates are invention programs and scores are float scores wrt. the frontiers. *)
+
+  let train_candidates, train_train_scores, train_test_scores, test_candidates, test_train_scores, test_test_scores = [], [], [], [], [], [] in 
+  let _  = get_candidate_oracle_costs_step_main ~grammar ~train_frontiers ~test_frontiers ~max_candidates_per_compression_step ~max_compression_steps ~top_k ~arity ~pseudocounts ~structure_penalty ~aic ~cpus in 
+  
   train_candidates, train_train_scores, train_test_scores, test_candidates, test_train_scores, test_test_scores
 
 let compress_grammar_candidates_and_rewrite_frontiers_for_each ~grammar ~train_frontiers ~test_frontiers ?language_alignments:(language_alignments=[]) ~max_candidates_per_compression_step

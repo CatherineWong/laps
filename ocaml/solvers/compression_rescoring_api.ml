@@ -144,7 +144,7 @@ register_api_fn "get_candidate_oracle_costs" (fun grammar train_frontiers test_f
 
   let max_candidates_per_compression_step, max_grammar_candidates_to_retain_for_rewriting, max_compression_steps, top_k, arity, pseudocounts, structure_penalty, aic, cpus, language_alignments_weight, language_alignments = deserialize_compressor_kwargs kwargs in
 
-  let train_candidates, train_train_scores, train_test_scores, test_candidates, test_train_scores, test_test_scores = get_candidate_oracle_costs ~grammar ~train_frontiers ~test_frontiers ~language_alignments ~max_candidates_per_compression_step ~max_compression_steps ~top_k ~arity ~pseudocounts ~structure_penalty ~aic ~cpus  ~language_alignments_weight in 
+  let train_candidates, train_train_scores, train_test_scores, test_candidates, test_train_scores, test_test_scores = get_candidate_oracle_costs ~grammar ~train_frontiers ~test_frontiers ~max_candidates_per_compression_step ~max_compression_steps ~top_k ~arity ~pseudocounts ~structure_penalty ~aic ~cpus in 
 
   let serialized_response = `Assoc([
     train_string, `Assoc([

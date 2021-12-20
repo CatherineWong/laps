@@ -105,6 +105,33 @@ def test_laps_grammar_get_candidate_oracle_costs_ocaml():
         max_candidates_per_compression_step=5,
         max_compression_steps=1,
         arity=1,
+        cpus=2,
+    )
+
+def test_laps_grammar_get_compressed_grammmar_and_rewritten_frontiers():
+    test_config = TEST_GRAPHICS_CONFIG
+    test_experiment_state = ExperimentState(test_config)
+    test_experiment_state.initialize_ground_truth_task_frontiers(task_loaders.TRAIN)
+    test_experiment_state.initialize_ground_truth_task_frontiers(task_loaders.TEST)
+
+
+    test_grammar = test_experiment_state.models[GRAMMAR]
+
+    (
+        json_response,
+        json_error,
+        json_serialized_binary_message,
+    ) = test_grammar._get_compressed_grammmar_and_rewritten_frontiers(
+        experiment_state=test_experiment_state,
+        task_splits=[task_loaders.TRAIN, task_loaders.TEST],
+        task_ids_in_splits={
+            task_loaders.TRAIN: ["a small triangle", "a medium triangle"],
+            task_loaders.TEST: ["6 concentric square s", "a medium square next to a medium triangle"],
+        },
+        max_candidates_per_compression_step=5,
+        max_compression_steps=1,
+        arity=1,
+        cpus=12,
     )
 
 def test_laps_grammar_send_receive_compressor_api_call():
