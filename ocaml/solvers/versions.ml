@@ -782,26 +782,25 @@ let beam_costs'' ~ct ~bs (candidates : int list) (frontier_indices : (int list) 
 (* For each of the candidates returns the minimum description length of the frontiers *)
 let beam_costs' ~ct ~bs (candidates : int list) (frontier_indices : (int list) list)
   : float list =
-  let is_in_table c = c > ct.cost_table_parent.not_in_table in 
-  (* let valid_candidates = candidates |> List.filter ~f:is_in_table in  *)
-  let caching_table = beam_costs'' ~ct ~bs candidates frontier_indices in
+  let ct : cost_table = ct in
+  let v = ct.cost_table_parent in 
+  let valid_candidates = candidates |> List.filter ~f:(fun c -> c > v.not_in_table) in 
+  let caching_table = beam_costs'' ~ct ~bs valid_candidates frontier_indices in
   let frontier_beams = frontier_indices |> List.map ~f:(List.map ~f:(fun j ->
     get_resizable caching_table j |> get_some)) in
 
   let score_valid i =
-    if !is_in_table i then 
-      Float.infinity 
-    else 
+    if i > v.not_in_table then 
       let corpus_size = frontier_beams |> List.map ~f:(fun bs ->
           bs |> List.map ~f:(fun b -> min (relative_argument b i) (relative_function b i)) |>
           fold1 min) |> fold1 (+.)
       in
       corpus_size
+    else
+      Float.infinity
   in
   candidates |> List.map ~f:score_valid
 
-  
-  
 let beam_costs ~ct ~bs (candidates : int list) (frontier_indices : (int list) list) =
   let scored = List.zip_exn (beam_costs' ~ct ~bs candidates frontier_indices) candidates in
   scored |> List.sort ~compare:(fun (s1,_) (s2,_) -> Float.compare s1 s2)
