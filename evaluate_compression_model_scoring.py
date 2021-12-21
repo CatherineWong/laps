@@ -145,6 +145,86 @@ def get_test_fns(args):
                 test_fns.append(test_fn)
     return test_fns
 
+@register_test
+def test_oracle_ranking(
+    args, 
+    config,
+    max_test_tasks=10,
+    max_candidates_to_evaluate=100,
+    max_best_candidates_to_report=10,
+):
+    """
+    Compares oracle ranking under the heldout set with respect to the ranking under the training set for various candidates.
+    """
+    initial_ground_truth_experiment_state = get_initial_ground_truth_experiment_state(
+        config
+    )
+
+    sorted_test_tasks = make_sorted_log_prior_buckets(
+        initial_ground_truth_experiment_state,
+        task_split=TEST,
+        num_buckets=args.hp_num_training_buckets,
+        remove_duplicates=True,
+    )
+    for train_iteration, train_task_subset in make_program_log_prior_buckets_iterator(
+        initial_ground_truth_experiment_state,
+        task_split=TRAIN,
+        remove_duplicates=True,
+        num_buckets=args.hp_num_training_buckets,
+    ):
+        print(
+            f"Iteration: {train_iteration}. Train task subset: {len(train_task_subset)} tasks: up to {train_task_subset[-1].name}"
+        )
+        start_time = time.time()
+        json_response, _, _ = initial_ground_truth_experiment_state.models[
+            GRAMMAR
+        ]._get_candidate_oracle_costs(
+            experiment_state=initial_ground_truth_experiment_state,
+            task_splits=[TRAIN, TEST],
+            task_ids_in_splits={
+                TRAIN: [t.name for t in train_task_subset],
+                TEST: [t.name for t in sorted_test_tasks[:len(train_task_subset)]],
+            },
+            max_candidates_per_compression_step=500,
+            max_compression_steps=1,
+            arity=2,
+        )
+        print(
+            f"[DEBUG]: calculating oracle candidates - {train_iteration} - took {(time.time() - start_time)} s."
+        )
+        # For the best candidates, how many candidates in the oracle split are BETTER than (or equal to)
+        for split in [TRAIN, TEST]:
+            opposite_split = TRAIN if split == TEST else TEST
+            # Zip: the candidates; their own scores; their scores under the opposite 
+            zip_with_scores = list(zip(json_response[split]["candidates"], json_response[split][f"{split}_scores"], json_response[opposite_split][f"{split}_scores"],))
+            
+            zip_with_scores = [z for z in zip_with_scores if z[1] > 0] # Should at least be valid under self.
+            # Sort them by their own scores
+            sorted_own_scores = sorted(zip_with_scores, key=lambda z : z[1])
+            sorted_own_scores_oracle_valid =  sorted([z for z in zip_with_scores if z[-1] > 0], key=lambda z : z[1])
+            sorted_other_scores_valid = sorted([z for z in zip_with_scores if z[-1] > 0], key=lambda z : z[-1])
+
+            def get_candidate_score_opposite_ranking(sorted_own_scores, sorted_other_scores, i):
+                candidate, score, other_score = sorted_own_scores[i][0], sorted_own_scores[i][1],  sorted_own_scores[i][-1]
+                if other_score < 0:
+                    return candidate, score, other_score
+                
+                unzipped_other = list(zip(*sorted_other_scores))
+                opposite_index = unzipped_other[0].index(candidate) 
+                return candidate, score, opposite_index
+
+            print(f"Comparing split {split} with opposite split: {opposite_split}")
+            for i in range(max_best_candidates_to_report):
+                candidate, score, opposite_ranking = get_candidate_score_opposite_ranking(sorted_own_scores, sorted_other_scores_valid, i)
+                print(f"[{i}] -- score: {score} \t oracle_rank: {opposite_ranking} \t | {candidate}")
+        
+            if split == TEST:
+                print(f"Comparing split {split} that are findable wrt. opposite split: {opposite_split}")
+                for i in range(max_best_candidates_to_report):
+                    candidate, score, opposite_ranking = get_candidate_score_opposite_ranking(sorted_own_scores_oracle_valid, sorted_other_scores_valid, i)
+                    print(f"[{i}] -- score: {score} \t oracle_rank: {opposite_ranking} \t | {candidate}")
+        import pdb; pdb.set_trace()
+
 
 @register_test
 def test_discrimination_original_final_libraries_full(args, config):
@@ -433,23 +513,40 @@ def report_model_baseline_top_k_candidates_heldout_likelihoods(
         plot_title="test_heldout_scores_with_model_reranking" + experiment_id,
     )
 
-
-def make_program_log_prior_buckets_iterator(
+def make_sorted_log_prior_buckets(
     experiment_state,
     task_split,
     num_buckets,
-):
-    """Iterator over num_buckets buckets of tasks with ground truth programs by log_prior under the grammar (as a corollary for description length)."""
-
+    remove_duplicates=False):
     def best_log_prior(task):
         frontier = experiment_state.task_frontiers[task_split][task]
         return min([e.logPrior for e in frontier.entries])
 
+    tasks = experiment_state.task_frontiers[task_split]
+    if remove_duplicates: 
+        # Duplicates have the same name.
+        tasks = [t for t in tasks if not experiment_state.COPY in t.name]
     sorted_log_prior = sorted(
         experiment_state.task_frontiers[task_split],
         key=lambda task: best_log_prior(task),
         reverse=True,
     )
+    return sorted_log_prior
+
+
+def make_program_log_prior_buckets_iterator(
+    experiment_state,
+    task_split,
+    num_buckets,
+    remove_duplicates=False,
+    return_sorted=False
+):
+    """Iterator over num_buckets buckets of tasks with ground truth programs by log_prior under the grammar (as a corollary for description length)."""
+    sorted_log_prior = make_sorted_log_prior_buckets(
+    experiment_state,
+    task_split,
+    num_buckets,
+    remove_duplicates=False)
 
     batch_size = int(len(sorted_log_prior) / num_buckets)
     for bucket_idx in range(num_buckets + 1):

@@ -44,6 +44,8 @@ class ExperimentState:
     SAMPLES = "samples"
     FRONTIERS = "frontiers"
 
+    COPY = "copy"
+
     def __init__(self, config):
         self.config = config
 

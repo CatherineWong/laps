@@ -9,7 +9,8 @@
         "resume_checkpoint_directory": null,
         "init_frontiers_from_checkpoint": false,
         "ocaml_special_handler": "LOGO",
-        "random_seed": 0
+        "random_seed": 0,
+        "export_with_timestamp" : false
     },
     "model_initializers": [
         {
