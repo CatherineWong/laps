@@ -990,7 +990,14 @@ let candidate_comparison_worker connection ~arity ~top_k ~split_name g split_fro
     (Printf.eprintf "(worker) Sending back %d scores for split %s.\n" (List.length alternate_split_candidate_scores) (split_name);
      flush_everything());
   send alternate_split_candidate_scores;
-  (Printf.eprintf "Done");;
+
+  while true do
+    match receive() with
+    | KillWorker -> 
+      (Zmq.Socket.close socket;
+        Zmq.Context.terminate context;
+      exit 0)
+  done;;
 
 let divide_list_cpus n_cpus items = 
 (** ret: [array of n_cpus subarrays containing partitioned items] *)
@@ -1038,9 +1045,7 @@ let send_threads_data data sockets =
 let receive_thread_data socket = Marshal.from_string (Zmq.Socket.recv socket) 0
 
 let kill_threads sockets context = 
-  send_threads_data KillWorker sockets;
-    sockets |> List.iter ~f:(fun s -> Zmq.Socket.close s);
-    Zmq.Context.terminate context
+  send_threads_data KillWorker sockets
 
 let time_elapsed start_time = (Time.diff (Time.now ()) start_time |> Time.Span.to_string)
 
@@ -1056,8 +1061,9 @@ let collect_candidates_from_sockets sockets =
 let collect_cumulative_scores_from_sockets sockets = 
   let candidate_scores : float list list =
     sockets |> List.map ~f:(fun s -> let ss : float list = receive_thread_data s in ss) in 
-  let cumulative_scores = candidate_scores |> List.transpose_exn |> List.map ~f:(fold1 (+.))
-  in cumulative_scores
+  let cumulative_scores = candidate_scores |> List.transpose_exn |> List.map ~f:(fold1 (+.)) in
+  let cumulative_scores = cumulative_scores |> List.map ~f:(fun s -> if s < Float.infinity then s else -1.0) in
+  cumulative_scores
 
 let get_candidate_oracle_costs_step_main ~grammar ~train_frontiers ~test_frontiers ~max_candidates_per_compression_step ~max_compression_steps ~top_k ~arity ~pseudocounts ~structure_penalty ~aic ~cpus = 
 (** compare_candidates_oracle: main thread for calculating the comparison scores for get_candidate_oracle costs at a given step. *)
@@ -1082,19 +1088,31 @@ let get_candidate_oracle_costs_step_main ~grammar ~train_frontiers ~test_frontie
 
   (** Now, calculate the oracle scores. *)
   send_threads_data test_candidates train_sockets;
+  let train_test_scores = collect_cumulative_scores_from_sockets train_sockets in 
+  let () = (Printf.eprintf "Received train-test candidate scores for %d candidates.\n"(List.length train_test_scores)) in 
 
-  (* let () = kill_threads train_sockets train_context in  *)
-  (* let () = kill_threads test_sockets train_context in  *)
-  start_time
+  send_threads_data train_candidates test_sockets;
+  let test_train_scores = collect_cumulative_scores_from_sockets test_sockets in 
+  let () = (Printf.eprintf "Received test-train candidate scores for %d candidates.\n"(List.length test_train_scores)) in
+
+  (** Finally, clean up the threads. *)
+  kill_threads train_sockets train_context;
+  let () = (Printf.eprintf "Finished train threads....\n") in
+  kill_threads test_sockets test_context;
+  let () = (Printf.eprintf "Finished test threads....\n") in
+
+  let train_candidates = train_candidates |> List.map ~f:(fun c -> normalize_invention c) in 
+  let test_candidates = test_candidates |> List.map ~f:(fun c -> normalize_invention c) in 
+  train_candidates, train_train_scores, train_test_scores, test_candidates, test_train_scores, test_test_scores
 
 (** API function implementations. **)
 let get_candidate_oracle_costs ~grammar ~train_frontiers ~test_frontiers  ~max_candidates_per_compression_step ~max_compression_steps ~top_k ~arity ~pseudocounts ~structure_penalty ~aic ~cpus = 
   (** get_candidate_oracle_costs: gets ordered lists of costs for candidates at each stage of compression, with respect to the train and test frontiers. 
   :ret: train_candidates, train_train_scores, train_test_scores, test_candidates, test_train_scores, test_test_scores - where candidates are invention programs and scores are float scores wrt. the frontiers. *)
 
-  let train_candidates, train_train_scores, train_test_scores, test_candidates, test_train_scores, test_test_scores = [], [], [], [], [], [] in 
-  let _  = get_candidate_oracle_costs_step_main ~grammar ~train_frontiers ~test_frontiers ~max_candidates_per_compression_step ~max_compression_steps ~top_k ~arity ~pseudocounts ~structure_penalty ~aic ~cpus in 
+  let train_candidates, train_train_scores, train_test_scores, test_candidates, test_train_scores, test_test_scores = get_candidate_oracle_costs_step_main ~grammar ~train_frontiers ~test_frontiers ~max_candidates_per_compression_step ~max_compression_steps ~top_k ~arity ~pseudocounts ~structure_penalty ~aic ~cpus in 
   
+
   train_candidates, train_train_scores, train_test_scores, test_candidates, test_train_scores, test_test_scores
 
 let compress_grammar_candidates_and_rewrite_frontiers_for_each ~grammar ~train_frontiers ~test_frontiers ?language_alignments:(language_alignments=[]) ~max_candidates_per_compression_step

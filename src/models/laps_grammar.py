@@ -52,6 +52,9 @@ class LAPSGrammar(Grammar):
         "frontiers",
         "compression_scores",
     )
+    CANDIDATES = "candidates"
+    TRAIN_SCORES = "train_scores"
+    TEST_SCORES = "test_scores"
     TEST_API_FN = "test_send_receive_response"  # Test ping function to make sure the binary is avaiable.
 
     # Standard hyperparameters for the compressor.
@@ -212,6 +215,7 @@ class LAPSGrammar(Grammar):
         compressor_type=DEFAULT_COMPRESSOR_TYPE,
         compressor=DEFAULT_API_COMPRESSOR,
         compressor_directory=DEFAULT_BINARY_DIRECTORY,
+        deserializer_fn=None,
     ):
         """Caller for invoking an API function implemented in the the OCaml compression_rescoring_api binary. Function names and signatures are defined in compression_rescoring_api.ml.
         Expects:
@@ -269,8 +273,13 @@ class LAPSGrammar(Grammar):
         except Exception as e:
             print(f"Error in _send_receive_compressor_api_call: {e}")
 
-        import pdb; pdb.set_trace();
+        json_serialized_binary_message = json.loads(json_serialized_binary_message)
+        if deserializer_fn is None:
+            deserializer_fn = self._default_grammar_frontiers_deserializer
+        json_deserialized_response = deserializer_fn(json_response)
+        return json_deserialized_response, json_error, json_serialized_binary_message
 
+    def _default_grammar_frontiers_deserializer(self, json_deserialized_response):
         json_deserialized_response = json_response
         json_deserialized_response[self.REQUIRED_ARGS][self.GRAMMAR] = [
             self._deserialize_json_grammar(serialized_grammar)
@@ -289,8 +298,9 @@ class LAPSGrammar(Grammar):
                 json_deserialized_response[self.REQUIRED_ARGS][self.FRONTIERS]
             )
         ]
-        json_serialized_binary_message = json.loads(json_serialized_binary_message)
-        return json_deserialized_response, json_error, json_serialized_binary_message
+        return json_deserialized_response
+
+
 
     def _deserialize_json_grammar(self, json_grammar):
         return LAPSGrammar(
@@ -397,7 +407,12 @@ class LAPSGrammar(Grammar):
             self.STRUCTURE_PENALTY: structure_penalty,
             self.TOP_K: top_k,
         }
-        json_deserialized_response, _, _ = self._send_receive_compressor_api_call(
+        def train_test_candidates_deserializer(json_deserialized_response):
+            for split in task_loaders.TRAIN, task_loaders.TEST:
+                json_deserialized_response[split][self.CANDIDATES] = [Program.parse(e) for e in json_deserialized_response[split][self.CANDIDATES]]
+            return json_deserialized_response
+            
+        return self._send_receive_compressor_api_call(
             api_fn=api_fn,
             grammar=self,
             frontiers=frontiers,
@@ -405,7 +420,30 @@ class LAPSGrammar(Grammar):
             compressor_type=compressor_type,
             compressor=compressor,
             compressor_directory=compressor_directory,
+            deserializer_fn=train_test_candidates_deserializer
         )
+
+    
+    def _default_grammar_frontiers_deserializer(self, json_deserialized_response):
+        json_deserialized_response = json_response
+        json_deserialized_response[self.REQUIRED_ARGS][self.GRAMMAR] = [
+            self._deserialize_json_grammar(serialized_grammar)
+            for serialized_grammar in json_response[self.REQUIRED_ARGS][self.GRAMMAR]
+        ]
+
+        new_grammars = json_deserialized_response[self.REQUIRED_ARGS][self.GRAMMAR]
+        # Deserialize the frontiers with respect to their corresponding grammar.
+        json_deserialized_response[self.REQUIRED_ARGS][self.FRONTIERS] = [
+            self._deserialize_json_frontiers(
+                new_grammars[grammar_idx],
+                non_empty_frontiers=non_empty_frontiers,
+                json_frontiers=json_frontiers,
+            )
+            for grammar_idx, json_frontiers in enumerate(
+                json_deserialized_response[self.REQUIRED_ARGS][self.FRONTIERS]
+            )
+        ]
+        return json_deserialized_response
        
 
     def _get_compressed_grammar_candidates_and_rewritten_frontiers(
@@ -495,43 +533,6 @@ class LAPSGrammar(Grammar):
 
         return grammar_frontier_score_candidates
 
-    def _get_compressed_grammar_candidates_and_rewritten_frontiers_parallel(
-        self,
-        experiment_state,
-        task_splits,
-        task_ids_in_splits,
-        max_candidates_per_compression_step,
-        max_compression_steps,
-        top_k=DEFAULT_TOP_K,
-        pseudocounts=DEFAULT_PSEUDOCOUNTS,
-        arity=DEFAULT_ARITY,
-        aic=DEFAULT_AIC,
-        structure_penalty=DEFAULT_STRUCTURE_PENALTY,
-        compressor_type=DEFAULT_COMPRESSOR_TYPE,
-        compressor=DEFAULT_API_COMPRESSOR,
-        compressor_directory=DEFAULT_BINARY_DIRECTORY,
-        cpus=DEFAULT_CPUS,
-    ):
-        """
-    Parallel implementation for getting candidate compressed grammars and rewritten frontiers.
-        Corresponding OCaml API Function:
-        get_compressed_grammar_candidates_and_rewritten_frontiers
-        Call the compressor to return a set of grammar candidates augmneted with library functions {g_c_0, g_c_1...} and frontiers rewritten under each candidate.
-
-        Evaluates max_candidates_per_compression_step under the compression score, and currently returns the max_candidates_per_compression_step under the compression score.
-
-        Always assumes it should only optimize with respect to the TRAIN frontiers, but rewrites train/test frontiers under the compressed grammar.
-
-        :ret:
-            Array of {
-                "grammar": Grammar candidate.
-                "frontiers": {split:[rewritten frontiers]}.
-                "compression_score": scalar score of grammar wrt. frontiers.
-            }
-        """
-        pass
-        # NB  this could actually be done with separate threads.
-
     def _get_compressed_grammmar_and_rewritten_frontiers(
         self,
         experiment_state,
@@ -590,7 +591,6 @@ class LAPSGrammar(Grammar):
             compressor=compressor,
             compressor_directory=compressor_directory,
         )
-
         optimized_grammar = json_deserialized_response[self.REQUIRED_ARGS][
             self.GRAMMAR
         ][0]
@@ -607,6 +607,7 @@ class LAPSGrammar(Grammar):
                 ] = rewritten_frontier
 
         return optimized_grammar, rewritten_train_test_frontiers
+    
 
     ## Elevate static methods to create correct class.
     @staticmethod
