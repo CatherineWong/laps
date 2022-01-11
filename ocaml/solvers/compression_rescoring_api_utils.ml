@@ -1105,15 +1105,15 @@ let get_candidate_oracle_costs_step_main ~grammar ~train_frontiers ~test_frontie
   let test_candidates = test_candidates |> List.map ~f:(fun c -> normalize_invention c) in 
 
   (** Sort them by their scores under their own split so we don't send thousands. *)
-  let sort_take_top_k = (fun candidates, self_scores, other_scores, top_k ->
+  (* let sort_take_top_k = (fun candidates, self_scores, other_scores, top_k ->
     let zipped = List.zip_exn candidates self_scores |> List.zip_exn other_scores in 
     let sorted = zipped |> List.sort ~compare:(fun (_,s1,_) (_,s2,_) -> Float.compare s1 s2) in 
-    let top_i = List.take sorted max_candidates_per_compression_step
+    let top_i = List.take sorted max_candidates_per_compression_step in 
     let candidates, self_scores, other_scores = top_i |> List.unzip3 
     in candidates, self_scores, other_scores
   ) in 
   let train_candidates, train_train_scores, test_train_scores = sort_take_top_k train_candidates, train_train_scores, test_train_scores, max_candidates_per_compression_step in 
-  let test_candidates, test_test_scores, train_test_scores = sort_take_top_k test_candidates, test_test_scores, train_test_scores in 
+  let test_candidates, test_test_scores, train_test_scores = sort_take_top_k test_candidates, test_test_scores, train_test_scores in  *)
 
   train_candidates, train_train_scores, train_test_scores, test_candidates, test_train_scores, test_test_scores
 
