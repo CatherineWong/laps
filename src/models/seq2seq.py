@@ -864,14 +864,17 @@ class Seq2Seq(nn.Module, model_loaders.ModelLoader):
             early_stopping_epsilon: Best train loss must decrease by at least this
                 amount each epoch, otherwise the early stopping counter is
                 incremented.
-            early_stopping_patience: If the train loss doesn't decrease by
+            early_stopping_patience: If the val loss doesn't decrease by
                 early_stopping_epsilon for this number of consecutive epochs,
                 then early stopping will be triggered. Note that the counter
-                resets after each "successful" training epoch in which the
+                resets after each "successful" epoch in which the
                 conditions are not met.
 
         On completion, model parameters should be updated to the trained model.
         """
+        ########################################################################
+        # Cross-validation to determine optimal number of train epochs
+        ########################################################################
         cv_iterator = self._make_cross_val_iterator(
             experiment_state,
             task_split=task_split,
@@ -879,64 +882,112 @@ class Seq2Seq(nn.Module, model_loaders.ModelLoader):
             cv_folds=cv_folds,
         )
 
-        for train_ids, val_ids in cv_iterator:
+        cv_results = []
+
+        for fold_i, fold_ids in enumerate(cv_iterator):
+            train_ids, val_ids = fold_ids
+            print(
+                f"CV FOLD {fold_i}: Training on {len(train_ids)} tasks, evaluating on {len(val_ids)} tasks."
+            )
+
             # Re-init models on each fold
             self._initialize_encoders(experiment_state, self.task_encoder_types)
             self._initialize_decoder(experiment_state)
-            
-            print(train_ids, val_ids)
 
-        exit()
+            encoder_optimizer = Adam(params=self.encoder.parameters(), lr=learning_rate)
+            decoder_optimizer = Adam(params=self.decoder.parameters(), lr=learning_rate)
+
+            results_per_epoch = []
+            loss_per_epoch = []
+            early_stopping_counter = (
+                0  # Tracks the number of times early stopping conditions were met.
+            )
+
+            # TODO(gg): Implement batching over task ids
+            for epoch in range(recognition_train_epochs):
+                results_train = self._run_tasks(
+                    task_split,
+                    train_ids,
+                    experiment_state,
+                    encoder_optimizer,
+                    decoder_optimizer,
+                    mode=TRAIN,
+                )
+                if results_train is None:
+                    print(
+                        f"[TRAIN] Skipped training - None of the frontiers had any entries to train on."
+                    )
+                    return None
+
+                results_val = self._run_tasks(
+                    task_split,
+                    val_ids,
+                    experiment_state,
+                    mode=TEST,
+                )
+                if results_val is None:
+                    print(
+                        f"[VAL] Skipped validation - None of the frontiers had any entries to train on."
+                    )
+                    return None
+
+                loss_val = results_val["loss"]
+                print(
+                    f"[FOLD {fold_i}: TRAIN {epoch} / {recognition_train_epochs}] Train loss: {results_train['loss']}, Val loss: {results_val['loss']}"
+                )
+
+                # Check whether to trigger early stopping
+                loss_per_epoch.append(loss_val)
+
+                if epoch > 0:
+                    best_loss_val = min(loss_per_epoch[:-1])
+                    if (best_loss_val - loss_val) < early_stopping_epsilon:
+                        early_stopping_counter += 1
+                    else:
+                        early_stopping_counter = 0
+
+                    if early_stopping_counter >= early_stopping_patience:
+                        print(f"Early stopping triggered at epoch {epoch}")
+                        break
+
+                results_per_epoch.append(
+                    {
+                        "epoch": epoch,
+                        "train": results_train,
+                        "val": results_val,
+                    }
+                )
+
+            cv_results.append(
+                {
+                    "fold": fold_i,
+                    "results_per_epoch": results_per_epoch,
+                }
+            )
+
+        ########################################################################
+        # Re-train the model on the full dataset
+        ########################################################################
+        self._initialize_encoders(experiment_state, self.task_encoder_types)
+        self._initialize_decoder(experiment_state)
 
         encoder_optimizer = Adam(params=self.encoder.parameters(), lr=learning_rate)
         decoder_optimizer = Adam(params=self.decoder.parameters(), lr=learning_rate)
 
-        run_results_per_epoch = []
-        loss_per_epoch = []
-        early_stopping_counter = (
-            0  # Tracks the number of times early stopping conditions were met.
-        )
+        best_epoch_per_fold = []
+        for fold_results in cv_results:
+            val_losses = [
+                result["val"]["loss"] for result in fold_results["results_per_epoch"]
+            ]
+            best_epoch_per_fold.append(np.argmin(val_losses))
+        best_epoch = np.ceil(np.mean(best_epoch_per_fold))
+        print(f"The best epochs per fold were: {best_epoch_per_fold}")
+        print(f"Training final model for {best_epoch} epochs")
+        for epoch in range(best_epoch):
+            pass
 
-        # TODO(gg): Implement batching over task ids
-        for epoch in range(recognition_train_epochs):
-            run_results = self._run_tasks(
-                task_split,
-                task_batch_ids,
-                experiment_state,
-                encoder_optimizer,
-                decoder_optimizer,
-                mode=TRAIN,
-            )
-
-            if run_results is None:
-                print(
-                    f"[TRAIN] Skipped training - None of the frontiers had any entries to train on."
-                )
-                return None
-
-            run_results["epoch"] = epoch
-            run_results_per_epoch.append(run_results)
-
-            loss = run_results["loss"]
-            print(
-                f"[TRAIN {epoch} / {recognition_train_epochs}] Fit {self.name} on {run_results['n_tasks']} tasks with total loss: {loss}"
-            )
-
-            # Check whether to trigger early stopping
-            loss_per_epoch.append(loss)
-
-            if epoch > 0:
-                best_loss = min(loss_per_epoch[:-1])
-                if (best_loss - loss) < early_stopping_epsilon:
-                    early_stopping_counter += 1
-                else:
-                    early_stopping_counter = 0
-
-                if early_stopping_counter >= early_stopping_patience:
-                    print(f"Early stopping triggered at epoch {epoch}")
-                    break
-
-        return run_results_per_epoch
+        # TODO(gg): Update callers to handle new results format
+        return cv_results
 
     def score_frontier_avg_conditional_log_likelihoods(
         self, experiment_state, task_split=TRAIN, task_batch_ids=ALL
