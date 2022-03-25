@@ -7,7 +7,7 @@ Updates GRAMMAR based on Stitch compression.
 """
 
 import src.models.model_loaders as model_loaders
-from dreamcoder.program import Program
+from dreamcoder.program import Program, EtaLongVisitor
 from src.models.laps_grammar import LAPSGrammar
 from src.models.stitch_base import StitchBase
 from src.task_loaders import TRAIN
@@ -73,6 +73,7 @@ class StitchProposerLibraryLearner(StitchBase, model_loaders.ModelLoader):
 
         # Update the grammar with the new inventions.
         grammar = experiment_state.models[model_loaders.GRAMMAR]
+        # new_productions = [(0.0, p.infer(), p) for p in inv_programs]
         new_productions = [(0.0, p.infer(), p) for p in inv_programs]
         new_grammar = LAPSGrammar(
             logVariable=grammar.logVariable,  # TODO: Renormalize logVariable
@@ -80,7 +81,6 @@ class StitchProposerLibraryLearner(StitchBase, model_loaders.ModelLoader):
             continuationType=grammar.continuationType,
             initialize_parameters_from_grammar=grammar,
         )
-
         experiment_state.models[model_loaders.GRAMMAR] = new_grammar
 
     def get_compressed_grammar_lm_prior_rank(
@@ -119,7 +119,7 @@ class StitchProposerLibraryLearner(StitchBase, model_loaders.ModelLoader):
         )
         self.run_binary(
             bin="compress",
-            stitch_args=[frontiers_filepath, "--no-top-lambda"],
+            stitch_args=[frontiers_filepath, "--no-top-lambda", "--eta-long"],
             stitch_kwargs={
                 "out": inventions_filepath,
                 "max-arity": max_arity,

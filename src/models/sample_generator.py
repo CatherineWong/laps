@@ -48,6 +48,7 @@ class CodexSampleGenerator(CodexBase, model_loaders.ModelLoader):
         debug: bool = False,
         use_cached: bool = False,
         function_name_classes: list = [LAPSGrammar.DEFAULT_FUNCTION_NAMES],
+        rescore_frontiers: bool = False,
     ):
         """
         Queries Codex API to generate new samples based on training data.
@@ -175,12 +176,13 @@ class CodexSampleGenerator(CodexBase, model_loaders.ModelLoader):
                     continue
 
                 # Hack to avoid fatal error when computing likelihood summaries during rescoreFrontier
-                try:
-                    p = EtaLongVisitor(request=p_type).execute(p)
-                except:
-                    print(f"Error converting to ETA Long for {p}")
-                    query_results["programs_invalid"].append(program_str_codex)
-                    continue
+                if rescore_frontiers:
+                    try:
+                        p = EtaLongVisitor(request=p_type).execute(p)
+                    except:
+                        print(f"Error converting to ETA Long for {p}")
+                        query_results["programs_invalid"].append(program_str_codex)
+                        continue
 
                 program_str = str(p)
 
@@ -199,9 +201,10 @@ class CodexSampleGenerator(CodexBase, model_loaders.ModelLoader):
                 )
 
                 # Re-score the logPrior and logLikelihood of the frontier under the current grammar
-                frontier = experiment_state.models[
-                    model_loaders.GRAMMAR
-                ].rescoreFrontier(frontier)
+                if rescore_frontiers:
+                    frontier = experiment_state.models[
+                        model_loaders.GRAMMAR
+                    ].rescoreFrontier(frontier)
 
                 experiment_state.sample_tasks[TRAIN].append(task)
                 experiment_state.sample_frontiers[TRAIN][task] = frontier

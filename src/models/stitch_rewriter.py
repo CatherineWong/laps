@@ -36,7 +36,12 @@ class StitchProgramRewriter(StitchBase, model_loaders.ModelLoader):
         super().__init__()
 
     def get_rewritten_frontiers_for_grammar(
-        self, experiment_state, task_splits, task_ids_in_splits, include_samples
+        self,
+        experiment_state,
+        task_splits,
+        task_ids_in_splits,
+        include_samples,
+        rescore_frontiers=True,
     ):
         """
         Updates experiment_state frontiers wrt. the experiment_state.models[GRAMMAR]
@@ -81,28 +86,24 @@ class StitchProgramRewriter(StitchBase, model_loaders.ModelLoader):
             for task in experiment_state.get_tasks_for_ids(
                 task_split=split, task_ids=task_ids_in_splits[split]
             ):
-                frontier_rewritten = Frontier(
-                    frontier=[],
-                    task=task,
-                )
+                frontier_rewritten = Frontier(frontier=[], task=task,)
                 for program_data in task_to_programs[task.name]:
                     p_str = program_data["program"]
                     p = Program.parse(p_str)
                     # Hack to avoid fatal error when computing likelihood summaries
-                    try:
-                        p = EtaLongVisitor(request=task.request).execute(p)
-                    except EtaExpandFailure:
-                        raise EtaExpandFailure(p_str)
+                    if rescore_frontiers:
+                        try:
+                            p = EtaLongVisitor(request=task.request).execute(p)
+                        except EtaExpandFailure:
+                            raise EtaExpandFailure(p_str)
+
                     frontier_rewritten.entries.append(
-                        FrontierEntry(
-                            program=p,
-                            logPrior=0.0,
-                            logLikelihood=0.0,
-                        )
+                        FrontierEntry(program=p, logPrior=0.0, logLikelihood=0.0,)
                     )
                 # Re-score the logPrior and logLikelihood of the frontier under the current grammar
-                frontier_rewritten = experiment_state.models[
-                    model_loaders.GRAMMAR
-                ].rescoreFrontier(frontier_rewritten)
+                if rescore_frontiers:
+                    frontier_rewritten = experiment_state.models[
+                        model_loaders.GRAMMAR
+                    ].rescoreFrontier(frontier_rewritten)
 
                 experiment_state.task_frontiers[split][task] = frontier_rewritten

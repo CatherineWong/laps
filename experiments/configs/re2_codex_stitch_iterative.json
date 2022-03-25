@@ -88,7 +88,8 @@
                     "max_tokens": 256,
                     "function_name_classes": [
                         "human_readable"
-                    ]
+                    ],
+                    "rescore_frontiers": false
                 }
             },
             {
@@ -121,21 +122,8 @@
                     "all"
                 ],
                 "params": {
-                    "include_samples": true
-                }
-            },
-            {
-                "experiment_block_type": "model_fn",
-                "model_type": "grammar",
-                "model_fn": "evaluate_frontier_likelihoods",
-                "task_splits": [
-                    "test"
-                ],
-                "task_batch_sizes": [
-                    "all"
-                ],
-                "params": {
-                    "save_filename": "test_likelihoods.json"
+                    "include_samples": true,
+                    "rescore_frontiers": false
                 }
             }
         ]

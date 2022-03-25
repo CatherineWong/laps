@@ -8,7 +8,7 @@ from src.models.model_loaders import ModelLoaderRegistries, GRAMMAR, ModelLoader
 from src.models.laps_grammar import LAPSGrammar
 
 import dreamcoder.domains.re2.re2Primitives as re2Primitives
-from dreamcoder.program import Program
+from dreamcoder.program import Program, EtaLongVisitor
 
 GrammarRegistry = ModelLoaderRegistries[GRAMMAR]
 
@@ -64,6 +64,7 @@ def synthetic_language_to_re2_program(language):
         match_type, replace_regex, match_tokens
     )
     p = Program.parse(match_replace_regex).betaNormalForm()
+    p = EtaLongVisitor(request=p.infer()).execute(p)
     return p
 
 
