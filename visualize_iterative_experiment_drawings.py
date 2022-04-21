@@ -134,6 +134,16 @@ def stack_images(images):
     return img_merge
 
 
+def get_blank_spacer(images, percentage=1):
+    # Adds a spacer that is percentage * height
+    last_image = images[-1]
+
+    spacer = PIL.Image.new(
+        "RGB", int(last_image.size[0]), last_image.size[-1], (255, 255, 255),
+    )
+    return spacer
+
+
 def visualize_codex_results(args, replication_directory, replication_subdirectories):
     codex_results_figure = []
     for batch_directory in sorted(
@@ -157,27 +167,33 @@ def visualize_codex_results(args, replication_directory, replication_subdirector
                 if len(prompted_programs) > 0:
                     prompted_progams_montage = drawings_primitives.display_programs_as_grid(
                         prompted_programs,
+                        color=(0, 0, 0),
                         suptitle=f"Codex prompt program examples: {batch_directory}, stitch_iteration={iteration}",
                         transparent_background=False,
                         ncols=8,
                     )
                     codex_results_figure.append(prompted_progams_montage)
-                # TODO: get prompted language.
 
                 # Montage the sampled programs.
                 sampled_programs = get_sampled_programs(codex_results)
                 if len(sampled_programs) > 0:
                     sampled_programs_montage = drawings_primitives.display_programs_as_grid(
                         sampled_programs,
+                        color=(0, 0, 255),
                         suptitle=f"Codex program samples: {batch_directory}, stitch_iteration={iteration}",
                         transparent_background=False,
                         ncols=8,
                     )
 
                     codex_results_figure.append(sampled_programs_montage)
+                # Add a line spacer.
+
+                codex_results_figure.append(get_blank_spacer(codex_results_figure))
+
             except Exception as e:
                 print(e)
                 continue
+
     # Concatenate all the images and save it.
     codex_visualization_output = os.path.join(
         replication_directory, CODEX_SAMPLE_VISUALIZATION
