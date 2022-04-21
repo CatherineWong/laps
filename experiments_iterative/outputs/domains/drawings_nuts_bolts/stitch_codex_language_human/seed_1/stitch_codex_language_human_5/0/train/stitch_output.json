@@ -1,0 +1,853 @@
+{
+  "cmd": "target/release/compress /Users/catwong/Desktop/zyzzyva/code/laps/experiments_iterative/outputs/domains/drawings_nuts_bolts/stitch_codex_language_human/seed_1/stitch_codex_language_human_5/0/train/stitch_frontiers.json --out=/Users/catwong/Desktop/zyzzyva/code/laps/experiments_iterative/outputs/domains/drawings_nuts_bolts/stitch_codex_language_human/seed_1/stitch_codex_language_human_5/0/train/stitch_output.json --max-arity=2 --iterations=10 --fmt=dreamcoder",
+  "args": {
+    "file": "/Users/catwong/Desktop/zyzzyva/code/laps/experiments_iterative/outputs/domains/drawings_nuts_bolts/stitch_codex_language_human/seed_1/stitch_codex_language_human_5/0/train/stitch_frontiers.json",
+    "out": "/Users/catwong/Desktop/zyzzyva/code/laps/experiments_iterative/outputs/domains/drawings_nuts_bolts/stitch_codex_language_human/seed_1/stitch_codex_language_human_5/0/train/stitch_output.json",
+    "iterations": 10,
+    "shuffle": false,
+    "truncate": null,
+    "fmt": "Dreamcoder",
+    "no_opt": false,
+    "step": {
+      "max_arity": 2,
+      "threads": 1,
+      "inv_candidates": 1,
+      "hole_choice": "MinCost",
+      "no_top_lambda": false,
+      "track": null,
+      "verbose_worklist": false,
+      "verbose_best": false,
+      "break_early_assignment": false,
+      "fifo_worklist": false,
+      "ascending_worklist": false,
+      "lossy_candidates": false,
+      "no_cache": false,
+      "show_rewritten": false,
+      "no_opt_free_vars": false,
+      "no_opt_single_use": false,
+      "no_opt_single_task": false,
+      "no_opt_upper_bound": false,
+      "no_opt_force_multiuse": false,
+      "no_opt_useless_abstract": false,
+      "no_stats": false,
+      "no_other_util": false,
+      "no_ctx_thread": false,
+      "eta_long": false
+    }
+  },
+  "original_cost": 105218,
+  "original": [
+    "(C (T (T c (M 2 0 0 0)) (M 2 0 0 0)) (T (T c (M 2 0 0 0)) (M 1 0 0 0)))",
+    "(C (T (T c (M 2 0 0 0)) (M 2 0 0 0)) (T (T c (M 2 0 0 0)) (M 0.5 0 0 0)))",
+    "(C (T (T c (M 2 0 0 0)) (M 2 0 0 0)) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 1 0 0 0)))",
+    "(C (T (T c (M 2 0 0 0)) (M 2 0 0 0)) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 0.5 0 0 0)))",
+    "(C (T (T c (M 2 0 0 0)) (M 2 0 0 0)) (T r (M 1 0 0 0)))",
+    "(C (T (T l (M 1 0 0 (/ 0.5 (tan (/ pi 2))))) (M 2 0 0 0)) (T (T c (M 2 0 0 0)) (M 2 0 0 0)))",
+    "(C (T (T r (M 2 0 0 0)) (M 2 0 0 0)) (T (T c (M 2 0 0 0)) (M 2 0.5 0 0)))",
+    "(C (T (T (T (T r (M 1 0 0 0)) (M 1 0 0 0)) (M 1 0 0 0)) (M 2 0 0 0)) (T c (M 2 0.75 0 0)))",
+    "(C (T (T r (M 1 0 0 0)) (M 2 0 0 0)) (T (T c (M 1.5 0 0 0)) (M 2 0 0 0)))",
+    "(C (T (T (T (T (repeat (T c (M 1 0 0 (/ 0.5 (tan (/ pi 8))))) 8 (M 1 (/ (* 2 pi) 8) 0 0)) (M 2 0 0 0)) (M 2 0 0 0)) (M 0.5 0 0 0)) (M 2 0 0 0)) (T (T c (M 2 0 0 0)) (M 1 0 0 0)))",
+    "(C (T (T c (M 2 0 0 0)) (M 2 0 0 0)) (T (repeat (T c (M 0.5 0 0 0)) 8 (M 1 (/ (* 2 pi) 8) 0 0)) (M 1 0 0 0)))",
+    "(C (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 2 0 0 0)) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 0.5 0 0 0)))",
+    "(C (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 2 0 0 0)) (T c (M 2 0 0 0)))",
+    "(C (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 1 0 0 0)) (T c (M 1 0 0 0)))",
+    "(C (T (T l (M 0.5 0 0 0)) (M 2 0 0 0)) (T (T c (M 2 0 0 0)) (M 2 0 0 0)))",
+    "(C (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 0.5 0 0 0)) (T c (M 2 0 0 0)))",
+    "(C (T (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 1 0 0 0)) (M 1 0 0 0)) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 2 0 0 0)))",
+    "(C (T (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 1 0 0 0)) (M 1 0 0 0)) (T (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 1 0 0 0)) (M 2 0 0 0)))",
+    "(C (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 1 0 0 0)) (T (T c (M 2 0 0 0)) (M 0.5 0 0 0)))",
+    "(C (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 1 0 0 0)) (T (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 1 0 0 0)) (M 0.5 0 0 0)))",
+    "(C (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 1 0 0 0)) (T (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 1 0 0 0)) (M 2 0 0 0)))",
+    "(C (T (T c (M 2 0 0 0)) (M 2 0 0 0)) (T (T (T (T c (M 0.5 0 0 0)) (M 0.5 0 0 0)) (M 0 0.5 0 0)) (M 0 0.5 0 0)))",
+    "(C (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 1 0 0 0)) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 1 0 0 0)))",
+    "(C (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 1 0 0 0)) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 1.5 0 0 0)))"
+  ],
+  "invs": [
+    {
+      "body": "(T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M #0 0 0 0))",
+      "dreamcoder": "#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0)))",
+      "arity": 1,
+      "name": "fn_0",
+      "rewritten": [
+        "(C (T (T c (M 2 0 0 0)) (M 2 0 0 0)) (T (T c (M 2 0 0 0)) (M 1 0 0 0)))",
+        "(C (T (T c (M 2 0 0 0)) (M 2 0 0 0)) (T (T c (M 2 0 0 0)) (M 0.5 0 0 0)))",
+        "(C (T (T c (M 2 0 0 0)) (M 2 0 0 0)) (fn_0 1))",
+        "(C (T (T c (M 2 0 0 0)) (M 2 0 0 0)) (fn_0 0.5))",
+        "(C (T (T c (M 2 0 0 0)) (M 2 0 0 0)) (T r (M 1 0 0 0)))",
+        "(C (T (T l (M 1 0 0 (/ 0.5 (tan (/ pi 2))))) (M 2 0 0 0)) (T (T c (M 2 0 0 0)) (M 2 0 0 0)))",
+        "(C (T (T r (M 2 0 0 0)) (M 2 0 0 0)) (T (T c (M 2 0 0 0)) (M 2 0.5 0 0)))",
+        "(C (T (T (T (T r (M 1 0 0 0)) (M 1 0 0 0)) (M 1 0 0 0)) (M 2 0 0 0)) (T c (M 2 0.75 0 0)))",
+        "(C (T (T r (M 1 0 0 0)) (M 2 0 0 0)) (T (T c (M 1.5 0 0 0)) (M 2 0 0 0)))",
+        "(C (T (T (T (T (repeat (T c (M 1 0 0 (/ 0.5 (tan (/ pi 8))))) 8 (M 1 (/ (* 2 pi) 8) 0 0)) (M 2 0 0 0)) (M 2 0 0 0)) (M 0.5 0 0 0)) (M 2 0 0 0)) (T (T c (M 2 0 0 0)) (M 1 0 0 0)))",
+        "(C (T (T c (M 2 0 0 0)) (M 2 0 0 0)) (T (repeat (T c (M 0.5 0 0 0)) 8 (M 1 (/ (* 2 pi) 8) 0 0)) (M 1 0 0 0)))",
+        "(C (fn_0 2) (fn_0 0.5))",
+        "(C (fn_0 2) (T c (M 2 0 0 0)))",
+        "(C (fn_0 1) (T c (M 1 0 0 0)))",
+        "(C (T (T l (M 0.5 0 0 0)) (M 2 0 0 0)) (T (T c (M 2 0 0 0)) (M 2 0 0 0)))",
+        "(C (fn_0 0.5) (T c (M 2 0 0 0)))",
+        "(C (T (fn_0 1) (M 1 0 0 0)) (fn_0 2))",
+        "(C (T (fn_0 1) (M 1 0 0 0)) (T (fn_0 1) (M 2 0 0 0)))",
+        "(C (fn_0 1) (T (T c (M 2 0 0 0)) (M 0.5 0 0 0)))",
+        "(C (fn_0 1) (T (fn_0 1) (M 0.5 0 0 0)))",
+        "(C (fn_0 1) (T (fn_0 1) (M 2 0 0 0)))",
+        "(C (T (T c (M 2 0 0 0)) (M 2 0 0 0)) (T (T (T (T c (M 0.5 0 0 0)) (M 0.5 0 0 0)) (M 0 0.5 0 0)) (M 0 0.5 0 0)))",
+        "(C (fn_0 1) (fn_0 1))",
+        "(C (fn_0 1) (fn_0 1.5))"
+      ],
+      "rewritten_dreamcoder": [
+        "(C (T (T c (M 2 0 0 0)) (M 2 0 0 0)) (T (T c (M 2 0 0 0)) (M 1 0 0 0)))",
+        "(C (T (T c (M 2 0 0 0)) (M 2 0 0 0)) (T (T c (M 2 0 0 0)) (M 0.5 0 0 0)))",
+        "(C (T (T c (M 2 0 0 0)) (M 2 0 0 0)) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1))",
+        "(C (T (T c (M 2 0 0 0)) (M 2 0 0 0)) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5))",
+        "(C (T (T c (M 2 0 0 0)) (M 2 0 0 0)) (T r (M 1 0 0 0)))",
+        "(C (T (T l (M 1 0 0 (/ 0.5 (tan (/ pi 2))))) (M 2 0 0 0)) (T (T c (M 2 0 0 0)) (M 2 0 0 0)))",
+        "(C (T (T r (M 2 0 0 0)) (M 2 0 0 0)) (T (T c (M 2 0 0 0)) (M 2 0.5 0 0)))",
+        "(C (T (T (T (T r (M 1 0 0 0)) (M 1 0 0 0)) (M 1 0 0 0)) (M 2 0 0 0)) (T c (M 2 0.75 0 0)))",
+        "(C (T (T r (M 1 0 0 0)) (M 2 0 0 0)) (T (T c (M 1.5 0 0 0)) (M 2 0 0 0)))",
+        "(C (T (T (T (T (repeat (T c (M 1 0 0 (/ 0.5 (tan (/ pi 8))))) 8 (M 1 (/ (* 2 pi) 8) 0 0)) (M 2 0 0 0)) (M 2 0 0 0)) (M 0.5 0 0 0)) (M 2 0 0 0)) (T (T c (M 2 0 0 0)) (M 1 0 0 0)))",
+        "(C (T (T c (M 2 0 0 0)) (M 2 0 0 0)) (T (repeat (T c (M 0.5 0 0 0)) 8 (M 1 (/ (* 2 pi) 8) 0 0)) (M 1 0 0 0)))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2) (T c (M 2 0 0 0)))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (T c (M 1 0 0 0)))",
+        "(C (T (T l (M 0.5 0 0 0)) (M 2 0 0 0)) (T (T c (M 2 0 0 0)) (M 2 0 0 0)))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5) (T c (M 2 0 0 0)))",
+        "(C (T (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (M 1 0 0 0)) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2))",
+        "(C (T (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (M 1 0 0 0)) (T (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (M 2 0 0 0)))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (T (T c (M 2 0 0 0)) (M 0.5 0 0 0)))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (T (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (M 0.5 0 0 0)))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (T (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (M 2 0 0 0)))",
+        "(C (T (T c (M 2 0 0 0)) (M 2 0 0 0)) (T (T (T (T c (M 0.5 0 0 0)) (M 0.5 0 0 0)) (M 0 0.5 0 0)) (M 0 0.5 0 0)))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1.5))"
+      ],
+      "utility": 50298,
+      "expected_cost": 50678,
+      "final_cost": 50678,
+      "multiplier": 2.076206637988871,
+      "multiplier_wrt_orig": 2.076206637988871,
+      "num_uses": 20,
+      "uses": [
+        {
+          "fn_0 0.5": "(T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 0.5 0 0 0))"
+        },
+        {
+          "fn_0 1": "(T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 1 0 0 0))"
+        },
+        {
+          "fn_0 1.5": "(T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 1.5 0 0 0))"
+        },
+        {
+          "fn_0 2": "(T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 2 0 0 0))"
+        }
+      ]
+    },
+    {
+      "body": "(T #1 (M #0 0 0 0))",
+      "dreamcoder": "#(lambda (lambda (T $0 (M $1 0 0 0))))",
+      "arity": 2,
+      "name": "fn_1",
+      "rewritten": [
+        "(C (fn_1 2 (fn_1 2 c)) (fn_1 1 (fn_1 2 c)))",
+        "(C (fn_1 2 (fn_1 2 c)) (fn_1 0.5 (fn_1 2 c)))",
+        "(C (fn_1 2 (fn_1 2 c)) (fn_0 1))",
+        "(C (fn_1 2 (fn_1 2 c)) (fn_0 0.5))",
+        "(C (fn_1 2 (fn_1 2 c)) (fn_1 1 r))",
+        "(C (fn_1 2 (T l (M 1 0 0 (/ 0.5 (tan (/ pi 2)))))) (fn_1 2 (fn_1 2 c)))",
+        "(C (fn_1 2 (fn_1 2 r)) (T (fn_1 2 c) (M 2 0.5 0 0)))",
+        "(C (fn_1 2 (fn_1 1 (fn_1 1 (fn_1 1 r)))) (T c (M 2 0.75 0 0)))",
+        "(C (fn_1 2 (fn_1 1 r)) (fn_1 2 (fn_1 1.5 c)))",
+        "(C (fn_1 2 (fn_1 0.5 (fn_1 2 (fn_1 2 (repeat (T c (M 1 0 0 (/ 0.5 (tan (/ pi 8))))) 8 (M 1 (/ (* 2 pi) 8) 0 0)))))) (fn_1 1 (fn_1 2 c)))",
+        "(C (fn_1 2 (fn_1 2 c)) (fn_1 1 (repeat (fn_1 0.5 c) 8 (M 1 (/ (* 2 pi) 8) 0 0))))",
+        "(C (fn_0 2) (fn_0 0.5))",
+        "(C (fn_0 2) (fn_1 2 c))",
+        "(C (fn_0 1) (fn_1 1 c))",
+        "(C (fn_1 2 (fn_1 0.5 l)) (fn_1 2 (fn_1 2 c)))",
+        "(C (fn_0 0.5) (fn_1 2 c))",
+        "(C (fn_1 1 (fn_0 1)) (fn_0 2))",
+        "(C (fn_1 1 (fn_0 1)) (fn_1 2 (fn_0 1)))",
+        "(C (fn_0 1) (fn_1 0.5 (fn_1 2 c)))",
+        "(C (fn_0 1) (fn_1 0.5 (fn_0 1)))",
+        "(C (fn_0 1) (fn_1 2 (fn_0 1)))",
+        "(C (fn_1 2 (fn_1 2 c)) (T (T (fn_1 0.5 (fn_1 0.5 c)) (M 0 0.5 0 0)) (M 0 0.5 0 0)))",
+        "(C (fn_0 1) (fn_0 1))",
+        "(C (fn_0 1) (fn_0 1.5))"
+      ],
+      "rewritten_dreamcoder": [
+        "(C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)))",
+        "(C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)))",
+        "(C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1))",
+        "(C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5))",
+        "(C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 r))",
+        "(C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (T l (M 1 0 0 (/ 0.5 (tan (/ pi 2)))))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)))",
+        "(C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 r)) (T (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c) (M 2 0.5 0 0)))",
+        "(C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 r)))) (T c (M 2 0.75 0 0)))",
+        "(C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 r)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1.5 c)))",
+        "(C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (repeat (T c (M 1 0 0 (/ 0.5 (tan (/ pi 8))))) 8 (M 1 (/ (* 2 pi) 8) 0 0)))))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)))",
+        "(C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (repeat (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 c) 8 (M 1 (/ (* 2 pi) 8) 0 0))))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 c))",
+        "(C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 l)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c))",
+        "(C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2))",
+        "(C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)))",
+        "(C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (T (T (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 c)) (M 0 0.5 0 0)) (M 0 0.5 0 0)))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1.5))"
+      ],
+      "utility": 22269,
+      "expected_cost": 27650,
+      "final_cost": 27650,
+      "multiplier": 1.8328390596745028,
+      "multiplier_wrt_orig": 3.805352622061483,
+      "num_uses": 57,
+      "uses": [
+        {
+          "fn_1 2 (T (T (T (repeat (T c (M 1 0 0 (/ 0.5 (tan (/ pi 8))))) 8 (M 1 (/ (* 2 pi) 8) 0 0)) (M 2 0 0 0)) (M 2 0 0 0)) (M 0.5 0 0 0))": "(T (T (T (T (repeat (T c (M 1 0 0 (/ 0.5 (tan (/ pi 8))))) 8 (M 1 (/ (* 2 pi) 8) 0 0)) (M 2 0 0 0)) (M 2 0 0 0)) (M 0.5 0 0 0)) (M 2 0 0 0))"
+        },
+        {
+          "fn_1 2 (T (T (T r (M 1 0 0 0)) (M 1 0 0 0)) (M 1 0 0 0))": "(T (T (T (T r (M 1 0 0 0)) (M 1 0 0 0)) (M 1 0 0 0)) (M 2 0 0 0))"
+        },
+        {
+          "fn_1 0.5 (T (T (repeat (T c (M 1 0 0 (/ 0.5 (tan (/ pi 8))))) 8 (M 1 (/ (* 2 pi) 8) 0 0)) (M 2 0 0 0)) (M 2 0 0 0))": "(T (T (T (repeat (T c (M 1 0 0 (/ 0.5 (tan (/ pi 8))))) 8 (M 1 (/ (* 2 pi) 8) 0 0)) (M 2 0 0 0)) (M 2 0 0 0)) (M 0.5 0 0 0))"
+        },
+        {
+          "fn_1 1 (T (T r (M 1 0 0 0)) (M 1 0 0 0))": "(T (T (T r (M 1 0 0 0)) (M 1 0 0 0)) (M 1 0 0 0))"
+        },
+        {
+          "fn_1 2 (T (repeat (T c (M 1 0 0 (/ 0.5 (tan (/ pi 8))))) 8 (M 1 (/ (* 2 pi) 8) 0 0)) (M 2 0 0 0))": "(T (T (repeat (T c (M 1 0 0 (/ 0.5 (tan (/ pi 8))))) 8 (M 1 (/ (* 2 pi) 8) 0 0)) (M 2 0 0 0)) (M 2 0 0 0))"
+        },
+        {
+          "fn_1 0.5 (T c (M 0.5 0 0 0))": "(T (T c (M 0.5 0 0 0)) (M 0.5 0 0 0))"
+        },
+        {
+          "fn_1 2 (T c (M 1.5 0 0 0))": "(T (T c (M 1.5 0 0 0)) (M 2 0 0 0))"
+        },
+        {
+          "fn_1 0.5 (T c (M 2 0 0 0))": "(T (T c (M 2 0 0 0)) (M 0.5 0 0 0))"
+        },
+        {
+          "fn_1 1 (T c (M 2 0 0 0))": "(T (T c (M 2 0 0 0)) (M 1 0 0 0))"
+        },
+        {
+          "fn_1 2 (T c (M 2 0 0 0))": "(T (T c (M 2 0 0 0)) (M 2 0 0 0))"
+        },
+        {
+          "fn_1 2 (T l (M 0.5 0 0 0))": "(T (T l (M 0.5 0 0 0)) (M 2 0 0 0))"
+        },
+        {
+          "fn_1 2 (T l (M 1 0 0 (/ 0.5 (tan (/ pi 2)))))": "(T (T l (M 1 0 0 (/ 0.5 (tan (/ pi 2))))) (M 2 0 0 0))"
+        },
+        {
+          "fn_1 1 (T r (M 1 0 0 0))": "(T (T r (M 1 0 0 0)) (M 1 0 0 0))"
+        },
+        {
+          "fn_1 2 (T r (M 1 0 0 0))": "(T (T r (M 1 0 0 0)) (M 2 0 0 0))"
+        },
+        {
+          "fn_1 2 (T r (M 2 0 0 0))": "(T (T r (M 2 0 0 0)) (M 2 0 0 0))"
+        },
+        {
+          "fn_1 0.5 (fn_0 1)": "(T (fn_0 1) (M 0.5 0 0 0))"
+        },
+        {
+          "fn_1 1 (fn_0 1)": "(T (fn_0 1) (M 1 0 0 0))"
+        },
+        {
+          "fn_1 2 (fn_0 1)": "(T (fn_0 1) (M 2 0 0 0))"
+        },
+        {
+          "fn_1 1 (repeat (T c (M 0.5 0 0 0)) 8 (M 1 (/ (* 2 pi) 8) 0 0))": "(T (repeat (T c (M 0.5 0 0 0)) 8 (M 1 (/ (* 2 pi) 8) 0 0)) (M 1 0 0 0))"
+        },
+        {
+          "fn_1 2 (repeat (T c (M 1 0 0 (/ 0.5 (tan (/ pi 8))))) 8 (M 1 (/ (* 2 pi) 8) 0 0))": "(T (repeat (T c (M 1 0 0 (/ 0.5 (tan (/ pi 8))))) 8 (M 1 (/ (* 2 pi) 8) 0 0)) (M 2 0 0 0))"
+        },
+        {
+          "fn_1 0.5 c": "(T c (M 0.5 0 0 0))"
+        },
+        {
+          "fn_1 1 c": "(T c (M 1 0 0 0))"
+        },
+        {
+          "fn_1 1.5 c": "(T c (M 1.5 0 0 0))"
+        },
+        {
+          "fn_1 2 c": "(T c (M 2 0 0 0))"
+        },
+        {
+          "fn_1 0.5 l": "(T l (M 0.5 0 0 0))"
+        },
+        {
+          "fn_1 1 r": "(T r (M 1 0 0 0))"
+        },
+        {
+          "fn_1 2 r": "(T r (M 2 0 0 0))"
+        }
+      ]
+    },
+    {
+      "body": "(fn_1 2)",
+      "dreamcoder": "#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2)",
+      "arity": 0,
+      "name": "fn_2",
+      "rewritten": [
+        "(C (fn_2 (fn_2 c)) (fn_1 1 (fn_2 c)))",
+        "(C (fn_2 (fn_2 c)) (fn_1 0.5 (fn_2 c)))",
+        "(C (fn_2 (fn_2 c)) (fn_0 1))",
+        "(C (fn_2 (fn_2 c)) (fn_0 0.5))",
+        "(C (fn_2 (fn_2 c)) (fn_1 1 r))",
+        "(C (fn_2 (T l (M 1 0 0 (/ 0.5 (tan (/ pi 2)))))) (fn_2 (fn_2 c)))",
+        "(C (fn_2 (fn_2 r)) (T (fn_2 c) (M 2 0.5 0 0)))",
+        "(C (fn_2 (fn_1 1 (fn_1 1 (fn_1 1 r)))) (T c (M 2 0.75 0 0)))",
+        "(C (fn_2 (fn_1 1 r)) (fn_2 (fn_1 1.5 c)))",
+        "(C (fn_2 (fn_1 0.5 (fn_2 (fn_2 (repeat (T c (M 1 0 0 (/ 0.5 (tan (/ pi 8))))) 8 (M 1 (/ (* 2 pi) 8) 0 0)))))) (fn_1 1 (fn_2 c)))",
+        "(C (fn_2 (fn_2 c)) (fn_1 1 (repeat (fn_1 0.5 c) 8 (M 1 (/ (* 2 pi) 8) 0 0))))",
+        "(C (fn_0 2) (fn_0 0.5))",
+        "(C (fn_0 2) (fn_2 c))",
+        "(C (fn_0 1) (fn_1 1 c))",
+        "(C (fn_2 (fn_1 0.5 l)) (fn_2 (fn_2 c)))",
+        "(C (fn_0 0.5) (fn_2 c))",
+        "(C (fn_1 1 (fn_0 1)) (fn_0 2))",
+        "(C (fn_1 1 (fn_0 1)) (fn_2 (fn_0 1)))",
+        "(C (fn_0 1) (fn_1 0.5 (fn_2 c)))",
+        "(C (fn_0 1) (fn_1 0.5 (fn_0 1)))",
+        "(C (fn_0 1) (fn_2 (fn_0 1)))",
+        "(C (fn_2 (fn_2 c)) (T (T (fn_1 0.5 (fn_1 0.5 c)) (M 0 0.5 0 0)) (M 0 0.5 0 0)))",
+        "(C (fn_0 1) (fn_0 1))",
+        "(C (fn_0 1) (fn_0 1.5))"
+      ],
+      "rewritten_dreamcoder": [
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 r))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (T l (M 1 0 0 (/ 0.5 (tan (/ pi 2)))))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) r)) (T (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c) (M 2 0.5 0 0)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 r)))) (T c (M 2 0.75 0 0)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 r)) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1.5 c)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (repeat (T c (M 1 0 0 (/ 0.5 (tan (/ pi 8))))) 8 (M 1 (/ (* 2 pi) 8) 0 0)))))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (repeat (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 c) 8 (M 1 (/ (* 2 pi) 8) 0 0))))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 c))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 l)) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))",
+        "(C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2))",
+        "(C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)) (T (T (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 c)) (M 0 0.5 0 0)) (M 0 0.5 0 0)))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1.5))"
+      ],
+      "utility": 3436,
+      "expected_cost": 23913,
+      "final_cost": 23913,
+      "multiplier": 1.1562748295905994,
+      "multiplier_wrt_orig": 4.400033454606281,
+      "num_uses": 37,
+      "uses": [
+        {
+          "fn_2 ": "(fn_1 2)"
+        }
+      ]
+    },
+    {
+      "body": "(C (fn_2 (fn_2 c)))",
+      "dreamcoder": "#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+      "arity": 0,
+      "name": "fn_3",
+      "rewritten": [
+        "(fn_3 (fn_1 1 (fn_2 c)))",
+        "(fn_3 (fn_1 0.5 (fn_2 c)))",
+        "(fn_3 (fn_0 1))",
+        "(fn_3 (fn_0 0.5))",
+        "(fn_3 (fn_1 1 r))",
+        "(C (fn_2 (T l (M 1 0 0 (/ 0.5 (tan (/ pi 2)))))) (fn_2 (fn_2 c)))",
+        "(C (fn_2 (fn_2 r)) (T (fn_2 c) (M 2 0.5 0 0)))",
+        "(C (fn_2 (fn_1 1 (fn_1 1 (fn_1 1 r)))) (T c (M 2 0.75 0 0)))",
+        "(C (fn_2 (fn_1 1 r)) (fn_2 (fn_1 1.5 c)))",
+        "(C (fn_2 (fn_1 0.5 (fn_2 (fn_2 (repeat (T c (M 1 0 0 (/ 0.5 (tan (/ pi 8))))) 8 (M 1 (/ (* 2 pi) 8) 0 0)))))) (fn_1 1 (fn_2 c)))",
+        "(fn_3 (fn_1 1 (repeat (fn_1 0.5 c) 8 (M 1 (/ (* 2 pi) 8) 0 0))))",
+        "(C (fn_0 2) (fn_0 0.5))",
+        "(C (fn_0 2) (fn_2 c))",
+        "(C (fn_0 1) (fn_1 1 c))",
+        "(C (fn_2 (fn_1 0.5 l)) (fn_2 (fn_2 c)))",
+        "(C (fn_0 0.5) (fn_2 c))",
+        "(C (fn_1 1 (fn_0 1)) (fn_0 2))",
+        "(C (fn_1 1 (fn_0 1)) (fn_2 (fn_0 1)))",
+        "(C (fn_0 1) (fn_1 0.5 (fn_2 c)))",
+        "(C (fn_0 1) (fn_1 0.5 (fn_0 1)))",
+        "(C (fn_0 1) (fn_2 (fn_0 1)))",
+        "(fn_3 (T (T (fn_1 0.5 (fn_1 0.5 c)) (M 0 0.5 0 0)) (M 0 0.5 0 0)))",
+        "(C (fn_0 1) (fn_0 1))",
+        "(C (fn_0 1) (fn_0 1.5))"
+      ],
+      "rewritten_dreamcoder": [
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 r))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (T l (M 1 0 0 (/ 0.5 (tan (/ pi 2)))))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) r)) (T (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c) (M 2 0.5 0 0)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 r)))) (T c (M 2 0.75 0 0)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 r)) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1.5 c)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (repeat (T c (M 1 0 0 (/ 0.5 (tan (/ pi 8))))) 8 (M 1 (/ (* 2 pi) 8) 0 0)))))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (repeat (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 c) 8 (M 1 (/ (* 2 pi) 8) 0 0))))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 c))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 l)) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))",
+        "(C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2))",
+        "(C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (T (T (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 c)) (M 0 0.5 0 0)) (M 0 0.5 0 0)))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1.5))"
+      ],
+      "utility": 1517,
+      "expected_cost": 21792,
+      "final_cost": 21792,
+      "multiplier": 1.097329295154185,
+      "multiplier_wrt_orig": 4.828285609397944,
+      "num_uses": 7,
+      "uses": [
+        {
+          "fn_3 ": "(C (fn_2 (fn_2 c)))"
+        }
+      ]
+    },
+    {
+      "body": "(fn_0 1)",
+      "dreamcoder": "#(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)",
+      "arity": 0,
+      "name": "fn_4",
+      "rewritten": [
+        "(fn_3 (fn_1 1 (fn_2 c)))",
+        "(fn_3 (fn_1 0.5 (fn_2 c)))",
+        "(fn_3 fn_4)",
+        "(fn_3 (fn_0 0.5))",
+        "(fn_3 (fn_1 1 r))",
+        "(C (fn_2 (T l (M 1 0 0 (/ 0.5 (tan (/ pi 2)))))) (fn_2 (fn_2 c)))",
+        "(C (fn_2 (fn_2 r)) (T (fn_2 c) (M 2 0.5 0 0)))",
+        "(C (fn_2 (fn_1 1 (fn_1 1 (fn_1 1 r)))) (T c (M 2 0.75 0 0)))",
+        "(C (fn_2 (fn_1 1 r)) (fn_2 (fn_1 1.5 c)))",
+        "(C (fn_2 (fn_1 0.5 (fn_2 (fn_2 (repeat (T c (M 1 0 0 (/ 0.5 (tan (/ pi 8))))) 8 (M 1 (/ (* 2 pi) 8) 0 0)))))) (fn_1 1 (fn_2 c)))",
+        "(fn_3 (fn_1 1 (repeat (fn_1 0.5 c) 8 (M 1 (/ (* 2 pi) 8) 0 0))))",
+        "(C (fn_0 2) (fn_0 0.5))",
+        "(C (fn_0 2) (fn_2 c))",
+        "(C fn_4 (fn_1 1 c))",
+        "(C (fn_2 (fn_1 0.5 l)) (fn_2 (fn_2 c)))",
+        "(C (fn_0 0.5) (fn_2 c))",
+        "(C (fn_1 1 fn_4) (fn_0 2))",
+        "(C (fn_1 1 fn_4) (fn_2 fn_4))",
+        "(C fn_4 (fn_1 0.5 (fn_2 c)))",
+        "(C fn_4 (fn_1 0.5 fn_4))",
+        "(C fn_4 (fn_2 fn_4))",
+        "(fn_3 (T (T (fn_1 0.5 (fn_1 0.5 c)) (M 0 0.5 0 0)) (M 0 0.5 0 0)))",
+        "(C fn_4 fn_4)",
+        "(C fn_4 (fn_0 1.5))"
+      ],
+      "rewritten_dreamcoder": [
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 r))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (T l (M 1 0 0 (/ 0.5 (tan (/ pi 2)))))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) r)) (T (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c) (M 2 0.5 0 0)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 r)))) (T c (M 2 0.75 0 0)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 r)) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1.5 c)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (repeat (T c (M 1 0 0 (/ 0.5 (tan (/ pi 8))))) 8 (M 1 (/ (* 2 pi) 8) 0 0)))))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (repeat (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 c) 8 (M 1 (/ (* 2 pi) 8) 0 0))))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 c))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 l)) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))",
+        "(C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2))",
+        "(C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (T (T (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 c)) (M 0 0.5 0 0)) (M 0 0.5 0 0)))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1.5))"
+      ],
+      "utility": 1012,
+      "expected_cost": 20479,
+      "final_cost": 20479,
+      "multiplier": 1.0641144587138043,
+      "multiplier_wrt_orig": 5.137848527760145,
+      "num_uses": 13,
+      "uses": [
+        {
+          "fn_4 ": "(fn_0 1)"
+        }
+      ]
+    },
+    {
+      "body": "(fn_1 1)",
+      "dreamcoder": "#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1)",
+      "arity": 0,
+      "name": "fn_5",
+      "rewritten": [
+        "(fn_3 (fn_5 (fn_2 c)))",
+        "(fn_3 (fn_1 0.5 (fn_2 c)))",
+        "(fn_3 fn_4)",
+        "(fn_3 (fn_0 0.5))",
+        "(fn_3 (fn_5 r))",
+        "(C (fn_2 (T l (M 1 0 0 (/ 0.5 (tan (/ pi 2)))))) (fn_2 (fn_2 c)))",
+        "(C (fn_2 (fn_2 r)) (T (fn_2 c) (M 2 0.5 0 0)))",
+        "(C (fn_2 (fn_5 (fn_5 (fn_5 r)))) (T c (M 2 0.75 0 0)))",
+        "(C (fn_2 (fn_5 r)) (fn_2 (fn_1 1.5 c)))",
+        "(C (fn_2 (fn_1 0.5 (fn_2 (fn_2 (repeat (T c (M 1 0 0 (/ 0.5 (tan (/ pi 8))))) 8 (M 1 (/ (* 2 pi) 8) 0 0)))))) (fn_5 (fn_2 c)))",
+        "(fn_3 (fn_5 (repeat (fn_1 0.5 c) 8 (M 1 (/ (* 2 pi) 8) 0 0))))",
+        "(C (fn_0 2) (fn_0 0.5))",
+        "(C (fn_0 2) (fn_2 c))",
+        "(C fn_4 (fn_5 c))",
+        "(C (fn_2 (fn_1 0.5 l)) (fn_2 (fn_2 c)))",
+        "(C (fn_0 0.5) (fn_2 c))",
+        "(C (fn_5 fn_4) (fn_0 2))",
+        "(C (fn_5 fn_4) (fn_2 fn_4))",
+        "(C fn_4 (fn_1 0.5 (fn_2 c)))",
+        "(C fn_4 (fn_1 0.5 fn_4))",
+        "(C fn_4 (fn_2 fn_4))",
+        "(fn_3 (T (T (fn_1 0.5 (fn_1 0.5 c)) (M 0 0.5 0 0)) (M 0 0.5 0 0)))",
+        "(C fn_4 fn_4)",
+        "(C fn_4 (fn_0 1.5))"
+      ],
+      "rewritten_dreamcoder": [
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) r))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (T l (M 1 0 0 (/ 0.5 (tan (/ pi 2)))))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) r)) (T (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c) (M 2 0.5 0 0)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) r)))) (T c (M 2 0.75 0 0)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) r)) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1.5 c)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (repeat (T c (M 1 0 0 (/ 0.5 (tan (/ pi 8))))) 8 (M 1 (/ (* 2 pi) 8) 0 0)))))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) (repeat (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 c) 8 (M 1 (/ (* 2 pi) 8) 0 0))))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) c))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 l)) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (T (T (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 c)) (M 0 0.5 0 0)) (M 0 0.5 0 0)))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1.5))"
+      ],
+      "utility": 810,
+      "expected_cost": 19368,
+      "final_cost": 19368,
+      "multiplier": 1.0573626600578274,
+      "multiplier_wrt_orig": 5.432569186286658,
+      "num_uses": 11,
+      "uses": [
+        {
+          "fn_5 ": "(fn_1 1)"
+        }
+      ]
+    },
+    {
+      "body": "(M #1 #0 0 0)",
+      "dreamcoder": "#(lambda (lambda (M $0 $1 0 0)))",
+      "arity": 2,
+      "name": "fn_6",
+      "rewritten": [
+        "(fn_3 (fn_5 (fn_2 c)))",
+        "(fn_3 (fn_1 0.5 (fn_2 c)))",
+        "(fn_3 fn_4)",
+        "(fn_3 (fn_0 0.5))",
+        "(fn_3 (fn_5 r))",
+        "(C (fn_2 (T l (M 1 0 0 (/ 0.5 (tan (/ pi 2)))))) (fn_2 (fn_2 c)))",
+        "(C (fn_2 (fn_2 r)) (T (fn_2 c) (fn_6 0.5 2)))",
+        "(C (fn_2 (fn_5 (fn_5 (fn_5 r)))) (T c (fn_6 0.75 2)))",
+        "(C (fn_2 (fn_5 r)) (fn_2 (fn_1 1.5 c)))",
+        "(C (fn_2 (fn_1 0.5 (fn_2 (fn_2 (repeat (T c (M 1 0 0 (/ 0.5 (tan (/ pi 8))))) 8 (fn_6 (/ (* 2 pi) 8) 1)))))) (fn_5 (fn_2 c)))",
+        "(fn_3 (fn_5 (repeat (fn_1 0.5 c) 8 (fn_6 (/ (* 2 pi) 8) 1))))",
+        "(C (fn_0 2) (fn_0 0.5))",
+        "(C (fn_0 2) (fn_2 c))",
+        "(C fn_4 (fn_5 c))",
+        "(C (fn_2 (fn_1 0.5 l)) (fn_2 (fn_2 c)))",
+        "(C (fn_0 0.5) (fn_2 c))",
+        "(C (fn_5 fn_4) (fn_0 2))",
+        "(C (fn_5 fn_4) (fn_2 fn_4))",
+        "(C fn_4 (fn_1 0.5 (fn_2 c)))",
+        "(C fn_4 (fn_1 0.5 fn_4))",
+        "(C fn_4 (fn_2 fn_4))",
+        "(fn_3 (T (T (fn_1 0.5 (fn_1 0.5 c)) (fn_6 0.5 0)) (fn_6 0.5 0)))",
+        "(C fn_4 fn_4)",
+        "(C fn_4 (fn_0 1.5))"
+      ],
+      "rewritten_dreamcoder": [
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) r))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (T l (M 1 0 0 (/ 0.5 (tan (/ pi 2)))))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) r)) (T (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c) (#(lambda (lambda (M $0 $1 0 0))) 0.5 2)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) r)))) (T c (#(lambda (lambda (M $0 $1 0 0))) 0.75 2)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) r)) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1.5 c)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (repeat (T c (M 1 0 0 (/ 0.5 (tan (/ pi 8))))) 8 (#(lambda (lambda (M $0 $1 0 0))) (/ (* 2 pi) 8) 1)))))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) (repeat (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 c) 8 (#(lambda (lambda (M $0 $1 0 0))) (/ (* 2 pi) 8) 1))))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) c))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 l)) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (T (T (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 c)) (#(lambda (lambda (M $0 $1 0 0))) 0.5 0)) (#(lambda (lambda (M $0 $1 0 0))) 0.5 0)))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1.5))"
+      ],
+      "utility": 756,
+      "expected_cost": 18156,
+      "final_cost": 18156,
+      "multiplier": 1.0667547918043623,
+      "multiplier_wrt_orig": 5.795219211280018,
+      "num_uses": 6,
+      "uses": [
+        {
+          "fn_6 0.5 0": "(M 0 0.5 0 0)"
+        },
+        {
+          "fn_6 (/ (* 2 pi) 8) 1": "(M 1 (/ (* 2 pi) 8) 0 0)"
+        },
+        {
+          "fn_6 0.5 2": "(M 2 0.5 0 0)"
+        },
+        {
+          "fn_6 0.75 2": "(M 2 0.75 0 0)"
+        }
+      ]
+    },
+    {
+      "body": "(fn_2 c)",
+      "dreamcoder": "#(#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)",
+      "arity": 0,
+      "name": "fn_7",
+      "rewritten": [
+        "(fn_3 (fn_5 fn_7))",
+        "(fn_3 (fn_1 0.5 fn_7))",
+        "(fn_3 fn_4)",
+        "(fn_3 (fn_0 0.5))",
+        "(fn_3 (fn_5 r))",
+        "(C (fn_2 (T l (M 1 0 0 (/ 0.5 (tan (/ pi 2)))))) (fn_2 fn_7))",
+        "(C (fn_2 (fn_2 r)) (T fn_7 (fn_6 0.5 2)))",
+        "(C (fn_2 (fn_5 (fn_5 (fn_5 r)))) (T c (fn_6 0.75 2)))",
+        "(C (fn_2 (fn_5 r)) (fn_2 (fn_1 1.5 c)))",
+        "(C (fn_2 (fn_1 0.5 (fn_2 (fn_2 (repeat (T c (M 1 0 0 (/ 0.5 (tan (/ pi 8))))) 8 (fn_6 (/ (* 2 pi) 8) 1)))))) (fn_5 fn_7))",
+        "(fn_3 (fn_5 (repeat (fn_1 0.5 c) 8 (fn_6 (/ (* 2 pi) 8) 1))))",
+        "(C (fn_0 2) (fn_0 0.5))",
+        "(C (fn_0 2) fn_7)",
+        "(C fn_4 (fn_5 c))",
+        "(C (fn_2 (fn_1 0.5 l)) (fn_2 fn_7))",
+        "(C (fn_0 0.5) fn_7)",
+        "(C (fn_5 fn_4) (fn_0 2))",
+        "(C (fn_5 fn_4) (fn_2 fn_4))",
+        "(C fn_4 (fn_1 0.5 fn_7))",
+        "(C fn_4 (fn_1 0.5 fn_4))",
+        "(C fn_4 (fn_2 fn_4))",
+        "(fn_3 (T (T (fn_1 0.5 (fn_1 0.5 c)) (fn_6 0.5 0)) (fn_6 0.5 0)))",
+        "(C fn_4 fn_4)",
+        "(C fn_4 (fn_0 1.5))"
+      ],
+      "rewritten_dreamcoder": [
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) #(#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 #(#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) r))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (T l (M 1 0 0 (/ 0.5 (tan (/ pi 2)))))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) #(#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) r)) (T #(#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c) (#(lambda (lambda (M $0 $1 0 0))) 0.5 2)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) r)))) (T c (#(lambda (lambda (M $0 $1 0 0))) 0.75 2)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) r)) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1.5 c)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (repeat (T c (M 1 0 0 (/ 0.5 (tan (/ pi 8))))) 8 (#(lambda (lambda (M $0 $1 0 0))) (/ (* 2 pi) 8) 1)))))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) #(#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) (repeat (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 c) 8 (#(lambda (lambda (M $0 $1 0 0))) (/ (* 2 pi) 8) 1))))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2) #(#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) c))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 l)) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) #(#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5) #(#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 #(#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (T (T (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 c)) (#(lambda (lambda (M $0 $1 0 0))) 0.5 0)) (#(lambda (lambda (M $0 $1 0 0))) 0.5 0)))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1.5))"
+      ],
+      "utility": 608,
+      "expected_cost": 17247,
+      "final_cost": 17247,
+      "multiplier": 1.0527048182292573,
+      "multiplier_wrt_orig": 6.100655186409231,
+      "num_uses": 9,
+      "uses": [
+        {
+          "fn_7 ": "(fn_2 c)"
+        }
+      ]
+    },
+    {
+      "body": "(fn_1 0.5)",
+      "dreamcoder": "#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5)",
+      "arity": 0,
+      "name": "fn_8",
+      "rewritten": [
+        "(fn_3 (fn_5 fn_7))",
+        "(fn_3 (fn_8 fn_7))",
+        "(fn_3 fn_4)",
+        "(fn_3 (fn_0 0.5))",
+        "(fn_3 (fn_5 r))",
+        "(C (fn_2 (T l (M 1 0 0 (/ 0.5 (tan (/ pi 2)))))) (fn_2 fn_7))",
+        "(C (fn_2 (fn_2 r)) (T fn_7 (fn_6 0.5 2)))",
+        "(C (fn_2 (fn_5 (fn_5 (fn_5 r)))) (T c (fn_6 0.75 2)))",
+        "(C (fn_2 (fn_5 r)) (fn_2 (fn_1 1.5 c)))",
+        "(C (fn_2 (fn_8 (fn_2 (fn_2 (repeat (T c (M 1 0 0 (/ 0.5 (tan (/ pi 8))))) 8 (fn_6 (/ (* 2 pi) 8) 1)))))) (fn_5 fn_7))",
+        "(fn_3 (fn_5 (repeat (fn_8 c) 8 (fn_6 (/ (* 2 pi) 8) 1))))",
+        "(C (fn_0 2) (fn_0 0.5))",
+        "(C (fn_0 2) fn_7)",
+        "(C fn_4 (fn_5 c))",
+        "(C (fn_2 (fn_8 l)) (fn_2 fn_7))",
+        "(C (fn_0 0.5) fn_7)",
+        "(C (fn_5 fn_4) (fn_0 2))",
+        "(C (fn_5 fn_4) (fn_2 fn_4))",
+        "(C fn_4 (fn_8 fn_7))",
+        "(C fn_4 (fn_8 fn_4))",
+        "(C fn_4 (fn_2 fn_4))",
+        "(fn_3 (T (T (fn_8 (fn_8 c)) (fn_6 0.5 0)) (fn_6 0.5 0)))",
+        "(C fn_4 fn_4)",
+        "(C fn_4 (fn_0 1.5))"
+      ],
+      "rewritten_dreamcoder": [
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) #(#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5) #(#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) r))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (T l (M 1 0 0 (/ 0.5 (tan (/ pi 2)))))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) #(#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) r)) (T #(#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c) (#(lambda (lambda (M $0 $1 0 0))) 0.5 2)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) r)))) (T c (#(lambda (lambda (M $0 $1 0 0))) 0.75 2)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) r)) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1.5 c)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (repeat (T c (M 1 0 0 (/ 0.5 (tan (/ pi 8))))) 8 (#(lambda (lambda (M $0 $1 0 0))) (/ (* 2 pi) 8) 1)))))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) #(#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) (repeat (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5) c) 8 (#(lambda (lambda (M $0 $1 0 0))) (/ (* 2 pi) 8) 1))))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2) #(#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) c))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5) l)) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) #(#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5) #(#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5) #(#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (T (T (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5) c)) (#(lambda (lambda (M $0 $1 0 0))) 0.5 0)) (#(lambda (lambda (M $0 $1 0 0))) 0.5 0)))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1))",
+        "(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1.5))"
+      ],
+      "utility": 507,
+      "expected_cost": 16439,
+      "final_cost": 16439,
+      "multiplier": 1.0491514082365108,
+      "multiplier_wrt_orig": 6.400510979986617,
+      "num_uses": 8,
+      "uses": [
+        {
+          "fn_8 ": "(fn_1 0.5)"
+        }
+      ]
+    },
+    {
+      "body": "(C fn_4)",
+      "dreamcoder": "#(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1))",
+      "arity": 0,
+      "name": "fn_9",
+      "rewritten": [
+        "(fn_3 (fn_5 fn_7))",
+        "(fn_3 (fn_8 fn_7))",
+        "(fn_3 fn_4)",
+        "(fn_3 (fn_0 0.5))",
+        "(fn_3 (fn_5 r))",
+        "(C (fn_2 (T l (M 1 0 0 (/ 0.5 (tan (/ pi 2)))))) (fn_2 fn_7))",
+        "(C (fn_2 (fn_2 r)) (T fn_7 (fn_6 0.5 2)))",
+        "(C (fn_2 (fn_5 (fn_5 (fn_5 r)))) (T c (fn_6 0.75 2)))",
+        "(C (fn_2 (fn_5 r)) (fn_2 (fn_1 1.5 c)))",
+        "(C (fn_2 (fn_8 (fn_2 (fn_2 (repeat (T c (M 1 0 0 (/ 0.5 (tan (/ pi 8))))) 8 (fn_6 (/ (* 2 pi) 8) 1)))))) (fn_5 fn_7))",
+        "(fn_3 (fn_5 (repeat (fn_8 c) 8 (fn_6 (/ (* 2 pi) 8) 1))))",
+        "(C (fn_0 2) (fn_0 0.5))",
+        "(C (fn_0 2) fn_7)",
+        "(fn_9 (fn_5 c))",
+        "(C (fn_2 (fn_8 l)) (fn_2 fn_7))",
+        "(C (fn_0 0.5) fn_7)",
+        "(C (fn_5 fn_4) (fn_0 2))",
+        "(C (fn_5 fn_4) (fn_2 fn_4))",
+        "(fn_9 (fn_8 fn_7))",
+        "(fn_9 (fn_8 fn_4))",
+        "(fn_9 (fn_2 fn_4))",
+        "(fn_3 (T (T (fn_8 (fn_8 c)) (fn_6 0.5 0)) (fn_6 0.5 0)))",
+        "(fn_9 fn_4)",
+        "(fn_9 (fn_0 1.5))"
+      ],
+      "rewritten_dreamcoder": [
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) #(#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5) #(#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) r))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (T l (M 1 0 0 (/ 0.5 (tan (/ pi 2)))))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) #(#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) r)) (T #(#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c) (#(lambda (lambda (M $0 $1 0 0))) 0.5 2)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) r)))) (T c (#(lambda (lambda (M $0 $1 0 0))) 0.75 2)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) r)) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1.5 c)))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (repeat (T c (M 1 0 0 (/ 0.5 (tan (/ pi 8))))) 8 (#(lambda (lambda (M $0 $1 0 0))) (/ (* 2 pi) 8) 1)))))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) #(#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) (repeat (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5) c) 8 (#(lambda (lambda (M $0 $1 0 0))) (/ (* 2 pi) 8) 1))))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2) #(#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))",
+        "(#(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) c))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5) l)) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) #(#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(C (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 0.5) #(#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 2))",
+        "(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)))",
+        "(#(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5) #(#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c)))",
+        "(#(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)))",
+        "(#(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)))",
+        "(#(C (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2) c))) (T (T (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5) (#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5) c)) (#(lambda (lambda (M $0 $1 0 0))) 0.5 0)) (#(lambda (lambda (M $0 $1 0 0))) 0.5 0)))",
+        "(#(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)) #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1))",
+        "(#(C #(#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1)) (#(lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))) 1.5))"
+      ],
+      "utility": 305,
+      "expected_cost": 15833,
+      "final_cost": 15833,
+      "multiplier": 1.0382744899892629,
+      "multiplier_wrt_orig": 6.645487273416283,
+      "num_uses": 6,
+      "uses": [
+        {
+          "fn_9 ": "(C fn_4)"
+        }
+      ]
+    }
+  ]
+}

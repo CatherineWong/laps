@@ -187,7 +187,11 @@ class CodexSampleGenerator(CodexBase, model_loaders.ModelLoader):
             query_results["curr_prompt_idx"] = curr_prompt_idx
             query_results["prompt_text"].append(prompt_text)
             query_results["prompt_programs"].append(prompt_examples)
-            query_results["completion"].append(completion.to_dict_recursive())
+
+            if completion is not None:
+                query_results["completion"].append(completion.to_dict_recursive())
+            else:
+                query_results["completion"].append({})
 
             if completion is not None:
                 (
@@ -199,20 +203,22 @@ class CodexSampleGenerator(CodexBase, model_loaders.ModelLoader):
                     completion_name_classes=function_name_classes,
                     compute_likelihoods=compute_likelihoods,
                 )
-                all_programs_invalid.update(programs_invalid)
-                all_programs_valid.update(programs_valid)
-                query_results["programs_valid"], query_results["programs_invalid"] = (
-                    list(all_programs_valid),
-                    list(all_programs_invalid),
-                )
-                if verbose_prompt:
-                    print(separator.join(programs_invalid))
-                if not cache_used:
-                    with open(query_results_filepath, "w") as f:
-                        json.dump(query_results, f)
-                    print(f"Wrote results: {query_results_filepath}")
             else:
-                raise ValueError("Query to Codex encountered an error.")
+                print("Error: Codex completion error.")
+                programs_valid, programs_invalid = [], []
+
+            all_programs_invalid.update(programs_invalid)
+            all_programs_valid.update(programs_valid)
+            query_results["programs_valid"], query_results["programs_invalid"] = (
+                list(all_programs_valid),
+                list(all_programs_invalid),
+            )
+            if verbose_prompt:
+                print(separator.join(programs_invalid))
+            if not cache_used:
+                with open(query_results_filepath, "w") as f:
+                    json.dump(query_results, f)
+                print(f"Wrote results: {query_results_filepath}")
 
     def get_completion_for_prompt(
         self,
@@ -302,20 +308,10 @@ class CodexSampleGenerator(CodexBase, model_loaders.ModelLoader):
             # NOTE(gg): Hashing for task naming avoids adding duplicate programs to the `experiment_state`
             program_hash = abs(hash(program_str))
 
-            task = Task(
-                name=f"codex_{program_hash}",
-                request=p_type,
-                examples=[],
-            )
+            task = Task(name=f"codex_{program_hash}", request=p_type, examples=[],)
 
             frontier = Frontier(
-                frontier=[
-                    FrontierEntry(
-                        program=p,
-                        logPrior=0.0,
-                        logLikelihood=0.0,
-                    )
-                ],
+                frontier=[FrontierEntry(program=p, logPrior=0.0, logLikelihood=0.0,)],
                 task=task,
             )
 
@@ -389,6 +385,7 @@ class CodexSampleGenerator(CodexBase, model_loaders.ModelLoader):
                         grammar.show_program(p, name_classes=function_name_classes)
                         for p in examples_for_task
                     ]
+
                 example_types_for_task.append(examples_for_task)
             if len(example_types_for_task) < 1:
                 continue

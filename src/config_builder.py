@@ -6,6 +6,7 @@ Utilities for autogenerating configs for experiments based on templates.
 
 import json
 import os
+from re import L
 
 from src.models.laps_grammar import LAPSGrammar
 from src.models.model_loaders import (
@@ -14,7 +15,14 @@ from src.models.model_loaders import (
     SAMPLE_GENERATOR,
     INITIALIZE_GROUND_TRUTH,
 )
-from src.task_loaders import ALL, GroundTruthOrderedTaskBatcher
+from src.task_loaders import (
+    ALL,
+    DEFAULT,
+    GroundTruthOrderedTaskBatcher,
+    LANGUAGE,
+    SYNTHETIC,
+    HUMAN,
+)
 import data.drawings.make_tasks as drawing_tasks
 
 DEFAULT_EXPERIMENT_DIR = "experiments_iterative"
@@ -36,25 +44,38 @@ DEFAULT_CODEX_PARAMS = {
     "max_tokens": 256,
     "function_name_classes": ["default"],
 }
+DEFAULT_LANGUAGE = {
+    "logo": "synthetic",
+    "re2": "synthetic",
+    "clevr": "synthetic",
+    "drawings": "human",
+    "drawings_nuts_bolts": "human",
+    "drawings_wheels": "human",
+    "drawings_furniture": "human",
+    "drawings_dials": "human",
+}
 
 
-def get_domain_metadata(domain: str):
+def get_domain_metadata(domain: str, language: str):
+    if language == DEFAULT:
+        language = DEFAULT_LANGUAGE[domain]
+
     METADATA = {
         "logo": {
             "tasks_loader": "compositional_graphics_200",
-            "task_language_loader": "compositional_graphics_200_synthetic",
+            "task_language_loader": f"compositional_graphics_200_{language}",
             "ocaml_special_handler": "LOGO",
             "global_batch_sizes": [5, 10, 15, 25, 50, 100, 200],
         },
         "clevr": {
             "tasks_loader": "clevr",
-            "task_language_loader": "clevr_synthetic",
+            "task_language_loader": f"clevr_{language}",
             "ocaml_special_handler": "clevr",
             "global_batch_sizes": [5, 10, 15, 25, 50, 100, 191],
         },
         "re2": {
             "tasks_loader": "re2",
-            "task_language_loader": "re2_synthetic",
+            "task_language_loader": f"re2_{language}",
             "ocaml_special_handler": "re2",
             "global_batch_sizes": [5, 10, 15, 25, 50, 100, 200, 300, 400, 491],
         },
@@ -63,7 +84,7 @@ def get_domain_metadata(domain: str):
     # Metadata for each drawing task domain
     METADATA["drawings"] = {
         "tasks_loader": "drawings",
-        "task_language_loader": f"drawings_human",
+        "task_language_loader": f"drawings_{language}",
         "ocaml_special_handler": "drawings",
         "global_batch_sizes": [
             5,
@@ -85,9 +106,9 @@ def get_domain_metadata(domain: str):
         drawing_domain_name = "drawings_" + drawing_domain
         drawing_domain_metadata = {
             "tasks_loader": drawing_domain_name,
-            "task_language_loader": f"drawings_human_{drawing_domain}",
+            "task_language_loader": f"drawings_{language}_{drawing_domain}",
             "ocaml_special_handler": "drawings",
-            "global_batch_sizes": [5, 10, 15, 25, 50, 100, 200, 250],
+            "global_batch_sizes": [50, 100, 200, 250],
         }
         METADATA[drawing_domain_name] = drawing_domain_metadata
 
@@ -97,6 +118,7 @@ def get_domain_metadata(domain: str):
 def build_config(
     experiment_type: str,
     domain: str,
+    language: str,
     experiment_id: str = None,
     output_directory: str = DEFAULT_EXPERIMENT_DIR,
     random_seed: int = 0,
@@ -112,6 +134,7 @@ def build_config(
     config.update(
         build_config_body(
             experiment_type=experiment_type,
+            language=language,
             domain=domain,
             max_iterations=max_iterations,
             task_batcher=task_batcher,
@@ -125,6 +148,7 @@ def build_config(
     config.update(
         build_config_metadata(
             domain=domain,
+            language=language,
             experiment_type=experiment_type,
             experiment_id=experiment_id,
             global_batch_size=global_batch_size,
@@ -139,14 +163,19 @@ def build_config_metadata(
     domain: str,
     experiment_type: str,
     experiment_id: str = None,
+    language: str = DEFAULT,
     global_batch_size: int = ALL,
     output_directory: str = DEFAULT_EXPERIMENT_DIR,
     random_seed: int = 0,
 ):
-    domain_meta = get_domain_metadata(domain)
+    domain_meta = get_domain_metadata(domain, language)
 
     if experiment_id is None:
         experiment_id = experiment_type
+    if LANGUAGE in experiment_id:
+        if LANGUAGE == DEFAULT:
+            language = DEFAULT_LANGUAGE[domain]
+        experiment_id += f"_{language}"
 
     export_directory = os.path.join(
         output_directory,
@@ -187,6 +216,7 @@ def build_config_metadata(
 
 def build_config_body(
     experiment_type: str,
+    language: str,
     domain: str,
     max_iterations: int = 1,
     task_batcher: str = GroundTruthOrderedTaskBatcher.name,
@@ -202,7 +232,7 @@ def build_config_body(
     with open(template_path, "r") as f:
         config = json.load(f)
 
-    domain_meta = get_domain_metadata(domain)
+    domain_meta = get_domain_metadata(domain, language)
 
     model_initializers = config["model_initializers"]
     model_initializers[0]["model_loader"] = domain_meta["ocaml_special_handler"]

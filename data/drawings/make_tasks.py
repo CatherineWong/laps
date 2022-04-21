@@ -97,7 +97,7 @@ class DrawingsHumanLanguageLoader(TaskDataLoader):
             [s.strip() for s in eval(row["wheres"])],
         )
         zipped = list(zip(whats, wheres))
-        language = "\n".join(
+        language = "\t".join(
             [f"{WHAT_TOKEN} {what} {WHERE_TOKEN} {where}" for (what, where) in zipped]
         )
 

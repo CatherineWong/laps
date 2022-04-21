@@ -13,6 +13,7 @@ TaskLanguageLoaderRegistry = ClassRegistry("name", unique=True)
 TaskBatcherRegistry = ClassRegistry("name", unique=True)
 
 # Task and dataset constants
+DEFAULT = "default"
 TRAIN, TEST = "train", "test"
 HUMAN, SYNTHETIC = "human", "synthetic"
 TASKS, PROGRAMS, LANGUAGE, VOCAB = (

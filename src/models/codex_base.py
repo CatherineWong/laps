@@ -10,6 +10,8 @@ import time
 import openai
 from openai.error import InvalidRequestError, RateLimitError
 
+MAX_CODEX_TOKENS = 4096
+
 
 class CodexBase(object):
     DEFAULT_ENGINE = "davinci-codex"
@@ -58,13 +60,13 @@ class CodexBase(object):
                     logprobs=logprobs,
                 )
                 return completion
-            except InvalidRequestError as e:
-                print(e)
-                completion = None
-                return completion
             except RateLimitError as e:
                 print(e)
                 pause_for_rate_limit = True
                 completion = None
+            except Exception as e:
+                print(e)
+                completion = None
+                return completion
 
         return completion

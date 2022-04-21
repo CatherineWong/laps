@@ -1,0 +1,238 @@
+{
+  "cmd": "target/release/compress /Users/catwong/Desktop/zyzzyva/code/laps/experiments_iterative/outputs/domains/drawings_nuts_bolts/stitch/seed_0/stitch_10/0/train/stitch_frontiers.json --out=/Users/catwong/Desktop/zyzzyva/code/laps/experiments_iterative/outputs/domains/drawings_nuts_bolts/stitch/seed_0/stitch_10/0/train/stitch_output.json --max-arity=2 --iterations=10 --fmt=dreamcoder",
+  "args": {
+    "file": "/Users/catwong/Desktop/zyzzyva/code/laps/experiments_iterative/outputs/domains/drawings_nuts_bolts/stitch/seed_0/stitch_10/0/train/stitch_frontiers.json",
+    "out": "/Users/catwong/Desktop/zyzzyva/code/laps/experiments_iterative/outputs/domains/drawings_nuts_bolts/stitch/seed_0/stitch_10/0/train/stitch_output.json",
+    "iterations": 10,
+    "shuffle": false,
+    "truncate": null,
+    "fmt": "Dreamcoder",
+    "no_opt": false,
+    "step": {
+      "max_arity": 2,
+      "threads": 1,
+      "inv_candidates": 1,
+      "hole_choice": "MinCost",
+      "no_top_lambda": false,
+      "track": null,
+      "verbose_worklist": false,
+      "verbose_best": false,
+      "break_early_assignment": false,
+      "fifo_worklist": false,
+      "ascending_worklist": false,
+      "lossy_candidates": false,
+      "no_cache": false,
+      "show_rewritten": false,
+      "no_opt_free_vars": false,
+      "no_opt_single_use": false,
+      "no_opt_single_task": false,
+      "no_opt_upper_bound": false,
+      "no_opt_force_multiuse": false,
+      "no_opt_useless_abstract": false,
+      "no_stats": false,
+      "no_other_util": false,
+      "no_ctx_thread": false,
+      "eta_long": false
+    }
+  },
+  "original_cost": 32512,
+  "original": [
+    "(C (T (T c (M 2 0 0 0)) (M 2 0 0 0)) (T (T c (M 2 0 0 0)) (M 1 0 0 0)))",
+    "(C (T (T c (M 2 0 0 0)) (M 2 0 0 0)) (T (T c (M 2 0 0 0)) (M 0.5 0 0 0)))",
+    "(C (T (T c (M 2 0 0 0)) (M 2 0 0 0)) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 1 0 0 0)))",
+    "(C (T (T c (M 2 0 0 0)) (M 2 0 0 0)) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 0.5 0 0 0)))",
+    "(C (T (T c (M 2 0 0 0)) (M 2 0 0 0)) (T r (M 1 0 0 0)))",
+    "(C (T (T c (M 2 0 0 0)) (M 2 0 0 0)) (T r (M 0.5 0 0 0)))",
+    "(C (T (T c (M 2 0 0 0)) (M 4 0 0 0)) (T (T c (M 2 0 0 0)) (M 2 0 0 0)))",
+    "(C (T (T c (M 2 0 0 0)) (M 4 0 0 0)) (T (T c (M 2 0 0 0)) (M 1 0 0 0)))",
+    "(C (T (T c (M 2 0 0 0)) (M 4 0 0 0)) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 2 0 0 0)))",
+    "(C (T (T c (M 2 0 0 0)) (M 4 0 0 0)) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 1 0 0 0)))"
+  ],
+  "invs": [
+    {
+      "body": "(T (T c (M 2 0 0 0)) (M #0 0 0 0))",
+      "dreamcoder": "#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0)))",
+      "arity": 1,
+      "name": "fn_0",
+      "rewritten": [
+        "(C (fn_0 2) (fn_0 1))",
+        "(C (fn_0 2) (fn_0 0.5))",
+        "(C (fn_0 2) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 1 0 0 0)))",
+        "(C (fn_0 2) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 0.5 0 0 0)))",
+        "(C (fn_0 2) (T r (M 1 0 0 0)))",
+        "(C (fn_0 2) (T r (M 0.5 0 0 0)))",
+        "(C (fn_0 4) (fn_0 2))",
+        "(C (fn_0 4) (fn_0 1))",
+        "(C (fn_0 4) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 2 0 0 0)))",
+        "(C (fn_0 4) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 1 0 0 0)))"
+      ],
+      "rewritten_dreamcoder": [
+        "(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 1))",
+        "(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 0.5))",
+        "(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 1 0 0 0)))",
+        "(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 0.5 0 0 0)))",
+        "(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2) (T r (M 1 0 0 0)))",
+        "(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2) (T r (M 0.5 0 0 0)))",
+        "(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 4) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2))",
+        "(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 4) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 1))",
+        "(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 4) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 2 0 0 0)))",
+        "(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 4) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 1 0 0 0)))"
+      ],
+      "utility": 13736,
+      "expected_cost": 16958,
+      "final_cost": 16958,
+      "multiplier": 1.9172072178322916,
+      "multiplier_wrt_orig": 1.9172072178322916,
+      "num_uses": 14,
+      "uses": [
+        {
+          "fn_0 0.5": "(T (T c (M 2 0 0 0)) (M 0.5 0 0 0))"
+        },
+        {
+          "fn_0 1": "(T (T c (M 2 0 0 0)) (M 1 0 0 0))"
+        },
+        {
+          "fn_0 2": "(T (T c (M 2 0 0 0)) (M 2 0 0 0))"
+        },
+        {
+          "fn_0 4": "(T (T c (M 2 0 0 0)) (M 4 0 0 0))"
+        }
+      ]
+    },
+    {
+      "body": "(C (fn_0 #0) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M #1 0 0 0)))",
+      "dreamcoder": "#(lambda (lambda (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $1) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0)))))",
+      "arity": 2,
+      "name": "fn_1",
+      "rewritten": [
+        "(C (fn_0 2) (fn_0 1))",
+        "(C (fn_0 2) (fn_0 0.5))",
+        "(fn_1 2 1)",
+        "(fn_1 2 0.5)",
+        "(C (fn_0 2) (T r (M 1 0 0 0)))",
+        "(C (fn_0 2) (T r (M 0.5 0 0 0)))",
+        "(C (fn_0 4) (fn_0 2))",
+        "(C (fn_0 4) (fn_0 1))",
+        "(fn_1 4 2)",
+        "(fn_1 4 1)"
+      ],
+      "rewritten_dreamcoder": [
+        "(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 1))",
+        "(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 0.5))",
+        "(#(lambda (lambda (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $1) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))))) 2 1)",
+        "(#(lambda (lambda (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $1) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))))) 2 0.5)",
+        "(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2) (T r (M 1 0 0 0)))",
+        "(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2) (T r (M 0.5 0 0 0)))",
+        "(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 4) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2))",
+        "(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 4) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 1))",
+        "(#(lambda (lambda (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $1) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))))) 4 2)",
+        "(#(lambda (lambda (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $1) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))))) 4 1)"
+      ],
+      "utility": 7170,
+      "expected_cost": 5242,
+      "final_cost": 5242,
+      "multiplier": 3.235024799694773,
+      "multiplier_wrt_orig": 6.202212895841282,
+      "num_uses": 4,
+      "uses": [
+        {
+          "fn_1 2 0.5": "(C (fn_0 2) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 0.5 0 0 0)))"
+        },
+        {
+          "fn_1 2 1": "(C (fn_0 2) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 1 0 0 0)))"
+        },
+        {
+          "fn_1 4 1": "(C (fn_0 4) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 1 0 0 0)))"
+        },
+        {
+          "fn_1 4 2": "(C (fn_0 4) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 2 0 0 0)))"
+        }
+      ]
+    },
+    {
+      "body": "(C (fn_0 2))",
+      "dreamcoder": "#(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2))",
+      "arity": 0,
+      "name": "fn_2",
+      "rewritten": [
+        "(fn_2 (fn_0 1))",
+        "(fn_2 (fn_0 0.5))",
+        "(fn_1 2 1)",
+        "(fn_1 2 0.5)",
+        "(fn_2 (T r (M 1 0 0 0)))",
+        "(fn_2 (T r (M 0.5 0 0 0)))",
+        "(C (fn_0 4) (fn_0 2))",
+        "(C (fn_0 4) (fn_0 1))",
+        "(fn_1 4 2)",
+        "(fn_1 4 1)"
+      ],
+      "rewritten_dreamcoder": [
+        "(#(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2)) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 1))",
+        "(#(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2)) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 0.5))",
+        "(#(lambda (lambda (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $1) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))))) 2 1)",
+        "(#(lambda (lambda (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $1) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))))) 2 0.5)",
+        "(#(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2)) (T r (M 1 0 0 0)))",
+        "(#(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2)) (T r (M 0.5 0 0 0)))",
+        "(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 4) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2))",
+        "(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 4) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 1))",
+        "(#(lambda (lambda (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $1) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))))) 4 2)",
+        "(#(lambda (lambda (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $1) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))))) 4 1)"
+      ],
+      "utility": 355,
+      "expected_cost": 4434,
+      "final_cost": 4434,
+      "multiplier": 1.1822282363554353,
+      "multiplier_wrt_orig": 7.332431213351375,
+      "num_uses": 4,
+      "uses": [
+        {
+          "fn_2 ": "(C (fn_0 2))"
+        }
+      ]
+    },
+    {
+      "body": "(fn_2 (T r (M #0 0 0 0)))",
+      "dreamcoder": "#(lambda (#(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2)) (T r (M $0 0 0 0))))",
+      "arity": 1,
+      "name": "fn_3",
+      "rewritten": [
+        "(fn_2 (fn_0 1))",
+        "(fn_2 (fn_0 0.5))",
+        "(fn_1 2 1)",
+        "(fn_1 2 0.5)",
+        "(fn_3 1)",
+        "(fn_3 0.5)",
+        "(C (fn_0 4) (fn_0 2))",
+        "(C (fn_0 4) (fn_0 1))",
+        "(fn_1 4 2)",
+        "(fn_1 4 1)"
+      ],
+      "rewritten_dreamcoder": [
+        "(#(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2)) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 1))",
+        "(#(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2)) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 0.5))",
+        "(#(lambda (lambda (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $1) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))))) 2 1)",
+        "(#(lambda (lambda (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $1) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))))) 2 0.5)",
+        "(#(lambda (#(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2)) (T r (M $0 0 0 0)))) 1)",
+        "(#(lambda (#(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2)) (T r (M $0 0 0 0)))) 0.5)",
+        "(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 4) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2))",
+        "(C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 4) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 1))",
+        "(#(lambda (lambda (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $1) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))))) 4 2)",
+        "(#(lambda (lambda (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $1) (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))))) 4 1)"
+      ],
+      "utility": 152,
+      "expected_cost": 3222,
+      "final_cost": 3222,
+      "multiplier": 1.3761638733705772,
+      "multiplier_wrt_orig": 10.090626939788951,
+      "num_uses": 2,
+      "uses": [
+        {
+          "fn_3 0.5": "(fn_2 (T r (M 0.5 0 0 0)))"
+        },
+        {
+          "fn_3 1": "(fn_2 (T r (M 1 0 0 0)))"
+        }
+      ]
+    }
+  ]
+}

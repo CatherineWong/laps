@@ -1,0 +1,762 @@
+{
+    "curr_prompt_idx": 4,
+    "max_num_prompts": 10,
+    "programs_valid": [
+        "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)))",
+        "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0))) (repeat_transform (transform (transform square (transform_matrix 2.25 0 0 0)) (transform_matrix 2.25 0 0 0)) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)))",
+        "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0))) (repeat_transform (transform (transform square (transform_matrix 1 0 0 0)) (transform_matrix 0.5 0 0 0)) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)))",
+        "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0))) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))",
+        "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (repeat_transform (transform square (transform_matrix 0.5 0 0 0)) 2 (transform_matrix 1 (/ (* 2 pi) 4) 0 0)))",
+        "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0))) (repeat_transform (transform square (transform_matrix 0.5 0 0 0)) 2 (transform_matrix 1 0 0 0)))",
+        "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.5 0 0 0)) (transform_matrix 1 0 0 0)))",
+        "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0))) (repeat_transform (transform square (transform_matrix 1 0 0 0)) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)))",
+        "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 7 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 6.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 5 0 0 0)))",
+        "(transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0))",
+        "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))",
+        "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0))) (transform (transform circle (transform_matrix 1 0 0 0)) (transform_matrix 1 0 0 0)))",
+        "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))",
+        "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))",
+        "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0))) (repeat_transform (transform square (transform_matrix 1 0 0 0)) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)))",
+        "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (repeat_transform (transform square (transform_matrix 0.5 0 0 0)) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0))))",
+        "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0))) (repeat_transform (transform square (transform_matrix 0.25 0 0 0)) 2 (transform_matrix 1 (/ (* 2 pi) 4) 0 0)))"
+    ],
+    "programs_invalid": [
+        "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0))) (transform (transform square (transform_matrix 0.5 0 0 0)) (transform_matrix 1 0 (* (* 2 1.5) (cos (/ pi 4))) (* (* 2 1.5) (sin (/ pi 4))))) (transform (transform square (transform_matrix 0.5 0 0 0)) (transform_matrix 1 0 (* (* 2 1.5) (cos (/ pi 4))) (* (* 2 1.5) (sin (/ pi 4))))) )",
+        "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (connect_strokes (transform (transform circle (transform_matrix 1 0 0 0)) (transform_matrix 2 0 0 0)) (connect_strokes (transform (transform circle (transform_matrix 1 0 0 0)) (transform_matrix 0.25 0 0 0)) (transform (transform circle (transform_matrix 1 0 0 0)) (transform_matrix 0.5 0 0 0))) (connect_strokes (transform (transform circle (transform_matrix 1 0 0 0)) (transform_matrix 0.75 0 0 0)) (transform (transform circle (transform_matrix 1 0 0 0)) (transform_matrix 1 0 0 0))) (connect_strokes (transform (transform circle (transform_matrix 1 0 0 0)) (transform_matrix 1.25 0 0 0)) (transform (transform circle (transform_matrix 1 0 0 0",
+        "# <WHAT> two circles <WHERE> same size and along the outside of the hexagon\t<WHAT> two cirlces <WHERE> same size and along the inside of the hexagon",
+        "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)) (repeat_transform (transform square (transform_matrix 0.25 0 0 0)) 2 (transform_matrix 0.75 0 0 0)))",
+        "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1.25 0 0 0))) (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1.5 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1.75 0 0 0))) (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1.75 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1.5 0 0 0))) (connect_strokes (transform (transform circle (transform_matrix 2 0"
+    ],
+    "prompt_text": [
+        "# <WHAT> a 6 sided shape <WHERE> a small circle will be placed inside it\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))\n# <WHAT> small hexagon <WHERE> middle of page\t<WHAT> small square <WHERE> inside hexagon\n(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2.25 0 0 0))) (transform square (transform_matrix 1 0 0 0)))\n# <WHAT> tiny square <WHERE> middle of the screen\t<WHAT> medium circle <WHERE> encircling the tiny square\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 0.5 0 0 0)))\n# <WHAT> Octagon <WHERE> Center\t<WHAT> Square <WHERE> Inside Center of Octagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n# <WHAT> circle <WHERE> center\t<WHAT> an ever-so-slightly smaller circle <WHERE> inside of bigger circle, so close they look like parallel lines.\t<WHAT> Square 1/4 of smaller circle's diameter <WHERE> in the center of the smaller circle\n(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4.25 0 0 0))) (transform square (transform_matrix 2 0 0 0)))\n# <WHAT> medium small circle <WHERE> center of the page\t<WHAT> a slightly smaller circle <WHERE> center of the first circle\t<WHAT> a very small circle <WHERE> center of the previous circles\n(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> a hexagon <WHERE> in the middle of the space\t<WHAT> a circle that is 2/3 of the hexagon <WHERE> in the middle of the hexagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> a hexagon <WHERE> center of the big squared image\t<WHAT> another hexagon 1/2 the size of the first hexagon <WHERE> the center of the first hexagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)))\n# <WHAT> a small circle <WHERE> in the middle of the page\t<WHAT> another circle <WHERE> bordering the small circle\t<WHAT> a hexagon <WHERE> in the center of the small circle\n(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> a medium sized circle <WHERE> in the middle of the page\t<WHAT> a second circle <WHERE> inside of the first circle, but very close to it\t<WHAT> a third circle half the size of the second one <WHERE> in the center of the second circle\n(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> big bordered circle <WHERE> middle of page\t<WHAT> small square <WHERE> middle of circle.\n(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4.25 0 0 0))) (transform square (transform_matrix 1 0 0 0)))\n# <WHAT> small hexagon <WHERE> center\t<WHAT> very small square 1/16 size of hexagon <WHERE> center of hexagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 0.5 0 0 0)))\n# <WHAT> an octagon <WHERE> int he middle of the page\t<WHAT> a circle half the size of the octagon <WHERE> inside the octagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))\n# <WHAT> a hexagon roughly 1/9 the size of the page <WHERE> the center of the page\t<WHAT> another hexagon barely smaller than the first <WHERE> the center of the first hexagon\t<WHAT> another hexagon roughly 1/9 the size of the other hexagons <WHERE> the center of the 2 larger hexagons\n(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4.25 0 0 0))) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> small octagon <WHERE> center\t<WHAT> very small hexagon <WHERE> center of octagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n# <WHAT> hexagon <WHERE> center\t<WHAT> circle 1/6 the diameter of the hexagon <WHERE> center of hexagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> Small hexagon <WHERE> In centre of page\t<WHAT> A slightly smaller hexagon <WHERE> inside the first hexagon\t<WHAT> a cirlcle <WHERE> In the centre of the hexagons\n(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> circle <WHERE> middle of a page\t<WHAT> slightly smaller circle <WHERE> middle of page\t<WHAT> square <WHERE> inside\n(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (transform square (transform_matrix 1 0 0 0)))\n# <WHAT> circle <WHERE> middle of space\t<WHAT> square <WHERE> in midde of the circle\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n# <WHAT> HEXAGON <WHERE> MIDDLE OF PAGE\t<WHAT> CIRCLE <WHERE> INTHE MIDDLE OF HEXAGON LIKE A NUT\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> a hexagon <WHERE> the middle center of the big square image\t<WHAT> another hexagon but a pinch slightly smaller <WHERE> within the hexagon in the middle\t<WHAT> a circle with a small squares clipped within <WHERE> the middle of the hexagon\n(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))\n# <WHAT> A medium double-lined hexagon (larger hexagon drawn inside smaller one very close). <WHERE> Near the center.\t<WHAT> A small circle. <WHERE> Center of double-lined hexagon.\n(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> small hexagon <WHERE> middle\t<WHAT> large hexagon <WHERE> around small hexagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> a quarter sized hexagon <WHERE> in the center of the paper\t<WHAT> a small square <WHERE> centered inside the hexagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n# <WHAT> a medium square <WHERE> the center of the page\t<WHAT> a very large hexagon <WHERE> around the outside of the hexagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 4 0 0 0)) (transform square (transform_matrix 2 0 0 0)))\n# <WHAT> a hexagon <WHERE> in center of space provided\t<WHAT> and draw a circle 50 percent size of hexagon <WHERE> inside hexagon\t<WHAT> draw 4 small circles <WHERE> spaced equally between hexagon and circle\n",
+        "# <WHAT> small hexagon <WHERE> center\t<WHAT> very small square 1/16 size of hexagon <WHERE> center of hexagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 0.5 0 0 0)))\n# <WHAT> a hexagon <WHERE> the space\t<WHAT> a circle <WHERE> the middle of the hexagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> a small circle <WHERE> in the middle\t<WHAT> a tiny square <WHERE> inside of the circle\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n# <WHAT> octagon <WHERE> center\t<WHAT> square, 1/4 diameter of octagon <WHERE> in center of octagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n# <WHAT> HEXAGON <WHERE> MIDDLE OF PAGE\t<WHAT> CIRCLE <WHERE> INTHE MIDDLE OF HEXAGON LIKE A NUT\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> a double lined thick heaxgon <WHERE> middle\t<WHAT> a small square <WHERE> in middle of hexagon\n(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4.25 0 0 0))) (transform square (transform_matrix 1 0 0 0)))\n# <WHAT> A circle, 1/8th the size of the page. <WHERE> At the center of the page.\t<WHAT> A hexagon, about 1/10th the size of the circle. <WHERE> At the center of the circle.\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> a medium square <WHERE> the center of the page\t<WHAT> a very large hexagon <WHERE> around the outside of the hexagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 4 0 0 0)) (transform square (transform_matrix 2 0 0 0)))\n# <WHAT> small circle <WHERE> in the center\t<WHAT> two hexagons <WHERE> very close to each other one inside the other and surrounding the circle\n(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> a circle about 1/4 the height of the box it is in <WHERE> exactly in the center of the box\t<WHAT> a smaller circle about 1/2 the diameter of the original <WHERE> exactly in the center of the original circle\t<WHAT> 2 small circles, diameter of about 1/3 the space between the inner and outer circle <WHERE> between the inner and outer circle at about the 1:30 and 7:30 positions if the outer circle was a clock face\n(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0))) (repeat_transform (transform (transform circle (transform_matrix 0.5 0 0 0)) (transform_matrix 1 0 (* (* 2 1.5) (cos (/ pi 4))) (* (* 2 1.5) (sin (/ pi 4))))) 2 (transform_matrix 1 (/ (* 2 pi) 2) 0 0)))\n# <WHAT> hexagon <WHERE> middle of page\t<WHAT> circle <WHERE> middle of hexagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))\n# <WHAT> tiny square <WHERE> middle\t<WHAT> larger circle <WHERE> around square\t<WHAT> even larger circle <WHERE> around the bigger circle\n(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (transform square (transform_matrix 1 0 0 0)))\n# <WHAT> A medium size circle <WHERE> in the middle of the page\t<WHAT> a smaller circle <WHERE> inside the first circle\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> I want you to draw a hexagon. <WHERE> In the middle of the page.\t<WHAT> Then I want you to draw me a much smaller hexagon. <WHERE> In the middle of the first one.\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> a circle <WHERE> in the middle of the page\t<WHAT> a very slightly smaller circle <WHERE> within the first circle\t<WHAT> a small hexagon <WHERE> in the middle of the smaller circle\n(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> a quarter sized hexagon <WHERE> in the center of the paper\t<WHAT> a small square <WHERE> centered inside the hexagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n# <WHAT> circle <WHERE> center\t<WHAT> circle 1/4 of first circle's diameter <WHERE> inside of the first circle\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))\n# <WHAT> a small square <WHERE> in the center of the page\t<WHAT> a large hexagon <WHERE> around the square in the center\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n# <WHAT> small hexagon <WHERE> in the center of the field\t<WHAT> 3x larger hexagon <WHERE> equally spaced around the first hexagon\t<WHAT> slightly larger hexagon <WHERE> immediately outside of the large hexagon\n(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4.25 0 0 0))) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> big bordered circle <WHERE> middle of page\t<WHAT> small square <WHERE> middle of circle.\n(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4.25 0 0 0))) (transform square (transform_matrix 1 0 0 0)))\n# <WHAT> one large circle <WHERE> center of page\t<WHAT> one only slightly smaller circle <WHERE> right around the inside of the large circle, like a ring\t<WHAT> small circle <WHERE> in the center of the double ringed circle\n(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> an octagon <WHERE> in the middle\t<WHAT> a circle <WHERE> inside of the octagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))\n# <WHAT> circle <WHERE> middle of page\t<WHAT> hexagon <WHERE> inside circle\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)))\n# <WHAT> a small circle <WHERE> in the center of the page\t<WHAT> a hexagon <WHERE> within the circle\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> small hexagon <WHERE> in the center\t<WHAT> larger octagon <WHERE> surrounding the hexagon with the hexagon centered and not touching.\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n# <WHAT> A hexagon <WHERE> centre of page\t<WHAT> circle <WHERE> in the middle of the hexagon\t<WHAT> 6 small squares <WHERE> surrounding the circle, evenly spaced\n",
+        "# <WHAT> A circle, 1/8th the size of the page. <WHERE> At the center of the page.\t<WHAT> A hexagon, about 1/10th the size of the circle. <WHERE> At the center of the circle.\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> small hexagon <WHERE> in the center\t<WHAT> larger octagon <WHERE> surrounding the hexagon with the hexagon centered and not touching.\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n# <WHAT> A medium size circle <WHERE> in the middle of the page\t<WHAT> a smaller circle <WHERE> inside the first circle\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> tiny square <WHERE> middle of the screen\t<WHAT> medium circle <WHERE> encircling the tiny square\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 0.5 0 0 0)))\n# <WHAT> Small hexagon <WHERE> In centre of page\t<WHAT> A slightly smaller hexagon <WHERE> inside the first hexagon\t<WHAT> a cirlcle <WHERE> In the centre of the hexagons\n(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> a double lined thick heaxgon <WHERE> middle\t<WHAT> a small square <WHERE> in middle of hexagon\n(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4.25 0 0 0))) (transform square (transform_matrix 1 0 0 0)))\n# <WHAT> HEXAGON <WHERE> MIDDLE OF PAGE\t<WHAT> CIRCLE <WHERE> INTHE MIDDLE OF HEXAGON LIKE A NUT\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> Octagon <WHERE> Center\t<WHAT> Square <WHERE> Inside Center of Octagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n# <WHAT> a medium sized circle <WHERE> in the middle of the page\t<WHAT> a second circle <WHERE> inside of the first circle, but very close to it\t<WHAT> a third circle half the size of the second one <WHERE> in the center of the second circle\n(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> a big circle <WHERE> a 6 sided shape will be placed in the circle\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)))\n# <WHAT> A medium circle <WHERE> Center\t<WHAT> A slightly larger circle <WHERE> Around the first circle\t<WHAT> Tiny square <WHERE> Center of the circle\n(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (transform square (transform_matrix 0.5 0 0 0)))\n# <WHAT> small hexagon <WHERE> center\t<WHAT> very small square 1/16 size of hexagon <WHERE> center of hexagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 0.5 0 0 0)))\n# <WHAT> a medium square <WHERE> the center of the page\t<WHAT> a very large hexagon <WHERE> around the outside of the hexagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 4 0 0 0)) (transform square (transform_matrix 2 0 0 0)))\n# <WHAT> a double-bordered hexagon with two outer perimeter lines close together, about 1/8 the height of the box it is in <WHERE> exactly in the center of the box\t<WHAT> a tiny square about 1/6 the height of the hexagon <WHERE> exactly in the center of the hexagon\n(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2.25 0 0 0))) (transform square (transform_matrix 0.5 0 0 0)))\n# <WHAT> a large hexagon <WHERE> middle of page\t<WHAT> an outline of that hexagon <WHERE> around the other hexagon\t<WHAT> a smaller hexagon <WHERE> in the middle of the other 2 hexagons\n(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4.25 0 0 0))) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)))\n# <WHAT> a double-bordered circle, two perimeter lines close together, about 1/4 the height of the box <WHERE> exactly in the center of the box\t<WHAT> a circle, about 1/2 the diameter of the first circle <WHERE> exactly in the center of the first circle\n(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))\n# <WHAT> a small circle <WHERE> in the middle\t<WHAT> a tiny square <WHERE> inside of the circle\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n# <WHAT> medium hexagon <WHERE> center of page\t<WHAT> hexagon, barely smaller than previous <WHERE> center of original hexagon\t<WHAT> circle 1/4 size of previous hexagon <WHERE> center of hexagon\n(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))\n# <WHAT> HEXAGON <WHERE> MIDDLE OF PAGE\t<WHAT> MEDIUM SQUARE <WHERE> MIDDLE OF HEXAGON LIKE A NUT WITH SQUARE HOLE\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform square (transform_matrix 2 0 0 0)))\n# <WHAT> small circle <WHERE> center of the paper\t<WHAT> a cirlce twice the size <WHERE> center of the paper\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> an octagon <WHERE> int he middle of the page\t<WHAT> a circle half the size of the octagon <WHERE> inside the octagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))\n# <WHAT> a circle about 1/4 the height of the box it is in <WHERE> exactly in the center of the box\t<WHAT> a smaller circle about 1/2 the diameter of the original <WHERE> exactly in the center of the original circle\t<WHAT> 2 small circles, diameter of about 1/3 the space between the inner and outer circle <WHERE> between the inner and outer circle at about the 1:30 and 7:30 positions if the outer circle was a clock face\n(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0))) (repeat_transform (transform (transform circle (transform_matrix 0.5 0 0 0)) (transform_matrix 1 0 (* (* 2 1.5) (cos (/ pi 4))) (* (* 2 1.5) (sin (/ pi 4))))) 2 (transform_matrix 1 (/ (* 2 pi) 2) 0 0)))\n# <WHAT> draw circle <WHERE> within space provided\t<WHAT> with square 15 percent size of hexagon <WHERE> within circle\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n# <WHAT> one large octagon <WHERE> center of page\t<WHAT> one small circle <WHERE> directly in the center of the octagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> s small hexagon <WHERE> in the middle of the page\t<WHAT> a much smaller hexagon <WHERE> in the middle of the larger hexagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n# <WHAT> hexagon <WHERE> middle of page\n",
+        "# <WHAT> small hexagon <WHERE> in the center of the field\t<WHAT> 3x larger hexagon <WHERE> equally spaced around the first hexagon\t<WHAT> slightly larger hexagon <WHERE> immediately outside of the large hexagon\n(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4.25 0 0 0))) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> an octagon <WHERE> in the middle\t<WHAT> a circle <WHERE> inside of the octagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))\n# <WHAT> hexagon <WHERE> center\t<WHAT> circle 1/2 diameter of hexagon <WHERE> in center of hexagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))\n# <WHAT> Small hexagon <WHERE> In centre of page\t<WHAT> A slightly smaller hexagon <WHERE> inside the first hexagon\t<WHAT> a cirlcle <WHERE> In the centre of the hexagons\n(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> hexagon <WHERE> center\t<WHAT> very slightly smaller hexagon <WHERE> inside of hexagon\t<WHAT> Square 1/4 of hexagon's diameter <WHERE> inside of hexagon\n(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2.25 0 0 0))) (transform square (transform_matrix 1 0 0 0)))\n# <WHAT> A Small Circle <WHERE> In the center of the image\t<WHAT> A Tiny Hexagon <WHERE> In the center of the circle\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n# <WHAT> I want you to draw a hexagon. <WHERE> In the middle of the page.\t<WHAT> Then I want you to draw me a much smaller hexagon. <WHERE> In the middle of the first one.\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> a circle <WHERE> in the middle of the page\t<WHAT> a circle <WHERE> closely bordering the first circle\t<WHAT> a small hexagon <WHERE> in the middle of the circle\n(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n# <WHAT> HEXAGON <WHERE> MIDDLE OF PAGE\t<WHAT> CIRCLE <WHERE> INTHE MIDDLE OF HEXAGON LIKE A NUT\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> Circle <WHERE> center\t<WHAT> half sized circle <WHERE> center\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))\n# <WHAT> a double lined thick heaxgon <WHERE> middle\t<WHAT> a small square <WHERE> in middle of hexagon\n(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4.25 0 0 0))) (transform square (transform_matrix 1 0 0 0)))\n# <WHAT> one medium sized circle <WHERE> center of page\t<WHAT> one medium-small circle (smaller than the outside circle) <WHERE> inside of the medium sized circle\t<WHAT> 2 tiny circles <WHERE> outside of the inner circle but still inside the outer circle. 1 directly SW of the inner circle and 1 directly NE of the inner circle.\n(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0))) (repeat_transform (transform (transform circle (transform_matrix 0.5 0 0 0)) (transform_matrix 1 0 (* (* 2 1.5) (cos (/ pi 4))) (* (* 2 1.5) (sin (/ pi 4))))) 2 (transform_matrix 1 (/ (* 2 pi) 2) 0 0)))\n# <WHAT> a tiny circle <WHERE> in the direct center\t<WHAT> a slightly larger circle <WHERE> tightly surrounding the first circle\t<WHAT> a very small square <WHERE> in the dead center of the two circles\n(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (transform square (transform_matrix 0.5 0 0 0)))\n# <WHAT> hexagon <WHERE> middle of the square\t<WHAT> hexagon <WHERE> around the smaller hexagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)))\n# <WHAT> A circle, 1/8th the size of the page. <WHERE> At the center of the page.\t<WHAT> A hexagon, about 1/10th the size of the circle. <WHERE> At the center of the circle.\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> six sided item with thin border <WHERE> in center of area\t<WHAT> small circle <WHERE> in center of six sided item\n(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> a small circle <WHERE> in the dead center of the page\t<WHAT> a somewhat larger circle <WHERE> surrounding the smaller circle\t<WHAT> a barely larger circle <WHERE> surrounding the larger circle tightly\n(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> small circle <WHERE> center of the paper\t<WHAT> a cirlce twice the size <WHERE> center of the paper\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> small hexagon <WHERE> center of the space\t<WHAT> extra small square <WHERE> center of the hexagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n# <WHAT> a medium square <WHERE> the center of the page\t<WHAT> a very large hexagon <WHERE> around the outside of the hexagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 4 0 0 0)) (transform square (transform_matrix 2 0 0 0)))\n# <WHAT> a large circle <WHERE> at the center of the page\t<WHAT> a slightly smaller circle, almost the size of the first circle <WHERE> inside the first circle\t<WHAT> a tiny square <WHERE> at the center of the two circles\n(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4.25 0 0 0))) (transform square (transform_matrix 1 0 0 0)))\n# <WHAT> a circle <WHERE> in the middle of the page\t<WHAT> a circle half the size of the first one <WHERE> inside the first circle\t<WHAT> four very small circles <WHERE> at the northeast, southeast, southwest, and northwest points between the two circles\n(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0))) (repeat_transform (transform (transform circle (transform_matrix 0.5 0 0 0)) (transform_matrix 1 0 (* (* 2 1.5) (cos (/ pi 4))) (* (* 2 1.5) (sin (/ pi 4))))) 4 (transform_matrix 1 (/ (* 2 pi) 4) 0 0)))\n# <WHAT> hexagon <WHERE> middle of page\t<WHAT> circle <WHERE> middle of hexagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))\n# <WHAT> small hexagon <WHERE> middle of page\t<WHAT> smaller hexagon <WHERE> middle of hexagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n# <WHAT> small octagon <WHERE> center\t<WHAT> very small hexagon <WHERE> center of octagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n# <WHAT> a hexagon <WHERE> in the middle\t<WHAT> a circle <WHERE> in the middle of the hexagon\t<WHAT> 2 tiny squares <WHERE> top right and bottom left outside of the circle\n",
+        "# <WHAT> a circle <WHERE> in the middle\t<WHAT> a small square <WHERE> in the middle of the circle\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform square (transform_matrix 2 0 0 0)))\n# <WHAT> A Small Circle <WHERE> In the center of the image\t<WHAT> A Tiny Hexagon <WHERE> In the center of the circle\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n# <WHAT> circle <WHERE> middle of a page\t<WHAT> slightly smaller circle <WHERE> middle of page\t<WHAT> square <WHERE> inside\n(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (transform square (transform_matrix 1 0 0 0)))\n# <WHAT> A circle, 1/8th the size of the page. <WHERE> At the center of the page.\t<WHAT> A hexagon, about 1/10th the size of the circle. <WHERE> At the center of the circle.\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> a hexagon <WHERE> the space\t<WHAT> a circle <WHERE> the middle of the hexagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> a small circle <WHERE> in the dead center of the page\t<WHAT> a somewhat larger circle <WHERE> surrounding the smaller circle\t<WHAT> a barely larger circle <WHERE> surrounding the larger circle tightly\n(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> a double lined thick heaxgon <WHERE> middle\t<WHAT> a small square <WHERE> in middle of hexagon\n(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4.25 0 0 0))) (transform square (transform_matrix 1 0 0 0)))\n# <WHAT> a hexagon <WHERE> the middle center of the big square image\t<WHAT> another hexagon but a pinch slightly smaller <WHERE> within the hexagon in the middle\t<WHAT> a circle with a small squares clipped within <WHERE> the middle of the hexagon\n(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))\n# <WHAT> a medium circle <WHERE> in the center of the page\t<WHAT> a circle <WHERE> directly inside the medium circle already drawn\t<WHAT> a smaller circle <WHERE> directly in the center of the two other circles\n(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))\n# <WHAT> one large octagon <WHERE> center of page\t<WHAT> one small circle <WHERE> directly in the center of the octagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> circle <WHERE> middle of page\t<WHAT> hexagon <WHERE> inside circle\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)))\n# <WHAT> tiny square <WHERE> middle of the screen\t<WHAT> medium circle <WHERE> encircling the tiny square\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 0.5 0 0 0)))\n# <WHAT> small hexagon <WHERE> middle\t<WHAT> large hexagon <WHERE> around small hexagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> A circle, about 1/18th the size of the page. <WHERE> At the center of the page.\t<WHAT> A hexagon, about 1/2 the size of the circle. <WHERE> At the center of the circle.\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> Small hexagon <WHERE> In centre of page\t<WHAT> A slightly smaller hexagon <WHERE> inside the first hexagon\t<WHAT> a cirlcle <WHERE> In the centre of the hexagons\n(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> small hexagon <WHERE> the center of the field with flat top and bottom\t<WHAT> square with lines 1/3 the size of the lines on the hexagon <WHERE> directly in the center of the hexagon with flat top and bottom\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 0.5 0 0 0)))\n# <WHAT> A small hexagon <WHERE> In the center of the page\t<WHAT> A square <WHERE> Inside the hexagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n# <WHAT> small circle <WHERE> center of the paper\t<WHAT> a cirlce twice the size <WHERE> center of the paper\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> CIRCLE <WHERE> MIDDLE OF PAGE\t<WHAT> SMALLER CIRCLE <WHERE> INSIDE LARGER CIRCLE TO MAKE DONUT\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))\n# <WHAT> small hexagon <WHERE> in the center\t<WHAT> larger octagon <WHERE> surrounding the hexagon with the hexagon centered and not touching.\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n# <WHAT> A medium circle <WHERE> Center\t<WHAT> A slightly larger circle <WHERE> Around the first circle\t<WHAT> Tiny square <WHERE> Center of the circle\n(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (transform square (transform_matrix 0.5 0 0 0)))\n# <WHAT> a hexagon <WHERE> in the middle of the page\t<WHAT> a small square <WHERE> in the middle of the hexagon\n(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 4 0 0 0)) (transform square (transform_matrix 2 0 0 0)))\n# <WHAT> draw a small circle <WHERE> directly in the center of the field\t<WHAT> circle with diameter 3 times the first <WHERE> directly around the first circle with all arcs equidistant from center\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n# <WHAT> a circle <WHERE> in the middle of the page\t<WHAT> a circle <WHERE> closely bordering the first circle\t<WHAT> a small hexagon <WHERE> in the middle of the circle\n(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n# <WHAT> a small sqaure <WHERE> in the center of the page\t<WHAT> a double edged circle <WHERE> 1.5 cm away from the small square in the center of the page\n(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4.25 0 0 0))) (transform square (transform_matrix 2 0 0 0)))\n# <WHAT> a hexagon <WHERE> in the middle of the space\t<WHAT> a 2nd hexagon that is barely smaller <WHERE> inside of the first hexagon\t<WHAT> a circle, 2/3 the size of the hexagon <WHERE> in the middle of the hexagons\t<WHAT> 4 circles, 1/10 the size of the big circle <WHERE> NE, SE, SW, NW inside of the hexagon, almost like corners of a square\n"
+    ],
+    "prompt_example_types": [
+        "language",
+        "programs"
+    ],
+    "prompt_programs": [
+        [
+            [
+                "# <WHAT> a 6 sided shape <WHERE> a small circle will be placed inside it",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))"
+            ],
+            [
+                "# <WHAT> small hexagon <WHERE> middle of page\t<WHAT> small square <WHERE> inside hexagon",
+                "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2.25 0 0 0))) (transform square (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> tiny square <WHERE> middle of the screen\t<WHAT> medium circle <WHERE> encircling the tiny square",
+                "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 0.5 0 0 0)))"
+            ],
+            [
+                "# <WHAT> Octagon <WHERE> Center\t<WHAT> Square <WHERE> Inside Center of Octagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> circle <WHERE> center\t<WHAT> an ever-so-slightly smaller circle <WHERE> inside of bigger circle, so close they look like parallel lines.\t<WHAT> Square 1/4 of smaller circle's diameter <WHERE> in the center of the smaller circle",
+                "(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4.25 0 0 0))) (transform square (transform_matrix 2 0 0 0)))"
+            ],
+            [
+                "# <WHAT> medium small circle <WHERE> center of the page\t<WHAT> a slightly smaller circle <WHERE> center of the first circle\t<WHAT> a very small circle <WHERE> center of the previous circles",
+                "(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a hexagon <WHERE> in the middle of the space\t<WHAT> a circle that is 2/3 of the hexagon <WHERE> in the middle of the hexagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a hexagon <WHERE> center of the big squared image\t<WHAT> another hexagon 1/2 the size of the first hexagon <WHERE> the center of the first hexagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a small circle <WHERE> in the middle of the page\t<WHAT> another circle <WHERE> bordering the small circle\t<WHAT> a hexagon <WHERE> in the center of the small circle",
+                "(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a medium sized circle <WHERE> in the middle of the page\t<WHAT> a second circle <WHERE> inside of the first circle, but very close to it\t<WHAT> a third circle half the size of the second one <WHERE> in the center of the second circle",
+                "(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> big bordered circle <WHERE> middle of page\t<WHAT> small square <WHERE> middle of circle.",
+                "(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4.25 0 0 0))) (transform square (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> small hexagon <WHERE> center\t<WHAT> very small square 1/16 size of hexagon <WHERE> center of hexagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 0.5 0 0 0)))"
+            ],
+            [
+                "# <WHAT> an octagon <WHERE> int he middle of the page\t<WHAT> a circle half the size of the octagon <WHERE> inside the octagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a hexagon roughly 1/9 the size of the page <WHERE> the center of the page\t<WHAT> another hexagon barely smaller than the first <WHERE> the center of the first hexagon\t<WHAT> another hexagon roughly 1/9 the size of the other hexagons <WHERE> the center of the 2 larger hexagons",
+                "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4.25 0 0 0))) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> small octagon <WHERE> center\t<WHAT> very small hexagon <WHERE> center of octagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))"
+            ],
+            [
+                "# <WHAT> hexagon <WHERE> center\t<WHAT> circle 1/6 the diameter of the hexagon <WHERE> center of hexagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> Small hexagon <WHERE> In centre of page\t<WHAT> A slightly smaller hexagon <WHERE> inside the first hexagon\t<WHAT> a cirlcle <WHERE> In the centre of the hexagons",
+                "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> circle <WHERE> middle of a page\t<WHAT> slightly smaller circle <WHERE> middle of page\t<WHAT> square <WHERE> inside",
+                "(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (transform square (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> circle <WHERE> middle of space\t<WHAT> square <WHERE> in midde of the circle",
+                "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform square (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> HEXAGON <WHERE> MIDDLE OF PAGE\t<WHAT> CIRCLE <WHERE> INTHE MIDDLE OF HEXAGON LIKE A NUT",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a hexagon <WHERE> the middle center of the big square image\t<WHAT> another hexagon but a pinch slightly smaller <WHERE> within the hexagon in the middle\t<WHAT> a circle with a small squares clipped within <WHERE> the middle of the hexagon",
+                "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))"
+            ],
+            [
+                "# <WHAT> A medium double-lined hexagon (larger hexagon drawn inside smaller one very close). <WHERE> Near the center.\t<WHAT> A small circle. <WHERE> Center of double-lined hexagon.",
+                "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> small hexagon <WHERE> middle\t<WHAT> large hexagon <WHERE> around small hexagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a quarter sized hexagon <WHERE> in the center of the paper\t<WHAT> a small square <WHERE> centered inside the hexagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a medium square <WHERE> the center of the page\t<WHAT> a very large hexagon <WHERE> around the outside of the hexagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 4 0 0 0)) (transform square (transform_matrix 2 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a hexagon <WHERE> in center of space provided\t<WHAT> and draw a circle 50 percent size of hexagon <WHERE> inside hexagon\t<WHAT> draw 4 small circles <WHERE> spaced equally between hexagon and circle"
+            ]
+        ],
+        [
+            [
+                "# <WHAT> small hexagon <WHERE> center\t<WHAT> very small square 1/16 size of hexagon <WHERE> center of hexagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 0.5 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a hexagon <WHERE> the space\t<WHAT> a circle <WHERE> the middle of the hexagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a small circle <WHERE> in the middle\t<WHAT> a tiny square <WHERE> inside of the circle",
+                "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> octagon <WHERE> center\t<WHAT> square, 1/4 diameter of octagon <WHERE> in center of octagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> HEXAGON <WHERE> MIDDLE OF PAGE\t<WHAT> CIRCLE <WHERE> INTHE MIDDLE OF HEXAGON LIKE A NUT",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a double lined thick heaxgon <WHERE> middle\t<WHAT> a small square <WHERE> in middle of hexagon",
+                "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4.25 0 0 0))) (transform square (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> A circle, 1/8th the size of the page. <WHERE> At the center of the page.\t<WHAT> A hexagon, about 1/10th the size of the circle. <WHERE> At the center of the circle.",
+                "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a medium square <WHERE> the center of the page\t<WHAT> a very large hexagon <WHERE> around the outside of the hexagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 4 0 0 0)) (transform square (transform_matrix 2 0 0 0)))"
+            ],
+            [
+                "# <WHAT> small circle <WHERE> in the center\t<WHAT> two hexagons <WHERE> very close to each other one inside the other and surrounding the circle",
+                "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a circle about 1/4 the height of the box it is in <WHERE> exactly in the center of the box\t<WHAT> a smaller circle about 1/2 the diameter of the original <WHERE> exactly in the center of the original circle\t<WHAT> 2 small circles, diameter of about 1/3 the space between the inner and outer circle <WHERE> between the inner and outer circle at about the 1:30 and 7:30 positions if the outer circle was a clock face",
+                "(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0))) (repeat_transform (transform (transform circle (transform_matrix 0.5 0 0 0)) (transform_matrix 1 0 (* (* 2 1.5) (cos (/ pi 4))) (* (* 2 1.5) (sin (/ pi 4))))) 2 (transform_matrix 1 (/ (* 2 pi) 2) 0 0)))"
+            ],
+            [
+                "# <WHAT> hexagon <WHERE> middle of page\t<WHAT> circle <WHERE> middle of hexagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))"
+            ],
+            [
+                "# <WHAT> tiny square <WHERE> middle\t<WHAT> larger circle <WHERE> around square\t<WHAT> even larger circle <WHERE> around the bigger circle",
+                "(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (transform square (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> A medium size circle <WHERE> in the middle of the page\t<WHAT> a smaller circle <WHERE> inside the first circle",
+                "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> I want you to draw a hexagon. <WHERE> In the middle of the page.\t<WHAT> Then I want you to draw me a much smaller hexagon. <WHERE> In the middle of the first one.",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a circle <WHERE> in the middle of the page\t<WHAT> a very slightly smaller circle <WHERE> within the first circle\t<WHAT> a small hexagon <WHERE> in the middle of the smaller circle",
+                "(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a quarter sized hexagon <WHERE> in the center of the paper\t<WHAT> a small square <WHERE> centered inside the hexagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> circle <WHERE> center\t<WHAT> circle 1/4 of first circle's diameter <WHERE> inside of the first circle",
+                "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a small square <WHERE> in the center of the page\t<WHAT> a large hexagon <WHERE> around the square in the center",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform square (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> small hexagon <WHERE> in the center of the field\t<WHAT> 3x larger hexagon <WHERE> equally spaced around the first hexagon\t<WHAT> slightly larger hexagon <WHERE> immediately outside of the large hexagon",
+                "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4.25 0 0 0))) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> big bordered circle <WHERE> middle of page\t<WHAT> small square <WHERE> middle of circle.",
+                "(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4.25 0 0 0))) (transform square (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> one large circle <WHERE> center of page\t<WHAT> one only slightly smaller circle <WHERE> right around the inside of the large circle, like a ring\t<WHAT> small circle <WHERE> in the center of the double ringed circle",
+                "(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> an octagon <WHERE> in the middle\t<WHAT> a circle <WHERE> inside of the octagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))"
+            ],
+            [
+                "# <WHAT> circle <WHERE> middle of page\t<WHAT> hexagon <WHERE> inside circle",
+                "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a small circle <WHERE> in the center of the page\t<WHAT> a hexagon <WHERE> within the circle",
+                "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> small hexagon <WHERE> in the center\t<WHAT> larger octagon <WHERE> surrounding the hexagon with the hexagon centered and not touching.",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))"
+            ],
+            [
+                "# <WHAT> A hexagon <WHERE> centre of page\t<WHAT> circle <WHERE> in the middle of the hexagon\t<WHAT> 6 small squares <WHERE> surrounding the circle, evenly spaced"
+            ]
+        ],
+        [
+            [
+                "# <WHAT> A circle, 1/8th the size of the page. <WHERE> At the center of the page.\t<WHAT> A hexagon, about 1/10th the size of the circle. <WHERE> At the center of the circle.",
+                "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> small hexagon <WHERE> in the center\t<WHAT> larger octagon <WHERE> surrounding the hexagon with the hexagon centered and not touching.",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))"
+            ],
+            [
+                "# <WHAT> A medium size circle <WHERE> in the middle of the page\t<WHAT> a smaller circle <WHERE> inside the first circle",
+                "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> tiny square <WHERE> middle of the screen\t<WHAT> medium circle <WHERE> encircling the tiny square",
+                "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 0.5 0 0 0)))"
+            ],
+            [
+                "# <WHAT> Small hexagon <WHERE> In centre of page\t<WHAT> A slightly smaller hexagon <WHERE> inside the first hexagon\t<WHAT> a cirlcle <WHERE> In the centre of the hexagons",
+                "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a double lined thick heaxgon <WHERE> middle\t<WHAT> a small square <WHERE> in middle of hexagon",
+                "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4.25 0 0 0))) (transform square (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> HEXAGON <WHERE> MIDDLE OF PAGE\t<WHAT> CIRCLE <WHERE> INTHE MIDDLE OF HEXAGON LIKE A NUT",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> Octagon <WHERE> Center\t<WHAT> Square <WHERE> Inside Center of Octagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a medium sized circle <WHERE> in the middle of the page\t<WHAT> a second circle <WHERE> inside of the first circle, but very close to it\t<WHAT> a third circle half the size of the second one <WHERE> in the center of the second circle",
+                "(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a big circle <WHERE> a 6 sided shape will be placed in the circle",
+                "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)))"
+            ],
+            [
+                "# <WHAT> A medium circle <WHERE> Center\t<WHAT> A slightly larger circle <WHERE> Around the first circle\t<WHAT> Tiny square <WHERE> Center of the circle",
+                "(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (transform square (transform_matrix 0.5 0 0 0)))"
+            ],
+            [
+                "# <WHAT> small hexagon <WHERE> center\t<WHAT> very small square 1/16 size of hexagon <WHERE> center of hexagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 0.5 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a medium square <WHERE> the center of the page\t<WHAT> a very large hexagon <WHERE> around the outside of the hexagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 4 0 0 0)) (transform square (transform_matrix 2 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a double-bordered hexagon with two outer perimeter lines close together, about 1/8 the height of the box it is in <WHERE> exactly in the center of the box\t<WHAT> a tiny square about 1/6 the height of the hexagon <WHERE> exactly in the center of the hexagon",
+                "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2.25 0 0 0))) (transform square (transform_matrix 0.5 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a large hexagon <WHERE> middle of page\t<WHAT> an outline of that hexagon <WHERE> around the other hexagon\t<WHAT> a smaller hexagon <WHERE> in the middle of the other 2 hexagons",
+                "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4.25 0 0 0))) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a double-bordered circle, two perimeter lines close together, about 1/4 the height of the box <WHERE> exactly in the center of the box\t<WHAT> a circle, about 1/2 the diameter of the first circle <WHERE> exactly in the center of the first circle",
+                "(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a small circle <WHERE> in the middle\t<WHAT> a tiny square <WHERE> inside of the circle",
+                "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> medium hexagon <WHERE> center of page\t<WHAT> hexagon, barely smaller than previous <WHERE> center of original hexagon\t<WHAT> circle 1/4 size of previous hexagon <WHERE> center of hexagon",
+                "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))"
+            ],
+            [
+                "# <WHAT> HEXAGON <WHERE> MIDDLE OF PAGE\t<WHAT> MEDIUM SQUARE <WHERE> MIDDLE OF HEXAGON LIKE A NUT WITH SQUARE HOLE",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform square (transform_matrix 2 0 0 0)))"
+            ],
+            [
+                "# <WHAT> small circle <WHERE> center of the paper\t<WHAT> a cirlce twice the size <WHERE> center of the paper",
+                "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> an octagon <WHERE> int he middle of the page\t<WHAT> a circle half the size of the octagon <WHERE> inside the octagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a circle about 1/4 the height of the box it is in <WHERE> exactly in the center of the box\t<WHAT> a smaller circle about 1/2 the diameter of the original <WHERE> exactly in the center of the original circle\t<WHAT> 2 small circles, diameter of about 1/3 the space between the inner and outer circle <WHERE> between the inner and outer circle at about the 1:30 and 7:30 positions if the outer circle was a clock face",
+                "(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0))) (repeat_transform (transform (transform circle (transform_matrix 0.5 0 0 0)) (transform_matrix 1 0 (* (* 2 1.5) (cos (/ pi 4))) (* (* 2 1.5) (sin (/ pi 4))))) 2 (transform_matrix 1 (/ (* 2 pi) 2) 0 0)))"
+            ],
+            [
+                "# <WHAT> draw circle <WHERE> within space provided\t<WHAT> with square 15 percent size of hexagon <WHERE> within circle",
+                "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform square (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> one large octagon <WHERE> center of page\t<WHAT> one small circle <WHERE> directly in the center of the octagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> s small hexagon <WHERE> in the middle of the page\t<WHAT> a much smaller hexagon <WHERE> in the middle of the larger hexagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))"
+            ],
+            [
+                "# <WHAT> hexagon <WHERE> middle of page"
+            ]
+        ],
+        [
+            [
+                "# <WHAT> small hexagon <WHERE> in the center of the field\t<WHAT> 3x larger hexagon <WHERE> equally spaced around the first hexagon\t<WHAT> slightly larger hexagon <WHERE> immediately outside of the large hexagon",
+                "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4.25 0 0 0))) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> an octagon <WHERE> in the middle\t<WHAT> a circle <WHERE> inside of the octagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))"
+            ],
+            [
+                "# <WHAT> hexagon <WHERE> center\t<WHAT> circle 1/2 diameter of hexagon <WHERE> in center of hexagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))"
+            ],
+            [
+                "# <WHAT> Small hexagon <WHERE> In centre of page\t<WHAT> A slightly smaller hexagon <WHERE> inside the first hexagon\t<WHAT> a cirlcle <WHERE> In the centre of the hexagons",
+                "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> hexagon <WHERE> center\t<WHAT> very slightly smaller hexagon <WHERE> inside of hexagon\t<WHAT> Square 1/4 of hexagon's diameter <WHERE> inside of hexagon",
+                "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2.25 0 0 0))) (transform square (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> A Small Circle <WHERE> In the center of the image\t<WHAT> A Tiny Hexagon <WHERE> In the center of the circle",
+                "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))"
+            ],
+            [
+                "# <WHAT> I want you to draw a hexagon. <WHERE> In the middle of the page.\t<WHAT> Then I want you to draw me a much smaller hexagon. <WHERE> In the middle of the first one.",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a circle <WHERE> in the middle of the page\t<WHAT> a circle <WHERE> closely bordering the first circle\t<WHAT> a small hexagon <WHERE> in the middle of the circle",
+                "(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))"
+            ],
+            [
+                "# <WHAT> HEXAGON <WHERE> MIDDLE OF PAGE\t<WHAT> CIRCLE <WHERE> INTHE MIDDLE OF HEXAGON LIKE A NUT",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> Circle <WHERE> center\t<WHAT> half sized circle <WHERE> center",
+                "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a double lined thick heaxgon <WHERE> middle\t<WHAT> a small square <WHERE> in middle of hexagon",
+                "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4.25 0 0 0))) (transform square (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> one medium sized circle <WHERE> center of page\t<WHAT> one medium-small circle (smaller than the outside circle) <WHERE> inside of the medium sized circle\t<WHAT> 2 tiny circles <WHERE> outside of the inner circle but still inside the outer circle. 1 directly SW of the inner circle and 1 directly NE of the inner circle.",
+                "(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0))) (repeat_transform (transform (transform circle (transform_matrix 0.5 0 0 0)) (transform_matrix 1 0 (* (* 2 1.5) (cos (/ pi 4))) (* (* 2 1.5) (sin (/ pi 4))))) 2 (transform_matrix 1 (/ (* 2 pi) 2) 0 0)))"
+            ],
+            [
+                "# <WHAT> a tiny circle <WHERE> in the direct center\t<WHAT> a slightly larger circle <WHERE> tightly surrounding the first circle\t<WHAT> a very small square <WHERE> in the dead center of the two circles",
+                "(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (transform square (transform_matrix 0.5 0 0 0)))"
+            ],
+            [
+                "# <WHAT> hexagon <WHERE> middle of the square\t<WHAT> hexagon <WHERE> around the smaller hexagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)))"
+            ],
+            [
+                "# <WHAT> A circle, 1/8th the size of the page. <WHERE> At the center of the page.\t<WHAT> A hexagon, about 1/10th the size of the circle. <WHERE> At the center of the circle.",
+                "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> six sided item with thin border <WHERE> in center of area\t<WHAT> small circle <WHERE> in center of six sided item",
+                "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a small circle <WHERE> in the dead center of the page\t<WHAT> a somewhat larger circle <WHERE> surrounding the smaller circle\t<WHAT> a barely larger circle <WHERE> surrounding the larger circle tightly",
+                "(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> small circle <WHERE> center of the paper\t<WHAT> a cirlce twice the size <WHERE> center of the paper",
+                "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> small hexagon <WHERE> center of the space\t<WHAT> extra small square <WHERE> center of the hexagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a medium square <WHERE> the center of the page\t<WHAT> a very large hexagon <WHERE> around the outside of the hexagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 4 0 0 0)) (transform square (transform_matrix 2 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a large circle <WHERE> at the center of the page\t<WHAT> a slightly smaller circle, almost the size of the first circle <WHERE> inside the first circle\t<WHAT> a tiny square <WHERE> at the center of the two circles",
+                "(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4.25 0 0 0))) (transform square (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a circle <WHERE> in the middle of the page\t<WHAT> a circle half the size of the first one <WHERE> inside the first circle\t<WHAT> four very small circles <WHERE> at the northeast, southeast, southwest, and northwest points between the two circles",
+                "(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0))) (repeat_transform (transform (transform circle (transform_matrix 0.5 0 0 0)) (transform_matrix 1 0 (* (* 2 1.5) (cos (/ pi 4))) (* (* 2 1.5) (sin (/ pi 4))))) 4 (transform_matrix 1 (/ (* 2 pi) 4) 0 0)))"
+            ],
+            [
+                "# <WHAT> hexagon <WHERE> middle of page\t<WHAT> circle <WHERE> middle of hexagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))"
+            ],
+            [
+                "# <WHAT> small hexagon <WHERE> middle of page\t<WHAT> smaller hexagon <WHERE> middle of hexagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))"
+            ],
+            [
+                "# <WHAT> small octagon <WHERE> center\t<WHAT> very small hexagon <WHERE> center of octagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a hexagon <WHERE> in the middle\t<WHAT> a circle <WHERE> in the middle of the hexagon\t<WHAT> 2 tiny squares <WHERE> top right and bottom left outside of the circle"
+            ]
+        ],
+        [
+            [
+                "# <WHAT> a circle <WHERE> in the middle\t<WHAT> a small square <WHERE> in the middle of the circle",
+                "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform square (transform_matrix 2 0 0 0)))"
+            ],
+            [
+                "# <WHAT> A Small Circle <WHERE> In the center of the image\t<WHAT> A Tiny Hexagon <WHERE> In the center of the circle",
+                "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))"
+            ],
+            [
+                "# <WHAT> circle <WHERE> middle of a page\t<WHAT> slightly smaller circle <WHERE> middle of page\t<WHAT> square <WHERE> inside",
+                "(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (transform square (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> A circle, 1/8th the size of the page. <WHERE> At the center of the page.\t<WHAT> A hexagon, about 1/10th the size of the circle. <WHERE> At the center of the circle.",
+                "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a hexagon <WHERE> the space\t<WHAT> a circle <WHERE> the middle of the hexagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a small circle <WHERE> in the dead center of the page\t<WHAT> a somewhat larger circle <WHERE> surrounding the smaller circle\t<WHAT> a barely larger circle <WHERE> surrounding the larger circle tightly",
+                "(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a double lined thick heaxgon <WHERE> middle\t<WHAT> a small square <WHERE> in middle of hexagon",
+                "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4.25 0 0 0))) (transform square (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a hexagon <WHERE> the middle center of the big square image\t<WHAT> another hexagon but a pinch slightly smaller <WHERE> within the hexagon in the middle\t<WHAT> a circle with a small squares clipped within <WHERE> the middle of the hexagon",
+                "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a medium circle <WHERE> in the center of the page\t<WHAT> a circle <WHERE> directly inside the medium circle already drawn\t<WHAT> a smaller circle <WHERE> directly in the center of the two other circles",
+                "(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))"
+            ],
+            [
+                "# <WHAT> one large octagon <WHERE> center of page\t<WHAT> one small circle <WHERE> directly in the center of the octagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> circle <WHERE> middle of page\t<WHAT> hexagon <WHERE> inside circle",
+                "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)))"
+            ],
+            [
+                "# <WHAT> tiny square <WHERE> middle of the screen\t<WHAT> medium circle <WHERE> encircling the tiny square",
+                "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 0.5 0 0 0)))"
+            ],
+            [
+                "# <WHAT> small hexagon <WHERE> middle\t<WHAT> large hexagon <WHERE> around small hexagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> A circle, about 1/18th the size of the page. <WHERE> At the center of the page.\t<WHAT> A hexagon, about 1/2 the size of the circle. <WHERE> At the center of the circle.",
+                "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> Small hexagon <WHERE> In centre of page\t<WHAT> A slightly smaller hexagon <WHERE> inside the first hexagon\t<WHAT> a cirlcle <WHERE> In the centre of the hexagons",
+                "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> small hexagon <WHERE> the center of the field with flat top and bottom\t<WHAT> square with lines 1/3 the size of the lines on the hexagon <WHERE> directly in the center of the hexagon with flat top and bottom",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 0.5 0 0 0)))"
+            ],
+            [
+                "# <WHAT> A small hexagon <WHERE> In the center of the page\t<WHAT> A square <WHERE> Inside the hexagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> small circle <WHERE> center of the paper\t<WHAT> a cirlce twice the size <WHERE> center of the paper",
+                "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> CIRCLE <WHERE> MIDDLE OF PAGE\t<WHAT> SMALLER CIRCLE <WHERE> INSIDE LARGER CIRCLE TO MAKE DONUT",
+                "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))"
+            ],
+            [
+                "# <WHAT> small hexagon <WHERE> in the center\t<WHAT> larger octagon <WHERE> surrounding the hexagon with the hexagon centered and not touching.",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))"
+            ],
+            [
+                "# <WHAT> A medium circle <WHERE> Center\t<WHAT> A slightly larger circle <WHERE> Around the first circle\t<WHAT> Tiny square <WHERE> Center of the circle",
+                "(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (transform square (transform_matrix 0.5 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a hexagon <WHERE> in the middle of the page\t<WHAT> a small square <WHERE> in the middle of the hexagon",
+                "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 4 0 0 0)) (transform square (transform_matrix 2 0 0 0)))"
+            ],
+            [
+                "# <WHAT> draw a small circle <WHERE> directly in the center of the field\t<WHAT> circle with diameter 3 times the first <WHERE> directly around the first circle with all arcs equidistant from center",
+                "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a circle <WHERE> in the middle of the page\t<WHAT> a circle <WHERE> closely bordering the first circle\t<WHAT> a small hexagon <WHERE> in the middle of the circle",
+                "(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a small sqaure <WHERE> in the center of the page\t<WHAT> a double edged circle <WHERE> 1.5 cm away from the small square in the center of the page",
+                "(connect_strokes (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 4.25 0 0 0))) (transform square (transform_matrix 2 0 0 0)))"
+            ],
+            [
+                "# <WHAT> a hexagon <WHERE> in the middle of the space\t<WHAT> a 2nd hexagon that is barely smaller <WHERE> inside of the first hexagon\t<WHAT> a circle, 2/3 the size of the hexagon <WHERE> in the middle of the hexagons\t<WHAT> 4 circles, 1/10 the size of the big circle <WHERE> NE, SE, SW, NW inside of the hexagon, almost like corners of a square"
+            ]
+        ]
+    ],
+    "engine": "davinci-codex",
+    "separator": "\n",
+    "completion": [
+        {
+            "id": "cmpl-4zD1QxuKH1xdBiFwQMWvifka6lH20",
+            "object": "text_completion",
+            "created": 1650493412,
+            "model": "code-davinci:001",
+            "choices": [
+                {
+                    "text": "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1.25 0 0 0))) (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1.5 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1.75 0 0 0))) (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1.75 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1.5 0 0 0))) (connect_strokes (transform (transform circle (transform_matrix 2 0",
+                    "index": 0,
+                    "logprobs": null,
+                    "finish_reason": "length"
+                },
+                {
+                    "text": "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0))) (transform (transform circle (transform_matrix 1 0 0 0)) (transform_matrix 1 0 0 0)))",
+                    "index": 1,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (connect_strokes (transform (transform circle (transform_matrix 1 0 0 0)) (transform_matrix 2 0 0 0)) (connect_strokes (transform (transform circle (transform_matrix 1 0 0 0)) (transform_matrix 0.25 0 0 0)) (transform (transform circle (transform_matrix 1 0 0 0)) (transform_matrix 0.5 0 0 0))) (connect_strokes (transform (transform circle (transform_matrix 1 0 0 0)) (transform_matrix 0.75 0 0 0)) (transform (transform circle (transform_matrix 1 0 0 0)) (transform_matrix 1 0 0 0))) (connect_strokes (transform (transform circle (transform_matrix 1 0 0 0)) (transform_matrix 1.25 0 0 0)) (transform (transform circle (transform_matrix 1 0 0 0",
+                    "index": 2,
+                    "logprobs": null,
+                    "finish_reason": "length"
+                },
+                {
+                    "text": "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.5 0 0 0)) (transform_matrix 1 0 0 0)))",
+                    "index": 3,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0))) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))",
+                    "index": 4,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                }
+            ]
+        },
+        {
+            "id": "cmpl-4zD1aJJdFNVx7neuQtFBYfNuK5kon",
+            "object": "text_completion",
+            "created": 1650493422,
+            "model": "code-davinci:001",
+            "choices": [
+                {
+                    "text": "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0))) (repeat_transform (transform square (transform_matrix 1 0 0 0)) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)))",
+                    "index": 0,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (transform_matrix 1 (/ (* 2 pi) 8) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0))) (repeat_transform (transform square (transform_matrix 1 0 0 0)) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)))",
+                    "index": 1,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0))) (repeat_transform (transform (transform square (transform_matrix 2.25 0 0 0)) (transform_matrix 2.25 0 0 0)) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)))",
+                    "index": 2,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (repeat_transform (transform square (transform_matrix 0.5 0 0 0)) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0))))",
+                    "index": 3,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0))) (repeat_transform (transform (transform square (transform_matrix 1 0 0 0)) (transform_matrix 0.5 0 0 0)) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)))",
+                    "index": 4,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                }
+            ]
+        },
+        {
+            "id": "cmpl-4zD1jwMRsHtpkGguq8mx5bce51grc",
+            "object": "text_completion",
+            "created": 1650493431,
+            "model": "code-davinci:001",
+            "choices": [
+                {
+                    "text": "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)))",
+                    "index": 0,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)))",
+                    "index": 1,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0))",
+                    "index": 2,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)))",
+                    "index": 3,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "# <WHAT> two circles <WHERE> same size and along the outside of the hexagon\t<WHAT> two cirlces <WHERE> same size and along the inside of the hexagon",
+                    "index": 4,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                }
+            ]
+        },
+        {
+            "id": "cmpl-4zD1opdRPMJM7QoXUV3rqJgacahd6",
+            "object": "text_completion",
+            "created": 1650493436,
+            "model": "code-davinci:001",
+            "choices": [
+                {
+                    "text": "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2.25 0 0 0))) (repeat_transform (transform square (transform_matrix 0.5 0 0 0)) 2 (transform_matrix 1 (/ (* 2 pi) 4) 0 0)))",
+                    "index": 0,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0))) (repeat_transform (transform square (transform_matrix 0.25 0 0 0)) 2 (transform_matrix 1 (/ (* 2 pi) 4) 0 0)))",
+                    "index": 1,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0))) (transform (transform square (transform_matrix 0.5 0 0 0)) (transform_matrix 1 0 (* (* 2 1.5) (cos (/ pi 4))) (* (* 2 1.5) (sin (/ pi 4))))) (transform (transform square (transform_matrix 0.5 0 0 0)) (transform_matrix 1 0 (* (* 2 1.5) (cos (/ pi 4))) (* (* 2 1.5) (sin (/ pi 4))))) )",
+                    "index": 2,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)) (repeat_transform (transform square (transform_matrix 0.25 0 0 0)) 2 (transform_matrix 0.75 0 0 0)))",
+                    "index": 3,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0))) (repeat_transform (transform square (transform_matrix 0.5 0 0 0)) 2 (transform_matrix 1 0 0 0)))",
+                    "index": 4,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                }
+            ]
+        },
+        {
+            "id": "cmpl-4zD20HsQHkujG3GyGDiVaEadKKl0E",
+            "object": "text_completion",
+            "created": 1650493448,
+            "model": "code-davinci:001",
+            "choices": [
+                {
+                    "text": "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))",
+                    "index": 0,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))",
+                    "index": 1,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 4 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))",
+                    "index": 2,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))",
+                    "index": 3,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (connect_strokes (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 7 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 6.25 0 0 0))) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 5 0 0 0)))",
+                    "index": 4,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                }
+            ]
+        }
+    ]
+}
