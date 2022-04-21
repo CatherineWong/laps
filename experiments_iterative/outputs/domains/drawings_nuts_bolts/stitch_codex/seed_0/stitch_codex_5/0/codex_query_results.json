@@ -1,1 +1,515 @@
-{"curr_prompt_idx": 9, "max_num_prompts": 10, "programs_valid": ["(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))", "(connect_strokes (transform (transform (transform circle (transform_matrix 1 0 0 0)) (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform (transform circle (transform_matrix 1 0 0 0)) (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0 0.5 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 1 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) square)", "(connect_strokes (transform (transform line (transform_matrix 0 1 0 0)) (transform_matrix 0 1 0 0.5)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1.5 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 0.5 0 0 0)) (transform_matrix 1 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1.5 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 3 0 0 0)) (transform_matrix 1 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.25 0 0 0)))", "(connect_strokes (transform (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.25 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0 0 2 0)))"], "programs_invalid": ["", "(connect_strokes (transform (transform triangle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform curve (transform_matrix 1 0 0 0)) (transform_matrix 0.5 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1.2 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform polygon (transform_matrix 1 0 0 0)) (transform_matrix 2 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.2 0 0 0)))", "(display (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 1 0 0 0)) (transform_matrix 1 0 0 0)))", "'''", "(construct (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))", "\"\"\"", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0 0)) (transform_matrix 0.5 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform_matrix 1 0 0 0) (transform_matrix 0 0.8 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform rectangle (transform_matrix 1 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.2 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1.1 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.3 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform triangle (transform_matrix 1 0 0 0)))"], "prompt_text": ["(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))\n", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))\n", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n"], "prompt_example_types": ["programs"], "prompt_programs": [["(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))"], ["(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))"], ["(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))"], ["(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))"], ["(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"], ["(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"], ["(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))"], ["(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))"], ["(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))"], ["(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))", "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"]], "engine": "davinci-codex", "separator": "\n", "completion": [{"id": "cmpl-4zDBF0SE94N0xuSyVZEs7FiX09AK4", "object": "text_completion", "created": 1650494021, "model": "code-davinci:001", "choices": [{"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0 0.5 0 0)))", "index": 0, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.2 0 0 0)))", "index": 1, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.3 0 0 0)))", "index": 2, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 3 0 0 0)) (transform_matrix 1 0 0 0)))", "index": 3, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))", "index": 4, "logprobs": null, "finish_reason": "stop"}]}, {"id": "cmpl-4zDBIuoDj7hKl251WTVXGpRhZ5dso", "object": "text_completion", "created": 1650494024, "model": "code-davinci:001", "choices": [{"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))", "index": 0, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform rectangle (transform_matrix 1 0 0 0)))", "index": 1, "logprobs": null, "finish_reason": "stop"}, {"text": "", "index": 2, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform line (transform_matrix 0 1 0 0)) (transform_matrix 0 1 0 0.5)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))", "index": 3, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))", "index": 4, "logprobs": null, "finish_reason": "stop"}]}, {"id": "cmpl-4zDBNtSpCqcZLM6ZEUGprvZ2zjD0e", "object": "text_completion", "created": 1650494029, "model": "code-davinci:001", "choices": [{"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.25 0 0 0)))", "index": 0, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))", "index": 1, "logprobs": null, "finish_reason": "stop"}, {"text": "'''", "index": 2, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0 0 2 0)))", "index": 3, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1.5 0 0 0)))", "index": 4, "logprobs": null, "finish_reason": "stop"}]}, {"id": "cmpl-4zDBPE0ZEhrkI3vfNdiKVDu54P8QP", "object": "text_completion", "created": 1650494031, "model": "code-davinci:001", "choices": [{"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0 0 0 0)))", "index": 0, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.2 0 0 0)))", "index": 1, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0 0 0 0)))", "index": 2, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform curve (transform_matrix 1 0 0 0)) (transform_matrix 0.5 0 0 0)))", "index": 3, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))", "index": 4, "logprobs": null, "finish_reason": "stop"}]}, {"id": "cmpl-4zDBVtNmqCBRVPmR8RZAFuZyt53AK", "object": "text_completion", "created": 1650494037, "model": "code-davinci:001", "choices": [{"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0 0.5 0 0)))", "index": 0, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 1 0)))", "index": 1, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform triangle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)))", "index": 2, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1.1 0 0 0)))", "index": 3, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))", "index": 4, "logprobs": null, "finish_reason": "stop"}]}, {"id": "cmpl-4zDBcWbW8GivXATWpjXoEEFjmHUEV", "object": "text_completion", "created": 1650494044, "model": "code-davinci:001", "choices": [{"text": "(construct (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))", "index": 0, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform (transform circle (transform_matrix 1 0 0 0)) (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform (transform circle (transform_matrix 1 0 0 0)) (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))", "index": 1, "logprobs": null, "finish_reason": "stop"}, {"text": "(display (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 1 0 0 0)) (transform_matrix 1 0 0 0)))", "index": 2, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))", "index": 3, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))", "index": 4, "logprobs": null, "finish_reason": "stop"}]}, {"id": "cmpl-4zDBjxQiekgiVKwg8XHI3XYrDf3Kx", "object": "text_completion", "created": 1650494051, "model": "code-davinci:001", "choices": [{"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1.5 0 0 0)))", "index": 0, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.25 0 0 0)))", "index": 1, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))", "index": 2, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1.2 0 0 0)))", "index": 3, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))", "index": 4, "logprobs": null, "finish_reason": "stop"}]}, {"id": "cmpl-4zDBqDfueX4sxe7vAadHOeAB7lzOm", "object": "text_completion", "created": 1650494058, "model": "code-davinci:001", "choices": [{"text": "\"\"\"", "index": 0, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))", "index": 1, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform polygon (transform_matrix 1 0 0 0)) (transform_matrix 2 0 0 0)))", "index": 2, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform_matrix 1 0 0 0) (transform_matrix 0 0.8 0)))", "index": 3, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform triangle (transform_matrix 1 0 0 0)))", "index": 4, "logprobs": null, "finish_reason": "stop"}]}, {"id": "cmpl-4zDBuu9QtBURZGhBE6EfxxsfR60mu", "object": "text_completion", "created": 1650494062, "model": "code-davinci:001", "choices": [{"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))", "index": 0, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))", "index": 1, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) square)", "index": 2, "logprobs": null, "finish_reason": "stop"}, {"text": "\"\"\"", "index": 3, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 0.5 0 0 0)) (transform_matrix 1 0 0 0)))", "index": 4, "logprobs": null, "finish_reason": "stop"}]}, {"id": "cmpl-4zDByxfyDaopsALo3Oc6qYPnZqhai", "object": "text_completion", "created": 1650494066, "model": "code-davinci:001", "choices": [{"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0 0)) (transform_matrix 0.5 0 0 0)))", "index": 0, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))", "index": 1, "logprobs": null, "finish_reason": "stop"}, {"text": "\"\"\"", "index": 2, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1.5 0 0 0)))", "index": 3, "logprobs": null, "finish_reason": "stop"}, {"text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))", "index": 4, "logprobs": null, "finish_reason": "stop"}]}]}
+{
+    "curr_prompt_idx": 9,
+    "max_num_prompts": 10,
+    "programs_valid": [
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))",
+        "(connect_strokes (transform (transform (transform circle (transform_matrix 1 0 0 0)) (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform (transform circle (transform_matrix 1 0 0 0)) (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0 0.5 0 0)))",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0 0 0 0)))",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 1 0)))",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) square)",
+        "(connect_strokes (transform (transform line (transform_matrix 0 1 0 0)) (transform_matrix 0 1 0 0.5)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1.5 0 0 0)))",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 0.5 0 0 0)) (transform_matrix 1 0 0 0)))",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1.5 0 0 0)))",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 3 0 0 0)) (transform_matrix 1 0 0 0)))",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.25 0 0 0)))",
+        "(connect_strokes (transform (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.25 0 0 0)))",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0 0 2 0)))"
+    ],
+    "programs_invalid": [
+        "",
+        "(connect_strokes (transform (transform triangle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)))",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform curve (transform_matrix 1 0 0 0)) (transform_matrix 0.5 0 0 0)))",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1.2 0 0 0)))",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform polygon (transform_matrix 1 0 0 0)) (transform_matrix 2 0 0 0)))",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.2 0 0 0)))",
+        "(display (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 1 0 0 0)) (transform_matrix 1 0 0 0)))",
+        "'''",
+        "(construct (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))",
+        "\"\"\"",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0 0)) (transform_matrix 0.5 0 0 0)))",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform_matrix 1 0 0 0) (transform_matrix 0 0.8 0)))",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform rectangle (transform_matrix 1 0 0 0)))",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.2 0 0 0)))",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1.1 0 0 0)))",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.3 0 0 0)))",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform triangle (transform_matrix 1 0 0 0)))"
+    ],
+    "prompt_text": [
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))\n",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))\n",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n",
+        "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))\n(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))\n"
+    ],
+    "prompt_example_types": [
+        "programs"
+    ],
+    "prompt_programs": [
+        [
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))"
+        ],
+        [
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))"
+        ],
+        [
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))"
+        ],
+        [
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))"
+        ],
+        [
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+        ],
+        [
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+        ],
+        [
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))"
+        ],
+        [
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))"
+        ],
+        [
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))"
+        ],
+        [
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform square (transform_matrix 1 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))",
+            "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))"
+        ]
+    ],
+    "engine": "davinci-codex",
+    "separator": "\n",
+    "completion": [
+        {
+            "id": "cmpl-4zDBF0SE94N0xuSyVZEs7FiX09AK4",
+            "object": "text_completion",
+            "created": 1650494021,
+            "model": "code-davinci:001",
+            "choices": [
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0 0.5 0 0)))",
+                    "index": 0,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.2 0 0 0)))",
+                    "index": 1,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.3 0 0 0)))",
+                    "index": 2,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 3 0 0 0)) (transform_matrix 1 0 0 0)))",
+                    "index": 3,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))",
+                    "index": 4,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                }
+            ]
+        },
+        {
+            "id": "cmpl-4zDBIuoDj7hKl251WTVXGpRhZ5dso",
+            "object": "text_completion",
+            "created": 1650494024,
+            "model": "code-davinci:001",
+            "choices": [
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)))",
+                    "index": 0,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform rectangle (transform_matrix 1 0 0 0)))",
+                    "index": 1,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "",
+                    "index": 2,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform line (transform_matrix 0 1 0 0)) (transform_matrix 0 1 0 0.5)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))",
+                    "index": 3,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))",
+                    "index": 4,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                }
+            ]
+        },
+        {
+            "id": "cmpl-4zDBNtSpCqcZLM6ZEUGprvZ2zjD0e",
+            "object": "text_completion",
+            "created": 1650494029,
+            "model": "code-davinci:001",
+            "choices": [
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.25 0 0 0)))",
+                    "index": 0,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))",
+                    "index": 1,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "'''",
+                    "index": 2,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0 0 2 0)))",
+                    "index": 3,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1.5 0 0 0)))",
+                    "index": 4,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                }
+            ]
+        },
+        {
+            "id": "cmpl-4zDBPE0ZEhrkI3vfNdiKVDu54P8QP",
+            "object": "text_completion",
+            "created": 1650494031,
+            "model": "code-davinci:001",
+            "choices": [
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0 0 0 0)))",
+                    "index": 0,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.2 0 0 0)))",
+                    "index": 1,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0 0 0 0)))",
+                    "index": 2,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform curve (transform_matrix 1 0 0 0)) (transform_matrix 0.5 0 0 0)))",
+                    "index": 3,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))",
+                    "index": 4,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                }
+            ]
+        },
+        {
+            "id": "cmpl-4zDBVtNmqCBRVPmR8RZAFuZyt53AK",
+            "object": "text_completion",
+            "created": 1650494037,
+            "model": "code-davinci:001",
+            "choices": [
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0 0.5 0 0)))",
+                    "index": 0,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 1 0)))",
+                    "index": 1,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform triangle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 2 0 0 0)))",
+                    "index": 2,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1.1 0 0 0)))",
+                    "index": 3,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))",
+                    "index": 4,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                }
+            ]
+        },
+        {
+            "id": "cmpl-4zDBcWbW8GivXATWpjXoEEFjmHUEV",
+            "object": "text_completion",
+            "created": 1650494044,
+            "model": "code-davinci:001",
+            "choices": [
+                {
+                    "text": "(construct (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))",
+                    "index": 0,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform (transform circle (transform_matrix 1 0 0 0)) (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform (transform circle (transform_matrix 1 0 0 0)) (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))",
+                    "index": 1,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(display (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 1 0 0 0)) (transform_matrix 1 0 0 0)))",
+                    "index": 2,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))",
+                    "index": 3,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))",
+                    "index": 4,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                }
+            ]
+        },
+        {
+            "id": "cmpl-4zDBjxQiekgiVKwg8XHI3XYrDf3Kx",
+            "object": "text_completion",
+            "created": 1650494051,
+            "model": "code-davinci:001",
+            "choices": [
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1.5 0 0 0)))",
+                    "index": 0,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.25 0 0 0)))",
+                    "index": 1,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 0.5 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)))",
+                    "index": 2,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1.2 0 0 0)))",
+                    "index": 3,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (repeat_transform (transform line (transform_matrix 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (transform_matrix 1 (/ (* 2 pi) 6) 0 0)) (transform_matrix 1 0 0 0)))",
+                    "index": 4,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                }
+            ]
+        },
+        {
+            "id": "cmpl-4zDBqDfueX4sxe7vAadHOeAB7lzOm",
+            "object": "text_completion",
+            "created": 1650494058,
+            "model": "code-davinci:001",
+            "choices": [
+                {
+                    "text": "\"\"\"",
+                    "index": 0,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))",
+                    "index": 1,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform polygon (transform_matrix 1 0 0 0)) (transform_matrix 2 0 0 0)))",
+                    "index": 2,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform_matrix 1 0 0 0) (transform_matrix 0 0.8 0)))",
+                    "index": 3,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform triangle (transform_matrix 1 0 0 0)))",
+                    "index": 4,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                }
+            ]
+        },
+        {
+            "id": "cmpl-4zDBuu9QtBURZGhBE6EfxxsfR60mu",
+            "object": "text_completion",
+            "created": 1650494062,
+            "model": "code-davinci:001",
+            "choices": [
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))",
+                    "index": 0,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))",
+                    "index": 1,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) square)",
+                    "index": 2,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "\"\"\"",
+                    "index": 3,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 0.5 0 0 0)) (transform_matrix 1 0 0 0)))",
+                    "index": 4,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                }
+            ]
+        },
+        {
+            "id": "cmpl-4zDByxfyDaopsALo3Oc6qYPnZqhai",
+            "object": "text_completion",
+            "created": 1650494066,
+            "model": "code-davinci:001",
+            "choices": [
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0 0)) (transform_matrix 0.5 0 0 0)))",
+                    "index": 0,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1 0 0 0)))",
+                    "index": 1,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "\"\"\"",
+                    "index": 2,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 1.5 0 0 0)))",
+                    "index": 3,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                },
+                {
+                    "text": "(connect_strokes (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 2 0 0 0)) (transform (transform circle (transform_matrix 2 0 0 0)) (transform_matrix 0.5 0 0 0)))",
+                    "index": 4,
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                }
+            ]
+        }
+    ]
+}
