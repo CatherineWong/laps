@@ -220,45 +220,6 @@ class CodexSampleGenerator(CodexBase, model_loaders.ModelLoader):
                     json.dump(query_results, f)
                 print(f"Wrote results: {query_results_filepath}")
 
-    def get_completion_for_prompt(
-        self,
-        experiment_state,
-        prompt_text,
-        query_results_filepath,
-        n_samples_per_prompt,
-        temperature,
-        max_tokens,
-        engine,
-        separator,
-        use_cached,
-        debug,
-    ):
-        if debug:
-            # Debugging query that returns programs.
-            cache_used = True
-            completion = self.query_mock(
-                experiment_state, n_samples=n_samples_per_prompt
-            )
-        elif use_cached and os.path.exists(query_results_filepath):
-            cache_used = True
-            print("Using cached examples....")
-            # For debugging only - does not verify that the cached completion matches the desired query parameters
-            with open(query_results_filepath, "r") as f:
-                completion_data = json.load(f)["completion"]
-            completion = Completion()
-            completion.refresh_from(completion_data)
-        else:
-            cache_used = False
-            completion = self.query_codex(
-                prompt_text,
-                n_samples=n_samples_per_prompt,
-                temperature=temperature,
-                max_tokens=max_tokens,
-                engine=engine,
-                separator=separator,
-            )
-        return completion, cache_used
-
     def maybe_get_frontiers_from_completion(
         self,
         experiment_state,

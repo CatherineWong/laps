@@ -213,6 +213,8 @@ class LAPSGrammar(Grammar):
         input_name_class=[DEFAULT_FUNCTION_NAMES],
         input_lam=DEFAULT_LAMBDA,
         debug=False,
+        mask_primitives=[],
+        mask_name_classes=[],
     ):
         if input_name_class == name_classes:
             unchanged = str(program)
@@ -221,23 +223,48 @@ class LAPSGrammar(Grammar):
 
         if type(program) == str:
             program = Program.parse(program, allow_unknown_primitives=True)
-        return self.show_program_from_tree(program, name_classes, lam, debug)
+        return self.show_program_from_tree(
+            program, name_classes, lam, debug, mask_primitives, mask_name_classes
+        )
 
     def show_program_from_tree(
-        self, program, name_classes, lam, debug=False,
+        self,
+        program,
+        name_classes,
+        lam,
+        debug=False,
+        mask_primitives=[],
+        mask_name_classes=[],
     ):
         # Show a program, walking the tree and printing out alternate names as we go.
         class NameVisitor(object):
-            def __init__(self, function_names, name_classes, lam, grammar):
+            def __init__(
+                self,
+                function_names,
+                name_classes,
+                lam,
+                grammar,
+                mask_primitives,
+                mask_name_classes,
+            ):
                 self.grammar = grammar
                 self.name_classes = name_classes + [LAPSGrammar.DEFAULT_FUNCTION_NAMES]
 
                 self.function_names = function_names
                 self.lam = lam
+                self.mask_primitives = mask_primitives
+                self.mask_name_classes = mask_name_classes + [
+                    LAPSGrammar.DEFAULT_FUNCTION_NAMES
+                ]
 
             def invented(self, e, isFunction):
                 original = "#" + str(e.body)
-                for n in self.name_classes:
+
+                if e in self.mask_primitives:
+                    name_classes = self.mask_name_classes
+                else:
+                    name_classes = self.name_classes
+                for n in name_classes:
                     if n in self.function_names[original]:
                         return self.function_names[original][n]
 
@@ -253,7 +280,13 @@ class LAPSGrammar(Grammar):
                         raise ParseFailure((str(e), e))
 
                 original_name = self.grammar.all_function_names_to_productions[e.name]
-                for n in self.name_classes:
+
+                # Optionally rename it.
+                if e in self.mask_primitives:
+                    name_classes = self.mask_name_classes
+                else:
+                    name_classes = self.name_classes
+                for n in name_classes:
                     if n in self.function_names[original_name]:
                         return self.function_names[original_name][n]
                 return e.name
@@ -271,7 +304,15 @@ class LAPSGrammar(Grammar):
                 return "(%s %s)" % (self.lam, e.body.visit(self, False))
 
         return program.visit(
-            NameVisitor(self.function_names, name_classes, lam, self), isFunction=False,
+            NameVisitor(
+                self.function_names,
+                name_classes,
+                lam,
+                self,
+                mask_primitives,
+                mask_name_classes,
+            ),
+            isFunction=False,
         )
 
     def infer_programs_for_tasks(

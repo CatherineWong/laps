@@ -6,6 +6,7 @@ their behavior.
 
 """
 from dbm.ndbm import library
+from tabnanny import verbose
 import numpy as np
 from src.experiment_iterator import RANDOM_GENERATOR
 from src.models.laps_grammar import LAPSGrammar
@@ -33,17 +34,146 @@ class CodexExamplesLibraryNamer(CodexBase, model_loaders.ModelLoader):
     TOP_1 = "top_1"
     SAMPLE_LOG_PROBS = "sample_log_probs"
 
-    LIBRARY_FUNCTION = ("library_function",)
-    EXAMPLES = "examples"
-    MASKED_NAMED_PROGRAMS = "masked_named_programs"
-    TASK_ID = ("task_id",)
-
     @staticmethod
     def load_model(experiment_state, **kwargs):
         return CodexExamplesLibraryNamer(experiment_state=experiment_state, **kwargs)
 
     def __init__(self, experiment_state=None):
         super().__init__()
+
+    def generate_library_names(
+        self,
+        experiment_state,
+        task_splits: list,
+        task_ids_in_splits: list,
+        n_samples_per_prompt: int = 5,
+        n_train_library_functions_per_prompt: int = 5,
+        n_train_tasks_per_library_function: int = 5,
+        temperature: float = 0.75,
+        max_tokens: int = 256,
+        separator: str = CodexBase.DEFAULT_SEPARATOR,
+        language_separator: str = CodexBase.DEFAULT_LANGUAGE_SEPARATOR,
+        engine: str = CodexBase.DEFAULT_ENGINE,
+        debug: bool = False,
+        verbose_prompt: bool = True,
+        function_name_class: list = LAPSGrammar.HUMAN_READABLE,
+        mask_function_class=LAPSGrammar.NUMERIC_FUNCTION_NAMES,
+        prompt_example_types: list = [LANGUAGE, PROGRAMS],
+        name_selection_criteria: str = TOP_1,
+        print_every_prompt_idx=1,
+    ):
+        """
+        Queries Codex API to generate new names for library functions.
+
+        n_train_library_functions_per_prompt : how many named library functions to include as examples.
+
+        n_train_tasks_per_library_function : how many training tasks to include per library function.
+        """
+        query_results_filepath = os.path.join(
+            os.getcwd(),
+            experiment_state.get_checkpoint_directory(),
+            self.query_results_file,
+        )
+
+        # Get library functions for prompt and to be named.
+        train_library_functions = self._get_train_library_functions(
+            experiment_state, n_train_library_functions_per_prompt, function_name_class,
+        )
+        unnamed_invention_functions = self._get_unnamed_inventions(
+            experiment_state, function_name_class
+        )
+
+        # Build example usages for train and invention library functions.
+        train_example_usages = [
+            self._build_usage_example(
+                library_function,
+                experiment_state,
+                task_ids_in_splits,
+                function_name_class,
+                n_train_tasks_per_library_function=n_train_tasks_per_library_function,
+                prompt_example_types=prompt_example_types,
+                use_base_dsl=True,
+            )
+            for library_function in train_library_functions
+        ]
+        invention_example_usages = [
+            self._build_usage_example(
+                library_function,
+                experiment_state,
+                task_ids_in_splits,
+                function_name_class,
+                n_train_tasks_per_library_function=n_train_tasks_per_library_function,
+                prompt_example_types=prompt_example_types,
+                use_base_dsl=False,
+            )
+            for library_function in unnamed_invention_functions
+        ]
+        train_example_usages = [
+            self._build_masked_usage_example(
+                usage, experiment_state, [function_name_class], [mask_function_class]
+            )
+            for usage in train_example_usages
+        ]
+
+        # Iteratively construct prompts and cache names.
+        for invention_example_usage in invention_example_usages:
+            invention_example_usage = self._build_masked_usage_example(
+                invention_example_usage,
+                experiment_state,
+                [function_name_class, mask_function_class],  # Mask any inventions also
+                [mask_function_class],
+            )
+            prompt = LibraryNamePrompt(
+                experiment_state,
+                body_example_usages=train_example_usages,
+                final_example_usage=invention_example_usage,
+            )
+            if verbose_prompt:
+                print(str(prompt))
+            completion, cache_used = self.get_completion_for_prompt(
+                experiment_state=experiment_state,
+                prompt_text=str(prompt),
+                query_results_filepath=query_results_filepath,
+                n_samples_per_prompt=n_samples_per_prompt,
+                temperature=temperature,
+                max_tokens=max_tokens,
+                engine=engine,
+                separator=separator,
+                use_cached=False,
+                debug=debug,
+                logprobs=1,
+            )
+            if completion is not None:
+                alternate_names = [
+                    (choice["text"], np.mean(choice["logprobs"]["token_logprobs"]))
+                    for choice in completion["choices"]
+                ]
+                alternate_name, log_prob = self._select_name(
+                    alternate_names, name_selection_criteria
+                )
+                alternate_name = experiment_state.models[
+                    model_loaders.GRAMMAR
+                ].set_function_name(
+                    str(invention_example_usage[self.LIBRARY_FUNCTION]),
+                    name_class=function_name_class,
+                    name=alternate_name,
+                )
+                if verbose_prompt:
+                    print(
+                        f"Setting function name for {invention_example_usage[self.LIBRARY_FUNCTION]} to {alternate_name} w/ log_p = {log_prob}"
+                    )
+                #  TODO[CW]: cache this out for results analysis
+
+    def _select_name(self, alternate_names, name_selection_criteria):
+        alternate_names = sorted(alternate_names, key=lambda c: c[-1], reverse=True)
+        if name_selection_criteria == self.TOP_1:
+            return alternate_names[0]
+        elif name_selection_criteria == self.SAMPLE_LOG_PROBS:
+            # Sample according to probability.
+            names, probabilities = zip(*alternate_names)
+            return np.random.choice(alternate_names, p=probabilities)[0]
+        else:
+            assert False
 
     def _new_library_usages(self):
         usages = {
@@ -155,192 +285,26 @@ class CodexExamplesLibraryNamer(CodexBase, model_loaders.ModelLoader):
         usages[self.LIBRARY_FUNCTION] = library_function
         usages[self.EXAMPLES] = usage_examples
         return usages
-    
-    
 
-    def generate_library_names(
+    def _build_masked_usage_example(
         self,
+        usages,
         experiment_state,
-        task_splits: list,
-        task_ids_in_splits: list,
-        n_train_library_functions_per_prompt: int = 5,
-        n_train_tasks_per_library_function: int = 5,
-        temperature: float = 0.75,
-        max_tokens: int = 256,
-        separator: str = CodexBase.DEFAULT_SEPARATOR,
-        language_separator: str = CodexBase.DEFAULT_LANGUAGE_SEPARATOR,
-        engine: str = CodexBase.DEFAULT_ENGINE,
-        debug: bool = False,
-        verbose_prompt: bool = False,
-        function_name_class: list = LAPSGrammar.HUMAN_READABLE,
-        prompt_example_types: list = [LANGUAGE, PROGRAMS],
-        print_every_prompt_idx=1,
+        function_name_classes=[LAPSGrammar.HUMAN_READABLE],
+        mask_function_classes=[LAPSGrammar.NUMERIC_FUNCTION_NAMES],
     ):
+        """Generates a masked_named_program example where all other functions are named using function_name_class
+        and a given function is named with mask_function_class
         """
-        Queries Codex API to generate new names for library functions.
-
-        n_train_library_functions_per_prompt : how many named library functions to include as examples.
-
-        n_train_tasks_per_library_function : how many training tasks to include per library function.
-        """
-        train_library_functions = self._get_train_library_functions(
-            experiment_state, n_train_library_functions_per_prompt, function_name_class,
-        )
-        unnamed_invention_functions = self._get_unnamed_inventions(
-            experiment_state, function_name_class
-        )
-        train_example_usages = [
-            self._build_usage_example(
-                library_function,
-                experiment_state,
-                task_ids_in_splits,
-                function_name_class,
-                n_train_tasks_per_library_function=n_train_tasks_per_library_function,
-                prompt_example_types=prompt_example_types,
-                use_base_dsl=True,
-            )
-            for library_function in train_library_functions
-        ]
-        invention_example_usages = [
-            self._build_usage_example(
-                library_function,
-                experiment_state,
-                task_ids_in_splits,
-                function_name_class,
-                n_train_tasks_per_library_function=n_train_tasks_per_library_function,
-                prompt_example_types=prompt_example_types,
-                use_base_dsl=False,
-            )
-            for library_function in unnamed_invention_functions
-        ]
-
-        # Construct masked examples for training prompt.
-        train_example_usages = [
-            self.
-            for usage in train_example_usages
-        ]
-
-    def _select_name(self, alternate_names, name_selection_criteria):
-        alternate_names = sorted(alternate_names, key=lambda c: c[-1], reverse=True)
-        if name_selection_criteria == self.TOP_1:
-            return alternate_names[0]
-        elif name_selection_criteria == self.SAMPLE_LOG_PROBS:
-            # Sample according to probability.
-            names, probabilities = zip(*alternate_names)
-            return np.random.choice(alternate_names, p=probabilities)[0]
-        else:
-            assert False
-
-    def _build_fixed_prompt_header(
-        self,
-        experiment_state,
-        prompt_comment_header,
-        prompt_with_base_dsl,
-        skip_types=["int"],
-    ):
-        prompt_header = ""
-        if prompt_comment_header is not None:
-            prompt_header += prompt_comment_header
-        if prompt_with_base_dsl:
-            prompt_header += CodexLibraryNamer.DEFAULT_BASE_DSL_HEADER
-            grammar = experiment_state.models[model_loaders.GRAMMAR]
-            for p in grammar.primitives:
-                if p.isInvented:
-                    # TODO: add previously named inventions here.
-                    continue
-                if str(p.tp) in skip_types:
-                    continue
-                prompt = "# Original function name: \n"  # TODO: use the numeric input name here.
-                prompt += f"{p}\n"  # TODO: use the human readable names; give examples of usage - match the form.
-                prompt += f"# Functionality: {p.function_comment}\n"
-                prompt += f"# Give an alternate verbose, human-readable name for this function that describes what it does. Prefix it with {grammar.function_prefix}_ \n"
-                prompt += (
-                    f"{p.alternate_names[-1]}"  # TODO: use the human readable name.
-                )
-                prompt += "\n\n"
-                prompt_header += prompt
-
-        return prompt_header
-
-    def _build_invention_prompt(
-        self,
-        experiment_state,
-        invention,
-        prompt_with_task_language,
-        prompt_with_n_example_programs,
-        body_name_class,
-        input_name_classes,
-        output_name_class,
-    ):
         grammar = experiment_state.models[model_loaders.GRAMMAR]
-        prompt = ""
-        prompt += CodexLibraryNamer.DEFAULT_INVENTION_HEADER
-
-        input_function_name = grammar.get_name(str(invention), input_name_classes)
-        prompt += "# Original function name: \n"
-        prompt += input_function_name + "\n"
-
-        if prompt_with_n_example_programs > 0:
-            example_usages = self._get_example_usages(
-                experiment_state, invention, prompt_with_n_example_programs
-            )
-            prompt += (
-                f"# Here are {prompt_with_n_example_programs} examples of its usage: "
-                + "\n"
-            )
-            # TODO: add language; more intelligent example usage selection.
-            example_programs = [
-                grammar.show_program(
-                    example,
-                    name_classes=[body_name_class] + input_name_classes,
-                    debug=True,
+        for example in usages[self.EXAMPLES]:
+            if example[PROGRAMS] is not None:
+                original_program = example[PROGRAMS]
+                example[self.MASKED_NAMED_PROGRAMS] = grammar.show_program(
+                    original_program,
+                    name_classes=function_name_classes,
+                    mask_primitives=[usages[self.LIBRARY_FUNCTION]],
+                    mask_name_classes=mask_function_classes,
                 )
-                for example in example_usages.values()
-            ]
-            prompt += "\n".join(example_programs) + "\n"
-        prompt += "# Function body: \n"
-        function_body = str(
-            grammar.show_program(
-                invention.betaNormalForm(), name_classes=[body_name_class]
-            )
-        )
-        prompt += function_body + "\n"
-        prompt += f"# Give an alternate verbose, human-readable name for this function that describes what it does. Prefix it with {grammar.function_prefix}_ \n"
-        prompt += f"{grammar.function_prefix}_"
-
-        return prompt
-
-    def _get_example_usages(self, experiment_state, primitive, n_examples):
-        """
-        :ret: [(task, example) for n_examples using the primitive]
-        """
-        # TODO: find examples where its not used along with inventions.
-        example_usages = dict()
-        for task, frontier in experiment_state.task_frontiers[TRAIN].items():
-            for e in frontier.entries:
-                if str(primitive) in e.tokens and not task in example_usages:
-                    example_usages[task] = e.program
-                    if len(example_usages) == n_examples:
-                        return example_usages
-        return example_usages
-
-    def _get_inventions_to_name(
-        self, experiment_state, inventions_to_name, output_name_class
-    ):
-        """
-        :ret: [array of Invention expressions to name]
-        """
-        # Get inventions.
-        grammar = experiment_state.models[model_loaders.GRAMMAR]
-        inventions = [p for p in grammar.primitives if p.isInvented]
-        if inventions_to_name == ALL:
-            pass
-        elif inventions_to_name == self.ALL_UNNAMED:
-            inventions = [
-                i
-                for i in inventions
-                if not grammar.has_alternate_name(i, output_name_class)
-            ]
-        inventions = sorted(inventions, key=lambda p: str(p))
-        return inventions
+        return usages
 
