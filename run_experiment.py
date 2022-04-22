@@ -36,6 +36,7 @@ from src.models.sample_generator import *
 from src.models.stitch_proposer import *
 from src.models.stitch_rewriter import *
 from src.models.library_namer import *
+from src.models.examples_library_namer import *
 
 DEFAULT_CONFIG_DIR = "experiments/configs"
 

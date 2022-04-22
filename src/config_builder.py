@@ -108,7 +108,7 @@ def get_domain_metadata(domain: str, language: str):
             "tasks_loader": drawing_domain_name,
             "task_language_loader": f"drawings_{language}_{drawing_domain}",
             "ocaml_special_handler": "drawings",
-            "global_batch_sizes": [50, 100, 200, 250],
+            "global_batch_sizes": [5, 10, 15, 25, 50, 50, 100, 150, 200],
         }
         METADATA[drawing_domain_name] = drawing_domain_metadata
 

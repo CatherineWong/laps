@@ -1,14 +1,6 @@
 {
   "frontiers": [
     {
-      "task": "lax-drawing-dials-all-054.png",
-      "programs": [
-        {
-          "program": "(#(lambda (lambda (C (C (C (T (T (T l (M 3 (/ pi 2) 0 (- 0 2))) (M 1 0 0 0)) (M 1 0 0 0)) (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) 0)))) (T (T $1 (M 1 0 (- 0 (+ 0.5 1)) (* 0.5 1))) (M 1 0 0 (* 0.5 1)))) (T (T $1 (M 1 0 (+ 0.5 1) (* 0.5 1))) (M 1 0 0 (* 0.5 1)))))) r #(* 1 2))"
-        }
-      ]
-    },
-    {
       "task": "lax-drawing-dials-all-050.png",
       "programs": [
         {
@@ -17,10 +9,10 @@
       ]
     },
     {
-      "task": "lax-drawing-dials-all-052.png",
+      "task": "lax-drawing-dials-all-053.png",
       "programs": [
         {
-          "program": "(C (#(lambda (lambda (T $0 (M 1 0 0 $1)))) 0 (#(lambda (lambda (T $0 (M 1 0 0 $1)))) 0 (T l (M 3 (/ pi 2) 0 (- 0 2))))) (#(lambda (lambda (T $0 (M 1 0 0 $1)))) (- (* (* 0.5 1) 2) 0) (T (T l (M 1 0 (- 0 0.5) 0)) (M #(* 1 2) 0 0 0))))"
+          "program": "(#(lambda (lambda (C (C (C (T (T (T l (M 3 (/ pi 2) 0 (- 0 2))) (M 1 0 0 0)) (M 1 0 0 0)) (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) 0)))) (T (T $1 (M 1 0 (- 0 (+ 0.5 1)) (* 0.5 1))) (M 1 0 0 (* 0.5 1)))) (T (T $1 (M 1 0 (+ 0.5 1) (* 0.5 1))) (M 1 0 0 (* 0.5 1)))))) c #(* 1 2))"
         }
       ]
     },
@@ -33,10 +25,18 @@
       ]
     },
     {
-      "task": "lax-drawing-dials-all-053.png",
+      "task": "lax-drawing-dials-all-054.png",
       "programs": [
         {
-          "program": "(#(lambda (lambda (C (C (C (T (T (T l (M 3 (/ pi 2) 0 (- 0 2))) (M 1 0 0 0)) (M 1 0 0 0)) (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) 0)))) (T (T $1 (M 1 0 (- 0 (+ 0.5 1)) (* 0.5 1))) (M 1 0 0 (* 0.5 1)))) (T (T $1 (M 1 0 (+ 0.5 1) (* 0.5 1))) (M 1 0 0 (* 0.5 1)))))) c #(* 1 2))"
+          "program": "(#(lambda (lambda (C (C (C (T (T (T l (M 3 (/ pi 2) 0 (- 0 2))) (M 1 0 0 0)) (M 1 0 0 0)) (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) 0)))) (T (T $1 (M 1 0 (- 0 (+ 0.5 1)) (* 0.5 1))) (M 1 0 0 (* 0.5 1)))) (T (T $1 (M 1 0 (+ 0.5 1) (* 0.5 1))) (M 1 0 0 (* 0.5 1)))))) r #(* 1 2))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-dials-all-052.png",
+      "programs": [
+        {
+          "program": "(C (#(lambda (lambda (T $0 (M 1 0 0 $1)))) 0 (#(lambda (lambda (T $0 (M 1 0 0 $1)))) 0 (T l (M 3 (/ pi 2) 0 (- 0 2))))) (#(lambda (lambda (T $0 (M 1 0 0 $1)))) (- (* (* 0.5 1) 2) 0) (T (T l (M 1 0 (- 0 0.5) 0)) (M #(* 1 2) 0 0 0))))"
         }
       ]
     }

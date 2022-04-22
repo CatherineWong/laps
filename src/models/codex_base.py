@@ -37,7 +37,7 @@ class CodexBase(object):
         top_p=None,
         logprobs=None,
         max_attempts_rate_limit=5,
-        rate_limit_seconds=30,
+        rate_limit_seconds=60,
     ):
         pause_for_rate_limit = False
         completion = None
