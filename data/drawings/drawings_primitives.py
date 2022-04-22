@@ -181,14 +181,14 @@ def _scaled_rectangle(w):
 _emptystroke = []
 objects = [
     Primitive("empt", tstroke, _emptystroke, alternate_names=["empty_stroke"],),
-    Primitive("l", tstroke, _line, alternate_names=["line"],),
-    Primitive("c", tstroke, _circle, alternate_names=["circle"],),
-    Primitive("r", tstroke, _rectangle, alternate_names=["square"],),
+    Primitive("l", tstroke, _line, alternate_names=["short_horizontal_line"],),
+    Primitive("c", tstroke, _circle, alternate_names=["small_circle"],),
+    Primitive("r", tstroke, _rectangle, alternate_names=["small_square"],),
     Primitive(
         "r_s",
         arrow(tfloat, tfloat, tstroke),
         _scaled_rectangle,
-        alternate_names=["rectangle"],
+        alternate_names=["scaled_rectangle"],
     ),
 ]
 

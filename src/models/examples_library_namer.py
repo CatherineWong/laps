@@ -46,10 +46,10 @@ class CodexExamplesLibraryNamer(CodexBase, model_loaders.ModelLoader):
         experiment_state,
         task_splits: list,
         task_ids_in_splits: list,
-        n_samples_per_prompt: int = 5,
-        n_train_library_functions_per_prompt: int = 5,
+        n_samples_per_prompt: int = 100,
+        n_train_library_functions_per_prompt: int = 10,
         n_train_tasks_per_library_function: int = 5,
-        temperature: float = 0.75,
+        temperature: float = 0.1,
         max_tokens: int = 256,
         separator: str = CodexBase.DEFAULT_SEPARATOR,
         language_separator: str = CodexBase.DEFAULT_LANGUAGE_SEPARATOR,
@@ -128,8 +128,8 @@ class CodexExamplesLibraryNamer(CodexBase, model_loaders.ModelLoader):
                 body_example_usages=train_example_usages,
                 final_example_usage=invention_example_usage,
             )
-            if verbose_prompt:
-                print(str(prompt))
+            # if verbose_prompt:
+            #     print(str(prompt))
             completion, cache_used = self.get_completion_for_prompt(
                 experiment_state=experiment_state,
                 prompt_text=str(prompt),
@@ -151,6 +151,7 @@ class CodexExamplesLibraryNamer(CodexBase, model_loaders.ModelLoader):
                 alternate_name, log_prob = self._select_name(
                     alternate_names, name_selection_criteria
                 )
+                alternate_name = "_".join(alternate_name.split())
                 alternate_name = experiment_state.models[
                     model_loaders.GRAMMAR
                 ].set_function_name(
@@ -159,6 +160,7 @@ class CodexExamplesLibraryNamer(CodexBase, model_loaders.ModelLoader):
                     name=alternate_name,
                 )
                 if verbose_prompt:
+                    print(alternate_names)
                     print(
                         f"Setting function name for {invention_example_usage[self.LIBRARY_FUNCTION]} to {alternate_name} w/ log_p = {log_prob}"
                     )

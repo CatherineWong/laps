@@ -131,8 +131,8 @@ class LibraryNamePrompt(object):
 
     DEFAULT_PREFIX_EXAMPLE = "/* Example usages of {} */"
     DEFAULT_PREFIX_PROGRAM = ""
-    DEFAULT_PREFIX_LANGUAGE = "# "
-    DEFAULT_PREFIX_READABLE_NAME = "# Human readable name for {} : "
+    DEFAULT_PREFIX_LANGUAGE = "# Human readable description: "
+    DEFAULT_PREFIX_READABLE_NAME = "# Can you guess what {} should be named : "
 
     def __init__(
         self,
