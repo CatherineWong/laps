@@ -1,57 +1,57 @@
 {
-    "mean_description_length": 39.22,
+    "mean_description_length": 39.96,
     "description_lengths_by_task": {
         "test": {
             "lax-drawing-nuts-bolts-all-000.png": [
-                12
+                8
             ],
             "lax-drawing-nuts-bolts-all-001.png": [
-                4
+                5
             ],
             "lax-drawing-nuts-bolts-all-002.png": [
-                7
+                8
             ],
             "lax-drawing-nuts-bolts-all-003.png": [
-                8
+                7
             ],
             "lax-drawing-nuts-bolts-all-004.png": [
-                9
-            ],
-            "lax-drawing-nuts-bolts-all-005.png": [
                 8
             ],
+            "lax-drawing-nuts-bolts-all-005.png": [
+                9
+            ],
             "lax-drawing-nuts-bolts-all-006.png": [
-                27
+                28
             ],
             "lax-drawing-nuts-bolts-all-007.png": [
                 28
             ],
             "lax-drawing-nuts-bolts-all-008.png": [
-                27
+                29
             ],
             "lax-drawing-nuts-bolts-all-009.png": [
-                27
+                28
             ],
             "lax-drawing-nuts-bolts-all-010.png": [
-                26
+                28
             ],
             "lax-drawing-nuts-bolts-all-011.png": [
-                27
+                29
             ],
             "lax-drawing-nuts-bolts-all-012.png": [
-                42
+                40
             ],
             "lax-drawing-nuts-bolts-all-013.png": [
-                42
+                40
             ],
             "lax-drawing-nuts-bolts-all-014.png": [
-                42
+                40
             ],
             "lax-drawing-nuts-bolts-all-015.png": [
-                42
+                40
             ],
             "lax-drawing-nuts-bolts-all-016.png": [
-                41
+                40
             ],
             "lax-drawing-nuts-bolts-all-017.png": [
                 40
@@ -75,61 +75,61 @@
                 40
             ],
             "lax-drawing-nuts-bolts-all-024.png": [
-                39
+                40
             ],
             "lax-drawing-nuts-bolts-all-025.png": [
-                39
+                40
             ],
             "lax-drawing-nuts-bolts-all-026.png": [
-                38
+                40
             ],
             "lax-drawing-nuts-bolts-all-027.png": [
-                39
+                41
             ],
             "lax-drawing-nuts-bolts-all-028.png": [
-                39
+                41
             ],
             "lax-drawing-nuts-bolts-all-029.png": [
-                39
+                41
             ],
             "lax-drawing-nuts-bolts-all-030.png": [
-                39
+                41
             ],
             "lax-drawing-nuts-bolts-all-031.png": [
-                39
+                41
             ],
             "lax-drawing-nuts-bolts-all-032.png": [
-                39
+                41
             ],
             "lax-drawing-nuts-bolts-all-033.png": [
-                62
+                63
             ],
             "lax-drawing-nuts-bolts-all-034.png": [
-                62
+                63
             ],
             "lax-drawing-nuts-bolts-all-035.png": [
-                62
+                63
             ],
             "lax-drawing-nuts-bolts-all-036.png": [
-                62
+                63
             ],
             "lax-drawing-nuts-bolts-all-037.png": [
-                61
+                63
             ],
             "lax-drawing-nuts-bolts-all-038.png": [
-                60
+                63
             ],
             "lax-drawing-nuts-bolts-all-039.png": [
-                60
+                63
             ],
             "lax-drawing-nuts-bolts-all-040.png": [
-                61
+                64
             ],
             "lax-drawing-nuts-bolts-all-041.png": [
-                61
+                64
             ],
             "lax-drawing-nuts-bolts-all-042.png": [
-                61
+                64
             ],
             "lax-drawing-nuts-bolts-all-043.png": [
                 43
@@ -144,13 +144,13 @@
                 43
             ],
             "lax-drawing-nuts-bolts-all-047.png": [
-                42
+                43
             ],
             "lax-drawing-nuts-bolts-all-048.png": [
-                42
+                43
             ],
             "lax-drawing-nuts-bolts-all-049.png": [
-                41
+                43
             ]
         }
     }

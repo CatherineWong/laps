@@ -16,9 +16,10 @@
             15,
             25,
             50,
+            50,
             100,
-            200,
-            250
+            150,
+            199
         ],
         "random_seed": 0
     },
@@ -63,14 +64,16 @@
                 "experiment_block_type": "state_fn",
                 "state_fn": "initialize_ground_truth_task_frontiers",
                 "params": {
-                    "task_split": "train"
+                    "task_split": "train",
+                    "compute_likelihoods": false
                 }
             },
             {
                 "experiment_block_type": "state_fn",
                 "state_fn": "initialize_ground_truth_task_frontiers",
                 "params": {
-                    "task_split": "test"
+                    "task_split": "test",
+                    "compute_likelihoods": false
                 }
             },
             {

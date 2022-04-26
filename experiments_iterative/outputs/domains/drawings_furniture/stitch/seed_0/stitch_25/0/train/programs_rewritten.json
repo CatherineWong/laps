@@ -1,0 +1,204 @@
+{
+  "frontiers": [
+    {
+      "task": "lax-drawing-furniture-all-054.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (T (repeat (repeat (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $0) 1 (#(M 1 0) 0 0)) 1 (#(M 1 0) 0 0)) (#(M 1 0) (/ (- (- 8 (* 0.5 $1)) (+ -8 (* 0.5 $1))) -2) (/ (- 0 0) -2))))) 1.125 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.84375 c))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-furniture-all-063.png",
+      "programs": [
+        {
+          "program": "(#(lambda (#(lambda (lambda (T (repeat (repeat (T $0 (M 1 0 0 0)) 2 (M 1 0 (/ $1 1) 0)) 1 (M 1 0 0 0)) (M 1 0 (/ $1 -2) (/ (- 0 0) -2))))) (- (- 8 (* 0.5 $0)) (+ -8 (* 0.5 $0))))) 1.125 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.84375 r))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-furniture-all-055.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (T (repeat (repeat (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $0) 1 (#(M 1 0) 0 0)) 1 (#(M 1 0) 0 0)) (#(M 1 0) (/ (- (- 8 (* 0.5 $1)) (+ -8 (* 0.5 $1))) -2) (/ (- 0 0) -2))))) 1.125 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.84375 r))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-furniture-all-074.png",
+      "programs": [
+        {
+          "program": "(C (T (repeat (repeat (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (C (#(lambda (lambda (T (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $1) (#(M 1 0) $0 0)))) (r_s 9 4) (+ -4.5 (* 0.5 9))) empt)) 1 (#(M 1 0) 0 0)) 4 (#(M 1 0) 0 (/ (- 7.5 -7.5) 3))) (#(M 1 0) (/ (- 0 0) -2) (/ (- 7.5 -7.5) -2))) (#(lambda (lambda (T (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $1) (#(M 1 0) $0 0)))) (r_s 11 21) (+ -5.5 (* 0.5 11))))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-furniture-all-050.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (T (repeat (repeat (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $0) 1 (#(M 1 0) 0 0)) 1 (#(M 1 0) 0 0)) (#(M 1 0) (/ (- (- 8 (* 0.5 $1)) (+ -8 (* 0.5 $1))) -2) (/ (- 0 0) -2))))) 1.625 (#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1.125 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $0 $1)))) c 0.84375))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-furniture-all-073.png",
+      "programs": [
+        {
+          "program": "(C (T (repeat (repeat (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (C (#(lambda (lambda (T (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $1) (#(M 1 0) $0 0)))) (r_s 9 4) (+ -4.5 (* 0.5 9))) (#(lambda (lambda (T (repeat (repeat (T $0 (M 1 0 0 0)) 2 (M 1 0 (/ $1 1) 0)) 1 (M 1 0 0 0)) (M 1 0 (/ $1 -2) (/ (- 0 0) -2))))) (- (- 2.25 (* 0.5 1.125)) (+ -2.25 (* 0.5 1.125))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.84375 c)))) 1 (#(M 1 0) 0 0)) 4 (#(M 1 0) 0 (/ (- 7.5 -7.5) 3))) (#(M 1 0) (/ (- 0 0) -2) (/ (- 7.5 -7.5) -2))) (#(lambda (lambda (T (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $1) (#(M 1 0) $0 0)))) (r_s 11 21) (+ -5.5 (* 0.5 11))))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-furniture-all-051.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (T (repeat (repeat (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $0) 1 (#(M 1 0) 0 0)) 1 (#(M 1 0) 0 0)) (#(M 1 0) (/ (- (- 8 (* 0.5 $1)) (+ -8 (* 0.5 $1))) -2) (/ (- 0 0) -2))))) 1.625 (#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1.125 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $0 $1)))) r 0.84375))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-furniture-all-072.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (C (T (T (repeat (repeat (T (C (T (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (r_s 13.5 3)) (#(M 1 0) (+ -6.75 (* 0.5 13.5)) 0)) (#(lambda (lambda (T (repeat (repeat (T $0 (M 1 0 0 0)) 2 (M 1 0 (/ $1 1) 0)) 1 (M 1 0 0 0)) (M 1 0 (/ $1 -2) (/ (- 0 0) -2))))) (- (- 3.375 (* 0.5 1.125)) (+ -3.375 (* 0.5 1.125))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.84375 c))) (#(M 1 0) 0 (+ (- 0 0) (* 3 0.5)))) 1 (#(M 1 0) 0 0)) 2 (#(M 1 0) 0 (/ (- 1.875 -1.875) 1))) (#(M 1 0) (/ (- 0 0) -2) 0)) (#(M 1 0) 0 0.75)) (T (T (r_s 15 8.25) (#(M 1 0) 0 (* 8.25 0.5))) (#(M 1 0) (+ -7.5 (* 0.5 15)) 0))) (T (repeat $0 1 (#(M 1 0) 0 (- 0 0))) (#(M 1 0) (/ $1 -2) 0))))) (- 7.5 -7.5) (repeat (T (#(lambda (lambda (T $0 (M $1 0 0 0)))) 3 (T (T l (#(M 1 0) (- 0 0.5) 0)) (M 1 (/ pi 2) 0 0))) (#(M 1 0) 0 (+ (- 0 0) -1.5))) 2 (#(M 1 0) (/ (- 7.5 -7.5) 1) 0)))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-furniture-all-053.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (T (repeat (repeat (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $0) 1 (#(M 1 0) 0 0)) 1 (#(M 1 0) 0 0)) (#(M 1 0) (/ (- (- 8 (* 0.5 $1)) (+ -8 (* 0.5 $1))) -2) (/ (- 0 0) -2))))) 1.625 (#(lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1.125 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.75 (repeat (T l (#(M 1 0) -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (M 1 (/ (* 2 pi) 8) 0 0)))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.84375 $0))) r))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-furniture-all-052.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (T (repeat (repeat (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $0) 1 (#(M 1 0) 0 0)) 1 (#(M 1 0) 0 0)) (#(M 1 0) (/ (- (- 8 (* 0.5 $1)) (+ -8 (* 0.5 $1))) -2) (/ (- 0 0) -2))))) 2.125 (C (#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1.125 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $0 $1)))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c) 1.625) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.84375 c)))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-furniture-all-065.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (C (T (T (repeat (repeat (T (C (T (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (r_s 13.5 3)) (#(M 1 0) (+ -6.75 (* 0.5 13.5)) 0)) (#(lambda (lambda (T (repeat (repeat (T $0 (M 1 0 0 0)) 2 (M 1 0 (/ $1 1) 0)) 1 (M 1 0 0 0)) (M 1 0 (/ $1 -2) (/ (- 0 0) -2))))) (- (- 3.375 (* 0.5 1.125)) (+ -3.375 (* 0.5 1.125))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.84375 c))) (#(M 1 0) 0 (+ (- 0 0) (* 3 0.5)))) 1 (#(M 1 0) 0 0)) 2 (#(M 1 0) 0 (/ (- 1.875 -1.875) 1))) (#(M 1 0) (/ (- 0 0) -2) 0)) (#(M 1 0) 0 0.75)) (T (T (r_s 15 8.25) (#(M 1 0) 0 (* 8.25 0.5))) (#(M 1 0) (+ -7.5 (* 0.5 15)) 0))) (T (repeat $0 1 (#(M 1 0) 0 (- 0 0))) (#(M 1 0) (/ $1 -2) 0))))) (- 7 -7) (repeat (T (r_s 1 6) (#(M 1 0) 0 (+ (- 0 0) -3))) 2 (#(M 1 0) (/ (- 7 -7) 1) 0)))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-furniture-all-070.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (C (T (T (repeat (repeat (T (C (T (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (r_s 13.5 3)) (#(M 1 0) (+ -6.75 (* 0.5 13.5)) 0)) (#(lambda (lambda (T (repeat (repeat (T $0 (M 1 0 0 0)) 2 (M 1 0 (/ $1 1) 0)) 1 (M 1 0 0 0)) (M 1 0 (/ $1 -2) (/ (- 0 0) -2))))) (- (- 3.375 (* 0.5 1.125)) (+ -3.375 (* 0.5 1.125))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.84375 c))) (#(M 1 0) 0 (+ (- 0 0) (* 3 0.5)))) 1 (#(M 1 0) 0 0)) 2 (#(M 1 0) 0 (/ (- 1.875 -1.875) 1))) (#(M 1 0) (/ (- 0 0) -2) 0)) (#(M 1 0) 0 0.75)) (T (T (r_s 15 8.25) (#(M 1 0) 0 (* 8.25 0.5))) (#(M 1 0) (+ -7.5 (* 0.5 15)) 0))) (T (repeat $0 1 (#(M 1 0) 0 (- 0 0))) (#(M 1 0) (/ $1 -2) 0))))) (- 7.5 -7.5) (repeat (T (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (T (T l (#(M 1 0) (- 0 0.5) 0)) (M 1 (/ pi 2) 0 0))) (#(M 1 0) 0 (+ (- 0 0) -0.5))) 3 (#(M 1 0) (/ (- 7.5 -7.5) 2) 0)))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-furniture-all-064.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (T (repeat (repeat (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $0) 1 (#(M 1 0) 0 0)) 2 (#(M 1 0) 0 (/ $1 1))) (#(M 1 0) (/ (- 0 0) -2) (/ $1 -2)))))) (- 2.5 -2.5) (C (#(lambda (lambda (T (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $1) (#(M 1 0) $0 0)))) (r_s 9 4) (+ -4.5 (* 0.5 9))) (#(lambda (lambda (T (repeat (repeat (T $0 (M 1 0 0 0)) 2 (M 1 0 (/ $1 1) 0)) 1 (M 1 0 0 0)) (M 1 0 (/ $1 -2) (/ (- 0 0) -2))))) (- (- 2.25 (* 0.5 1.625)) (+ -2.25 (* 0.5 1.625))) (#(lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1.125 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.75 (repeat (T l (#(M 1 0) -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (M 1 (/ (* 2 pi) 8) 0 0)))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.84375 $0))) c))) (#(lambda (lambda (T (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $1) (#(M 1 0) $0 0)))) (r_s 11 11) (+ -5.5 (* 0.5 11))))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-furniture-all-059.png",
+      "programs": [
+        {
+          "program": "(#(lambda (#(lambda (lambda (T (repeat (repeat (T $0 (M 1 0 0 0)) 2 (M 1 0 (/ $1 1) 0)) 1 (M 1 0 0 0)) (M 1 0 (/ $1 -2) (/ (- 0 0) -2))))) (- (- 8 (* 0.5 $0)) (+ -8 (* 0.5 $0))))) 2.125 (C (#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1.125 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $0 $1)))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c) 1.625) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.84375 r)))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-furniture-all-057.png",
+      "programs": [
+        {
+          "program": "(#(lambda (#(lambda (lambda (T (repeat (repeat (T $0 (M 1 0 0 0)) 2 (M 1 0 (/ $1 1) 0)) 1 (M 1 0 0 0)) (M 1 0 (/ $1 -2) (/ (- 0 0) -2))))) (- (- 8 (* 0.5 $0)) (+ -8 (* 0.5 $0))))) 1.625 (#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1.125 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $0 $1)))) r 0.84375))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-furniture-all-060.png",
+      "programs": [
+        {
+          "program": "(#(lambda (#(lambda (lambda (T (repeat (repeat (T $0 (M 1 0 0 0)) 2 (M 1 0 (/ $1 1) 0)) 1 (M 1 0 0 0)) (M 1 0 (/ $1 -2) (/ (- 0 0) -2))))) (- (- 8 (* 0.5 $0)) (+ -8 (* 0.5 $0))))) 1.625 (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1.125 r) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.84375 c)))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-furniture-all-058.png",
+      "programs": [
+        {
+          "program": "(#(lambda (#(lambda (lambda (T (repeat (repeat (T $0 (M 1 0 0 0)) 2 (M 1 0 (/ $1 1) 0)) 1 (M 1 0 0 0)) (M 1 0 (/ $1 -2) (/ (- 0 0) -2))))) (- (- 8 (* 0.5 $0)) (+ -8 (* 0.5 $0))))) 2.125 (C (#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1.125 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $0 $1)))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c) 1.625) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.84375 c)))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-furniture-all-056.png",
+      "programs": [
+        {
+          "program": "(#(lambda (#(lambda (lambda (T (repeat (repeat (T $0 (M 1 0 0 0)) 2 (M 1 0 (/ $1 1) 0)) 1 (M 1 0 0 0)) (M 1 0 (/ $1 -2) (/ (- 0 0) -2))))) (- (- 8 (* 0.5 $0)) (+ -8 (* 0.5 $0))))) 1.625 (#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1.125 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $0 $1)))) c 0.84375))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-furniture-all-062.png",
+      "programs": [
+        {
+          "program": "(#(lambda (#(lambda (lambda (T (repeat (repeat (T $0 (M 1 0 0 0)) 2 (M 1 0 (/ $1 1) 0)) 1 (M 1 0 0 0)) (M 1 0 (/ $1 -2) (/ (- 0 0) -2))))) (- (- 8 (* 0.5 $0)) (+ -8 (* 0.5 $0))))) 1.125 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.84375 c))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-furniture-all-066.png",
+      "programs": [
+        {
+          "program": "(C (T (repeat (repeat (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (C (#(lambda (lambda (T (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $1) (#(M 1 0) $0 0)))) (r_s 13.5 3) (+ -6.75 (* 0.5 13.5))) (#(lambda (lambda (T (repeat (repeat (T $0 (M 1 0 0 0)) 2 (M 1 0 (/ $1 1) 0)) 1 (M 1 0 0 0)) (M 1 0 (/ $1 -2) (/ (- 0 0) -2))))) (- (- 3.375 (* 0.5 1.125)) (+ -3.375 (* 0.5 1.125))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.84375 c)))) 1 (#(M 1 0) 0 0)) 4 (#(M 1 0) 0 (/ (- 5.625 -5.625) 3))) (#(M 1 0) (/ (- 0 0) -2) (/ (- 5.625 -5.625) -2))) (#(lambda (lambda (T (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $1) (#(M 1 0) $0 0)))) (r_s 15 15.75) (+ -7.5 (* 0.5 15))))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-furniture-all-061.png",
+      "programs": [
+        {
+          "program": "(#(lambda (#(lambda (lambda (T (repeat (repeat (T $0 (M 1 0 0 0)) 2 (M 1 0 (/ $1 1) 0)) 1 (M 1 0 0 0)) (M 1 0 (/ $1 -2) (/ (- 0 0) -2))))) (- (- 8 (* 0.5 $0)) (+ -8 (* 0.5 $0))))) 1.625 (#(lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1.125 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.75 (repeat (T l (#(M 1 0) -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (M 1 (/ (* 2 pi) 8) 0 0)))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.84375 $0))) r))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-furniture-all-067.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (T (repeat (repeat (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $0) 1 (#(M 1 0) 0 0)) 2 (#(M 1 0) 0 (/ $1 1))) (#(M 1 0) (/ (- 0 0) -2) (/ $1 -2)))))) (- 2.5 -2.5) (C (#(lambda (lambda (T (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $1) (#(M 1 0) $0 0)))) (r_s 9 4) (+ -4.5 (* 0.5 9))) (#(lambda (lambda (T (repeat (repeat (T $0 (M 1 0 0 0)) 2 (M 1 0 (/ $1 1) 0)) 1 (M 1 0 0 0)) (M 1 0 (/ $1 -2) (/ (- 0 0) -2))))) (- (- 2.25 (* 0.5 1.625)) (+ -2.25 (* 0.5 1.625))) (#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1.125 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $0 $1)))) c 0.84375))) (#(lambda (lambda (T (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $1) (#(M 1 0) $0 0)))) (r_s 11 11) (+ -5.5 (* 0.5 11))))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-furniture-all-068.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (T (repeat (repeat (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $0) 1 (#(M 1 0) 0 0)) 2 (#(M 1 0) 0 (/ $1 1))) (#(M 1 0) (/ (- 0 0) -2) (/ $1 -2)))))) (- 3.125 -3.125) (C (#(lambda (lambda (T (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $1) (#(M 1 0) $0 0)))) (r_s 12 5) (+ -6 (* 0.5 12))) (#(lambda (lambda (T (repeat (repeat (T $0 (M 1 0 0 0)) 2 (M 1 0 (/ $1 1) 0)) 1 (M 1 0 0 0)) (M 1 0 (/ $1 -2) (/ (- 0 0) -2))))) (- (- 3 (* 0.5 2.125)) (+ -3 (* 0.5 2.125))) (C (#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1.125 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $0 $1)))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c) 1.625) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.84375 c)))) (#(lambda (lambda (T (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $1) (#(M 1 0) $0 0)))) (r_s 14.5 13.75) (+ -7.25 (* 0.5 14.5))))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-furniture-all-069.png",
+      "programs": [
+        {
+          "program": "(C (T (repeat (repeat (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 (C (#(lambda (lambda (T (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $1) (#(M 1 0) $0 0)))) (r_s 12 5) (+ -6 (* 0.5 12))) (#(lambda (lambda (T (repeat (repeat (T $0 (M 1 0 0 0)) 2 (M 1 0 (/ $1 1) 0)) 1 (M 1 0 0 0)) (M 1 0 (/ $1 -2) (/ (- 0 0) -2))))) (- (- 3 (* 0.5 1.625)) (+ -3 (* 0.5 1.625))) (#(lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1.125 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.75 (repeat (T l (#(M 1 0) -0.5 (/ 0.5 (tan (/ pi 8))))) 8 (M 1 (/ (* 2 pi) 8) 0 0)))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.84375 $0))) r)))) 1 (#(M 1 0) 0 0)) 3 (#(M 1 0) 0 (/ (- 6.25 -6.25) 2))) (#(M 1 0) (/ (- 0 0) -2) (/ (- 6.25 -6.25) -2))) (#(lambda (lambda (T (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $1) (#(M 1 0) $0 0)))) (r_s 14.5 20) (+ -7.25 (* 0.5 14.5))))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-furniture-all-071.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (T (repeat (repeat (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $0) 1 (#(M 1 0) 0 0)) 2 (#(M 1 0) 0 (/ $1 1))) (#(M 1 0) (/ (- 0 0) -2) (/ $1 -2)))))) (- 3.125 -3.125) (C (#(lambda (lambda (T (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $1) (#(M 1 0) $0 0)))) (r_s 12 5) (+ -6 (* 0.5 12))) (#(lambda (lambda (T (repeat (repeat (T $0 (M 1 0 0 0)) 2 (M 1 0 (/ $1 1) 0)) 1 (M 1 0 0 0)) (M 1 0 (/ $1 -2) (/ (- 0 0) -2))))) (- (- 3 (* 0.5 1.625)) (+ -3 (* 0.5 1.625))) (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1.125 r) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.84375 c)))) (#(lambda (lambda (T (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $1) (#(M 1 0) $0 0)))) (r_s 14.5 13.75) (+ -7.25 (* 0.5 14.5))))"
+        }
+      ]
+    }
+  ]
+}

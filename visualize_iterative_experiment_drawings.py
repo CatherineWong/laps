@@ -10,7 +10,7 @@ Assumes that the directory structure is:
     {experiments_directory}/{experiment_type}/{replication}/{experiment_type}_{batch_size}
 
 Usage:
-python visualize_iterative_experiment.py
+python visualize_iterative_experiment_drawings.py
     --experiments_directory experiments_iterative/outputs/domains
     --domain drawings_nuts_bolts
     --experiment_type stitch_codex_language_human

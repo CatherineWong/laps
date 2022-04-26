@@ -1,58 +1,10 @@
 {
   "frontiers": [
     {
-      "task": "lax-drawing-nuts-bolts-all-047.png",
+      "task": "lax-drawing-nuts-bolts-all-049.png",
       "programs": [
         {
-          "program": "(C (#(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 4.25) 6) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 2)) (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) c 2) 2))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-006.png",
-      "programs": [
-        {
-          "program": "(C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 2 8) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 1))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-026.png",
-      "programs": [
-        {
-          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 1) 6 (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) r 6))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-048.png",
-      "programs": [
-        {
-          "program": "(C (#(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 4.25) 6) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 2)) (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) c 2) 6))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-007.png",
-      "programs": [
-        {
-          "program": "(C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 2 8) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 0.5))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-028.png",
-      "programs": [
-        {
-          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (T r (M $0 0 0 0))) 1) 6 (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) c 4))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-004.png",
-      "programs": [
-        {
-          "program": "(#(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 4.25) 6) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2))"
+          "program": "(C (#(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 4.25) 6) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 1)) (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) r 6))"
         }
       ]
     },
@@ -65,54 +17,6 @@
       ]
     },
     {
-      "task": "lax-drawing-nuts-bolts-all-035.png",
-      "programs": [
-        {
-          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 1) 8 (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) c 4))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-041.png",
-      "programs": [
-        {
-          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (T r (M $0 0 0 0))) 1) 8 (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) c 2))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-003.png",
-      "programs": [
-        {
-          "program": "(C (C (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 2) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 2.25)) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 0.5))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-030.png",
-      "programs": [
-        {
-          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (T r (M $0 0 0 0))) 1) 6 (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) c 8))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-044.png",
-      "programs": [
-        {
-          "program": "(C (#(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 4.25) 6) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 1)) (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) c 6))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-045.png",
-      "programs": [
-        {
-          "program": "(C (#(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 4.25) 6) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 1)) (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) r 2))"
-        }
-      ]
-    },
-    {
       "task": "lax-drawing-nuts-bolts-all-000.png",
       "programs": [
         {
@@ -121,10 +25,10 @@
       ]
     },
     {
-      "task": "lax-drawing-nuts-bolts-all-043.png",
+      "task": "lax-drawing-nuts-bolts-all-018.png",
       "programs": [
         {
-          "program": "(C (#(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 4.25) 6) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2)) (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) c 2) 6))"
+          "program": "(#(lambda (C (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 4) $0))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 1) (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) c 8))"
         }
       ]
     },
@@ -145,162 +49,10 @@
       ]
     },
     {
-      "task": "lax-drawing-nuts-bolts-all-049.png",
-      "programs": [
-        {
-          "program": "(C (#(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 4.25) 6) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 1)) (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) r 6))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-022.png",
-      "programs": [
-        {
-          "program": "(#(lambda (C (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 4) $0))) (#(lambda (T r (M $0 0 0 0))) 1) (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) r 6))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-008.png",
-      "programs": [
-        {
-          "program": "(C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 2 8) (#(lambda (T r (M $0 0 0 0))) 0.5))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-010.png",
-      "programs": [
-        {
-          "program": "(C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 8) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 1))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-014.png",
-      "programs": [
-        {
-          "program": "(#(lambda (C (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 4) $0))) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 1) (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) r 6))"
-        }
-      ]
-    },
-    {
       "task": "lax-drawing-nuts-bolts-all-017.png",
       "programs": [
         {
           "program": "(#(lambda (C (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 4) $0))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 1) (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) c 4))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-012.png",
-      "programs": [
-        {
-          "program": "(#(lambda (C (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 4) $0))) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2) (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) r 2) 4))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-018.png",
-      "programs": [
-        {
-          "program": "(#(lambda (C (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 4) $0))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 1) (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) c 8))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-042.png",
-      "programs": [
-        {
-          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (T r (M $0 0 0 0))) 1) 8 (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) r 2))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-029.png",
-      "programs": [
-        {
-          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (T r (M $0 0 0 0))) 1) 6 (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) c 6))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-031.png",
-      "programs": [
-        {
-          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (T r (M $0 0 0 0))) 1) 6 (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) r 4))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-023.png",
-      "programs": [
-        {
-          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 1) 6 (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) c 6))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-024.png",
-      "programs": [
-        {
-          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 2) 6 (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) r 2) 6))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-032.png",
-      "programs": [
-        {
-          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (T r (M $0 0 0 0))) 1) 6 (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) r 6))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-037.png",
-      "programs": [
-        {
-          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 2) 8 (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) c 2) 4))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-020.png",
-      "programs": [
-        {
-          "program": "(#(lambda (C (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 4) $0))) (#(lambda (T r (M $0 0 0 0))) 2) (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) c 2) 6))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-046.png",
-      "programs": [
-        {
-          "program": "(C (#(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 4.25) 6) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 1)) (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) r 4))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-011.png",
-      "programs": [
-        {
-          "program": "(C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 8) (#(lambda (T r (M $0 0 0 0))) 1))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-005.png",
-      "programs": [
-        {
-          "program": "(#(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 4.25) 6) (#(lambda (T r (M $0 0 0 0))) 2))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-021.png",
-      "programs": [
-        {
-          "program": "(#(lambda (C (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 4) $0))) (#(lambda (T r (M $0 0 0 0))) 1) (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) c 8))"
         }
       ]
     },
@@ -313,10 +65,234 @@
       ]
     },
     {
+      "task": "lax-drawing-nuts-bolts-all-006.png",
+      "programs": [
+        {
+          "program": "(C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 2 8) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 1))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-030.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (T r (M $0 0 0 0))) 1) 6 (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) c 8))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-008.png",
+      "programs": [
+        {
+          "program": "(C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 2 8) (#(lambda (T r (M $0 0 0 0))) 0.5))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-033.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2) 8 (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) c 2) 6))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-014.png",
+      "programs": [
+        {
+          "program": "(#(lambda (C (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 4) $0))) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 1) (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) r 6))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-041.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (T r (M $0 0 0 0))) 1) 8 (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) c 2))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-001.png",
+      "programs": [
+        {
+          "program": "(C (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 2) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 1))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-048.png",
+      "programs": [
+        {
+          "program": "(C (#(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 4.25) 6) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 2)) (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) c 2) 6))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-029.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (T r (M $0 0 0 0))) 1) 6 (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) c 6))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-023.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 1) 6 (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) c 6))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-007.png",
+      "programs": [
+        {
+          "program": "(C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 2 8) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 0.5))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-010.png",
+      "programs": [
+        {
+          "program": "(C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 8) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 1))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-028.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (T r (M $0 0 0 0))) 1) 6 (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) c 4))"
+        }
+      ]
+    },
+    {
       "task": "lax-drawing-nuts-bolts-all-040.png",
       "programs": [
         {
           "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (T r (M $0 0 0 0))) 2) 8 (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) c 2) 8))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-043.png",
+      "programs": [
+        {
+          "program": "(C (#(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 4.25) 6) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2)) (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) c 2) 6))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-031.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (T r (M $0 0 0 0))) 1) 6 (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) r 4))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-027.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (T r (M $0 0 0 0))) 2) 6 (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) r 2) 4))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-012.png",
+      "programs": [
+        {
+          "program": "(#(lambda (C (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 4) $0))) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2) (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) r 2) 4))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-003.png",
+      "programs": [
+        {
+          "program": "(C (C (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 2) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 2.25)) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 0.5))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-025.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 2) 6 (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) r 2) 8))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-024.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 2) 6 (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) r 2) 6))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-047.png",
+      "programs": [
+        {
+          "program": "(C (#(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 4.25) 6) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 2)) (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) c 2) 2))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-032.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (T r (M $0 0 0 0))) 1) 6 (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) r 6))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-046.png",
+      "programs": [
+        {
+          "program": "(C (#(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 4.25) 6) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 1)) (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) r 4))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-037.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 2) 8 (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) c 2) 4))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-019.png",
+      "programs": [
+        {
+          "program": "(#(lambda (C (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 4) $0))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 1) (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) r 2))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-021.png",
+      "programs": [
+        {
+          "program": "(#(lambda (C (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 4) $0))) (#(lambda (T r (M $0 0 0 0))) 1) (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) c 8))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-013.png",
+      "programs": [
+        {
+          "program": "(#(lambda (C (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 4) $0))) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 1) (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) r 4))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-011.png",
+      "programs": [
+        {
+          "program": "(C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 8) (#(lambda (T r (M $0 0 0 0))) 1))"
         }
       ]
     },
@@ -337,34 +313,42 @@
       ]
     },
     {
-      "task": "lax-drawing-nuts-bolts-all-019.png",
+      "task": "lax-drawing-nuts-bolts-all-022.png",
       "programs": [
         {
-          "program": "(#(lambda (C (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 4) $0))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 1) (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) r 2))"
+          "program": "(#(lambda (C (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 4) $0))) (#(lambda (T r (M $0 0 0 0))) 1) (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) r 6))"
         }
       ]
     },
     {
-      "task": "lax-drawing-nuts-bolts-all-001.png",
+      "task": "lax-drawing-nuts-bolts-all-035.png",
       "programs": [
         {
-          "program": "(C (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 2) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 1))"
+          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 1) 8 (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) c 4))"
         }
       ]
     },
     {
-      "task": "lax-drawing-nuts-bolts-all-027.png",
+      "task": "lax-drawing-nuts-bolts-all-042.png",
       "programs": [
         {
-          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (T r (M $0 0 0 0))) 2) 6 (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) r 2) 4))"
+          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (T r (M $0 0 0 0))) 1) 8 (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) r 2))"
         }
       ]
     },
     {
-      "task": "lax-drawing-nuts-bolts-all-033.png",
+      "task": "lax-drawing-nuts-bolts-all-020.png",
       "programs": [
         {
-          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2) 8 (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) c 2) 6))"
+          "program": "(#(lambda (C (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 4) $0))) (#(lambda (T r (M $0 0 0 0))) 2) (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) c 2) 6))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-005.png",
+      "programs": [
+        {
+          "program": "(#(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 4.25) 6) (#(lambda (T r (M $0 0 0 0))) 2))"
         }
       ]
     },
@@ -377,10 +361,34 @@
       ]
     },
     {
-      "task": "lax-drawing-nuts-bolts-all-025.png",
+      "task": "lax-drawing-nuts-bolts-all-044.png",
       "programs": [
         {
-          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 2) 6 (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) r 2) 8))"
+          "program": "(C (#(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 4.25) 6) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 1)) (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) c 6))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-004.png",
+      "programs": [
+        {
+          "program": "(#(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 4.25) 6) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 2))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-026.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 1) 6 (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) r 6))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-045.png",
+      "programs": [
+        {
+          "program": "(C (#(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 4.25) 6) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 1)) (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) r 2))"
         }
       ]
     },
@@ -389,14 +397,6 @@
       "programs": [
         {
           "program": "(#(lambda (lambda (C (C (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) 4 $0) $1)))) (#(lambda (#(lambda (lambda (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi $0))))) $0 (M 1 (/ (* 2 pi) $0) 0 0)) (M $1 0 0 0)))) $0 6)) 1) 8 (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) c 4))"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-013.png",
-      "programs": [
-        {
-          "program": "(#(lambda (C (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 4) $0))) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 1) (#(lambda (#(lambda (lambda ($1 $0 (M 1 (/ (* 2 pi) $0) 0 0)))) (#(lambda (lambda (repeat (T (T $1 (M 0.5 0 0 0)) (M 1 0 (* (* $0 1.5) (cos (/ pi 4))) (* (* $0 1.5) (sin (/ pi 4)))))))) $0 1))) r 4))"
         }
       ]
     }

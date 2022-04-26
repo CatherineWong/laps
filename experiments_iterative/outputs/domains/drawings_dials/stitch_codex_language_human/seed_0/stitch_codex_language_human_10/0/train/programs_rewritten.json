@@ -1,0 +1,172 @@
+{
+  "frontiers": [
+    {
+      "task": "lax-drawing-dials-all-056.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (#(lambda (lambda (C (T (T (T l (M 3 (/ pi 2) 0 (- 0 2))) (M 1 0 0 0)) (M 1 0 0 0)) (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) $0 $1)))) $0 0) (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) 1 $1)))) #(* 1 2) #(* 1 2))"
+        }
+      ]
+    },
+    {
+      "task": "codex_7945159709655381457",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (T (T $1 (M 1 0 $0 (* 0.5 1))) (M 1 0 0 (* 0.5 1))))) (T r (M 1 0 0.5 (* 0.5 1))) 0)"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-dials-all-057.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (C $0 (#(lambda (lambda (T (T $1 (M 1 0 $0 (* 0.5 1))) (M 1 0 0 (* 0.5 1))))) $1 (- 0 (+ 0.5 1)))) (#(lambda (lambda (T (T $1 (M 1 0 $0 (* 0.5 1))) (M 1 0 0 (* 0.5 1))))) $1 (+ 0.5 1))))) c (#(lambda (lambda (C (#(lambda (lambda (C (T (T (T l (M 3 (/ pi 2) 0 (- 0 2))) (M 1 0 0 0)) (M 1 0 0 0)) (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) $0 $1)))) $0 0) (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) 1 $1)))) #(* 1 2) #(* 1 2)))"
+        }
+      ]
+    },
+    {
+      "task": "codex_6715300888599530402",
+      "programs": [
+        {
+          "program": "(C (#(lambda (lambda (C (#(lambda (lambda (C (T (T (T l (M 3 (/ pi 2) 0 (- 0 2))) (M 1 0 0 0)) (M 1 0 0 0)) (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) $0 $1)))) $0 0) (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) 1 $1)))) (#(- #(* 1 2)) 0) #(* 1 2)) (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) 2 (#(- #(* 1 2)) 1)))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-dials-all-051.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (C $0 (#(lambda (lambda (T (T $1 (M 1 0 $0 (* 0.5 1))) (M 1 0 0 (* 0.5 1))))) $1 (- 0 (+ 0.5 1)))) (#(lambda (lambda (T (T $1 (M 1 0 $0 (* 0.5 1))) (M 1 0 0 (* 0.5 1))))) $1 (+ 0.5 1))))) r (#(lambda (lambda (C (T (T (T l (M 3 (/ pi 2) 0 (- 0 2))) (M 1 0 0 0)) (M 1 0 0 0)) (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) $0 $1)))) (#(- #(* 1 2)) 0) 0))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-dials-all-058.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (C $0 (#(lambda (lambda (T (T $1 (M 1 0 $0 (* 0.5 1))) (M 1 0 0 (* 0.5 1))))) $1 (- 0 (+ 0.5 1)))) (#(lambda (lambda (T (T $1 (M 1 0 $0 (* 0.5 1))) (M 1 0 0 (* 0.5 1))))) $1 (+ 0.5 1))))) r (#(lambda (lambda (C (#(lambda (lambda (C (T (T (T l (M 3 (/ pi 2) 0 (- 0 2))) (M 1 0 0 0)) (M 1 0 0 0)) (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) $0 $1)))) $0 0) (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) 1 $1)))) #(* 1 2) #(* 1 2)))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-dials-all-059.png",
+      "programs": [
+        {
+          "program": "(C (#(lambda (lambda (C (#(lambda (lambda (C (T (T (T l (M 3 (/ pi 2) 0 (- 0 2))) (M 1 0 0 0)) (M 1 0 0 0)) (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) $0 $1)))) $0 0) (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) 1 $1)))) (#(- #(* 1 2)) 1) (#(- #(* 1 2)) 0)) (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) 2 (#(- #(* 1 2)) 2)))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-dials-all-053.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (C $0 (#(lambda (lambda (T (T $1 (M 1 0 $0 (* 0.5 1))) (M 1 0 0 (* 0.5 1))))) $1 (- 0 (+ 0.5 1)))) (#(lambda (lambda (T (T $1 (M 1 0 $0 (* 0.5 1))) (M 1 0 0 (* 0.5 1))))) $1 (+ 0.5 1))))) c (#(lambda (lambda (C (T (T (T l (M 3 (/ pi 2) 0 (- 0 2))) (M 1 0 0 0)) (M 1 0 0 0)) (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) $0 $1)))) #(* 1 2) 0))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-dials-all-054.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (C $0 (#(lambda (lambda (T (T $1 (M 1 0 $0 (* 0.5 1))) (M 1 0 0 (* 0.5 1))))) $1 (- 0 (+ 0.5 1)))) (#(lambda (lambda (T (T $1 (M 1 0 $0 (* 0.5 1))) (M 1 0 0 (* 0.5 1))))) $1 (+ 0.5 1))))) r (#(lambda (lambda (C (T (T (T l (M 3 (/ pi 2) 0 (- 0 2))) (M 1 0 0 0)) (M 1 0 0 0)) (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) $0 $1)))) #(* 1 2) 0))"
+        }
+      ]
+    },
+    {
+      "task": "codex_747878928092738938",
+      "programs": [
+        {
+          "program": "(C (#(lambda (lambda (T (T $1 (M 1 0 $0 (* 0.5 1))) (M 1 0 0 (* 0.5 1))))) c 0))"
+        }
+      ]
+    },
+    {
+      "task": "codex_9117548987720514080",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (#(lambda (lambda (C (T (T (T l (M 3 (/ pi 2) 0 (- 0 2))) (M 1 0 0 0)) (M 1 0 0 0)) (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) $0 $1)))) $0 0) (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) 1 $1)))) #(* 1 2) #(* 1 2))"
+        }
+      ]
+    },
+    {
+      "task": "codex_5817008445026508878",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C $0 (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) $1 #(* 1 2))))) 0 (#(lambda (lambda (C (T (T (T l (M 3 (/ pi 2) 0 (- 0 2))) (M 1 0 0 0)) (M 1 0 0 0)) (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) $0 $1)))) #(* 1 2) 1))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-dials-all-055.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (C $0 (#(lambda (lambda (T (T $1 (M 1 0 $0 (* 0.5 1))) (M 1 0 0 (* 0.5 1))))) $1 (- 0 (+ 0.5 1)))) (#(lambda (lambda (T (T $1 (M 1 0 $0 (* 0.5 1))) (M 1 0 0 (* 0.5 1))))) $1 (+ 0.5 1))))) c (#(lambda (lambda (C (#(lambda (lambda (C (T (T (T l (M 3 (/ pi 2) 0 (- 0 2))) (M 1 0 0 0)) (M 1 0 0 0)) (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) $0 $1)))) $0 0) (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) 1 $1)))) (#(- #(* 1 2)) 1) (#(- #(* 1 2)) 0)))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-dials-all-050.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (C $0 (#(lambda (lambda (T (T $1 (M 1 0 $0 (* 0.5 1))) (M 1 0 0 (* 0.5 1))))) $1 (- 0 (+ 0.5 1)))) (#(lambda (lambda (T (T $1 (M 1 0 $0 (* 0.5 1))) (M 1 0 0 (* 0.5 1))))) $1 (+ 0.5 1))))) c (#(lambda (lambda (C (T (T (T l (M 3 (/ pi 2) 0 (- 0 2))) (M 1 0 0 0)) (M 1 0 0 0)) (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) $0 $1)))) (#(- #(* 1 2)) 0) 0))"
+        }
+      ]
+    },
+    {
+      "task": "codex_4177191233780971147",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C $0 (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) $1 #(* 1 2))))) 1 (#(lambda (lambda (C $0 (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) $1 #(* 1 2))))) 0 (#(lambda (lambda (T (T $1 (M 1 0 $0 (* 0.5 1))) (M 1 0 0 (* 0.5 1))))) (#(lambda (lambda (T $0 (M 1 0 0 $1)))) (* 0.5 1) r) 0)))"
+        }
+      ]
+    },
+    {
+      "task": "codex_4121588856831990793",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C $0 (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) $1 #(* 1 2))))) 1 (#(lambda (lambda (C $0 (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) $1 #(* 1 2))))) 0 (C (#(lambda (lambda (T $0 (M 1 0 0 $1)))) 0 (T (#(lambda (lambda (T $0 (M 1 0 0 $1)))) (- 0 0.5) (#(lambda (lambda (T $0 (M 1 0 0 $1)))) 0 (#(lambda (lambda (T $0 (M 1 0 0 $1)))) 0.5 r))) (M 3 (/ pi 2) 0 (- 0 2)))) (#(lambda (lambda (T $0 (M 1 0 0 $1)))) (- 0 0.5) (#(lambda (lambda (T $0 (M 1 0 0 $1)))) 0 (#(lambda (lambda (T $0 (M 1 0 0 $1)))) 0.5 r))))))"
+        }
+      ]
+    },
+    {
+      "task": "codex_2615342113888769029",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (C $0 (#(lambda (lambda (T (T $1 (M 1 0 $0 (* 0.5 1))) (M 1 0 0 (* 0.5 1))))) $1 (- 0 (+ 0.5 1)))) (#(lambda (lambda (T (T $1 (M 1 0 $0 (* 0.5 1))) (M 1 0 0 (* 0.5 1))))) $1 (+ 0.5 1))))) c (#(lambda (lambda (C (#(lambda (lambda (C (T (T (T l (M 3 (/ pi 2) 0 (- 0 2))) (M 1 0 0 0)) (M 1 0 0 0)) (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) $0 $1)))) $0 0) (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) 1 $1)))) #(* 1 2) #(* 1 2)))"
+        }
+      ]
+    },
+    {
+      "task": "codex_2626596578515576424",
+      "programs": [
+        {
+          "program": "(C (C (#(lambda (lambda (T $0 (M 1 0 0 $1)))) 0 (#(lambda (lambda (T $0 (M 1 0 0 $1)))) 0 (#(lambda (lambda (T $0 (M 1 0 0 $1)))) (* 0.5 1) c))) (#(lambda (lambda (T $0 (M 1 0 0 $1)))) 0 (T (#(lambda (lambda (T $0 (M 1 0 0 $1)))) (* 0.5 0.5) l) (M #(* 1 2) 0 0 0)))))"
+        }
+      ]
+    },
+    {
+      "task": "codex_5323066236886523277",
+      "programs": [
+        {
+          "program": "(C (#(lambda (lambda (T $0 (M 1 0 0 $1)))) (* 0.5 1) (#(lambda (lambda (T $0 (M 1 0 0 $1)))) 1 c)))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-dials-all-052.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (T (T (T l (M 3 (/ pi 2) 0 (- 0 2))) (M 1 0 0 0)) (M 1 0 0 0)) (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) $0 $1)))) #(* 1 2) 0)"
+        }
+      ]
+    },
+    {
+      "task": "codex_841619252177753785",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C $0 (#(lambda (lambda (T (T (T l (M 1 0 (- 0 0.5) 0)) (M $0 0 0 0)) (M 1 0 0 (- (* (* 0.5 1) 2) $1))))) $1 #(* 1 2))))) 0 (#(lambda ($0 (#(lambda (lambda (T $0 (M 1 0 0 $1)))) 1 (#(lambda (lambda (T $0 (M 1 0 0 $1)))) (- 0.5 1) (#(lambda (lambda (T $0 (M 1 0 0 $1)))) 1 r))))) (C (#(lambda ($0 (#(lambda (lambda (T $0 (M 1 0 0 $1)))) 1 (#(lambda (lambda (T $0 (M 1 0 0 $1)))) (- 0.5 1) (#(lambda (lambda (T $0 (M 1 0 0 $1)))) 1 r))))) (#(lambda ($0 (#(lambda (lambda (T $0 (M 1 0 0 $1)))) 1 (#(lambda (lambda (T $0 (M 1 0 0 $1)))) (- 0.5 1) (#(lambda (lambda (T $0 (M 1 0 0 $1)))) 1 r))))) C)))))"
+        }
+      ]
+    }
+  ]
+}

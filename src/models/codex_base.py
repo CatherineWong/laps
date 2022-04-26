@@ -52,7 +52,7 @@ class CodexBase(object):
         separator,
         use_cached,
         debug,
-        logprobs,
+        logprobs=0,
     ):
         if debug:
             # Debugging query that returns programs.

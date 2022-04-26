@@ -1,6 +1,14 @@
 {
   "frontiers": [
     {
+      "task": "lax-drawing-nuts-bolts-all-060.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $1) (T r (M $0 0 0 0))))) 4 2)"
+        }
+      ]
+    },
+    {
       "task": "lax-drawing-nuts-bolts-all-062.png",
       "programs": [
         {
@@ -9,82 +17,10 @@
       ]
     },
     {
-      "task": "lax-drawing-nuts-bolts-all-063.png",
-      "programs": [
-        {
-          "program": "(C #(#(lambda (#(lambda (lambda (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $0) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $1)))) $0 2)) 2.25) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 0.5))"
-        }
-      ]
-    },
-    {
       "task": "lax-drawing-nuts-bolts-all-051.png",
       "programs": [
         {
           "program": "(#(lambda (#(lambda (lambda (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $0) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $1)))) $0 2)) 0.5)"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-054.png",
-      "programs": [
-        {
-          "program": "(#(lambda (lambda (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $1) (T r (M $0 0 0 0))))) 2 1)"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-064.png",
-      "programs": [
-        {
-          "program": "(#(lambda (lambda (C $1 (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))))) #(#(lambda (#(lambda (lambda (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $0) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $1)))) $0 2)) 2.25) 1)"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-057.png",
-      "programs": [
-        {
-          "program": "(#(lambda (lambda (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $0) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $1)))) 1 4)"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-059.png",
-      "programs": [
-        {
-          "program": "(#(lambda (#(lambda (lambda (C $1 (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))))) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $0))) 4 1)"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-055.png",
-      "programs": [
-        {
-          "program": "(#(lambda (lambda (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $1) (T r (M $0 0 0 0))))) 2 0.5)"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-056.png",
-      "programs": [
-        {
-          "program": "(#(lambda (lambda (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $0) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $1)))) 2 4)"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-052.png",
-      "programs": [
-        {
-          "program": "(#(lambda (#(lambda (lambda (C $1 (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))))) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $0))) 2 1)"
-        }
-      ]
-    },
-    {
-      "task": "lax-drawing-nuts-bolts-all-058.png",
-      "programs": [
-        {
-          "program": "(#(lambda (#(lambda (lambda (C $1 (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))))) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $0))) 4 2)"
         }
       ]
     },
@@ -105,6 +41,62 @@
       ]
     },
     {
+      "task": "lax-drawing-nuts-bolts-all-058.png",
+      "programs": [
+        {
+          "program": "(#(lambda (#(lambda (lambda (C $1 (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))))) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $0))) 4 2)"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-059.png",
+      "programs": [
+        {
+          "program": "(#(lambda (#(lambda (lambda (C $1 (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))))) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $0))) 4 1)"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-054.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $1) (T r (M $0 0 0 0))))) 2 1)"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-064.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C $1 (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))))) #(#(lambda (#(lambda (lambda (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $0) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $1)))) $0 2)) 2.25) 1)"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-052.png",
+      "programs": [
+        {
+          "program": "(#(lambda (#(lambda (lambda (C $1 (T (repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M $0 0 0 0))))) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $0))) 2 1)"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-056.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $0) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $1)))) 2 4)"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-063.png",
+      "programs": [
+        {
+          "program": "(C #(#(lambda (#(lambda (lambda (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $0) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $1)))) $0 2)) 2.25) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) 0.5))"
+        }
+      ]
+    },
+    {
       "task": "lax-drawing-nuts-bolts-all-053.png",
       "programs": [
         {
@@ -113,10 +105,18 @@
       ]
     },
     {
-      "task": "lax-drawing-nuts-bolts-all-060.png",
+      "task": "lax-drawing-nuts-bolts-all-055.png",
       "programs": [
         {
-          "program": "(#(lambda (lambda (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $1) (T r (M $0 0 0 0))))) 4 2)"
+          "program": "(#(lambda (lambda (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $1) (T r (M $0 0 0 0))))) 2 0.5)"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-057.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $0) (#(lambda (T (T c (M 2 0 0 0)) (M $0 0 0 0))) $1)))) 1 4)"
         }
       ]
     }

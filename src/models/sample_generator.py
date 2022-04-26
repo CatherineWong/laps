@@ -241,7 +241,13 @@ class CodexSampleGenerator(CodexBase, model_loaders.ModelLoader):
                     program_str_codex, input_name_class=completion_name_classes
                 )
                 p = Program.parse(program_str)
-            except (ParseFailure, IndexError, AssertionError, ValueError) as e:
+            except (
+                ParseFailure,
+                IndexError,
+                AssertionError,
+                ValueError,
+                Exception,
+            ) as e:
                 print(f"Failed to parse ({type(e)}): {program_str_codex}")
                 invalid_programs.add(program_str_codex)
                 continue

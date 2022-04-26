@@ -1,0 +1,60 @@
+{
+  "frontiers": [
+    {
+      "task": "lax-drawing-wheels-all-051.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (#(lambda (lambda (T (repeat (repeat (T (C $1 (repeat (T (T c (M 0.25 0 0 0)) (M 1 0 (* 0.75 (cos (/ pi 4))) (* 0.75 (sin (/ pi 4))))) $0 (M 1 (/ (* 2 pi) $0) 0 0))) (M 1 0 0 0)) 1 (M 1 0 0 0)) 1 (M 1 0 0 0))))) (C (#(lambda (T c (M $0 0 0 0))) 2.25) $0) $1 (#(lambda (M 1 0 (/ (- (- (* 2 4) (* 0.5 $0)) (+ (* 2 -4) (* 0.5 $0))) -2) (/ (- 0 0) -2))) 2.75)))) 8 (#(lambda (T c (M $0 0 0 0))) 0.5))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-wheels-all-052.png",
+      "programs": [
+        {
+          "program": "(#(lambda (#(lambda (lambda (#(lambda (lambda (T (repeat (repeat (T (C $1 (repeat (T (T c (M 0.25 0 0 0)) (M 1 0 (* 0.75 (cos (/ pi 4))) (* 0.75 (sin (/ pi 4))))) $0 (M 1 (/ (* 2 pi) $0) 0 0))) (M 1 0 0 0)) 1 (M 1 0 0 0)) 1 (M 1 0 0 0))))) (C (#(lambda (T c (M $0 0 0 0))) 2.25) $0) $1 (#(lambda (M 1 0 (/ (- (- (* 2 4) (* 0.5 $0)) (+ (* 2 -4) (* 0.5 $0))) -2) (/ (- 0 0) -2))) 2.75)))) $0 (T r (#(lambda (M $0 0 0 0)) 0.5)))) 8)"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-wheels-all-053.png",
+      "programs": [
+        {
+          "program": "(#(lambda (#(lambda (lambda (T (repeat (repeat (T (C $1 (repeat (T (T c (M 0.25 0 0 0)) (M 1 0 (* 0.75 (cos (/ pi 4))) (* 0.75 (sin (/ pi 4))))) $0 (M 1 (/ (* 2 pi) $0) 0 0))) (M 1 0 0 0)) 1 (M 1 0 0 0)) 1 (M 1 0 0 0))))) (C (C (#(lambda (T c (M $0 0 0 0))) 2.25) (#(lambda (T c (M $0 0 0 0))) 2.75)) (#(lambda (T c (M $0 0 0 0))) 0.5)) $0 (#(lambda (M 1 0 (/ (- (- (* 2 4) (* 0.5 $0)) (+ (* 2 -4) (* 0.5 $0))) -2) (/ (- 0 0) -2))) 3.25))) 4)"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-wheels-all-054.png",
+      "programs": [
+        {
+          "program": "(#(lambda (#(lambda (lambda (T (repeat (repeat (T (C $1 (repeat (T (T c (M 0.25 0 0 0)) (M 1 0 (* 0.75 (cos (/ pi 4))) (* 0.75 (sin (/ pi 4))))) $0 (M 1 (/ (* 2 pi) $0) 0 0))) (M 1 0 0 0)) 1 (M 1 0 0 0)) 1 (M 1 0 0 0))))) (C (C (#(lambda (T c (M $0 0 0 0))) 2.25) (#(lambda (T c (M $0 0 0 0))) 2.75)) (#(lambda (T c (M $0 0 0 0))) 0.5)) $0 (#(lambda (M 1 0 (/ (- (- (* 2 4) (* 0.5 $0)) (+ (* 2 -4) (* 0.5 $0))) -2) (/ (- 0 0) -2))) 3.25))) 8)"
+        }
+      ]
+    },
+    {
+      "task": "codex_6599834074041835984",
+      "programs": [
+        {
+          "program": "(T (#(lambda (repeat ($0 (#(lambda (M $0 0 0 0)) 1)) 1 (#(lambda (M $0 0 0 0)) 1))) (repeat (T (C (C (C (#(lambda (T c (M $0 0 0 0))) 1.8) (#(lambda (T c (M $0 0 0 0))) 2.2)) (#(lambda (T c (M $0 0 0 0))) 2.25)) (repeat (T (#(lambda (T c (M $0 0 0 0))) 1.8) (M 1 0 (#(lambda (* 0.75 ($0 (/ pi 4)))) cos) (#(lambda (* 0.75 ($0 (/ pi 4)))) sin))) 2 (M 1 (/ (* 2 pi) 2) 0 0))) (#(lambda (M $0 0 0 0)) 1)) 1)) (#(lambda (M 1 0 (/ (- (- (* 2 4) (* 0.5 $0)) (+ (* 2 -4) (* 0.5 $0))) -2) (/ (- 0 0) -2))) 2.75))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-wheels-all-050.png",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (#(lambda (lambda (T (repeat (repeat (T (C $1 (repeat (T (T c (M 0.25 0 0 0)) (M 1 0 (* 0.75 (cos (/ pi 4))) (* 0.75 (sin (/ pi 4))))) $0 (M 1 (/ (* 2 pi) $0) 0 0))) (M 1 0 0 0)) 1 (M 1 0 0 0)) 1 (M 1 0 0 0))))) (C (#(lambda (T c (M $0 0 0 0))) 2.25) $0) $1 (#(lambda (M 1 0 (/ (- (- (* 2 4) (* 0.5 $0)) (+ (* 2 -4) (* 0.5 $0))) -2) (/ (- 0 0) -2))) 2.75)))) 4 (#(lambda (T c (M $0 0 0 0))) 0.5))"
+        }
+      ]
+    },
+    {
+      "task": "codex_3834233384808526328",
+      "programs": [
+        {
+          "program": "(#(lambda (#(lambda (lambda (#(lambda (lambda (T (repeat (repeat (T (C $1 (repeat (T (T c (M 0.25 0 0 0)) (M 1 0 (* 0.75 (cos (/ pi 4))) (* 0.75 (sin (/ pi 4))))) $0 (M 1 (/ (* 2 pi) $0) 0 0))) (M 1 0 0 0)) 1 (M 1 0 0 0)) 1 (M 1 0 0 0))))) (C (#(lambda (T c (M $0 0 0 0))) 2.25) $0) $1 (#(lambda (M 1 0 (/ (- (- (* 2 4) (* 0.5 $0)) (+ (* 2 -4) (* 0.5 $0))) -2) (/ (- 0 0) -2))) 2.75)))) $0 (T r (#(lambda (M $0 0 0 0)) 0.5)))) 4)"
+        }
+      ]
+    }
+  ]
+}

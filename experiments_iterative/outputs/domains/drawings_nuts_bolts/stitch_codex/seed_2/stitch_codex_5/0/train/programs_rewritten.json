@@ -1,0 +1,308 @@
+{
+  "frontiers": [
+    {
+      "task": "codex_5408670720700214261",
+      "programs": [
+        {
+          "program": "(#(#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $1 $0)))) 0.5) #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c))"
+        }
+      ]
+    },
+    {
+      "task": "codex_9093351651229038389",
+      "programs": [
+        {
+          "program": "(#(lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $0))) #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 #(repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0))) #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)))"
+        }
+      ]
+    },
+    {
+      "task": "codex_3275010491145367656",
+      "programs": [
+        {
+          "program": "(C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 #(repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 #(repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0))))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-054.png",
+      "programs": [
+        {
+          "program": "(#(#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $1 $0)))) 1) r)"
+        }
+      ]
+    },
+    {
+      "task": "codex_4672771525684340033",
+      "programs": [
+        {
+          "program": "(#(#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $1 $0)))) 1) #(repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-050.png",
+      "programs": [
+        {
+          "program": "(#(#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $1 $0)))) 1) #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c))"
+        }
+      ]
+    },
+    {
+      "task": "codex_5776565856741985787",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $1 $0)))) 1.5 #(repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)))"
+        }
+      ]
+    },
+    {
+      "task": "codex_8739928923051104056",
+      "programs": [
+        {
+          "program": "(#(lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $0))) r (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)))"
+        }
+      ]
+    },
+    {
+      "task": "codex_2564715904266344451",
+      "programs": [
+        {
+          "program": "(C #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 #(repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0))) #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-051.png",
+      "programs": [
+        {
+          "program": "(#(#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $1 $0)))) 0.5) #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c))"
+        }
+      ]
+    },
+    {
+      "task": "codex_5032507992523241829",
+      "programs": [
+        {
+          "program": "(#(#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $1 $0)))) 0.5) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 r))"
+        }
+      ]
+    },
+    {
+      "task": "codex_5338488461219501431",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $1 $0)))) 2 #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c))"
+        }
+      ]
+    },
+    {
+      "task": "codex_8394892262495092152",
+      "programs": [
+        {
+          "program": "(C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 r)) #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 #(repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0))))"
+        }
+      ]
+    },
+    {
+      "task": "codex_166153471576009394",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $1 $0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)))))"
+        }
+      ]
+    },
+    {
+      "task": "codex_2849857507839354011",
+      "programs": [
+        {
+          "program": "(#(#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $1 $0)))) 0.5) #(repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)))"
+        }
+      ]
+    },
+    {
+      "task": "codex_9199014999757723304",
+      "programs": [
+        {
+          "program": "(#(#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $1 $0)))) 0.5) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 c))"
+        }
+      ]
+    },
+    {
+      "task": "codex_3448020966615519932",
+      "programs": [
+        {
+          "program": "(#(#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $1 $0)))) 1) #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c))"
+        }
+      ]
+    },
+    {
+      "task": "codex_4368297638309264859",
+      "programs": [
+        {
+          "program": "#(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c))"
+        }
+      ]
+    },
+    {
+      "task": "codex_6456467383039410051",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $1 $0)))) 2 r)"
+        }
+      ]
+    },
+    {
+      "task": "codex_8766004828614307212",
+      "programs": [
+        {
+          "program": "(#(#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $1 $0)))) 1) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 r))"
+        }
+      ]
+    },
+    {
+      "task": "codex_3798367424906412069",
+      "programs": [
+        {
+          "program": "(C #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (T #(repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) (M 0 0 0.5 0)))"
+        }
+      ]
+    },
+    {
+      "task": "codex_3853347939963895338",
+      "programs": [
+        {
+          "program": "(#(lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $0))) (#(lambda (lambda (T $0 (M $1 0 0 0)))) 0.5 #(repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0))) #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)))"
+        }
+      ]
+    },
+    {
+      "task": "codex_994507745058026781",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $1 $0)))) -0.5 #(repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)))"
+        }
+      ]
+    },
+    {
+      "task": "codex_6199963955880079948",
+      "programs": [
+        {
+          "program": "(#(#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $1 $0)))) 1) (#(lambda (lambda (T $1 (M 0 $0 0 0)))) c -1))"
+        }
+      ]
+    },
+    {
+      "task": "codex_3215775337757996212",
+      "programs": [
+        {
+          "program": "(#(#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $1 $0)))) 1) (repeat r 6 (M 1 (/ (* 2 pi) 6) 0 0)))"
+        }
+      ]
+    },
+    {
+      "task": "codex_2199601594121179096",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $1 $0)))) 2 #(repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)))"
+        }
+      ]
+    },
+    {
+      "task": "codex_2294409267538681657",
+      "programs": [
+        {
+          "program": "(#(#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $1 $0)))) 1) c)"
+        }
+      ]
+    },
+    {
+      "task": "codex_4484458776193227395",
+      "programs": [
+        {
+          "program": "(C #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $1 (M 0 $0 0 0)))) #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c) 0.5))"
+        }
+      ]
+    },
+    {
+      "task": "codex_8681403264640238309",
+      "programs": [
+        {
+          "program": "(#(#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $1 $0)))) 0.5) r)"
+        }
+      ]
+    },
+    {
+      "task": "codex_6966577818662717449",
+      "programs": [
+        {
+          "program": "(C #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $1 (M 0 $0 0 0)))) #(repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)) 0.5))"
+        }
+      ]
+    },
+    {
+      "task": "codex_9046858836805008512",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $1 $0)))) 2 c)"
+        }
+      ]
+    },
+    {
+      "task": "codex_7968037012785145022",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $1 $0)))) -0.5 #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c))"
+        }
+      ]
+    },
+    {
+      "task": "codex_1688049340869854454",
+      "programs": [
+        {
+          "program": "(#(lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 $0))) #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 #(repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0))) #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 #(repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0))))"
+        }
+      ]
+    },
+    {
+      "task": "codex_941570019085050018",
+      "programs": [
+        {
+          "program": "(#(#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $1 $0)))) 1) #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 #(repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0))))"
+        }
+      ]
+    },
+    {
+      "task": "codex_7734480181402027092",
+      "programs": [
+        {
+          "program": "(#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $1 $0)))) 0.25 #(repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-052.png",
+      "programs": [
+        {
+          "program": "(#(#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $1 $0)))) 1) #(repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)))"
+        }
+      ]
+    },
+    {
+      "task": "codex_3644433806257620703",
+      "programs": [
+        {
+          "program": "(#(#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $1 $0)))) 0.5) #(#(lambda (lambda (T $0 (M $1 0 0 0)))) 1 #(repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0))))"
+        }
+      ]
+    },
+    {
+      "task": "lax-drawing-nuts-bolts-all-053.png",
+      "programs": [
+        {
+          "program": "(#(#(lambda (lambda (C (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 (#(lambda (lambda (T $0 (M $1 0 0 0)))) 2 c)) (#(lambda (lambda (T $0 (M $1 0 0 0)))) $1 $0)))) 0.5) #(repeat (T l (M 1 0 -0.5 (/ 0.5 (tan (/ pi 6))))) 6 (M 1 (/ (* 2 pi) 6) 0 0)))"
+        }
+      ]
+    }
+  ]
+}
