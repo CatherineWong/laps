@@ -12,10 +12,7 @@ import subprocess
 
 class StitchBase(object):
     def run_binary(
-        self,
-        bin: str = "compress",
-        stitch_args: list = [],
-        stitch_kwargs: dict = {},
+        self, bin: str = "compress", stitch_args: list = [], stitch_kwargs: dict = {},
     ):
         """Calls `cargo run` to invoke Stitch via subprocess call.
 
@@ -44,12 +41,18 @@ class StitchBase(object):
         task_ids_in_splits,
         frontiers_filepath: str,
         include_samples: bool = True,
+        rewrite_from_beta_normal: bool = False,
     ):
         """Dumps programs from frontiers to a file that can be passed to Stitch.
 
         returns:
             Path to JSON file containing a list of programs.
         """
+
+        def program_to_str(p):
+            if rewrite_from_beta_normal:
+                p = p.betaNormalForm()
+            return str(p)
 
         frontiers = experiment_state.get_frontiers_for_ids_in_splits(
             task_splits=task_splits,
@@ -63,7 +66,8 @@ class StitchBase(object):
                     {
                         "task": frontier.task.name,
                         "programs": [
-                            {"program": str(entry.program)} for entry in frontier
+                            {"program": program_to_str(entry.program)}
+                            for entry in frontier
                         ],
                     }
                 )
@@ -105,14 +109,6 @@ class StitchBase(object):
         return invs_and_metadata
 
     def _get_filepath_for_current_iteration(
-        self,
-        checkpoint_directory: str,
-        filename: str,
-        split: str = "",
+        self, checkpoint_directory: str, filename: str, split: str = "",
     ):
-        return os.path.join(
-            os.getcwd(),
-            checkpoint_directory,
-            split,
-            filename,
-        )
+        return os.path.join(os.getcwd(), checkpoint_directory, split, filename,)

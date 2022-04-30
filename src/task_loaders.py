@@ -203,3 +203,42 @@ class GroundTruthOrderedTaskBatcher(OrderedTaskBatcher):
             split: [t.name for t in gt_frontiers[split]] for split in gt_frontiers
         }
 
+
+@TaskBatcherRegistry.register
+class GroundTruthOrderedTaskBatcherNoIncrement(GroundTruthOrderedTaskBatcher):
+    """GroundTruthOrderedTaskBatcher: orders tasks according to the log prior for a reference ground truth. 
+    No shuffle, and does not increment the batch at each iteration.
+
+    This is used in experiments where we want to run multiple iterations of compression 
+    with respect to a single training batch.
+    """
+
+    name = "ground_truth_ordered_task_batcher_no_increment"
+
+    def __init__(
+        self,
+        experiment_state,
+        curr_iteration,
+        max_iterations,
+        global_batch_size,
+        verbose=False,
+    ):
+        super(GroundTruthOrderedTaskBatcherNoIncrement, self).__init__(
+            experiment_state, curr_iteration, max_iterations, global_batch_size, verbose
+        )
+
+    def get_task_batch_ids(
+        self, experiment_state, curr_iteration, task_split, batch_size
+    ):
+        """
+        Gets a batch of tasks relative to a global pointer.
+        batch_size: {ALL, GLOBAL_BATCH_SIZE, scalar}: 
+        if ALL, returns all tasks for a split. 
+        if GLOBAL_BATCH_SIZE, returns global_batch_size tasks from the global pointer.
+        Else, returns n tasks from the global pointer.
+        """
+        curr_iteration = 0  # Always increment from the start
+        return super(GroundTruthOrderedTaskBatcherNoIncrement, self).get_task_batch_ids(
+            experiment_state, curr_iteration, task_split, batch_size
+        )
+

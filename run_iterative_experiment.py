@@ -58,6 +58,13 @@ parser.add_argument(
 )
 
 parser.add_argument(
+    "--max_iterations",
+    default=1,
+    type=int,
+    help="How many iterations to run each loop.",
+)
+
+parser.add_argument(
     "--stitch_params", default="{}", help="JSON string of stitch params"
 )
 
@@ -114,6 +121,7 @@ def main(args):
             domain=args.domain,
             task_batcher=args.task_batcher,
             random_seed=random_seed,
+            max_iterations=args.max_iterations,
             codex_params=codex_params,
             stitch_params=stitch_params,
             compute_likelihoods=args.compute_likelihoods,
@@ -136,17 +144,11 @@ def main(args):
         # Clear the experiment_id_base directory
         if args.overwrite:
             shutil.rmtree(
-                os.path.join(
-                    os.getcwd(),
-                    config_base["metadata"]["export_directory"],
-                ),
+                os.path.join(os.getcwd(), config_base["metadata"]["export_directory"],),
                 ignore_errors=True,
             )
             shutil.rmtree(
-                os.path.join(
-                    os.getcwd(),
-                    config_base["metadata"]["log_directory"],
-                ),
+                os.path.join(os.getcwd(), config_base["metadata"]["log_directory"],),
                 ignore_errors=True,
             )
 
@@ -157,6 +159,7 @@ def main(args):
                 domain=args.domain,
                 task_batcher=args.task_batcher,
                 random_seed=random_seed,
+                max_iterations=args.max_iterations,
                 global_batch_size=global_batch_size,
                 codex_params=codex_params,
                 stitch_params=stitch_params,
