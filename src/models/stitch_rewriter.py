@@ -119,3 +119,4 @@ class StitchProgramRewriter(StitchBase, model_loaders.ModelLoader):
                     ].rescoreFrontier(frontier_rewritten)
 
                 experiment_state.task_frontiers[split][task] = frontier_rewritten
+

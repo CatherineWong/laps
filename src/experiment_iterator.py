@@ -361,7 +361,6 @@ class ExperimentState:
             if exclude_nonempty:
                 if not self.task_frontiers[task_split][task].empty:
                     continue
-
             self.task_frontiers[task_split][task] = self.task_frontiers[task_split][
                 task
             ].replaceWithSupervised(

@@ -45,7 +45,8 @@ DISTS = np.arange(-3.0, 3.25, 0.25)  # Distances
 INTEGERS = range(0, 13)  # General scaling constants
 numeric_constants = set(list(SCALES) + list(DISTS) + list(INTEGERS))
 constants = [
-    Primitive(f"{n:g}", tfloat, n, override_globals=True) for n in numeric_constants
+    Primitive(f"{n:g}", tfloat, n, override_globals=True, alternate_names=[f"{n:g}"])
+    for n in numeric_constants
 ]
 constants += [Primitive("pi", tfloat, math.pi, override_globals=True)]
 

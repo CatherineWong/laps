@@ -47,7 +47,6 @@ class StitchBase(object):
         returns:
             Path to JSON file containing a list of programs.
         """
-
         frontiers = experiment_state.get_frontiers_for_ids_in_splits(
             task_splits=task_splits,
             task_ids_in_splits=task_ids_in_splits,

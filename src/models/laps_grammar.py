@@ -98,13 +98,18 @@ class LAPSGrammar(Grammar):
             initialize_parameters_from_grammar
         )
 
-    def _add_base_primitive(self, base_primitive):
+    def _add_base_primitive(self, base_primitive, use_default_as_human_readable=False):
         numeric_idx = len(self.function_names)
         self.function_names[str(base_primitive)] = {
             LAPSGrammar.DEFAULT_FUNCTION_NAMES: str(base_primitive),
             LAPSGrammar.NUMERIC_FUNCTION_NAMES: LAPSGrammar.NUMERIC_FUNCTION_NAMES_PREFIX
             + str(numeric_idx),
         }
+        if use_default_as_human_readable:
+            self.function_names[str(base_primitive)][LAPSGrammar.HUMAN_READABLE] = str(
+                base_primitive
+            )
+
         self.all_function_names_counts[str(base_primitive)] += 1
         self.all_function_names_to_productions[str(base_primitive)] = str(
             base_primitive
@@ -139,6 +144,8 @@ class LAPSGrammar(Grammar):
             for p in initialize_from_grammar.function_names:
                 for name_class in initialize_from_grammar.function_names[p]:
                     if name_class not in self.EXCLUDE_NAME_INITIALIZATION:
+                        if p not in function_names:
+                            function_names[p] = dict()
                         function_names[p][
                             name_class
                         ] = initialize_from_grammar.function_names[p][name_class]
@@ -247,7 +254,9 @@ class LAPSGrammar(Grammar):
                     # Allow floats.
                     try:
                         float_primitive = float(e.name)  # If we can cast to float.
-                        self.grammar._add_base_primitive(e)
+                        self.grammar._add_base_primitive(
+                            e, use_default_as_human_readable=True
+                        )
                         self.function_names = self.grammar.function_names
                     except:
                         raise ParseFailure((str(e), e))
