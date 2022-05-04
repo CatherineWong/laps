@@ -41,18 +41,12 @@ class StitchBase(object):
         task_ids_in_splits,
         frontiers_filepath: str,
         include_samples: bool = True,
-        rewrite_from_beta_normal: bool = False,
     ):
         """Dumps programs from frontiers to a file that can be passed to Stitch.
 
         returns:
             Path to JSON file containing a list of programs.
         """
-
-        def program_to_str(p):
-            if rewrite_from_beta_normal:
-                p = p.betaNormalForm()
-            return str(p)
 
         frontiers = experiment_state.get_frontiers_for_ids_in_splits(
             task_splits=task_splits,
@@ -66,8 +60,7 @@ class StitchBase(object):
                     {
                         "task": frontier.task.name,
                         "programs": [
-                            {"program": program_to_str(entry.program)}
-                            for entry in frontier
+                            {"program": str(entry.program)} for entry in frontier
                         ],
                     }
                 )

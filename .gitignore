@@ -16,4 +16,5 @@ venv/
 compressionMessages/
 experiments/
 experiments_iterative/
+bin/
 .vscode

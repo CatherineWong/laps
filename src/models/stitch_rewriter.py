@@ -44,7 +44,6 @@ class StitchProgramRewriter(StitchBase, model_loaders.ModelLoader):
         include_samples,
         load_inventions_from_split: str = "train",
         compute_likelihoods: bool = False,
-        rewrite_from_beta_normal: bool = True,
     ):
         """
         Updates experiment_state frontiers wrt. the experiment_state.models[GRAMMAR]
@@ -82,7 +81,6 @@ class StitchProgramRewriter(StitchBase, model_loaders.ModelLoader):
                 task_ids_in_splits=task_ids_in_splits,
                 frontiers_filepath=programs_filepath,
                 include_samples=include_samples,
-                rewrite_from_beta_normal=rewrite_from_beta_normal,
             )
             self.run_binary(
                 bin="rewrite",
