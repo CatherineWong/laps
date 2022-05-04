@@ -129,7 +129,7 @@ class StitchProposerLibraryLearner(StitchBase, model_loaders.ModelLoader):
             bin="compress",
             stitch_args=[
                 frontiers_filepath,
-                "--no-other-util",
+                # "--no-other-util",
                 "--no-mismatch-check",
             ],  # TODO(gg): remove --no-mismatch-check when (_rconcat #0 #0) bug is fixed
             stitch_kwargs={
