@@ -127,7 +127,11 @@ class StitchProposerLibraryLearner(StitchBase, model_loaders.ModelLoader):
         )
         self.run_binary(
             bin="compress",
-            stitch_args=[frontiers_filepath],
+            stitch_args=[
+                frontiers_filepath,
+                "--no-other-util",
+                "--no-mismatch-check",
+            ],  # TODO(gg): remove --no-mismatch-check when (_rconcat #0 #0) bug is fixed
             stitch_kwargs={
                 "out": inventions_filepath,
                 "max-arity": max_arity,
