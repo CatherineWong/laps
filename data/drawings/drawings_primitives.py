@@ -372,7 +372,7 @@ def render_stroke_arrays_to_canvas(
 
 def render_parsed_program(
     program,
-    stroke_width_height=4 * XYLIM,
+    stroke_width_height=8 * XYLIM,
     canvas_width_height=SYNTHESIS_TASK_CANVAS_WIDTH_HEIGHT,
     allow_partial_rendering=False,
     color=None,
@@ -408,6 +408,9 @@ def display_programs_as_grid(programs, max_programs=16, color=None, **kwargs):
     for p in programs:
         try:
             A = render_parsed_program(p, color=color)
+            import pdb
+
+            pdb.set_trace()
             rendered_arrays.append(A)
         except:
             pass
@@ -432,8 +435,21 @@ def fig2img(fig):
 
 
 def display_arrays_as_grid(
-    rendered_arrays, suptitle=None, titles=None, ncols=4, transparent_background=True,
+    rendered_arrays,
+    suptitle=None,
+    titles=None,
+    ncols=4,
+    transparent_background=True,
+    array_captions=[],
+    max_programs=16,
 ):
+
+    if len(rendered_arrays) < max_programs:
+        # Pad out the programs.
+        last_array = rendered_arrays[-1]
+        for _ in range(max_programs - len(rendered_arrays)):
+            rendered_arrays.append(np.zeros_like(last_array) + 255)
+
     N = len(rendered_arrays)
     ncols = min(N, ncols)
     nrows = math.ceil(N / ncols)
