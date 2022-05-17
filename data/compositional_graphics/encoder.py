@@ -24,7 +24,7 @@ LOGO_DREAMS_TMP_DIRECTORY = "dreams/"
 class LogoFeatureCNNExamplesEncoder(ModelLoader):
     """Loads the LOGO Feature CNN class. Note that this does not return an initialized model. It returns the class that can be instantiated from the experiment state, with other params set. Original source: dreamcoder/domains/logo/main.py"""
 
-    name = "LOGO"
+    name = "logo_cnn_examples_encoder"
 
     def load_model_initializer(self, experiment_state, **kwargs):
         def experiment_state_initializer(exp_state):

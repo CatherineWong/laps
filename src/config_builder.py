@@ -58,12 +58,14 @@ def get_domain_metadata(domain: str):
             "task_language_loader": "compositional_graphics_200_synthetic",
             "ocaml_special_handler": "LOGO",
             "global_batch_sizes": [5, 10, 15, 25, 50, 100, 200],
+            "examples_encoder": "logo_cnn_examples_encoder",
         },
         "clevr": {
             "tasks_loader": "clevr",
             "task_language_loader": "clevr_synthetic",
             "ocaml_special_handler": "clevr",
             "global_batch_sizes": [5, 10, 15, 25, 50, 100, 191],
+            "examples_encoder": "clevr_rnn_examples_encoder",
         },
         "re2": {
             "tasks_loader": "re2",
@@ -219,6 +221,11 @@ def build_config_body(
     model_initializers[0]["model_loader"] = domain_meta["ocaml_special_handler"]
     config["model_initializers"] = model_initializers
 
+    # Set the domain-specific examples_encoder.
+    for model_initializer in config["model_initializers"]:
+        if model_initializer["model_type"] == "examples_encoder":
+            model_initializer["model_loader"] = domain_meta["examples_encoder"]
+
     config["experiment_iterator"]["max_iterations"] = max_iterations
     config["experiment_iterator"]["task_batcher"]["model_type"] = task_batcher
     config["experiment_iterator"]["task_batcher"]["params"][
@@ -239,17 +246,11 @@ def build_config_body(
             block["params"].update(_stitch_params)
         if (
             block.get("model_type")
-            in [
-                LAPSGrammar.GRAMMAR,
-                SAMPLE_GENERATOR,
-                PROGRAM_REWRITER,
-            ]
+            in [LAPSGrammar.GRAMMAR, SAMPLE_GENERATOR, PROGRAM_REWRITER,]
             or block.get("state_fn") == INITIALIZE_GROUND_TRUTH
         ):
             block["params"].update(
-                {
-                    "compute_likelihoods": compute_likelihoods,
-                }
+                {"compute_likelihoods": compute_likelihoods,}
             )
         loop_blocks.append(block)
     config["experiment_iterator"]["loop_blocks"] = loop_blocks
