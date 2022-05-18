@@ -3,6 +3,7 @@ laps_dreamcoder_recognition.py | Author : Catherine Wong.
 
 Utility wrapper function around the DreamCoder recognition model. Elevates common functions to be class functions and allows them to be called with an ExperimentState.
 """
+import itertools
 from src.task_loaders import *
 import src.models.model_loaders as model_loaders
 
@@ -43,8 +44,8 @@ class LAPSDreamCoderRecognition:
     def infer_programs_for_tasks(
         self,
         experiment_state,
-        task_split,
-        task_batch_ids,
+        task_splits,
+        task_ids_in_splits,
         enumeration_timeout,
         maximum_frontier=DEFAULT_MAXIMUM_FRONTIER,
         cpus=DEFAULT_CPUS,
@@ -52,6 +53,7 @@ class LAPSDreamCoderRecognition:
         evaluation_timeout=DEFAULT_EVALUATION_TIMEOUT,
         max_mem_per_enumeration_thread=DEFAULT_MAX_MEM_PER_ENUMERATION_THREAD,
         solver_directory=DEFAULT_BINARY_DIRECTORY,
+        **kwargs,
     ):
         """
         Infers programs for tasks via top-down enumerative search from the grammar.
@@ -59,40 +61,41 @@ class LAPSDreamCoderRecognition:
 
         Wrapper function around recognition.enumerateFrontiers from dreamcoder.recognition.
         """
-        tasks_to_attempt = experiment_state.get_tasks_for_ids(
-            task_split=task_split, task_ids=task_batch_ids, include_samples=False
-        )
-        new_frontiers, _ = self._neural_recognition_model.enumerateFrontiers(
-            tasks=tasks_to_attempt,
-            maximumFrontier=maximum_frontier,
-            enumerationTimeout=enumeration_timeout,
-            CPUs=cpus,
-            solver=solver,
-            evaluationTimeout=evaluation_timeout,
-            max_mem_per_enumeration_thread=max_mem_per_enumeration_thread,
-            solver_directory=solver_directory,
-            testing=task_split == TEST,
-        )
+        for task_split in task_splits:
+            tasks_to_attempt = experiment_state.get_tasks_for_ids(
+                task_split=task_split, task_ids=task_ids_in_splits[task_split], include_samples=False
+            )
+            new_frontiers, _ = self._neural_recognition_model.enumerateFrontiers(
+                tasks=tasks_to_attempt,
+                maximumFrontier=maximum_frontier,
+                enumerationTimeout=enumeration_timeout,
+                CPUs=cpus,
+                solver=solver,
+                evaluationTimeout=evaluation_timeout,
+                max_mem_per_enumeration_thread=max_mem_per_enumeration_thread,
+                solver_directory=solver_directory,
+                testing=task_split == TEST,
+            )
 
-        experiment_state.update_frontiers(
-            new_frontiers=new_frontiers,
-            maximum_frontier=maximum_frontier,
-            task_split=task_split,
-            is_sample=False,
+            experiment_state.update_frontiers(
+                new_frontiers=new_frontiers,
+                maximum_frontier=maximum_frontier,
+                task_split=task_split,
+                is_sample=False,
         )
 
     def optimize_model_for_frontiers(
         self,
         experiment_state,
-        task_split=TRAIN,
-        task_batch_ids=ALL,
+        task_splits,
+        task_ids_in_splits,
+        sample_training_ratio=0.0,  # How often to try to train on existing samples.
         task_encoder_types=[
             model_loaders.EXAMPLES_ENCODER
         ],  # Task encoders to use: [EXAMPLES_ENCODER, LANGUAGE_ENCODER]
-        recognition_train_steps=5000,  # Gradient steps to train model.
+        recognition_train_steps=10000,  # Gradient steps to train model.
         recognition_train_timeout=None,  # Alternatively, how long to train the model
         recognition_train_epochs=None,  # Alternatively, how many epochs to train
-        helmholtz_ratio=0.5,  # How often to sample Helmholtz samples
         sample_evaluation_timeout=1.0,  # How long to spend trying to evaluate samples.
         matrix_rank=None,  # Maximum rank of bigram transition matrix for contextual recognition model. Defaults to full rank.
         mask=False,  # Unconditional bigram masking
@@ -104,16 +107,24 @@ class LAPSDreamCoderRecognition:
         cpus=12,
         max_mem_per_enumeration_thread=1000000,
         require_ground_truth_frontiers=False,
+        **kwargs,
     ):
         """Trains a new recognition model with respect to the frontiers. Updates the experiment_state.models[AMORTIZED_SYNTHESIS] to contain the trained model."""
 
         # Skip training if no non-empty frontiers.
+        frontiers_in_splits = experiment_state.get_frontiers_for_ids_in_splits(
+            task_splits=task_splits,
+            task_ids_in_splits=task_ids_in_splits,
+            include_samples=False,
+        )
+        solved_frontiers = list(itertools.chain(*frontiers_in_splits.values()))
+
         if (
             require_ground_truth_frontiers
-            and len(experiment_state.get_non_empty_frontiers_for_split(task_split)) < 1
+            and len(solved_frontiers) < 1
         ):
             print(
-                f"require_ground_truth_frontiers=True and no non-empty frontiers in {task_split}. skipping optimize_model_for_frontiers"
+                f"require_ground_truth_frontiers=True and no non-empty frontiers. skipping optimize_model_for_frontiers"
             )
             return
         # Initialize I/O example encoders.
@@ -138,29 +149,26 @@ class LAPSDreamCoderRecognition:
             id=0,
         )
 
-        # Train the model.
-        all_train_frontiers = experiment_state.get_frontiers_for_ids(
-            task_split=task_split, task_ids=task_batch_ids
-        )
+        # Train the model. We no longer take online samples from the grammar during training. 
 
         # Returns any existing samples in the experiment state
         def get_sample_frontiers():
             return experiment_state.get_frontiers_for_ids(
-                task_split=task_split,
-                task_ids=ALL,
+                task_split=TRAIN,
+                task_ids=[],
                 include_samples=True,
                 include_ground_truth_tasks=False,
             )
 
         self._neural_recognition_model.train(
-            all_train_frontiers,
+            solved_frontiers,
             biasOptimal=bias_optimal,
             helmholtzFrontiers=get_sample_frontiers(),
             CPUs=cpus,
             evaluationTimeout=sample_evaluation_timeout,
             timeout=recognition_train_timeout,
             steps=recognition_train_steps,
-            helmholtzRatio=helmholtz_ratio,
+            helmholtzRatio=sample_training_ratio,
             auxLoss=auxiliary_loss,
             vectorized=True,
             epochs=recognition_train_epochs,

@@ -316,6 +316,21 @@ class ExperimentState:
             frontiers += list(self.sample_frontiers[task_split].values())
         return frontiers
 
+    def get_tasks_for_ids_in_splits( self,
+        task_splits,
+        task_ids_in_splits,
+        include_samples=False,
+        include_ground_truth_tasks=True):
+        return {
+            task_split: self.get_tasks_for_ids(
+                task_split,
+                task_ids_in_splits[task_split],
+                include_samples,
+                include_ground_truth_tasks,
+            )
+            for task_split in task_splits
+        }
+
     def get_frontiers_for_ids_in_splits(
         self,
         task_splits,

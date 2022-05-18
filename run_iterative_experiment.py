@@ -76,6 +76,8 @@ parser.add_argument(
 
 parser.add_argument("--codex_params", default="{}", help="JSON string of codex params")
 
+parser.add_argument("--synthesizer_params", default="{}", help="JSON string of synthesizer params")
+
 parser.add_argument(
     "--compute_likelihoods",
     action="store_true",
@@ -110,6 +112,7 @@ def main(args):
 
     codex_params = json.loads(args.codex_params)
     stitch_params = json.loads(args.stitch_params)
+    synthesizer_params = json.loads(args.synthesizer_params)
     if args.use_cached:
         codex_params["use_cached"] = True
 
@@ -123,6 +126,7 @@ def main(args):
             iterations=args.iterations,
             codex_params=codex_params,
             stitch_params=stitch_params,
+            synthesizer_params=synthesizer_params,
             compute_likelihoods=args.compute_likelihoods,
             compute_description_lengths=True,
             increment_task_batcher=args.increment_task_batcher,
@@ -152,6 +156,7 @@ def main(args):
                 global_batch_size=global_batch_size,
                 codex_params=codex_params,
                 stitch_params=stitch_params,
+                synthesizer_params=synthesizer_params,
                 compute_likelihoods=args.compute_likelihoods,
                 compute_description_lengths=True,
                 increment_task_batcher=args.increment_task_batcher,
