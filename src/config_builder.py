@@ -40,6 +40,7 @@ DEFAULT_CODEX_PARAMS = {
     "function_name_classes": ["default_no_inline", "numeric"],
 }
 
+
 class ExperimentType(str, Enum):
     ORACLE = "oracle"
     ORACLE_TRAIN_TEST = "oracle_train_test"
@@ -66,16 +67,17 @@ def get_domain_metadata(domain: str):
             "ocaml_special_handler": "clevr",
             "global_batch_sizes": [5, 10, 15, 25, 50, 100, 191],
             "examples_encoder": "clevr_rnn_examples_encoder",
-            "enumeration_timeout" : 1000,
-            "recognition_train_steps" : 10000,
+            "enumeration_timeout": 1000,
+            "recognition_train_steps": 10000,
         },
         "re2": {
             "tasks_loader": "re2",
             "task_language_loader": "re2_synthetic",
             "ocaml_special_handler": "re2",
             "global_batch_sizes": [5, 10, 15, 25, 50, 100, 200, 300, 400, 491],
-            "enumeration_timeout" : 720,
-            "recognition_train_steps" : 10000,
+            "examples_encoder": "re2_rnn_examples_encoder",
+            "enumeration_timeout": 720,
+            "recognition_train_steps": 10000,
         },
     }
 
@@ -124,7 +126,7 @@ def build_config(
     global_batch_size: int = ALL,
     stitch_params: dict = DEFAULT_STITCH_PARAMS,
     codex_params: dict = DEFAULT_CODEX_PARAMS,
-    synthesizer_params: dict = {}, 
+    synthesizer_params: dict = {},
     compute_likelihoods: bool = True,
     compute_description_lengths: bool = True,
     increment_task_batcher: bool = False,
@@ -214,7 +216,7 @@ def build_config_body(
     global_batch_size: int = ALL,
     stitch_params: dict = DEFAULT_STITCH_PARAMS,
     codex_params: dict = DEFAULT_CODEX_PARAMS,
-    synthesizer_params : dict = {},
+    synthesizer_params: dict = {},
     compute_likelihoods: bool = True,
     compute_description_lengths: bool = True,
     increment_task_batcher: bool = False,
@@ -251,7 +253,10 @@ def build_config_body(
     _codex_params.update(codex_params)
     _stitch_params = DEFAULT_STITCH_PARAMS
     _stitch_params.update(stitch_params)
-    _synthesizer_params = {}
+    _synthesizer_params = {
+        "enumeration_timeout": domain_meta["enumeration_timeout"],
+        "recognition_train_steps": domain_meta["recognition_train_steps"],
+    }
     _synthesizer_params.update(synthesizer_params)
 
     loop_blocks = []

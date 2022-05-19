@@ -63,7 +63,9 @@ class LAPSDreamCoderRecognition:
         """
         for task_split in task_splits:
             tasks_to_attempt = experiment_state.get_tasks_for_ids(
-                task_split=task_split, task_ids=task_ids_in_splits[task_split], include_samples=False
+                task_split=task_split,
+                task_ids=task_ids_in_splits[task_split],
+                include_samples=False,
             )
             new_frontiers, _ = self._neural_recognition_model.enumerateFrontiers(
                 tasks=tasks_to_attempt,
@@ -82,7 +84,7 @@ class LAPSDreamCoderRecognition:
                 maximum_frontier=maximum_frontier,
                 task_split=task_split,
                 is_sample=False,
-        )
+            )
 
     def optimize_model_for_frontiers(
         self,
@@ -119,22 +121,22 @@ class LAPSDreamCoderRecognition:
         )
         solved_frontiers = list(itertools.chain(*frontiers_in_splits.values()))
 
-        if (
-            require_ground_truth_frontiers
-            and len(solved_frontiers) < 1
-        ):
+        if require_ground_truth_frontiers and len(solved_frontiers) < 1:
             print(
                 f"require_ground_truth_frontiers=True and no non-empty frontiers. skipping optimize_model_for_frontiers"
             )
             return
-        # Initialize I/O example encoders.
+        # Initialize specification encoders.
         example_encoder = self._maybe_initialize_example_encoder(
+            task_encoder_types, experiment_state
+        )
+        language_encoder = self._maybe_initialize_language_encoder(
             task_encoder_types, experiment_state
         )
         # Initialize the neural recognition model.
         self._neural_recognition_model = RecognitionModel(
             example_encoder=example_encoder,
-            language_encoder=None,
+            language_encoder=language_encoder,
             grammar=experiment_state.models[model_loaders.GRAMMAR],
             mask=mask,
             rank=matrix_rank,
@@ -143,13 +145,13 @@ class LAPSDreamCoderRecognition:
             contextual=contextual,
             pretrained_model=None,
             helmholtz_nearest_language=0,
-            helmholtz_translations=None,  # This object contains information for using the joint generative model over programs and language.
+            helmholtz_translations=None,  # This object contains information for using the joint generative model over programs and language. We would only use this if we had a translation model for the samples
             nearest_encoder=None,
             nearest_tasks=[],
             id=0,
         )
 
-        # Train the model. We no longer take online samples from the grammar during training. 
+        # Train the model. We no longer take online samples from the grammar during training.
 
         # Returns any existing samples in the experiment state
         def get_sample_frontiers():
@@ -179,4 +181,11 @@ class LAPSDreamCoderRecognition:
             return None
         # Initialize from tasks.
         model_initializer_fn = experiment_state.models[model_loaders.EXAMPLES_ENCODER]
+        return model_initializer_fn(experiment_state)
+
+    def _maybe_initialize_language_encoder(self, task_encoder_types, experiment_state):
+        if model_loaders.LANGUAGE_ENCODER not in task_encoder_types:
+            return None
+        # Initialize from tasks.
+        model_initializer_fn = experiment_state.models[model_loaders.LANGUAGE_ENCODER]
         return model_initializer_fn(experiment_state)

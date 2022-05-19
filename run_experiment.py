@@ -22,6 +22,7 @@ from data.compositional_graphics.grammar import *
 from data.compositional_graphics.encoder import *
 from data.re2.make_tasks import *
 from data.re2.grammar import *
+from data.re2.encoder import *
 from data.clevr.make_tasks import *
 from data.clevr.grammar import *
 from data.clevr.encoder import *
@@ -33,6 +34,7 @@ from data.structures.make_tasks import *
 from data.structures.grammar import *
 
 from src.models.laps_dreamcoder_recognition import *
+from src.models.laps_language_encoder import *
 from src.models.sample_generator import *
 from src.models.stitch_proposer import *
 from src.models.stitch_rewriter import *
