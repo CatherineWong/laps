@@ -121,6 +121,8 @@ class LAPSDreamCoderRecognition:
         )
         solved_frontiers = list(itertools.chain(*frontiers_in_splits.values()))
 
+        # Further, try and score the frontiers so that we can train with them.
+
         if require_ground_truth_frontiers and len(solved_frontiers) < 1:
             print(
                 f"require_ground_truth_frontiers=True and no non-empty frontiers. skipping optimize_model_for_frontiers"
@@ -174,6 +176,7 @@ class LAPSDreamCoderRecognition:
             auxLoss=auxiliary_loss,
             vectorized=True,
             epochs=recognition_train_epochs,
+            generateNewHelmholtz=False,  # Disallow generating new samples within the model.
         )
 
     def _maybe_initialize_example_encoder(self, task_encoder_types, experiment_state):

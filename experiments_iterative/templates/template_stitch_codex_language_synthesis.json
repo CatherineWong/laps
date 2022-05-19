@@ -120,7 +120,7 @@
                         "examples_encoder",
                         "language_encoder"
                     ],
-                    "sample_training_ratio": 0.0,
+                    "sample_training_ratio": 0.5,
                     "recognition_train_steps": 10000,
                     "require_ground_truth_frontiers": true
                 }

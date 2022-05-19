@@ -99,10 +99,7 @@ class StitchProgramRewriter(StitchBase, model_loaders.ModelLoader):
             for task in experiment_state.get_tasks_for_ids(
                 task_split=split, task_ids=task_ids_in_splits[split]
             ):
-                frontier_rewritten = Frontier(
-                    frontier=[],
-                    task=task,
-                )
+                frontier_rewritten = Frontier(frontier=[], task=task,)
                 for program_data in task_to_programs[task.name]:
                     p_str = program_data["program"]
                     p = Program.parse(p_str)
@@ -113,11 +110,7 @@ class StitchProgramRewriter(StitchBase, model_loaders.ModelLoader):
                         except EtaExpandFailure:
                             raise EtaExpandFailure(p_str)
                     frontier_rewritten.entries.append(
-                        FrontierEntry(
-                            program=p,
-                            logPrior=0.0,
-                            logLikelihood=0.0,
-                        )
+                        FrontierEntry(program=p, logPrior=0.0, logLikelihood=0.0,)
                     )
                 # Re-score the logPrior and logLikelihood of the frontier under the current grammar
                 if compute_likelihoods:
