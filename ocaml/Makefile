@@ -93,6 +93,19 @@ clevrPrimitivesTest:
 	cd solvers && jbuilder build test_clevr_primitives.exe && \
 	cp _build/default/test_clevr_primitives.exe ../bin/test_clevr_primitives
 
+testDrawingsOcaml:
+	cd solvers && jbuilder clean 
+	rm -f bin/test_drawings_ocaml
+	cd solvers && jbuilder build test_drawings_ocaml.exe && \
+	cp _build/default/test_drawings_ocaml.exe ../bin/test_drawings_ocaml
+
+testDrawingsApi:
+	cd solvers && jbuilder clean 
+	rm -f bin/test_drawings_ocaml
+	cd solvers && jbuilder build test_drawings_api.exe && \
+	cp _build/default/test_drawings_api.exe ../bin/test_drawings_api
+
+
 re2TestClean: 
 	cd solvers && jbuilder clean
 	rm -f bin/re2Test
