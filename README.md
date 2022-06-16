@@ -8,7 +8,7 @@ The codebase is implemented in both Python and OCaml. The repository contains pr
 We also provide scripts for installing and running this repository on two MIT-specific computing clusters, which do not allow directly installing software and run on Linux architectures.
 #### Setting up on sketch3.
 These are exact instructions for setting up on the Sketch3 computing cluster managed by the MIT BCS department. This is an Ubuntu 16.04 environment.
-1. Connect to the sketch3 machine. This is via a valid CSAIL account at <CSAIL_ID>@sketch3.mit.csail.edu. You likely need to be on an MIT-secure (VPN) network. You also ideally will have sudo access if you want to install this environment from scratch, as in these setup details. You can request this from any sudo user (eg. Matt Bowers). A working environment is at `/scratch/zyzzyva`.
+1. Connect to the sketch3 machine. This is via a valid CSAIL account at <CSAIL_ID>@sketch3.csail.mit.edu. You likely need to be on an MIT-secure (VPN) network. You also ideally will have sudo access if you want to install this environment from scratch, as in these setup details. You can request this from any sudo user (eg. Matt Bowers). A working environment is at `/scratch/zyzzyva`.
 2. Git clone this using `git@github.com:CatherineWong/laps.git`.
 3. Run `setup_sketch3.sh`. You may need to first install conda if you don't already have this.
 
