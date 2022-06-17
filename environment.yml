@@ -28,6 +28,7 @@ dependencies:
   - imageio
   - importlib-metadata
   - iniconfig
+  - ipywidgets
   - jedi
   - Jinja2
   - joblib
