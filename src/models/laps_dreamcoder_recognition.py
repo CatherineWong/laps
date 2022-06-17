@@ -4,10 +4,10 @@ laps_dreamcoder_recognition.py | Author : Catherine Wong.
 Utility wrapper function around the DreamCoder recognition model. Elevates common functions to be class functions and allows them to be called with an ExperimentState.
 """
 import itertools
-from src.task_loaders import *
-import src.models.model_loaders as model_loaders
 
+import src.models.model_loaders as model_loaders
 from dreamcoder.recognition import RecognitionModel
+from src.task_loaders import *
 
 AmortizedSynthesisModelRegistry = model_loaders.ModelLoaderRegistries[
     model_loaders.AMORTIZED_SYNTHESIS
@@ -34,7 +34,7 @@ class LAPSDreamCoderRecognition:
     DEFAULT_ENUMERATION_SOLVER = "ocaml"  # OCaml, PyPy, or Python enumeration
     DEFAULT_SAMPLER = "helmholtz"
     DEFAULT_BINARY_DIRECTORY = os.path.join(
-        DEFAULT_ENUMERATION_SOLVER, "linux_bin"
+        DEFAULT_ENUMERATION_SOLVER, "bin"
     )  # Assumes you're almost definitely running this on a linux machine.
     DEFAULT_EVALUATION_TIMEOUT = 1  # Timeout for evaluating a program on a task
     DEFAULT_MAX_MEM_PER_ENUMERATION_THREAD = 1000000000  # Max memory usage per thread
