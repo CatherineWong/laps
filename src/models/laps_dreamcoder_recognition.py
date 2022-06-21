@@ -86,6 +86,7 @@ class LAPSDreamCoderRecognition:
                 maximum_frontier=maximum_frontier,
                 task_split=task_split,
                 is_sample=False,
+                report_frontiers=True,
             )
 
     def optimize_model_for_frontiers(
