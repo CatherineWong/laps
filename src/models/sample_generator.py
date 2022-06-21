@@ -602,11 +602,7 @@ class CodexSampleGenerator(CodexBase, model_loaders.ModelLoader):
             program = Program.parse(result_data["program"])
             task = Task(
                 name=f"codex_{result_data['hash']}",
-<<<<<<< HEAD
-                request=program.infer(),
-=======
                 request=Type.fromjson(result_data["type_json"]),
->>>>>>> main
                 examples=[],
             )
 
