@@ -378,11 +378,13 @@ class ExperimentState:
                         .topK(maximum_frontier)
                     )
                 if report_frontiers:
-                    print(
-                        Frontier.describe(
-                            [self.task_frontiers[task_split][new_frontier.task]]
-                        )
-                    )
+                    print(f"Combined programs for task: {new_frontier.task}")
+                    for e in (
+                        self.task_frontiers[task_split][new_frontier.task]
+                        .normalize()
+                        .topK(maximum_frontier)
+                    ):
+                        print("%.02f\t%s" % (e.logPosterior, e.program))
 
     def initialize_ground_truth_task_frontiers(
         self, task_split, exclude_nonempty=True, compute_likelihoods=False
