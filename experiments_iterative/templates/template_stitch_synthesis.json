@@ -73,27 +73,32 @@
                 "experiment_block_type": "model_fn",
                 "model_type": "amortized_synthesis",
                 "model_fn": "optimize_model_for_frontiers",
-                "task_splits": ["train"],
+                "task_splits": [
+                    "train"
+                ],
                 "task_batch_sizes": [
                     "global_batch_size"
                 ],
                 "params": {
-                    "task_encoder_types" : ["examples_encoder"],
-                    "sample_training_ratio" : 0.0,
+                    "task_encoder_types": [
+                        "examples_encoder"
+                    ],
+                    "sample_training_ratio": 0.0,
                     "recognition_train_steps": 10000,
-                    "require_ground_truth_frontiers" : true
+                    "require_ground_truth_frontiers": true
                 }
             },
             {
                 "experiment_block_type": "model_fn",
                 "model_type": "amortized_synthesis",
                 "model_fn": "infer_programs_for_tasks",
-                "task_splits": ["train"],
-                "task_batch_sizes": [
-                    "all"
+                "task_splits": [
+                    "train"
                 ],
-                "params": {
-                }
+                "task_batch_sizes": [
+                    "global_batch_size"
+                ],
+                "params": {}
             },
             {
                 "experiment_block_type": "model_fn",

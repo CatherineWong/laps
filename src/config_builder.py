@@ -67,7 +67,7 @@ def get_domain_metadata(domain: str):
             "ocaml_special_handler": "clevr",
             "global_batch_sizes": [5, 10, 15, 25, 50, 100, 191],
             "examples_encoder": "clevr_rnn_examples_encoder",
-            "enumeration_timeout": 1000,
+            "enumeration_timeout": 20,
             "recognition_train_steps": 10000,
         },
         "re2": {
@@ -269,17 +269,11 @@ def build_config_body(
             block["params"].update(_synthesizer_params)
         if (
             block.get("model_type")
-            in [
-                LAPSGrammar.GRAMMAR,
-                SAMPLE_GENERATOR,
-                PROGRAM_REWRITER,
-            ]
+            in [LAPSGrammar.GRAMMAR, SAMPLE_GENERATOR, PROGRAM_REWRITER,]
             or block.get("state_fn") == INITIALIZE_GROUND_TRUTH
         ):
             block["params"].update(
-                {
-                    "compute_likelihoods": compute_likelihoods,
-                }
+                {"compute_likelihoods": compute_likelihoods,}
             )
         loop_blocks.append(block)
     config["experiment_iterator"]["loop_blocks"] = loop_blocks
