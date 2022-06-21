@@ -11,6 +11,7 @@ from enum import Enum
 import data.drawings.make_tasks as drawing_tasks
 from src.models.laps_grammar import LAPSGrammar
 from src.models.model_loaders import (
+    AMORTIZED_SYNTHESIS,
     INITIALIZE_GROUND_TRUTH,
     LIBRARY_LEARNER,
     PROGRAM_REWRITER,
@@ -60,18 +61,25 @@ def get_domain_metadata(domain: str):
             "task_language_loader": "compositional_graphics_200_synthetic",
             "ocaml_special_handler": "LOGO",
             "global_batch_sizes": [5, 10, 15, 25, 50, 100, 200],
+            "examples_encoder": "logo_cnn_examples_encoder",
         },
         "clevr": {
             "tasks_loader": "clevr",
             "task_language_loader": "clevr_synthetic",
             "ocaml_special_handler": "clevr",
             "global_batch_sizes": [5, 10, 15, 25, 50, 100, 191],
+            "examples_encoder": "clevr_rnn_examples_encoder",
+            "enumeration_timeout": 20,
+            "recognition_train_steps": 10000,
         },
         "re2": {
             "tasks_loader": "re2",
             "task_language_loader": "re2_synthetic",
             "ocaml_special_handler": "re2",
             "global_batch_sizes": [5, 10, 15, 25, 50, 100, 200, 300, 400, 491],
+            "examples_encoder": "re2_rnn_examples_encoder",
+            "enumeration_timeout": 720,
+            "recognition_train_steps": 10000,
         },
     }
 
@@ -120,6 +128,7 @@ def build_config(
     global_batch_size: int = ALL,
     stitch_params: dict = DEFAULT_STITCH_PARAMS,
     codex_params: dict = DEFAULT_CODEX_PARAMS,
+    synthesizer_params: dict = {},
     compute_likelihoods: bool = True,
     compute_description_lengths: bool = True,
     increment_task_batcher: bool = False,
@@ -134,6 +143,7 @@ def build_config(
             global_batch_size=global_batch_size,
             stitch_params=stitch_params,
             codex_params=codex_params,
+            synthesizer_params=synthesizer_params,
             compute_likelihoods=compute_likelihoods,
             compute_description_lengths=compute_description_lengths,
             increment_task_batcher=increment_task_batcher,
@@ -208,6 +218,7 @@ def build_config_body(
     global_batch_size: int = ALL,
     stitch_params: dict = DEFAULT_STITCH_PARAMS,
     codex_params: dict = DEFAULT_CODEX_PARAMS,
+    synthesizer_params: dict = {},
     compute_likelihoods: bool = True,
     compute_description_lengths: bool = True,
     increment_task_batcher: bool = False,
@@ -224,6 +235,11 @@ def build_config_body(
     model_initializers[0]["model_loader"] = domain_meta["ocaml_special_handler"]
     config["model_initializers"] = model_initializers
 
+    # Set the domain-specific examples_encoder.
+    for model_initializer in config["model_initializers"]:
+        if model_initializer["model_type"] == "examples_encoder":
+            model_initializer["model_loader"] = domain_meta["examples_encoder"]
+
     config["experiment_iterator"]["max_iterations"] = iterations
     config["experiment_iterator"]["task_batcher"]["model_type"] = task_batcher
     config["experiment_iterator"]["task_batcher"]["params"][
@@ -234,6 +250,16 @@ def build_config_body(
         "increment_at_global_iteration"
     ] = increment_task_batcher
 
+    # Use defaults for any unspeficied parameters
+    _codex_params = DEFAULT_CODEX_PARAMS
+    _codex_params.update(codex_params)
+    _stitch_params = DEFAULT_STITCH_PARAMS
+    _stitch_params.update(stitch_params)
+    _synthesizer_params = {
+        "enumeration_timeout": domain_meta.get("enumeration_timeout", 1000),
+        "recognition_train_steps": domain_meta.get("recognition_train_steps", 10000),
+    }
+    _synthesizer_params.update(synthesizer_params)
     # params updates use the following precedence order (highest to lowest):
     # 1. params from CLI (e.g., stitch_params)
     # 2. params from template (e.g., block["params"])
@@ -246,6 +272,8 @@ def build_config_body(
             _codex_params.update(block["params"])
             _codex_params.update(codex_params)
             block["params"] = _codex_params
+        if block.get("model_type") == AMORTIZED_SYNTHESIS:
+            block["params"].update(_synthesizer_params)
         if block.get("model_type") == LIBRARY_LEARNER:
             _stitch_params = DEFAULT_STITCH_PARAMS
             _stitch_params.update(block["params"])
@@ -253,17 +281,11 @@ def build_config_body(
             block["params"] = _stitch_params
         if (
             block.get("model_type")
-            in [
-                LAPSGrammar.GRAMMAR,
-                SAMPLE_GENERATOR,
-                PROGRAM_REWRITER,
-            ]
+            in [LAPSGrammar.GRAMMAR, SAMPLE_GENERATOR, PROGRAM_REWRITER,]
             or block.get("state_fn") == INITIALIZE_GROUND_TRUTH
         ):
             block["params"].update(
-                {
-                    "compute_likelihoods": compute_likelihoods,
-                }
+                {"compute_likelihoods": compute_likelihoods,}
             )
         loop_blocks.append(block)
     config["experiment_iterator"]["loop_blocks"] = loop_blocks

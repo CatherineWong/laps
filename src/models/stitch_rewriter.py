@@ -44,6 +44,7 @@ class StitchProgramRewriter(StitchBase, model_loaders.ModelLoader):
         include_samples,
         load_inventions_from_split: str = "train",
         compute_likelihoods: bool = False,
+        use_beta_normal_if_invalid_eta_long: bool = False,
     ):
         """
         Updates experiment_state frontiers wrt. the experiment_state.models[GRAMMAR]
@@ -54,6 +55,7 @@ class StitchProgramRewriter(StitchBase, model_loaders.ModelLoader):
             `compute_likelihoods`: Whether to compute log likelihoods of each program
                 under the grammar. This requires converting the programs to eta-long form,
                 which is error-prone, so we don't do it by default.
+            `use_beta_normal_if_invalid_eta_long`: This uses the beta normal form of the program if we cannot convert programs to eta-long. This allows us to compute likelihoods for programs that truly cannot be eta-longified.
 
         """
         inventions_filepath = self._get_filepath_for_current_iteration(
@@ -99,10 +101,7 @@ class StitchProgramRewriter(StitchBase, model_loaders.ModelLoader):
             for task in experiment_state.get_tasks_for_ids(
                 task_split=split, task_ids=task_ids_in_splits[split]
             ):
-                frontier_rewritten = Frontier(
-                    frontier=[],
-                    task=task,
-                )
+                frontier_rewritten = Frontier(frontier=[], task=task,)
                 for program_data in task_to_programs[task.name]:
                     p_str = program_data["program"]
                     p = Program.parse(p_str)
@@ -111,13 +110,15 @@ class StitchProgramRewriter(StitchBase, model_loaders.ModelLoader):
                         try:
                             p = EtaLongVisitor(request=task.request).execute(p)
                         except EtaExpandFailure:
-                            raise EtaExpandFailure(p_str)
+                            if use_beta_normal_if_invalid_eta_long:
+                                print(
+                                    f"Warning: we are converting {p} to beta normal form."
+                                )
+                                p = p.betaNormalForm()
+                            else:
+                                raise EtaExpandFailure(p_str)
                     frontier_rewritten.entries.append(
-                        FrontierEntry(
-                            program=p,
-                            logPrior=0.0,
-                            logLikelihood=0.0,
-                        )
+                        FrontierEntry(program=p, logPrior=0.0, logLikelihood=0.0,)
                     )
                 # Re-score the logPrior and logLikelihood of the frontier under the current grammar
                 if compute_likelihoods:

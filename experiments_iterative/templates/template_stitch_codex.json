@@ -69,8 +69,12 @@
                 ],
                 "params": {
                     "final_task_origin": "default",
-                    "body_task_types": ["programs"],
-                    "final_task_types": ["programs"]
+                    "body_task_types": [
+                        "programs"
+                    ],
+                    "final_task_types": [
+                        "programs"
+                    ]
                 }
             },
             {

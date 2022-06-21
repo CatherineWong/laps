@@ -1,11 +1,17 @@
+B /scratch/zyzzyva/.opam/4.06.1+flambda/lib/bytes
+B /scratch/zyzzyva/.opam/4.06.1+flambda/lib/cairo2
+B /scratch/zyzzyva/.opam/4.06.1+flambda/lib/gg
+B /scratch/zyzzyva/.opam/4.06.1+flambda/lib/ocaml
+B /scratch/zyzzyva/.opam/4.06.1+flambda/lib/result
+B /scratch/zyzzyva/.opam/4.06.1+flambda/lib/uchar
+B /scratch/zyzzyva/.opam/4.06.1+flambda/lib/vg
 B ../_build/default/geomLib/.geomLib.objs
-B /Users/catwong/.opam/default/lib/cairo2
-B /Users/catwong/.opam/default/lib/gg
-B /Users/catwong/.opam/default/lib/vg
-B /opt/homebrew/lib/ocaml
-FLG -open GeomLib -w -40
+S /scratch/zyzzyva/.opam/4.06.1+flambda/lib/bytes
+S /scratch/zyzzyva/.opam/4.06.1+flambda/lib/cairo2
+S /scratch/zyzzyva/.opam/4.06.1+flambda/lib/gg
+S /scratch/zyzzyva/.opam/4.06.1+flambda/lib/ocaml
+S /scratch/zyzzyva/.opam/4.06.1+flambda/lib/result
+S /scratch/zyzzyva/.opam/4.06.1+flambda/lib/uchar
+S /scratch/zyzzyva/.opam/4.06.1+flambda/lib/vg
 S .
-S /Users/catwong/.opam/default/lib/cairo2
-S /Users/catwong/.opam/default/lib/gg
-S /Users/catwong/.opam/default/lib/vg
-S /opt/homebrew/lib/ocaml
+FLG -open GeomLib -w -40

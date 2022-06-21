@@ -316,6 +316,23 @@ class ExperimentState:
             frontiers += list(self.sample_frontiers[task_split].values())
         return frontiers
 
+    def get_tasks_for_ids_in_splits(
+        self,
+        task_splits,
+        task_ids_in_splits,
+        include_samples=False,
+        include_ground_truth_tasks=True,
+    ):
+        return {
+            task_split: self.get_tasks_for_ids(
+                task_split,
+                task_ids_in_splits[task_split],
+                include_samples,
+                include_ground_truth_tasks,
+            )
+            for task_split in task_splits
+        }
+
     def get_frontiers_for_ids_in_splits(
         self,
         task_splits,
@@ -334,9 +351,17 @@ class ExperimentState:
             for task_split in task_splits
         }
 
-    def update_frontiers(self, new_frontiers, maximum_frontier, task_split, is_sample):
+    def update_frontiers(
+        self,
+        new_frontiers,
+        maximum_frontier,
+        task_split,
+        is_sample,
+        report_frontiers=False,
+    ):
         """Updates frontiers with new_frontiers. If is_sample, updates sample frontiers."""
-
+        nonempty_tasks = {f.task: f for f in new_frontiers if not f.empty}
+        print(f"Updating new frontiers for {len(nonempty_tasks)} tasks.")
         for new_frontier in new_frontiers:
             if is_sample:
                 if new_frontier.task in self.sample_frontiers:
@@ -352,6 +377,14 @@ class ExperimentState:
                         .combine(new_frontier)
                         .topK(maximum_frontier)
                     )
+                if report_frontiers:
+                    print(f"Combined programs for task: {new_frontier.task}")
+                    for e in (
+                        self.task_frontiers[task_split][new_frontier.task]
+                        .normalize()
+                        .topK(maximum_frontier)
+                    ):
+                        print("%.02f\t%s" % (e.logPosterior, e.program))
 
     def initialize_ground_truth_task_frontiers(
         self, task_split, exclude_nonempty=True, compute_likelihoods=False

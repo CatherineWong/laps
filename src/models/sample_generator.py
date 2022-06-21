@@ -599,6 +599,7 @@ class CodexSampleGenerator(CodexBase, model_loaders.ModelLoader):
         compute_likelihoods: bool = True,
     ):
         for result_data in parse_results_valid:
+            program = Program.parse(result_data["program"])
             task = Task(
                 name=f"codex_{result_data['hash']}",
                 request=Type.fromjson(result_data["type_json"]),
@@ -607,11 +608,7 @@ class CodexSampleGenerator(CodexBase, model_loaders.ModelLoader):
 
             frontier = Frontier(
                 frontier=[
-                    FrontierEntry(
-                        program=Program.parse(result_data["program"]),
-                        logPrior=0.0,
-                        logLikelihood=0.0,
-                    )
+                    FrontierEntry(program=program, logPrior=0.0, logLikelihood=0.0,)
                 ],
                 task=task,
             )
