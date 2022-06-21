@@ -4,10 +4,10 @@ laps_dreamcoder_recognition.py | Author : Catherine Wong.
 Utility wrapper function around the DreamCoder recognition model. Elevates common functions to be class functions and allows them to be called with an ExperimentState.
 """
 import itertools
-from src.task_loaders import *
-import src.models.model_loaders as model_loaders
 
+import src.models.model_loaders as model_loaders
 from dreamcoder.recognition import RecognitionModel
+from src.task_loaders import *
 
 AmortizedSynthesisModelRegistry = model_loaders.ModelLoaderRegistries[
     model_loaders.AMORTIZED_SYNTHESIS

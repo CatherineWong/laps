@@ -254,8 +254,8 @@ def build_config_body(
     _stitch_params = DEFAULT_STITCH_PARAMS
     _stitch_params.update(stitch_params)
     _synthesizer_params = {
-        "enumeration_timeout": domain_meta["enumeration_timeout"],
-        "recognition_train_steps": domain_meta["recognition_train_steps"],
+        "enumeration_timeout": domain_meta.get("enumeration_timeout", 1000),
+        "recognition_train_steps": domain_meta.get("recognition_train_steps", 10000),
     }
     _synthesizer_params.update(synthesizer_params)
 
@@ -269,11 +269,17 @@ def build_config_body(
             block["params"].update(_synthesizer_params)
         if (
             block.get("model_type")
-            in [LAPSGrammar.GRAMMAR, SAMPLE_GENERATOR, PROGRAM_REWRITER,]
+            in [
+                LAPSGrammar.GRAMMAR,
+                SAMPLE_GENERATOR,
+                PROGRAM_REWRITER,
+            ]
             or block.get("state_fn") == INITIALIZE_GROUND_TRUTH
         ):
             block["params"].update(
-                {"compute_likelihoods": compute_likelihoods,}
+                {
+                    "compute_likelihoods": compute_likelihoods,
+                }
             )
         loop_blocks.append(block)
     config["experiment_iterator"]["loop_blocks"] = loop_blocks
