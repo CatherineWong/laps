@@ -3,6 +3,7 @@ channels:
   - conda-forge
   - pytorch
   - anaconda
+  - huggingface
 dependencies:
   - python=3.7.7
   - appdirs
@@ -63,6 +64,7 @@ dependencies:
   - psutil
   - ptyprocess
   - py
+  - pycairo
   - pycparser
   - Pygments
   - pyparsing
@@ -91,6 +93,7 @@ dependencies:
   - tornado
   - tqdm
   - traitlets
+  - transformers
   - typed-ast
   - typing-extensions
   - urllib3

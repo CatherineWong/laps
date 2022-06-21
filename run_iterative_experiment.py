@@ -76,12 +76,14 @@ parser.add_argument(
 
 parser.add_argument("--codex_params", default="{}", help="JSON string of codex params")
 
-parser.add_argument("--synthesizer_params", default="{}", help="JSON string of synthesizer params")
+parser.add_argument(
+    "--synthesizer_params", default="{}", help="JSON string of synthesizer params"
+)
 
 parser.add_argument(
-    "--compute_likelihoods",
+    "--no_likelihoods",
     action="store_true",
-    help="Compute program log likelihoods",
+    help="Disable computing program log likelihoods, which sometimes produce EtaExpandFailure errors",
 )
 
 parser.add_argument(
@@ -127,7 +129,7 @@ def main(args):
             codex_params=codex_params,
             stitch_params=stitch_params,
             synthesizer_params=synthesizer_params,
-            compute_likelihoods=args.compute_likelihoods,
+            compute_likelihoods=(not args.no_likelihoods),
             compute_description_lengths=True,
             increment_task_batcher=args.increment_task_batcher,
         )
@@ -157,7 +159,7 @@ def main(args):
                 codex_params=codex_params,
                 stitch_params=stitch_params,
                 synthesizer_params=synthesizer_params,
-                compute_likelihoods=args.compute_likelihoods,
+                compute_likelihoods=(not args.no_likelihoods),
                 compute_description_lengths=True,
                 increment_task_batcher=args.increment_task_batcher,
             )
