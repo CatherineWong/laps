@@ -33,7 +33,7 @@
         },
         {
             "model_type": "amortized_synthesis",
-            "model_loader": "dreamcoder_recognition",
+            "model_loader": "codex_dreamcoder_enumerator",
             "model_initializer_fn": "load_model",
             "params": {}
         }

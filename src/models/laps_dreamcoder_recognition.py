@@ -47,48 +47,6 @@ class LAPSDreamCoderRecognition:
     def __init__(self):
         self._neural_recognition_model = None
 
-    def generate_solutions_and_samples(
-        self,
-        experiment_state,
-        task_splits,
-        task_ids_in_splits,
-        enumeration_timeout,
-        maximum_sample_frontier=DEFAULT_MAXIMUM_SAMPLE_FRONTIER,
-        cpus=DEFAULT_CPUS,
-        solver=DEFAULT_ENUMERATION_SOLVER,
-        evaluation_timeout=DEFAULT_EVALUATION_TIMEOUT,
-        max_mem_per_enumeration_thread=DEFAULT_MAX_MEM_PER_ENUMERATION_THREAD,
-        solver_directory=DEFAULT_BINARY_DIRECTORY,
-        likelihood_model=INDUCTIVE_EXAMPLES_DISCOUNTED_PRIOR_LIKELIHOOD_MODEL,
-        **kwargs,
-    ):
-        """
-        Generates samples via an enumerative PCFG for tasks.
-        """
-        for task_split in task_splits:
-            tasks_to_attempt = experiment_state.get_tasks_for_ids(
-                task_split=task_split,
-                task_ids=task_ids_in_splits[task_split],
-                include_samples=False,
-            )
-            new_frontiers, _ = self._neural_recognition_model.enumerateFrontiers(
-                tasks=tasks_to_attempt,
-                maximumFrontier=maximum_sample_frontier,
-                enumerationTimeout=enumeration_timeout,
-                CPUs=cpus,
-                solver=solver,
-                evaluationTimeout=evaluation_timeout,
-                max_mem_per_enumeration_thread=max_mem_per_enumeration_thread,
-                solver_directory=solver_directory,
-                testing=task_split == TEST,
-                likelihood_model=likelihood_model,
-            )
-            import pdb
-
-            pdb.set_trace()
-
-            # Further distinguish between frontiers that solve the task and samples from the prior.
-
     def infer_programs_for_tasks(
         self,
         experiment_state,
