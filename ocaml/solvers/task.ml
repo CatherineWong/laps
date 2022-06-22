@@ -407,12 +407,17 @@ let enumerate_for_tasks (g: contextual_grammar) ?verbose:(verbose = true)
     ?lowerBound:(lowerBound = 0.)
     ?upperBound:(upperBound = 99.)
     ?nc:(nc=1)
+    ?likelihoodModel:(likelihoodModel=inductive_examples_likelihood_model)
     ~timeout
     (* tasks and maximum frontier sizes *)
     (tf: (task*int) list)
   (* Returns, for each task, (program,logPrior) as well as the total number of enumerated programs *)
      : (hit_result list list)*int
   =
+
+  let () = (Printf.eprintf "[ocaml] enumerate_for_tasks in task.ml \n") in 
+  let () = (Printf.eprintf "[ocaml] timeout: %d \n" (timeout)) in
+  let () = (Printf.eprintf "[ocaml] likelihoodModel: %s \n" (likelihoodModel)) in
 
   set_enumeration_timeout timeout;
 

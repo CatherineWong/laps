@@ -8,6 +8,10 @@ open Type
 open Program
 open Grammar
 
+(** Constant strings for the likelihood model *)
+let inductive_examples_likelihood_model = "inductive_examples_likelihood_model" ;; 
+let inductive_examples_discounted_prior_likelihood_model = "inductive_examples_discounted_prior_likelihood_model" ;;
+
 type frontier = {
   programs: (program*float) list;
   request: tp

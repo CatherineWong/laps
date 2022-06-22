@@ -7,6 +7,7 @@ import itertools
 
 import src.models.model_loaders as model_loaders
 from dreamcoder.recognition import RecognitionModel
+from dreamcoder.enumeration import *
 from src.task_loaders import *
 
 AmortizedSynthesisModelRegistry = model_loaders.ModelLoaderRegistries[
@@ -30,7 +31,9 @@ class LAPSDreamCoderRecognition:
     """LAPSDreamCoderRecognition: containiner wrapper for a DreamCoder recognition model. The neural weights are fully reset and retrained when optimize_model_for_frontiers is called."""
 
     DEFAULT_MAXIMUM_FRONTIER = 5  # Maximum top-programs to keep in frontier
-    DEFAULT_MAXIMUM_SAMPLE_FRONTIER = 100 # Maximum number of samples to take for a task.
+    DEFAULT_MAXIMUM_SAMPLE_FRONTIER = (
+        100  # Maximum number of samples to take for a task.
+    )
     DEFAULT_CPUS = 12  # Parallel CPUs
     DEFAULT_ENUMERATION_SOLVER = "ocaml"  # OCaml, PyPy, or Python enumeration
     DEFAULT_SAMPLER = "helmholtz"
@@ -39,14 +42,12 @@ class LAPSDreamCoderRecognition:
     )  # Assumes you're almost definitely running this on a linux machine.
     DEFAULT_EVALUATION_TIMEOUT = 1  # Timeout for evaluating a program on a task
     DEFAULT_MAX_MEM_PER_ENUMERATION_THREAD = 1000000000  # Max memory usage per thread
-    INDUCTIVE_LIKELIHOOD = "inductive_likelihood" # Use the inductive examples as a likelihood function.
-    INDUCTIVE_CODEX_LIKELIHOOD = "inductive_codex_likelihood" # Use inductive examples and codex as a likelihood.
 
     # Contain the neural recognition model. This is re-trained each time optimize_model_for_frontiers is called.
     def __init__(self):
         self._neural_recognition_model = None
 
-    def sample_programs_for_tasks(
+    def generate_solutions_and_samples(
         self,
         experiment_state,
         task_splits,
@@ -58,16 +59,11 @@ class LAPSDreamCoderRecognition:
         evaluation_timeout=DEFAULT_EVALUATION_TIMEOUT,
         max_mem_per_enumeration_thread=DEFAULT_MAX_MEM_PER_ENUMERATION_THREAD,
         solver_directory=DEFAULT_BINARY_DIRECTORY,
-        likelihood_fn=INDUCTIVE_CODEX_LIKELIHOOD,
+        likelihood_model=INDUCTIVE_EXAMPLES_DISCOUNTED_PRIOR_LIKELIHOOD_MODEL,
         **kwargs,
     ):
         """
-        Infers a beam of samples for tasks via top-down
-        
-        programs for tasks via top-down enumerative search from the grammar.
-        Updates Frontiers in experiment_state with discovered programs.
-
-        Wrapper function around recognition.enumerateFrontiers from dreamcoder.recognition.
+        Generates samples via an enumerative PCFG for tasks.
         """
         for task_split in task_splits:
             tasks_to_attempt = experiment_state.get_tasks_for_ids(
@@ -85,9 +81,10 @@ class LAPSDreamCoderRecognition:
                 max_mem_per_enumeration_thread=max_mem_per_enumeration_thread,
                 solver_directory=solver_directory,
                 testing=task_split == TEST,
-                likelihood_fn=likelihood,
+                likelihood_model=likelihood_model,
             )
-            import pdb; pdb.set_trace();
+
+            # Further distinguish between frontiers that solve the task and samples from the prior.
 
     def infer_programs_for_tasks(
         self,
@@ -101,6 +98,7 @@ class LAPSDreamCoderRecognition:
         evaluation_timeout=DEFAULT_EVALUATION_TIMEOUT,
         max_mem_per_enumeration_thread=DEFAULT_MAX_MEM_PER_ENUMERATION_THREAD,
         solver_directory=DEFAULT_BINARY_DIRECTORY,
+        likelihood_model=INDUCTIVE_EXAMPLES_LIKELIHOOD_MODEL,
         **kwargs,
     ):
         """
@@ -125,7 +123,7 @@ class LAPSDreamCoderRecognition:
                 max_mem_per_enumeration_thread=max_mem_per_enumeration_thread,
                 solver_directory=solver_directory,
                 testing=task_split == TEST,
-                likelihood_fn=INDUCTIVE_LIKELIHOOD,
+                likelihood_model=likelihood_model,
             )
 
             experiment_state.update_frontiers(

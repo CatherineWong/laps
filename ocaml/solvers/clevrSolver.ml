@@ -15,7 +15,6 @@ open Grammar
 open Task
 open FastType
 
-
 let load_problems channel =
   let open Yojson.Basic.Util in
   let j = Yojson.Basic.from_channel channel in
@@ -122,10 +121,17 @@ let load_problems channel =
       j |> member "nc" |> to_int 
     with _ -> 1
   in
+
+  let likelihoodModel =
+    try
+      j |> member "likelihoodModel" |> to_string 
+    with _ -> "inductive_examples_likelihood_model"
+  in
+
   (tf,g,
    lowerBound,upperBound,budgetIncrement,
    maxParameters,
-   nc,timeout,verbose)
+   nc,timeout,verbose, likelihoodModel)
 
 let export_frontiers number_enumerated tf solutions: string =
   let open Yojson.Basic.Util in
@@ -147,8 +153,9 @@ let _ =
   let (tf,g,
        lowerBound,upperBound,budgetIncrement,
        mfp,
-     nc,timeout, verbose) =
-    load_problems Pervasives.stdin in
+     nc,timeout, verbose, inductive_examples_likelihood_model) =
+    load_problems Pervasives.stdin in 
+
   let solutions, number_enumerated =
     enumerate_for_tasks ~maxFreeParameters:mfp ~lowerBound:lowerBound ~upperBound:upperBound ~budgetIncrement:budgetIncrement
     ~verbose:verbose ~nc:nc ~timeout:timeout g tf
