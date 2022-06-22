@@ -443,8 +443,8 @@ let enumerate_for_tasks (g: contextual_grammar) ?verbose:(verbose = true)
                 | 
                 (** Posterior based on example likelihoods for nonzero likelihoods and a prior otherwise. *)
                 inductive_examples_discounted_prior_likelihood_model -> 
-                  let h1_example_score = if is_valid h1.hit_likelihood then 1000 else 0.0 in 
-                  let h2_example_score = if is_valid h2.hit_likelihood then 1000 else 0.0 in
+                  let h1_example_score = if is_valid h1.hit_likelihood then 1000.0 else 0.0 in 
+                  let h2_example_score = if is_valid h2.hit_likelihood then 1000.0 else 0.0 in
                 Float.compare (h1_example_score+.h1.hit_prior) (h2_example_score+.h2.hit_prior)
                 )
           ()) in
