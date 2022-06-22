@@ -416,7 +416,7 @@ let enumerate_for_tasks (g: contextual_grammar) ?verbose:(verbose = true)
   =
 
   let () = (Printf.eprintf "[ocaml] enumerate_for_tasks in task.ml \n") in 
-  let () = (Printf.eprintf "[ocaml] timeout: %d \n" (timeout)) in
+  let () = (Printf.eprintf "[ocaml] timeout: %f \n" (timeout)) in
   let () = (Printf.eprintf "[ocaml] likelihoodModel: %s \n" (likelihoodModel)) in
 
   set_enumeration_timeout timeout;
