@@ -418,6 +418,8 @@ let enumerate_for_tasks (g: contextual_grammar) ?verbose:(verbose = true)
   let () = (Printf.eprintf "[ocaml] enumerate_for_tasks in task.ml \n") in 
   let () = (Printf.eprintf "[ocaml] timeout: %f \n" (timeout)) in
   let () = (Printf.eprintf "[ocaml] likelihoodModel: %s \n" (likelihoodModel)) in
+  let is_inductive_examples_likelihood_model = (likelihoodModel = inductive_examples_likelihood_model) in 
+  let is_inductive_examples_discounted_prior_likelihood_model = (likelihoodModel = inductive_examples_discounted_prior_likelihood_model) in 
 
   set_enumeration_timeout timeout;
 
@@ -430,11 +432,21 @@ let enumerate_for_tasks (g: contextual_grammar) ?verbose:(verbose = true)
 
   (* Store the hits in a priority queue *)
   (* We will only ever maintain maximumFrontier best solutions *)
+  (* Choose the likelihood model for maintaining the frontier solutions. *)
   let hits =
     Array.init nt ~f:(fun _ -> 
         Heap.create
           ~cmp:(fun h1 h2 ->
-              Float.compare (h1.hit_likelihood+.h1.hit_prior) (h2.hit_likelihood+.h2.hit_prior))
+              match likelihoodModel with 
+                (** Posterior based on example likelihoods alone. *)
+                inductive_examples_likelihood_model -> Float.compare (h1.hit_likelihood+.h1.hit_prior) (h2.hit_likelihood+.h2.hit_prior)
+                | 
+                (** Posterior based on example likelihoods for nonzero likelihoods and a prior otherwise. *)
+                inductive_examples_discounted_prior_likelihood_model -> 
+                  let h1_example_score = if is_valid h1.hit_likelihood then 1000 else 0.0 in 
+                  let h2_example_score = if is_valid h2.hit_likelihood then 1000 else 0.0 in
+                Float.compare (h1_example_score+.h1.hit_prior) (h2_example_score+.h2.hit_prior)
+                )
           ()) in
   
   let lower_bound = ref lowerBound in
@@ -467,14 +479,15 @@ let enumerate_for_tasks (g: contextual_grammar) ?verbose:(verbose = true)
              assert( mdl < budgetIncrement+.(!lower_bound));
 
              range nt |> List.iter ~f:(fun j -> 
-                 let logLikelihood = tasks.(j).log_likelihood p in
-                 if is_valid logLikelihood then begin
+                 let task_log_likelihood = tasks.(j).log_likelihood p in
+                 (** If we are using an all or nothing  *)
+                 if is_valid logLikelihood || is_inductive_examples_discounted_prior_likelihood_model then begin
                    let dt = Time.abs_diff startTime (Time.now ())
                             |> Time.Span.to_sec in
                    Heap.add hits.(j)
                      {hit_program = string_of_program p;
                       hit_prior = logPrior;
-                      hit_likelihood = logLikelihood;
+                      hit_likelihood = task_log_likelihood;
                       hit_time = dt;
                       hit_tokens = string_of_tokens false p} ;
                    while Heap.length hits.(j) > maximumFrontier.(j) do
