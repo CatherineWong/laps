@@ -153,11 +153,11 @@ let _ =
   let (tf,g,
        lowerBound,upperBound,budgetIncrement,
        mfp,
-     nc,timeout, verbose, inductive_examples_likelihood_model) =
+     nc,timeout, verbose, likelihoodModel) =
     load_problems Pervasives.stdin in 
 
   let solutions, number_enumerated =
     enumerate_for_tasks ~maxFreeParameters:mfp ~lowerBound:lowerBound ~upperBound:upperBound ~budgetIncrement:budgetIncrement
-    ~verbose:verbose ~nc:nc ~timeout:timeout g tf
+    ~verbose:verbose ~nc:nc ~timeout:timeout ~likelihoodModel:likelihoodModel g tf
   in
   export_frontiers number_enumerated tf solutions |> print_string ;;

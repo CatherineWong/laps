@@ -83,6 +83,9 @@ class LAPSDreamCoderRecognition:
                 testing=task_split == TEST,
                 likelihood_model=likelihood_model,
             )
+            import pdb
+
+            pdb.set_trace()
 
             # Further distinguish between frontiers that solve the task and samples from the prior.
 
