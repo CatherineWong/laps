@@ -481,7 +481,7 @@ let enumerate_for_tasks (g: contextual_grammar) ?verbose:(verbose = true)
              range nt |> List.iter ~f:(fun j -> 
                  let task_log_likelihood = tasks.(j).log_likelihood p in
                  (** If we are using an all or nothing  *)
-                 if is_valid logLikelihood || is_inductive_examples_discounted_prior_likelihood_model then begin
+                 if is_valid task_log_likelihood || is_inductive_examples_discounted_prior_likelihood_model then begin
                    let dt = Time.abs_diff startTime (Time.now ())
                             |> Time.Span.to_sec in
                    Heap.add hits.(j)
