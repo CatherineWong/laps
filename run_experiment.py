@@ -34,6 +34,7 @@ from data.structures.make_tasks import *
 from data.structures.grammar import *
 
 from src.models.laps_dreamcoder_recognition import *
+from src.models.codex_dreamcoder_enumerator import *
 from src.models.laps_language_encoder import *
 from src.models.sample_generator import *
 from src.models.stitch_proposer import *

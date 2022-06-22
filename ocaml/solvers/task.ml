@@ -425,6 +425,7 @@ let enumerate_for_tasks (g: contextual_grammar) ?verbose:(verbose = true)
 
   let nt = List.length tf in
   let maximumFrontier = Array.of_list (tf |> List.map ~f:snd) in
+  let () = (Printf.eprintf "[ocaml] maximum frontier per task: %d \n" (maximumFrontier.(0))) in
   let tasks = Array.of_list (tf |> List.map ~f:fst) in
 
   let request = tasks.(0).task_type in
@@ -443,8 +444,8 @@ let enumerate_for_tasks (g: contextual_grammar) ?verbose:(verbose = true)
                 | 
                 (** Posterior based on example likelihoods for nonzero likelihoods and a prior otherwise. *)
                 inductive_examples_discounted_prior_likelihood_model -> 
-                  let h1_example_score = if is_valid h1.hit_likelihood then 1000.0 else 0.0 in 
-                  let h2_example_score = if is_valid h2.hit_likelihood then 1000.0 else 0.0 in
+                  let h1_example_score = if h1.hit_likelihood >= 0.0 then 1000.0 else 0.0 in 
+                  let h2_example_score = if h1.hit_likelihood >= 0.0  then 1000.0 else 0.0 in
                 Float.compare (h1_example_score+.h1.hit_prior) (h2_example_score+.h2.hit_prior)
                 )
           ()) in
@@ -459,6 +460,7 @@ let enumerate_for_tasks (g: contextual_grammar) ?verbose:(verbose = true)
           List.exists (range nt) ~f:(fun j -> Heap.length hits.(j) < maximumFrontier.(j))
        && !lower_bound +. budgetIncrement <= upperBound
   do
+    let () = (Printf.eprintf "[ocaml] Size of hits heap is now: %d \n" (Heap.length hits.(j))) in
     let number_of_enumerated_programs = ref 0 in
       let final_results =
         (* Returns a list of "final results" *)
@@ -481,7 +483,7 @@ let enumerate_for_tasks (g: contextual_grammar) ?verbose:(verbose = true)
              range nt |> List.iter ~f:(fun j -> 
                  let task_log_likelihood = tasks.(j).log_likelihood p in
                  (** If we are using an all or nothing  *)
-                 if is_valid task_log_likelihood || is_inductive_examples_discounted_prior_likelihood_model then begin
+                 if is_valid logLikelihood || is_inductive_examples_discounted_prior_likelihood_model then begin
                    let dt = Time.abs_diff startTime (Time.now ())
                             |> Time.Span.to_sec in
                    Heap.add hits.(j)
