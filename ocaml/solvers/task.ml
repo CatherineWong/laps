@@ -442,7 +442,7 @@ let enumerate_for_tasks (g: contextual_grammar) ?verbose:(verbose = true)
                 (** Posterior based on example likelihoods alone. *)
                 inductive_examples_likelihood_model -> Float.compare (h1.hit_likelihood+.h1.hit_prior) (h2.hit_likelihood+.h2.hit_prior)
                 | 
-                (** Posterior based on example likelihoods for nonzero likelihoods and a prior otherwise. *)
+                (** Posterior based on example likelihoods for nonzero likelihoods and a prior otherwise. Note that this just favors short programs. *)
                 inductive_examples_discounted_prior_likelihood_model -> 
                   let h1_example_score = if h1.hit_likelihood >= 0.0 then 1000.0 else 0.0 in 
                   let h2_example_score = if h1.hit_likelihood >= 0.0  then 1000.0 else 0.0 in

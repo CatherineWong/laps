@@ -88,7 +88,7 @@ class CodexDreamCoderEnumerator(LAPSDreamCoderRecognition):
             for pcfg_sample_frontier in pcfg_sample_frontiers:
                 # Get Codex likelihood.
                 codex_frontier = self.codex_likelihood_for_frontier(
-                    pcfg_sample_frontier
+                    pcfg_sample_frontier.topK(maximum_sample_frontier)
                 )
                 # Combine specs?
 
@@ -100,3 +100,4 @@ class CodexDreamCoderEnumerator(LAPSDreamCoderRecognition):
         import pdb
 
         pdb.set_trace()
+        # Are we evaluating the posthoc likelihood of a bunch of frontiers?
