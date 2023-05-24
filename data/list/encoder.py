@@ -12,9 +12,71 @@ from src.models.model_loaders import (
 )
 from src.task_loaders import TRAIN, TEST, ALL
 
-from dreamcoder.domains.list.main import LearnedFeatureExtractor
+from dreamcoder.recognition import RecurrentFeatureExtractor
+from dreamcoder.utilities import flatten
+# from dreamcoder.domains.list.main import LearnedFeatureExtractor
 
 ExamplesEncoderRegistry = ModelLoaderRegistries[EXAMPLES_ENCODER]
+
+class LearnedFeatureExtractor(RecurrentFeatureExtractor):
+    """The same as the LearnedFeatureExtractor from the list domain's main.py file, but maps the lexicon to strings."""
+    H = 64
+    
+    special = None
+
+    def tokenize(self, examples):
+        def sanitize(l): return [z if z in self.lexicon else "?"
+                                 for z_ in l
+                                 for z in (z_ if isinstance(z_, list) else [z_])]
+
+        tokenized = []
+        for xs, y in examples:
+            if isinstance(y, list):
+                y = ["LIST_START"] + y + ["LIST_END"]
+            else:
+                y = [y]
+            y = sanitize(y)
+            if len(y) > self.maximumLength:
+                return None
+
+            serializedInputs = []
+            for xi, x in enumerate(xs):
+                if isinstance(x, list):
+                    x = ["LIST_START"] + x + ["LIST_END"]
+                else:
+                    x = [x]
+                x = sanitize(x)
+                if len(x) > self.maximumLength:
+                    return None
+                serializedInputs.append(x)
+
+            tokenized.append((tuple(serializedInputs), y))
+
+        return tokenized
+
+    def __init__(self, tasks, testingTasks=[], cuda=False):
+        self.lexicon = set(flatten((t.examples for t in tasks + testingTasks), abort=lambda x: isinstance(
+            x, str))).union({"LIST_START", "LIST_END", "?"})
+        self.lexicon = list(map(str, self.lexicon))     # Convert all vocabulary to strings.
+
+        # Calculate the maximum length
+        self.maximumLength = float('inf') # Believe it or not this is actually important to have here
+        self.maximumLength = max(len(l)
+                                 for t in tasks + testingTasks
+                                 for xs, y in self.tokenize(t.examples)
+                                 for l in [y] + [x for x in xs])
+
+        self.recomputeTasks = True
+
+        super(
+            LearnedFeatureExtractor,
+            self).__init__(
+            lexicon=list(
+                self.lexicon),
+            tasks=tasks,
+            cuda=cuda,
+            H=self.H,
+            bidirectional=True)
 
 @ExamplesEncoderRegistry.register
 class ListFeatureExamplesEncoder(ModelLoader):
