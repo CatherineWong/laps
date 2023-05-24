@@ -110,7 +110,7 @@ def get_domain_metadata(domain: str):
             "task_language_loader": "list_synthetic",
             "ocaml_special_handler": "list",
             "dsl_description_prefix": "This is a domain-specific language for list transformations.",
-            "global_batch_sizes": [5, 10, 25, 50, 100, 200, 400, 800, 1600, 3942],
+            "global_batch_sizes": [5, 10, 25, 50, 154],
             "n_tasks_train": 154,
             "n_tasks_test": 66,
         }
